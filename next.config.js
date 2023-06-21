@@ -1,4 +1,11 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+
+    images: {
+        domains: [
+          "meenahealth.s3.eu-central-1.amazonaws.com", 
+        ],
+      },
+}
 
 module.exports = nextConfig

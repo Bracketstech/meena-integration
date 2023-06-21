@@ -1,6 +1,5 @@
 import getNavData from '@/lib/data-hooks/getNavData';
 import Link from 'next/link';
-import LangButton from './LangButton';
 
 
 
