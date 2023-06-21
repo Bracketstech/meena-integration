@@ -13,11 +13,11 @@ export default async function Nav() {
   return (
     <nav className='flex  justify-between    p-2 px-4' >
       <div className='flex flex-row-reverse gap-x-3'>
-        {data.nav.tree.map(({page})=> <Link href={page.url}><strong>{page.title}</strong></Link>  )}
+        {data.nav.tree.map(({page})=> <Link key={page.url} href={page.url}><strong>{page.title}</strong></Link>  )}
       </div> 
       <div className='flex flex-row-reverse gap-x-3'>
 
-      {data.nav.tree.map(({page})=> <Link href={"/ar"+page.url}><strong>{page.title}  AR</strong></Link>  )}
+      {data.nav.tree.map(({page})=> <Link key={page.url} href={"/ar"+page.url}><strong>{page.title}  AR</strong></Link>  )}
 </div>
     </nav>
     )
