@@ -1,12 +1,13 @@
 import getNavData from '@/lib/data-hooks/getNavData';
 import Link from 'next/link';
+import LangSwitcher from './LangSwitcher';
 
 
 
 
 
-export default async function Nav() {
-  const data = await getNavData()
+export default async function Nav({arabic}) {
+  const data = await getNavData(arabic)
  
    
   return (
@@ -15,8 +16,7 @@ export default async function Nav() {
         {data.nav.tree.map(({page})=> <Link key={page.url} href={page.url}><strong>{page.title}</strong></Link>  )}
       </div> 
       <div className='flex flex-row-reverse gap-x-3'>
-
-      {data.nav.tree.map(({page})=> <Link key={page.url} href={"/ar"+page.url}><strong>{page.title}  AR</strong></Link>  )}
+      <LangSwitcher arabic={arabic}/>
 </div>
     </nav>
     )

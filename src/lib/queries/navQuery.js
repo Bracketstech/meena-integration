@@ -1,18 +1,20 @@
 const { gql } = require("@apollo/client");
 
 export const nav = gql`
-query MyQuery {
-  nav(handle: "top_navigation") {
-    handle
-    title
-    ... on Navigation {
+query MyQuery($site:String) {
+  nav(handle: "top_navigation" ) {
       handle
       title
-      tree {
-        page {
+  ... on Navigation{
+      handle
+      title
+      tree(site: $site){
+        page{
           title
           url
+          id:entry_id
         }
+
       }
     }
   }

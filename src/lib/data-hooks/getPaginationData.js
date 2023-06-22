@@ -5,7 +5,7 @@ const { default: client } = require("../client");
 
 const getPaginationData = async (pageNo,limit)=>{
   const variables={
-    page:3,limit:3
+    page:pageNo,limit:3
 }
   const { data } =  await client.query({query:paginationQuery(),variables})
    return data
