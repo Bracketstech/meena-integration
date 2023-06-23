@@ -1,7 +1,6 @@
 import getAboutData from "./getAboutData";
 import getHomeData from "./getHomeData";
-
-const { default: client } = require("../client");
+ 
 
 const getData = async (pageName,isAr)=>{
 

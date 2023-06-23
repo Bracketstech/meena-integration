@@ -1,6 +1,7 @@
 import Nav from "@/components/Navbar"
 import Pagination from "@/components/Pagination"
 import getHomeData from "@/lib/data-hooks/getHomeData"
+ 
 
 
 

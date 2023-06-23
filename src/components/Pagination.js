@@ -18,6 +18,7 @@ const  Pagination = async ({searchParams}) => {
         <PaginationCard data={card} key={card.title +index}/>   )}
         </div> 
         <PagintationAction numberOfPages={numberOfPages} pageNo={searchParams.page ? searchParams.page:1} limit={limit}/>
+    
     </div>
   )
 }
