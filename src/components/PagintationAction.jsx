@@ -26,7 +26,7 @@ const PagintationAction = ({pageNo,limt,numberOfPages}) => {
   return (
     <div className="flex gap-x-3 my-3">
         <Link  className={`${+pageNo ===1 && 'opacity-[0.5]'}`} href={`?page=${ +pageNo ===1 ? 1 :  +pageNo - 1}`}>Prev Page</Link>
-        {myArray.map((item,index)=> <Link href={`?page=${index+1}`} className={`${+pageNo == index + 1 && "text-blue-400"} cursor-pointer `} >{index + 1}</Link>)}
+        {myArray.map((item,index)=> <Link key={index} href={`?page=${index+1}`} className={`${+pageNo == index + 1 && "text-blue-400"} cursor-pointer `} >{index + 1}</Link>)}
         <Link
         // href={pathname + '?' + createQueryString('page', +pageNo + 1)}
         href={`?page=${+pageNo === numberOfPages? numberOfPages : +pageNo + 1}`}
