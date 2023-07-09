@@ -44,7 +44,7 @@ export default async function Nav({ arabic, home }) {
           <div className="flex navTopList items-center justify-end lg:gap-x-[2.91666666667vw]">
             <ul className="hidden links PingAR-Regular lg:text-[0.9375vw] lg:leading-[1.45833333333vw] lg:flex items-center lg:gap-x-[2.08333333333vw]">
               {topData.nav.treeEn.map((item) => (
-                <li>
+                <li key={item.page.url}>
                   <Link href={item.page.url}>{item.page.title}</Link>
                   <img src="/images/icons/links-style2.svg" alt="style" />
                 </li>
@@ -85,7 +85,7 @@ export default async function Nav({ arabic, home }) {
           <div className="hidden lg:flex items-center lg:gap-x-[2.08333333333vw]">
             <ul className="links navList PingAR-Regular lg:text-[1.04166666667vw] lg:leading-[1.45833333333vw] flex items-center lg:gap-x-[2.08333333333vw]">
               {bottomData.nav.treeEn.map((item) => (
-                <li>
+                <li key={item.page.url}>
                   <Link href={item.page.url}>{item.page.title}</Link>
                   <img
                     src="/images/icons/links-style.svg"
@@ -108,7 +108,7 @@ export default async function Nav({ arabic, home }) {
         <div className="sm:pt-[37.8048780488vw] w-[90%] mx-[auto] h-full flex flex-col pt-[54.8717948718vw]">
           <ul className="sm:text-[3.41463414634vw] PingAr-Regular links w-full text-white text-[4.87179487179vw] flex flex-col gap-y-[4.10256410256vw]">
             {bottomData.nav.treeEn.map((item) => (
-              <li>
+              <li key={item.page.url}>
                 <Link href={item.page.url}>{item.page.title}</Link>
                 <img
                   src="/images/icons/links-style.svg"
@@ -118,7 +118,7 @@ export default async function Nav({ arabic, home }) {
               </li>
             ))}
             {topData.nav.treeEn.map((item) => (
-              <li>
+              <li key={item.page.url}>
                 <Link href={item.page.url}>{item.page.title}</Link>
                 <img
                   src="/images/icons/links-style.svg"
