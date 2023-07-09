@@ -1,12 +1,19 @@
 import { getClient } from "../client";
 import { nav } from "../queries/navQuery";
- 
 
-const getNavData = async (arabic)=>{
-  const variables= {site:arabic?"arabic":"default"}
-    
-  const { data } =  await getClient().query({query:nav,variables})
-   return data
-  }
+const getNavData = async (arabic) => {
+  const variables = { site: arabic ? "arabic" : "default" };
 
-  export default getNavData
+  const { data } = await getClient().query({
+    query: nav,
+    variables,
+    context: {
+      fetchOptions: {
+        next: { revalidate: 5 },
+      },
+    },
+  });
+  return data;
+};
+
+export default getNavData;

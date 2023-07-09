@@ -4,28 +4,28 @@
 
 @font-face {
     font-family: "Ping AR + LT";
-    src: url('../assets/fonts/PingAR+LT-Light.otf');
+    src: url(../fonts/PingAR+LT-Light.otf);
     font-weight: 300;
     display: block;
 }
 
 @font-face {
     font-family: "Ping AR + LT";
-    src: url('../assets/fonts/PingAR+LT-Regular.otf');
+    src: url(../fonts/PingAR+LT-Regular.otf);
     font-weight: 400;
     display: block;
 }
 
 @font-face {
     font-family: "Ping AR + LT";
-    src: url('../assets/fonts/PingAR+LT-Medium.otf');
+    src: url(../fonts/PingAR+LT-Medium.otf);
     font-weight: 500;
     display: block;
 }
 
 @font-face {
     font-family: "Ping AR + LT";
-    src: url('../assets/fonts/PingAR+LT-Bold.otf');
+    src: url(../fonts/PingAR+LT-Bold.otf);
     font-weight: 700;
     display: block;
 }
