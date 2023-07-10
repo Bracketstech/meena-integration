@@ -17,7 +17,7 @@ export default async function Home({ searchParams }) {
     <>
       <Nav home />
       {/* <h1>{data.entry.title}</h1> */}
-      {/* <HomePage/> */}
+      <HomePage/>
       {/* <Services/> */}
       {/* <Locations/> */}
       {/* <HelpAndSupport/> */}
@@ -25,7 +25,7 @@ export default async function Home({ searchParams }) {
       {/* <LatestNews/> */}
       {/* <Article/> */}
       {/* <TermsAndConditions/> */}
-      <PrivacyPolicy/>
+      {/* <PrivacyPolicy/> */}
       {/* <Pagination searchParams={searchParams}/> */}
     </>
   );
