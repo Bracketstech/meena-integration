@@ -6,7 +6,7 @@ import HelpAndSupport from '../../components/Pages/HelpAndSupport/Index'
 import About from "@/components/Pages/About"
 import Careers from "@/components/Pages/Careers"
 
-export default async function Page({ params }) {
+export default async function Page({ params }) { 
     const {slug} =params 
     const topNavData = await getTopNavData()
     const bottomNavData = await getBottomNavData()
