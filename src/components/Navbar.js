@@ -25,20 +25,20 @@ export default async function Nav({ arabic, home }) {
     >
       <div className="relative z-[3] Container1680 flex items-center lg:items-start justify-between">
         <div>
-          <a href="./index.html">
+          <Link href="/">
             <img
               src="/images/icons/header-logo.svg"
               alt="logo"
               className="whiteLogo lg:w-[12.7083333333vw] w-[31.7948717949vw]"
             />
-          </a>
-          <a href="./index.html">
+          </Link>
+          <Link href="/">
             <img
               src="/images/icons/header-logo-blue.svg"
               alt="logo"
               className="blueLogo lg:w-[12.7083333333vw] w-[31.7948717949vw]"
             />
-          </a>
+          </Link>
         </div>
         <div className="flex flex-col lg:gap-y-[1.14583333333vw]">
           <div className="flex navTopList items-center justify-end lg:gap-x-[2.91666666667vw]">
@@ -128,12 +128,12 @@ export default async function Nav({ arabic, home }) {
               </li>
             ))}
           </ul>
-          <a
+          <Link
             href="./about-app.html"
             className="sm:mt-[6.82926829268vw] sm:h-[7.31707317073vw] sm:text-[2.43902439024vw] mt-[12.3076923077vw] bg-[#845FFF] text-white text-[3.84615384615vw] rounded-[7.94871794872vw] w-full h-[10.5128205128vw] flex justify-center items-center"
           >
             <span> Download app </span>
-          </a>
+          </Link>
         </div>
       </div>
     </header>

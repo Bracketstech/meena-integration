@@ -9,7 +9,7 @@ const Content = () => {
       data-aos-delay={400}
       className="heading54 PingAR-Regular tracking-[unset] text-[#3B3659]"
     >
-      We're hiring <br />
+      We`&apos;re hiring <br />
       for #<span className="PingAR-Bold"> positions </span>
     </h2>
     <p
@@ -18,7 +18,7 @@ const Content = () => {
       data-aos-delay={400}
       className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] PingAR-Light lg:text-[1.14583333333vw] text-[#505050] lg:leading-[1.70572916667vw] text-[3.58974358974vw] leading-[6.02564102564vw] lg:mt-[1.14583333333vw] mt-[5.12820512821vw]"
     >
-      By hiring those with a real passion for healthcare, we've created a varied
+      By hiring those with a real passion for healthcare, we`&apos;ve created a varied
       and driven group of experts focused on elevating the healthcare journey
       within the Kingdom, join us to make an impact
     </p>

@@ -1,4 +1,7 @@
 import Nav from "@/components/Navbar";
+import "swiper/css";
+import "swiper/css/navigation";
+
 import "./globals.css";
 import { Inter } from "next/font/google";
 

@@ -83,7 +83,7 @@ const EcoCards = () => {
               id="lineanimation3"
               className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw] lg:text-[1.354166666666667vw] lg:leading-[2.1875vw] PingAR-Bold text-[4.87179487179vw] leading-[7.69230769231vw] text-[#845FFF]"
             >
-              Care that's convenient
+              Care that`&apos;`sconvenient
             </h5>
             <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[0.9375vw] lg:leading-[1.45833333333vw] text-[3.58974358974vw] leading-[6.15384615385vw] text-[#505050] PingAR-Light lg:mt-[0.41666666666vw] mt-[2.05128205128vw]">
               Integrated care at your fingertips through our mobile app, where you
@@ -106,7 +106,7 @@ const EcoCards = () => {
           />
           <div className="text-center">
             <h5 className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw] lg:text-[1.354166666666667vw] lg:leading-[2.1875vw] PingAR-Bold text-[4.87179487179vw] leading-[7.69230769231vw] text-[#845FFF]">
-              Care that's comprehensive
+              Care that`&apos;`scomprehensive
             </h5>
             <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[0.9375vw] lg:leading-[1.45833333333vw] text-[3.58974358974vw] leading-[6.15384615385vw] text-[#505050] PingAR-Light lg:mt-[0.41666666666vw] mt-[2.05128205128vw]">
               Rapid, in-clinic imaging, testing, and medication dispensing with

@@ -113,7 +113,7 @@ const BringingLoving = () => {
             />
             <div className="text-center">
               <h5 className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw] lg:text-[1.354166666666667vw] lg:leading-[1.979166666666667vw] text-[4.871794871794872vw] leading-[9.743589743589744vw] PingAR-Medium text-[#3B3659]">
-                Women's wellness
+                Women`&apos;`swellness
               </h5>
               <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.9512195122vw] lg:text-[1.14583333333vw] lg:leading-[1.458333333333333vw] text-[3.58974358974359vw] leading-[6.153846153846154vw] PingAR-Light text-[#707070] lg:mt-[0.4166666666666667vw] mt-[2vw]">
                 Comprehensive healthcare tailored for women.
