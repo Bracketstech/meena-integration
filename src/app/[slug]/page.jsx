@@ -4,7 +4,7 @@ import Locations from '../../components/Pages/Locations/Index'
 import Services from '../../components/Pages/Services/Index'
 import HelpAndSupport from '../../components/Pages/HelpAndSupport/Index'
 import About from "@/components/Pages/About"
-import Careers from "@/components/Pages/Careers"
+import Careers from "@/components/Pages/Careers/Index"
 
 export default async function Page({ params }) { 
     const {slug} =params 
