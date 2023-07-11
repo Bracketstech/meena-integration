@@ -1,8 +1,15 @@
-import React from 'react'
+'use client'
+import { useEffect, useState } from 'react';
 import { Navigation } from 'swiper/modules';
 import {Swiper,SwiperSlide} from 'swiper/react';
 
 const FutureHealthCareSwiper = () => {
+  const [swiperGap,setSwiperGap] = useState(0)
+  const [slidesPerView,setSlidesPerView] = useState(0)
+  useEffect(()=>{
+    setSwiperGap(window.innerWidth>768? window.innerWidth /100 * 20.8333333333 : window.innerWidth /100 * 6.66666666667)
+    setSlidesPerView(window.innerWidth>768? 1: 1)
+  },[])
   return (
    <>
      <h2
@@ -18,7 +25,7 @@ const FutureHealthCareSwiper = () => {
     </h2>
     {/* Swiper */}
     <div className="lg:pb-[8.4375vw] pb-[15.12820512820513vw] sm:pb-[14.6341463415vw]">
-      <Swiper modules={[Navigation]} spaceBetween={window.innerWidth>768? window.innerWidth /100 * 20.8333333333 : window.innerWidth /100 * 6.66666666667} slidesPerView={window.innerWidth>768? 1: 1} className="swiper mySwiper lg:w-[75vw] lg:pt-[2.5vw] pt-[6.15384615385vw] sm:pt-[4.87804878049vw]  lg:pb-[2.91666666667vw] pb-[8.717948717948718vw] aboutAppSwiper">
+      <Swiper modules={[Navigation]} spaceBetween={swiperGap} slidesPerView={slidesPerView} className="swiper mySwiper lg:w-[75vw] lg:pt-[2.5vw] pt-[6.15384615385vw] sm:pt-[4.87804878049vw]  lg:pb-[2.91666666667vw] pb-[8.717948717948718vw] aboutAppSwiper">
       <SwiperSlide className="swiper-slide">
             <div className="flex items-center justify-center lg:gap-x-[4.21875vw] flex-col lg:flex-row gap-y-[4.10256410256vw]">
               <div
@@ -33,7 +40,7 @@ const FutureHealthCareSwiper = () => {
                 {/* <img
                     src="/images/about-app/design.png"
                     alt="design"
-                    class="lg:w-[3.38541666667vw] w-[7.69230769231vw] lg:right-[3.125vw] lg:top-[3.125vw] top-[7.17948717949vw] right-[7.17948717949vw] absolute"
+                    className="lg:w-[3.38541666667vw] w-[7.69230769231vw] lg:right-[3.125vw] lg:top-[3.125vw] top-[7.17948717949vw] right-[7.17948717949vw] absolute"
                   /> */}
                 <svg
                   className="h-[8.20512820513vw] lg:h-[unset] lg:w-[3.38541666667vw] w-[7.69230769231vw]  lg:top-[3.125vw] top-[7.17948717949vw] aboutApp__Asterisk absolute"
@@ -136,7 +143,7 @@ const FutureHealthCareSwiper = () => {
                 {/* <img
                     src="/images/about-app/design.png"
                     alt="design"
-                    class="lg:w-[3.38541666667vw] w-[7.69230769231vw] lg:right-[3.125vw] lg:top-[3.125vw] top-[7.17948717949vw] right-[7.17948717949vw] absolute"
+                    className="lg:w-[3.38541666667vw] w-[7.69230769231vw] lg:right-[3.125vw] lg:top-[3.125vw] top-[7.17948717949vw] right-[7.17948717949vw] absolute"
                   /> */}
                 <svg
                   className="h-[8.20512820513vw] lg:h-[unset] lg:w-[3.38541666667vw] w-[7.69230769231vw]  lg:top-[3.125vw] top-[7.17948717949vw] aboutApp__Asterisk absolute"
@@ -239,7 +246,7 @@ const FutureHealthCareSwiper = () => {
                 {/* <img
                     src="/images/about-app/design.png"
                     alt="design"
-                    class="lg:w-[3.38541666667vw] w-[7.69230769231vw] lg:right-[3.125vw] lg:top-[3.125vw] top-[7.17948717949vw] right-[7.17948717949vw] absolute"
+                    className="lg:w-[3.38541666667vw] w-[7.69230769231vw] lg:right-[3.125vw] lg:top-[3.125vw] top-[7.17948717949vw] right-[7.17948717949vw] absolute"
                   /> */}
                 <svg
                   className="h-[8.20512820513vw] lg:h-[unset] lg:w-[3.38541666667vw] w-[7.69230769231vw]  lg:top-[3.125vw] top-[7.17948717949vw] aboutApp__Asterisk absolute"
@@ -342,7 +349,7 @@ const FutureHealthCareSwiper = () => {
                 {/* <img
                     src="/images/about-app/design.png"
                     alt="design"
-                    class="lg:w-[3.38541666667vw] w-[7.69230769231vw] lg:right-[3.125vw] lg:top-[3.125vw] top-[7.17948717949vw] right-[7.17948717949vw] absolute"
+                    className="lg:w-[3.38541666667vw] w-[7.69230769231vw] lg:right-[3.125vw] lg:top-[3.125vw] top-[7.17948717949vw] right-[7.17948717949vw] absolute"
                   /> */}
                 <svg
                   className="h-[8.20512820513vw] lg:h-[unset] lg:w-[3.38541666667vw] w-[7.69230769231vw]  lg:top-[3.125vw] top-[7.17948717949vw] aboutApp__Asterisk absolute"

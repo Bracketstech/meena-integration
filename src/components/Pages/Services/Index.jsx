@@ -1,15 +1,18 @@
+"use client"
 import SubPageHero from '@/components/SubPageHero'
 import React from 'react'
 import PrimaryCare from './PrimaryCare'
 import Ecosystem from './Ecosystem'
 import WellBeingPrograms from './WellBeingPrograms'
 import BookYourAppointment from '@/components/BookYourAppointment'
+import useAnimations from '@/hooks/useAnimations'
 
-const Index = () => {
+const Index = ({arabic}) => {
+    useAnimations()
     return (
         <main>
             <SubPageHero
-                boldtext="Services"
+                boldtext={ "Services"}
                 text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
         eirmod tempor invidunt ut labore et dolore magna"
             />

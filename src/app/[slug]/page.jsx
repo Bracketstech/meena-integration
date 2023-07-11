@@ -1,18 +1,13 @@
-import getBottomNavData from "@/lib/data-hooks/getBottomNavData"
-import getTopNavData from "@/lib/data-hooks/getTopNavData"
-import Locations from '../../components/Pages/Locations/Index'
-import Services from '../../components/Pages/Services/Index'
-import HelpAndSupport from '../../components/Pages/HelpAndSupport/Index'
-import About from "@/components/Pages/About"
+import AboutMeena from "@/components/Pages/AboutMeena/Index"
 import Careers from "@/components/Pages/Careers/Index"
+import HelpAndSupport from '@/components/Pages/HelpAndSupport/Index'
+import Locations from '@/components/Pages/Locations/Index'
+import Services from '@/components/Pages/Services/Index'
+import usePageId from "@/hooks/usePageId"
 
 export default async function Page({ params }) { 
     const {slug} =params 
-    const topNavData = await getTopNavData()
-    const bottomNavData = await getBottomNavData()
-    const filteredDataTop = topNavData.nav.treeEn.filter(({page})=>page.url.replace('/',"") == slug ) 
-    const filteredDataBottom = bottomNavData.nav.treeEn.filter(({page})=>page.url.replace('/',"") == slug ) 
-    const id = filteredDataTop[0] ? filteredDataTop[0].page.id :filteredDataBottom[0]?.page.id
+    const id = await usePageId(slug) 
    switch (id) {
             case "300942ec-7d92-4f42-b8b2-15250cbf1c04":
                     return <> 
@@ -28,7 +23,7 @@ export default async function Page({ params }) {
                     </>
             case "464bc255-fcaa-40f3-a9b3-6dff74e5436b":
                     return <> 
-                    <About/>
+                    <AboutMeena/>
                     </>
             case "2f433ac6-6b0b-4a65-bcb8-2f84b7e6b211":
                     return <> 

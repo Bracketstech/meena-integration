@@ -12,7 +12,7 @@ const OurFeatures = () => {
     {/* <img
             src="/images/about-app/design.png"
             alt="design"
-            class="lg:w-[3.02083333333vw] w-[7.69230769231vw] lg:top-[-2.08333333333vw] lg:left-[-1.51041666667vw] left-[8.20512820513vw] top-[-8.20512820513vw] absolute"
+            className="lg:w-[3.02083333333vw] w-[7.69230769231vw] lg:top-[-2.08333333333vw] lg:left-[-1.51041666667vw] left-[8.20512820513vw] top-[-8.20512820513vw] absolute"
           /> */}
     <svg
       className="h-[8.46153846154vw] lg:h-[unset] lg:w-[3.02083333333vw] asterisk w-[7.69230769231vw]  lg:top-[-2.08333333333vw] aboutAppFeature__Asterisk top-[-8.20512820513vw] absolute sm:top-[-6.09756097561vw] sm:w-[6.09756097561vw]"

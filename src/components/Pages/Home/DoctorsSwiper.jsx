@@ -1,8 +1,15 @@
 'use client'
+import { useEffect, useState } from 'react';
 import { Navigation } from 'swiper/modules';
 import {Swiper,SwiperSlide} from 'swiper/react';
 
 const DoctorsSwiper = () => {
+  const [swiperGap,setSwiperGap] = useState(0)
+  const [slidesPerView,setSlidesPerView] = useState(0)
+  useEffect(()=>{
+    setSwiperGap(window.innerWidth>768? window.innerWidth /100 * 2.5 :window.innerWidth /100 * 4.10256410256)
+    setSlidesPerView(window.innerWidth>1024? 4  : window.innerWidth > 600 ? 2.5: 1.31)
+  },[])
   return (
     <div className="relative">
     <span className="healthCare__Overlay absolute w-full h-[149.743589744vw] lg:h-[41.3541666667vw] bottom-0 leftRightFixer1"></span>
@@ -16,7 +23,7 @@ const DoctorsSwiper = () => {
       </h3>
       <div className="flex justify-end lg:justify-[normal]">
         <div className="lg:w-[75vw] w-[93%] lg:mx-[auto]">
-          <Swiper modules={[Navigation]} spaceBetween={window.innerWidth>768? window.innerWidth /100 * 2.5 :window.innerWidth /100 * 4.10256410256} slidesPerView={window.innerWidth>768? 4 : 1.31} className="sm:pb-[14.6341463415vw] sm:pt-[4.87804878049vw] swiper doctorsSwiper w-full lg:pt-[2.5vw] pt-[6.15384615385vw] pb-[17.358974359vw] lg:pb-[5.885416666666667vw]">
+          <Swiper modules={[Navigation]} spaceBetween={swiperGap} slidesPerView={slidesPerView} className="sm:pb-[14.6341463415vw] sm:pt-[4.87804878049vw] swiper doctorsSwiper w-full lg:pt-[2.5vw] pt-[6.15384615385vw] pb-[17.358974359vw] lg:pb-[5.885416666666667vw]">
  <SwiperSlide
                 className="swiper-slide"
                 data-aos="fade"

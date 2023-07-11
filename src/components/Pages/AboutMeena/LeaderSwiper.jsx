@@ -1,8 +1,15 @@
 'use client'
+import { useEffect, useState } from 'react';
 import { Navigation } from 'swiper/modules';
 import {Swiper,SwiperSlide} from 'swiper/react';
 
 const LeaderSwiper = () => {
+  const [swiperGap,setSwiperGap] = useState(0)
+  const [slidesPerView,setSlidesPerView] = useState(0)
+  useEffect(()=>{
+    setSwiperGap(window.innerWidth>768? window.innerWidth /100 * 2.5 :window.innerWidth /100 * 4.10256410256)
+    setSlidesPerView(window.innerWidth>768? 4 : 1.31)
+  },[])
   return (
     <div className="relative z-[2]">
   <h3
@@ -15,7 +22,7 @@ const LeaderSwiper = () => {
   <div className="flex justify-end lg:justify-[norma]">
     <div className="lg:w-[75vw] w-[93%] lg:mx-[auto]">
       {/* Swiper */}
-      <Swiper modules={[Navigation]} spaceBetween={window.innerWidth>768? window.innerWidth /100 * 2.5 :window.innerWidth /100 * 4.10256410256} slidesPerView={window.innerWidth>768? 4 : 1.31} className="sm:pb-[14.6341463415vw] sm:pt-[4.87804878049vw] swiper doctorsSwiper w-full lg:pt-[2.5vw] pt-[6.15384615385vw] pb-[14.358974359vw] lg:pb-[5.885416666666667vw]">
+      <Swiper modules={[Navigation]} spaceBetween={swiperGap} slidesPerView={slidesPerView} className="sm:pb-[14.6341463415vw] sm:pt-[4.87804878049vw] swiper doctorsSwiper w-full lg:pt-[2.5vw] pt-[6.15384615385vw] pb-[14.358974359vw] lg:pb-[5.885416666666667vw]">
       <SwiperSlide data-aos="fade" data-aos-delay="00" className="swiper-slide">
             <img
               src="/images/about-meena/leaders/1.jpg"

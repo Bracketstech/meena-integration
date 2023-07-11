@@ -1,4 +1,4 @@
-import React from 'react'
+'use client'
 import Hero from './Hero'
 import Info from './Info'
 import MeenaLocations from './MeenaLocations'
@@ -6,11 +6,14 @@ import BookYourAppointment from '@/components/BookYourAppointment'
 import DoctorsSwiper from './DoctorsSwiper'
 import PatientsSwiper from './PatientsSwiper'
 import LatestNewsSwiper from './LatestNewsSwiper'
+import useAnimations from '@/hooks/useAnimations'
 
-const HomePage = () => {
+const HomePage = ({arabic}) => {
+  useAnimations()
+ 
   return (
     <main>
-      <Hero />
+      <Hero arabic={arabic}/>
       <Info />
       <section>
   <div>

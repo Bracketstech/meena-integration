@@ -1,14 +1,21 @@
 'use client'
+import { useEffect, useState } from 'react';
 import { Navigation } from 'swiper/modules';
 import {Swiper,SwiperSlide} from 'swiper/react';
 
 const Qualifications = () => {
+  const [swiperGap,setSwiperGap] = useState(0)
+  const [slidesPerView,setSlidesPerView] = useState(0)
+  useEffect(()=>{
+    setSwiperGap(window.innerWidth>768? window.innerWidth /100 * 2.91666666667 : window.innerWidth /100 * 6.66666666667)
+    setSlidesPerView(window.innerWidth>768? 4 : 1.31)
+  },[])
   return (
     <div className="relative lg:pt-[6.875vw] pt-[6.15384615385vw]">
   <span className="healthCare__Overlay absolute w-full lg:h-[49.4270833333vw] h-[258.717948718vw] top-0 leftRightFixer1"></span>
   <div className="sm:pt-[7.31707317073vw] sm:pb-[14.6341463415vw] relative z-[2] w-full flex lg:gap-x-[7.29166666667vw] lg:justify-start lg:items-stjustify-start items-end lg:flex-row flex-col-reverse gap-y-[6.41025641026vw] lg:pt-[6.96666666667vw] pt-[12.8205128205vw] lg:pb-[10.4166666667vw] pb-[20.5128205128vw]">
     <div className="lg:w-[53.125vw] w-[94.358974359vw] aboutMeenaSwiper__Main">
-      <Swiper modules={[Navigation]} spaceBetween={window.innerWidth>768? window.innerWidth /100 * 2.91666666667 : window.innerWidth /100 * 6.66666666667} slidesPerView={window.innerWidth>768? 4.7: 3.6} className="sm:pb-[6.82926829268vw] swiper mySwiper aboutMeenaSwiper lg:pb-[3.38541666667vw] pb-[9.74358974359vw]">
+      <Swiper modules={[Navigation]} spaceBetween={swiperGap} slidesPerView={slidesPerView} className="sm:pb-[6.82926829268vw] swiper mySwiper aboutMeenaSwiper lg:pb-[3.38541666667vw] pb-[9.74358974359vw]">
       <SwiperSlide data-aos="fade" data-aos-delay="00" className="swiper-slide">
             <img
               src="/images/about-meena/partners/1.svg"
@@ -105,7 +112,7 @@ const Qualifications = () => {
         {/* <img
             src="/images/about-app/design.png"
             alt="design"
-            class="lg:w-[3.02083333333vw] w-[7.69230769231vw] lg:top-[-3.22916666667vw] lg:left-[-3.02083333333vw] left-[-7.69230769231vw] top-[-8.20512820513vw] absolute"
+            className="lg:w-[3.02083333333vw] w-[7.69230769231vw] lg:top-[-3.22916666667vw] lg:left-[-3.02083333333vw] left-[-7.69230769231vw] top-[-8.20512820513vw] absolute"
           /> */}
         <svg
           className="sm:w-[5.36585365854vw] sm:top-[-6.09756097561vw] h-[8.46153846154vw] lg:h-[unset] lg:w-[3.02083333333vw] asterisk about__Asterisk w-[7.69230769231vw] lg:top-[-3.22916666667vw] top-[-8.20512820513vw] absolute"

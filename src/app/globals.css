@@ -8,7 +8,9 @@
   font-weight: 300;
   display: block;
 }
-
+.rtl {
+  direction: rtl;
+}
 @font-face {
   font-family: "PingAR-Regular";
   src: url(../assets/fonts/PingAR+LT-Regular.otf);
@@ -31,7 +33,6 @@
 }
 
 body {
-  /* background-color: #2d2755; */
   font-family: "PingAR-Regular";
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -134,13 +135,13 @@ cursor-pointer;
     @apply font-[300] h-[5.38461538462vw] sm:h-[4.0243902439vw] lg:h-[unset] lg:text16;
   }
   .rtl .arToggler {
-    @apply font-[700] lg:text16 pointer-events-none;
+    @apply lg:text16;
   }
   .ltr .enToggler {
     @apply font-[700] text16 pointer-events-none;
   }
   .rtl .enToggler {
-    @apply font-[300] text16;
+    @apply font-[700] text16 pointer-events-none;
   }
   .toggle {
     @apply w-[26px] min-w-[26px] lg:min-w-[unset] relative h-[6.5px] lg:h-[0.72916666666vw] lg:w-[2.91666666667vw] bg-[#DCDCDC] rounded-[10px] lg:rounded-[1vw];
@@ -516,7 +517,7 @@ header {
 .sidebar.active {
   opacity: 1 !important;
   pointer-events: initial !important;
-  z-index: 2;
+  z-index: 3;
 }
 
 body.active {

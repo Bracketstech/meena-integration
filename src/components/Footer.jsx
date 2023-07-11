@@ -1,18 +1,29 @@
+import getBottomNavData from '@/lib/data-hooks/getBottomNavData';
+import getTopNavData from '@/lib/data-hooks/getTopNavData';
+import Link from 'next/link';
 import React from 'react'
 
-const Footer = () => {
+const Footer = async ({arabic}) => {
+  const topData = await getTopNavData();
+  const bottomData = await getBottomNavData();
+  const bottomDataAccordingToSite = arabic
+    ? bottomData.nav.treeAr
+    : bottomData.nav.treeEn;
+  const topDataAccordingToSite = arabic
+    ? topData.nav.treeAr
+    : topData.nav.treeEn;
   return (
     <footer>
     <div className="bg-[#3B3659] relative">
       {/* <img
       src="/images/icons/footerbg-design.png"
       alt="footerbg-design"
-      class="hidden lg:block lg:w-[18.6458333333vw] absolute leftRightFixer2 top-0"
+      className="hidden lg:block lg:w-[18.6458333333vw] absolute leftRightFixer2 top-0"
     /> */}
       <img
         src="/images/icons/footerbg-design.svg"
         alt="footerbg-design"
-        className="hidden lg:block lg:w-[18.1458333333vw] absolute leftRightFixer2 bottom-0"
+        className="hidden lg:block flipped lg:w-[18.1458333333vw] absolute leftRightFixer2 bottom-0"
       />
       <img
         src="/images/icons/footerbg-design-mob.svg"
@@ -22,7 +33,7 @@ const Footer = () => {
       <div className="sm:py-[7.31707317073vw] relative z-[2] Container1680 lg:pt-[4.16666666667vw] lg:pb-[4.47916666667vw] py-[12.30769230769231vw]">
         <div className="sm:gap-y-[7.31707317073vw] flex lg:gap-x-[9.375vw] flex-wrap gap-y-[12.30769230769231vw] gap-x-[12.30769230769231vw] justify-center lg:justify-normal">
           <div className="lg:w-[22.9166666667vw] text-center lg:text-start">
-            <a href="./index.html">
+            <a href="./index">
               <img
                 src="/images/icons/footer-logo.svg"
                 alt="logo"
@@ -40,26 +51,16 @@ const Footer = () => {
               Site map
             </h5>
             <ul className="sm:mt-[1.46341463415vw] sm:gap-y-[1.46341463415vw] sm:text-[1.82926829268vw] sm:leading-[3.0487804878vw] leading-[4.87179487179vw] items-center lg:items-start footerLinks PingAR-Light lg:text-[0.9375vw] lg:leading-[1.45833333333vw] text-[3.076923076923077vw] lg:mt-[0.41666666666vw] flex flex-col lg:gap-y-[0.26041666666vw] gap-y-[2.051282051282051vw] mt-[3.076923076923077vw]">
-              <li>
-                <a href="./index.html">
-                  <span>Home</span>
-                </a>
-              </li>
-              <li>
-                <a href="./services.html">
-                  <span>Services</span>
-                </a>
-              </li>
-              <li>
-                <a href="./locations.html">
-                  <span>Locations</span>
-                </a>
-              </li>
-              <li>
-                <a href="./help-and-support.html">
-                  <span>Help &amp; support</span>
-                </a>
-              </li>
+            {
+                                  bottomDataAccordingToSite.map((item) => (
+                                    <li key={item.page.title}>
+                                    <Link href={item.page.url}>
+                                      <span>{item.page.title}</span>
+                                    </Link>
+                                  </li>  
+                                  ))
+
+                }
             </ul>
           </div>
           <div className="text-[#E6E7E7]">
@@ -67,25 +68,26 @@ const Footer = () => {
               Other links
             </h5>
             <ul className="sm:mt-[1.46341463415vw] sm:gap-y-[1.46341463415vw] sm:text-[1.82926829268vw] sm:leading-[3.0487804878vw] leading-[4.87179487179vw] items-center lg:items-start footerLinks PingAR-Light lg:text-[0.9375vw] lg:leading-[1.45833333333vw] text-[3.076923076923077vw] lg:mt-[0.41666666666vw] flex flex-col lg:gap-y-[0.26041666666vw] gap-y-[2.051282051282051vw] mt-[3.076923076923077vw]">
+                {
+                                  topDataAccordingToSite.map((item) => (
+                                    <li key={item.page.title}>
+                                    <Link href={item.page.url}>
+                                      <span>{item.page.title}</span>
+                                    </Link>
+                                  </li>  
+                                  ))
+
+                }
+              
               <li>
-                <a href="./about-meena.html">
-                  <span>About meena</span>
-                </a>
-              </li>
-              <li>
-                <a href="./careers.html">
-                  <span>Careers</span>
-                </a>
-              </li>
-              <li>
-                <a href="./terms-and-conditions.html">
+                <Link href="./terms-and-conditions">
                   <span>Terms &amp; conditions</span>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="./privacy-policy.html">
+                <Link href="./privacy-policy">
                   <span>Privacy policy</span>
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

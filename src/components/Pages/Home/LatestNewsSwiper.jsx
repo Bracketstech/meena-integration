@@ -3,9 +3,16 @@ import { Navigation } from 'swiper/modules';
 import {Swiper,SwiperSlide} from 'swiper/react';
 import NewsCard from '../LatestNews/components/NewsCard'
 import CardData from '../LatestNews/CardData' 
+import { useEffect, useState } from 'react';
 
 
 const LatestNewsSwiper = () => {
+  const [swiperGap,setSwiperGap] = useState(0)
+  const [slidesPerView,setSlidesPerView] = useState(0)
+  useEffect(()=>{
+    setSwiperGap(window.innerWidth>768? window.innerWidth /100 * 2.5 :window.innerWidth /100 * 4.10256410256)
+    setSlidesPerView(window.innerWidth>768? 3 : 1.30)
+  },[])
   return (
     <div className="sm:pt-[14.6341463415vw] pt-[14.35897435897436vw] lg:pt-[5.72916666667vw] lg:pb-[5.72916666667vw]">
   <h3
@@ -18,12 +25,11 @@ const LatestNewsSwiper = () => {
   <div className="flex justify-end lg:justify-[normal]">
     <div className="lg:w-[75vw] w-[93%] lg:mx-[auto]">
       {/* Swiper */}
-      <Swiper modules={[Navigation]} spaceBetween={window.innerWidth>768? window.innerWidth /100 * 2.5 :window.innerWidth /100 * 4.10256410256} slidesPerView={window.innerWidth>768? 3 : 1.30} className="sm:pb-[14.6341463415vw] sm:pt-[4.87804878049vw] swiper homeSwipers w-full lg:pt-[2.5vw] pt-[6.153846153846154vw] lg:pb-[unset] pb-[16.30769230769231vw]">
+      <Swiper modules={[Navigation]} spaceBetween={swiperGap} slidesPerView={setSlidesPerView} className="sm:pb-[14.6341463415vw] sm:pt-[4.87804878049vw] swiper homeSwipers w-full lg:pt-[2.5vw] pt-[6.153846153846154vw] lg:pb-[unset] pb-[16.30769230769231vw]">
         
       {CardData.map((CardDat,index)=>(
-      <SwiperSlide className="swiper-slide" data-aos="fade" data-aos-delay="00">
-        <NewsCard 
-        key={index}
+      <SwiperSlide key={index} className="swiper-slide" data-aos="fade" data-aos-delay="00">
+        <NewsCard  
         image={CardDat.image}
         date={CardDat.date}
         heading={CardDat.heading}
