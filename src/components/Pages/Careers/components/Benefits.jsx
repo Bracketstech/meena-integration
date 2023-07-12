@@ -6,7 +6,7 @@ const Benefits = () => {
     <div
       data-aos="fade"
       data-aos-delay="00"
-      className="sm:h-[36.5853658537vw] sm:w-[48%] lg:w-[23.3333333333vw] w-full bg-[#EBF0F7] lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw] lg:h-[13.3854166667vw] h-[47.1794871795vw] lg:pt-[1.85416666667vw] pt-[8.20512820513vw] items-start"
+      className="sm:pt-[7.92682926829vw] sm:h-[36.5853658537vw] sm:w-[48%] lg:w-[23.3333333333vw] w-full bg-[#EBF0F7] lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw] lg:h-[13.3854166667vw] h-[47.1794871795vw] lg:pt-[1.85416666667vw] pt-[8.20512820513vw] items-start"
     >
       <div className="sm:w-[90%] lg:w-[20.8333333333vw] w-[76.4102564103vw] mx-[auto] flex flex-col items-center lg:gap-y-[0.72916666666vw] gap-y-[3.07692307692vw]">
         <img
@@ -28,14 +28,15 @@ const Benefits = () => {
     <div
       data-aos="fade"
       data-aos-delay={200}
-      className="sm:h-[36.5853658537vw] sm:w-[48%] lg:w-[23.3333333333vw] w-full bg-[#D6D1ED] lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw] lg:h-[13.3854166667vw] h-[47.1794871795vw] lg:pt-[1.85416666667vw] pt-[8.20512820513vw] items-start"
+      className="sm:pt-[7.92682926829vw] sm:h-[36.5853658537vw] sm:w-[48%] lg:w-[23.3333333333vw] w-full bg-[#D6D1ED] lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw] lg:h-[13.3854166667vw] h-[47.1794871795vw] lg:pt-[1.85416666667vw] pt-[8.20512820513vw] items-start"
     >
       <div className="sm:w-[90%] lg:w-[20.8333333333vw] w-[76.4102564103vw] mx-[auto] flex flex-col items-center lg:gap-y-[0.72916666666vw] gap-y-[3.07692307692vw]">
         <img
           src="
           /images/icons/healthcare-icons-home/2.svg"
           alt="healthcare-icons"
-          className="lg:w-[2.8125vw] w-[10vw] sm:w-[6.34146341463vw]"
+          className="lg:w-[2.8125vw] w-[10vw] 
+          sm:w-[5.60975609756vw]"
         />
         <div className="text-center">
           <h5 className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw]  lg:text-[1.354166666666667vw] lg:leading-[1.979166666666667vw] text-[4.871794871794872vw] leading-[9.743589743589744vw] PingAR-Medium text-[#3B3659]">
@@ -50,7 +51,7 @@ const Benefits = () => {
     <div
       data-aos="fade"
       data-aos-delay={400}
-      className="sm:h-[36.5853658537vw] sm:w-[48%] lg:w-[23.3333333333vw] w-full bg-[#F0F0F0] lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw] lg:h-[13.3854166667vw] h-[47.1794871795vw] lg:pt-[1.85416666667vw] pt-[8.20512820513vw] items-start"
+      className="sm:pt-[7.92682926829vw] sm:h-[36.5853658537vw] sm:w-[48%] lg:w-[23.3333333333vw] w-full bg-[#F0F0F0] lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw] lg:h-[13.3854166667vw] h-[47.1794871795vw] lg:pt-[1.85416666667vw] pt-[8.20512820513vw] items-start"
     >
       <div className="sm:w-[90%] lg:w-[20.8333333333vw] w-[76.4102564103vw] mx-[auto] flex flex-col items-center lg:gap-y-[0.72916666666vw] gap-y-[3.07692307692vw]">
         <img
@@ -72,7 +73,7 @@ const Benefits = () => {
     <div
       data-aos="fade"
       data-aos-delay="00"
-      className="sm:h-[36.5853658537vw] sm:w-[48%] lg:w-[23.3333333333vw] w-full bg-[#F0F0F0] lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw] lg:h-[13.3854166667vw] h-[47.1794871795vw] lg:pt-[1.85416666667vw] pt-[8.20512820513vw] items-start"
+      className="sm:pt-[7.92682926829vw] sm:h-[36.5853658537vw] sm:w-[48%] lg:w-[23.3333333333vw] w-full bg-[#F0F0F0] lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw] lg:h-[13.3854166667vw] h-[47.1794871795vw] lg:pt-[1.85416666667vw] pt-[8.20512820513vw] items-start"
     >
       <div className="sm:w-[90%] lg:w-[20.8333333333vw] w-[76.4102564103vw] mx-[auto] flex flex-col items-center lg:gap-y-[0.72916666666vw] gap-y-[3.07692307692vw]">
         <img
@@ -94,7 +95,7 @@ const Benefits = () => {
     <div
       data-aos="fade"
       data-aos-delay={200}
-      className="sm:h-[36.5853658537vw] sm:w-[48%] lg:w-[23.3333333333vw] w-full bg-[#F5EBE8] lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw] lg:h-[13.3854166667vw] h-[47.1794871795vw] lg:pt-[1.85416666667vw] pt-[8.20512820513vw] items-start"
+      className="sm:pt-[7.92682926829vw] sm:h-[36.5853658537vw] sm:w-[48%] lg:w-[23.3333333333vw] w-full bg-[#F5EBE8] lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw] lg:h-[13.3854166667vw] h-[47.1794871795vw] lg:pt-[1.85416666667vw] pt-[8.20512820513vw] items-start"
     >
       <div className="sm:w-[90%] lg:w-[20.8333333333vw] w-[76.4102564103vw] mx-[auto] flex flex-col items-center lg:gap-y-[0.72916666666vw] gap-y-[3.07692307692vw]">
         <img
@@ -116,7 +117,7 @@ const Benefits = () => {
     <div
       data-aos="fade"
       data-aos-delay={400}
-      className="sm:h-[36.5853658537vw] sm:w-[48%] lg:w-[23.3333333333vw] w-full bg-[#EBF0F7] lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw] lg:h-[13.3854166667vw] h-[47.1794871795vw] lg:pt-[1.85416666667vw] pt-[8.20512820513vw] items-start"
+      className="sm:pt-[7.92682926829vw] sm:h-[36.5853658537vw] sm:w-[48%] lg:w-[23.3333333333vw] w-full bg-[#EBF0F7] lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw] lg:h-[13.3854166667vw] h-[47.1794871795vw] lg:pt-[1.85416666667vw] pt-[8.20512820513vw] items-start"
     >
       <div className="sm:w-[90%] lg:w-[20.8333333333vw] w-[76.4102564103vw] mx-[auto] flex flex-col items-center lg:gap-y-[0.72916666666vw] gap-y-[3.07692307692vw]">
         <img

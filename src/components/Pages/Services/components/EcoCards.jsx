@@ -1,8 +1,8 @@
 import React from 'react'
 
-const EcoCards = () => {
+const EcoCards = ({arabic}) => {
   return (
-    <div className="flex items-stretch justify-center sm:justify-between lg:justify-center lg:gap-x-[2.5vw] lg:pt-[2.5vw] flex-wrap sm:gap-y-[3.658536585365854vw] gap-y-[4.10256410256vw] lg:gap-y-[2.60416666667vw] pt-[6.15384615385vw] pb-[6.15384615385vw] sm:pt-[4.878048780487805vw] sm:pb-[7.317073170731707vw] lg:pb-[unset]">
+    <div className={`flex items-stretch  ${arabic ? "flex-row-reverse":"flex-row"} justify-center sm:justify-between lg:justify-center lg:gap-x-[2.5vw] lg:pt-[2.5vw] flex-wrap sm:gap-y-[3.658536585365854vw] gap-y-[4.10256410256vw] lg:gap-y-[2.60416666667vw] pt-[6.15384615385vw] pb-[6.15384615385vw] sm:pt-[4.878048780487805vw] sm:pb-[7.317073170731707vw] lg:pb-[unset]`}>
       <div
         data-aos="fade"
         className="sm:w-[48%] sm:h-[44.5609756098vw] w-full lg:w-[23.3333333333vw] bg-[#F5EBE8] lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw] lg:h-[15.9895833333vw] h-[61.5384615385vw] lg:pt-[1.97916666667vw] flex pt-[8.20512820513vw] items-start"
@@ -15,11 +15,11 @@ const EcoCards = () => {
           />
           <div className="text-center">
             <h5 className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw] lg:text-[1.354166666666667vw] lg:leading-[2.1875vw] PingAR-Bold text-[4.87179487179vw] leading-[7.69230769231vw] text-[#845FFF]">
-              Care where you need it
+              {arabic ? "اهتم حيثما تحتاجها": "Care where you need it"}
             </h5>
             <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[0.9375vw] lg:leading-[1.45833333333vw] text-[3.58974358974vw] leading-[6.15384615385vw] text-[#505050] PingAR-Light lg:mt-[0.41666666666vw] mt-[2.05128205128vw]">
-              Clinics located near you, in your neighborhoods and your communal
-              areas, and through your phone
+              {arabic ? "عيادات تقع بالقرب منك ، في أحيائك والمناطق العامة الخاصة بك ، ومن خلال هاتفك": "Clinics located near you, in your neighborhoods and your communal areas, and through your phone"}
+              
             </p>
           </div>
         </div>
@@ -37,10 +37,10 @@ const EcoCards = () => {
           />
           <div className="text-center">
             <h5 className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw] lg:text-[1.354166666666667vw] lg:leading-[2.1875vw] PingAR-Bold text-[4.87179487179vw] leading-[7.69230769231vw] text-[#845FFF]">
-              Care when you need it
+              {arabic ? "اهتم عندما تحتاجها": "Care when you need it"}
             </h5>
             <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[0.9375vw] lg:leading-[1.45833333333vw] text-[3.58974358974vw] leading-[6.15384615385vw] text-[#505050] PingAR-Light lg:mt-[0.41666666666vw] mt-[2.05128205128vw]">
-              Urgent care center providing emergency care when you need it
+              {arabic ? "مركز رعاية عاجلة يقدم الرعاية الطارئة عند الحاجة إليها": "Urgent care center providing emergency care when you need it"}
             </p>
           </div>
         </div>
@@ -58,11 +58,11 @@ const EcoCards = () => {
           />
           <div className="text-center">
             <h5 className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw] lg:text-[1.354166666666667vw] lg:leading-[2.1875vw] PingAR-Bold text-[4.87179487179vw] leading-[7.69230769231vw] text-[#845FFF]">
-              Care with a personal touch
+            {arabic ? "رعاية بلمسة شخصية": "Care with a personal touch"}
             </h5>
             <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[0.9375vw] lg:leading-[1.45833333333vw] text-[3.58974358974vw] leading-[6.15384615385vw] text-[#505050] PingAR-Light lg:mt-[0.41666666666vw] mt-[2.05128205128vw]">
-              Care journey management including follow ups, recommendations and
-              referrals facilitated by care coordinators
+            {arabic ? "إدارة رحلة الرعاية بما في ذلك المتابعة والتوصيات والإحالات التي ييسرها منسقو الرعاية": "Care journey management including follow ups, recommendations and referrals facilitated by care coordinators"}
+              
             </p>
           </div>
         </div>
@@ -83,12 +83,12 @@ const EcoCards = () => {
               id="lineanimation3"
               className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw] lg:text-[1.354166666666667vw] lg:leading-[2.1875vw] PingAR-Bold text-[4.87179487179vw] leading-[7.69230769231vw] text-[#845FFF]"
             >
-              Care that`&apos;`sconvenient
+              {arabic ? "رعاية مريحة": "Care that's convenient"}
             </h5>
             <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[0.9375vw] lg:leading-[1.45833333333vw] text-[3.58974358974vw] leading-[6.15384615385vw] text-[#505050] PingAR-Light lg:mt-[0.41666666666vw] mt-[2.05128205128vw]">
-              Integrated care at your fingertips through our mobile app, where you
-              can access e-prescriptions, imaging reports, diagnostics, and
-              teleconsultations
+            {arabic ? "رعاية متكاملة في متناول يدك من خلال تطبيق الهاتف المحمول الخاص بنا ، حيث يمكنك الوصول إلى الوصفات الطبية الإلكترونية وتقارير التصوير والتشخيصات والاستشارات عن بُعد": "Integrated care at your fingertips through our mobile app, where you can access e-prescriptions, imaging reports, diagnostics, and teleconsultations"}
+               
+              
             </p>
           </div>
         </div>
@@ -106,11 +106,11 @@ const EcoCards = () => {
           />
           <div className="text-center">
             <h5 className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw] lg:text-[1.354166666666667vw] lg:leading-[2.1875vw] PingAR-Bold text-[4.87179487179vw] leading-[7.69230769231vw] text-[#845FFF]">
-              Care that`&apos;`scomprehensive
+            {arabic ? "رعاية شاملة": "Care that's comprehensive"}
             </h5>
             <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[0.9375vw] lg:leading-[1.45833333333vw] text-[3.58974358974vw] leading-[6.15384615385vw] text-[#505050] PingAR-Light lg:mt-[0.41666666666vw] mt-[2.05128205128vw]">
-              Rapid, in-clinic imaging, testing, and medication dispensing with
-              state-of-the-art facilities
+              {arabic ? "التصوير والاختبار والتصوير السريع في العيادة والاستغناء عن الأدوية بأحدث المرافق": "Rapid, in-clinic imaging, testing, and medication dispensing with state-of-the-art facilities"}
+              
             </p>
           </div>
         </div>

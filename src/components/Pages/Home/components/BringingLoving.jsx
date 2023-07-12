@@ -1,6 +1,6 @@
 import React from 'react'
 
-const BringingLoving = () => {
+const BringingLoving = ({arabic}) => {
   return (
     <div className="relative">
     {/* <img
@@ -48,145 +48,146 @@ const BringingLoving = () => {
         data-aos="fade-up"
         className="lg:w-[34.2708333333vw] PingAR-Regular heading54 tracking-[unset] text-[#3B3659]"
       >
-        Bringing loving care to
-        <span className="PingAR-Bold"> health care. </span>
+       {arabic ? "جلب الرعاية المحبة ": "Bringing loving care to"} 
+        <span className="PingAR-Bold">{arabic ? "للرعاية الصحية": "health care."}  </span>
       </h3>
       <div
         id="lineanimation2"
-        className="sm:pt-[4.87804878049vw] flex items-stretch justify-between lg:pt-[2.5vw] flex-wrap gap-y-[4.10256410256vw] lg:gap-y-[2.60416666667vw] pt-[6.15384615385vw]"
+        className="sm:pt-[4.87804878049vw] flex items-stretch justify-between lg:pt-[2.5vw] flex-wrap gap-y-[4.10256410256vw] sm:gap-y-[3.65853658537vw] lg:gap-y-[2.60416666667vw] pt-[6.15384615385vw]"
       >
-        <div
-          data-aos="fade"
-          data-aos-delay="00"
-          className="sm:h-[31.7073170732vw] sm:pt-[6.097561vw] lg:w-[23.3333333333vw] w-full bg-[#EBF0F7] lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw] lg:h-[13.3854166667vw] h-[47.1794871795vw] lg:pt-[1.85416666667vw] pt-[8.20512820513vw] items-start"
-        >
-          <div className="sm:gap-y-[1.46341463415vw] sm:w-[90%] lg:w-[20.8333333333vw] w-[76.4102564103vw] mx-[auto] flex flex-col items-center lg:gap-y-[0.72916666666vw] gap-y-[3.07692307692vw]">
-            <img
-              src="
-              /images/icons/healthcare-icons-home/1.svg"
-              alt="healthcare-icons"
-              className="lg:w-[3.59375vw] w-[12.5641025641vw] sm:w-[5.12195121951vw]"
-            />
-            <div className="text-center">
-              <h5 className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw] lg:text-[1.354166666666667vw] lg:leading-[1.979166666666667vw] text-[4.871794871794872vw] leading-[9.743589743589744vw] PingAR-Medium text-[#3B3659]">
-                Regular health checkups
-              </h5>
-              <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.9512195122vw] lg:text-[1.14583333333vw] lg:leading-[1.458333333333333vw] text-[3.58974358974359vw] leading-[6.153846153846154vw] PingAR-Light text-[#707070] lg:mt-[0.4166666666666667vw] mt-[2vw]">
-                Take care of your overall well-being with regular checkups.
-              </p>
-            </div>
-          </div>
+     <div
+      data-aos="fade"
+      data-aos-delay="00"
+      className="sm:pt-[7.92682926829vw] sm:h-[36.5853658537vw] sm:w-[48%] lg:w-[23.3333333333vw] w-full bg-[#EBF0F7] lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw] lg:h-[13.3854166667vw] h-[47.1794871795vw] lg:pt-[1.85416666667vw] pt-[8.20512820513vw] items-start"
+    >
+      <div className="sm:w-[90%] lg:w-[20.8333333333vw] w-[76.4102564103vw] mx-[auto] flex flex-col items-center lg:gap-y-[0.72916666666vw] gap-y-[3.07692307692vw]">
+        <img
+          src="
+          /images/icons/healthcare-icons-home/1.svg"
+          alt="healthcare-icons"
+          className="lg:w-[3.59375vw] w-[12.5641025641vw] sm:w-[6.34146341463vw]"
+        />
+        <div className="text-center">
+          <h5 className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw]  lg:text-[1.354166666666667vw] lg:leading-[1.979166666666667vw] text-[4.871794871794872vw] leading-[9.743589743589744vw] PingAR-Medium text-[#3B3659]">
+          {arabic ? "فحوصات طبية منتظمة": "Regular health checkups"}
+          </h5>
+          <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[1.14583333333vw] lg:leading-[1.458333333333333vw] text-[3.58974358974359vw] leading-[6.153846153846154vw] PingAR-Light text-[#707070] lg:mt-[0.4166666666666667vw] mt-[2vw]">
+          {arabic ? "اعتني بصحتك العامة من خلال الفحوصات المنتظمة.": "Take care of your overall well-being with regular checkups."}
+          </p>
         </div>
-        <div
-          data-aos="fade"
-          data-aos-delay="200"
-          className="sm:h-[31.7073170732vw] sm:pt-[6.097561vw] lg:w-[23.3333333333vw] w-full bg-[#D6D1ED] lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw] lg:h-[13.3854166667vw] h-[47.1794871795vw] lg:pt-[1.85416666667vw] pt-[8.20512820513vw] items-start"
-        >
-          <div className="sm:gap-y-[1.46341463415vw] sm:w-[90%] lg:w-[20.8333333333vw] w-[76.4102564103vw] mx-[auto] flex flex-col items-center lg:gap-y-[0.72916666666vw] gap-y-[3.07692307692vw]">
-            <img
-              src="
-              /images/icons/healthcare-icons-home/2.svg"
-              alt="healthcare-icons"
-              className="lg:w-[2.8125vw] w-[10vw] sm:w-[4.87804878049vw]"
-            />
-            <div className="text-center">
-              <h5 className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw] lg:text-[1.354166666666667vw] lg:leading-[1.979166666666667vw] text-[4.871794871794872vw] leading-[9.743589743589744vw] PingAR-Medium text-[#3B3659]">
-                Urgent care
-              </h5>
-              <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.9512195122vw] lg:text-[1.14583333333vw] lg:leading-[1.458333333333333vw] text-[3.58974358974359vw] leading-[6.153846153846154vw] PingAR-Light text-[#707070] lg:mt-[0.4166666666666667vw] mt-[2vw]">
-                Get prompt care for non-emergency medical needs.
-              </p>
-            </div>
-          </div>
+      </div>
+    </div>
+    <div
+      data-aos="fade"
+      data-aos-delay={200}
+      className="sm:pt-[7.92682926829vw] sm:h-[36.5853658537vw] sm:w-[48%] lg:w-[23.3333333333vw] w-full bg-[#D6D1ED] lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw] lg:h-[13.3854166667vw] h-[47.1794871795vw] lg:pt-[1.85416666667vw] pt-[8.20512820513vw] items-start"
+    >
+      <div className="sm:w-[90%] lg:w-[20.8333333333vw] w-[76.4102564103vw] mx-[auto] flex flex-col items-center lg:gap-y-[0.72916666666vw] gap-y-[3.07692307692vw]">
+        <img
+          src="
+          /images/icons/healthcare-icons-home/2.svg"
+          alt="healthcare-icons"
+          className="lg:w-[2.8125vw] w-[10vw] 
+          sm:w-[5.60975609756vw]"
+        />
+        <div className="text-center">
+          <h5 className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw]  lg:text-[1.354166666666667vw] lg:leading-[1.979166666666667vw] text-[4.871794871794872vw] leading-[9.743589743589744vw] PingAR-Medium text-[#3B3659]">
+          {arabic ? "الرعاية العاجلة": "Urgent care"}
+          </h5>
+          <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[1.14583333333vw] lg:leading-[1.458333333333333vw] text-[3.58974358974359vw] leading-[6.153846153846154vw] PingAR-Light text-[#707070] lg:mt-[0.4166666666666667vw] mt-[2vw]">
+          {arabic ? "احصل على رعاية فورية للاحتياجات الطبية غير الطارئة.": "Get prompt care for non-emergency medical needs."}
+          </p>
         </div>
-        <div
-          data-aos="fade"
-          data-aos-delay="400"
-          className="sm:h-[31.7073170732vw] sm:pt-[6.097561vw] lg:w-[23.3333333333vw] w-full bg-[#F0F0F0] lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw] lg:h-[13.3854166667vw] h-[47.1794871795vw] lg:pt-[1.85416666667vw] pt-[8.20512820513vw] items-start"
-        >
-          <div className="sm:gap-y-[1.46341463415vw] sm:w-[90%] lg:w-[20.8333333333vw] w-[76.4102564103vw] mx-[auto] flex flex-col items-center lg:gap-y-[0.72916666666vw] gap-y-[3.07692307692vw]">
-            <img
-              src="
-              /images/icons/healthcare-icons-home/3.svg"
-              alt="healthcare-icons"
-              className="lg:w-[1.875vw] w-[6.41025641026vw] sm:w-[4.26829268293vw]"
-            />
-            <div className="text-center">
-              <h5 className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw] lg:text-[1.354166666666667vw] lg:leading-[1.979166666666667vw] text-[4.871794871794872vw] leading-[9.743589743589744vw] PingAR-Medium text-[#3B3659]">
-                Women`&apos;`swellness
-              </h5>
-              <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.9512195122vw] lg:text-[1.14583333333vw] lg:leading-[1.458333333333333vw] text-[3.58974358974359vw] leading-[6.153846153846154vw] PingAR-Light text-[#707070] lg:mt-[0.4166666666666667vw] mt-[2vw]">
-                Comprehensive healthcare tailored for women.
-              </p>
-            </div>
-          </div>
+      </div>
+    </div>
+    <div
+      data-aos="fade"
+      data-aos-delay={400}
+      className="sm:pt-[7.92682926829vw] sm:h-[36.5853658537vw] sm:w-[48%] lg:w-[23.3333333333vw] w-full bg-[#F0F0F0] lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw] lg:h-[13.3854166667vw] h-[47.1794871795vw] lg:pt-[1.85416666667vw] pt-[8.20512820513vw] items-start"
+    >
+      <div className="sm:w-[90%] lg:w-[20.8333333333vw] w-[76.4102564103vw] mx-[auto] flex flex-col items-center lg:gap-y-[0.72916666666vw] gap-y-[3.07692307692vw]">
+        <img
+          src="
+          /images/icons/healthcare-icons-home/3.svg"
+          alt="healthcare-icons"
+          className="lg:w-[1.875vw] w-[6.41025641026vw] sm:w-[3.65853658537vw]"
+        />
+        <div className="text-center">
+          <h5 className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw]  lg:text-[1.354166666666667vw] lg:leading-[1.979166666666667vw] text-[4.871794871794872vw] leading-[9.743589743589744vw] PingAR-Medium text-[#3B3659]">
+          {arabic ? "عافية المرأة": "Women's wellness"}
+          </h5>
+          <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[1.14583333333vw] lg:leading-[1.458333333333333vw] text-[3.58974358974359vw] leading-[6.153846153846154vw] PingAR-Light text-[#707070] lg:mt-[0.4166666666666667vw] mt-[2vw]">
+          {arabic ? "رعاية صحية شاملة مصممة للسيدات.": "Comprehensive healthcare tailored for women."}
+          </p>
         </div>
-        <div
-          data-aos="fade"
-          data-aos-delay="00"
-          className="sm:h-[31.7073170732vw] sm:pt-[6.097561vw] lg:w-[23.3333333333vw] w-full bg-[#F0F0F0] lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw] lg:h-[13.3854166667vw] h-[47.1794871795vw] lg:pt-[1.85416666667vw] pt-[8.20512820513vw] items-start"
-        >
-          <div className="sm:gap-y-[1.46341463415vw] sm:w-[90%] lg:w-[20.8333333333vw] w-[76.4102564103vw] mx-[auto] flex flex-col items-center lg:gap-y-[0.72916666666vw] gap-y-[3.07692307692vw]">
-            <img
-              src="
-              /images/icons/healthcare-icons-home/4.svg"
-              alt="healthcare-icons"
-              className="lg:w-[2.76041666667vw] w-[9.48717948718vw] sm:w-[5.60975609756vw]"
-            />
-            <div className="text-center">
-              <h5 className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw] lg:text-[1.354166666666667vw] lg:leading-[1.979166666666667vw] text-[4.871794871794872vw] leading-[9.743589743589744vw] PingAR-Medium text-[#3B3659]">
-                Caring for kids
-              </h5>
-              <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.9512195122vw] lg:text-[1.14583333333vw] lg:leading-[1.458333333333333vw] text-[3.58974358974359vw] leading-[6.153846153846154vw] PingAR-Light text-[#707070] lg:mt-[0.4166666666666667vw] mt-[2vw]">
-                Expert healthcare for your little ones.
-              </p>
-            </div>
-          </div>
+      </div>
+    </div>
+    <div
+      data-aos="fade"
+      data-aos-delay="00"
+      className="sm:pt-[7.92682926829vw] sm:h-[36.5853658537vw] sm:w-[48%] lg:w-[23.3333333333vw] w-full bg-[#F0F0F0] lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw] lg:h-[13.3854166667vw] h-[47.1794871795vw] lg:pt-[1.85416666667vw] pt-[8.20512820513vw] items-start"
+    >
+      <div className="sm:w-[90%] lg:w-[20.8333333333vw] w-[76.4102564103vw] mx-[auto] flex flex-col items-center lg:gap-y-[0.72916666666vw] gap-y-[3.07692307692vw]">
+        <img
+          src="
+          /images/icons/healthcare-icons-home/4.svg"
+          alt="healthcare-icons"
+          className="lg:w-[2.76041666667vw] w-[9.48717948718vw] sm:w-[5.60975609756vw]"
+        />
+        <div className="text-center">
+          <h5 className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw]  lg:text-[1.354166666666667vw] lg:leading-[1.979166666666667vw] text-[4.871794871794872vw] leading-[9.743589743589744vw] PingAR-Medium text-[#3B3659]">
+          {arabic ? "رعاية الاطفال": "Caring for kids"}
+          </h5>
+          <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[1.14583333333vw] lg:leading-[1.458333333333333vw] text-[3.58974358974359vw] leading-[6.153846153846154vw] PingAR-Light text-[#707070] lg:mt-[0.4166666666666667vw] mt-[2vw]">
+          {arabic ? "رعاية صحية متخصصة لأطفالك الصغار.": "Expert healthcare for your little ones."}
+          </p>
         </div>
-        <div
-          data-aos="fade"
-          data-aos-delay="200"
-          className="sm:h-[31.7073170732vw] sm:pt-[6.097561vw] lg:w-[23.3333333333vw] w-full bg-[#F5EBE8] lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw] lg:h-[13.3854166667vw] h-[47.1794871795vw] lg:pt-[1.85416666667vw] pt-[8.20512820513vw] items-start"
-        >
-          <div className="sm:gap-y-[1.46341463415vw] sm:w-[90%] lg:w-[20.8333333333vw] w-[76.4102564103vw] mx-[auto] flex flex-col items-center lg:gap-y-[0.72916666666vw] gap-y-[3.07692307692vw]">
-            <img
-              src="
-              /images/icons/healthcare-icons-home/5.svg"
-              alt="healthcare-icons"
-              className="lg:w-[2.91666666667vw] w-[10.2564102564vw] sm:w-[5.60975609756vw]"
-            />
-            <div className="text-center">
-              <h5 className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw] lg:text-[1.354166666666667vw] lg:leading-[1.979166666666667vw] text-[4.871794871794872vw] leading-[9.743589743589744vw] PingAR-Medium text-[#3B3659]">
-                Managing long-term health
-              </h5>
-              <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.9512195122vw] lg:text-[1.14583333333vw] lg:leading-[1.458333333333333vw] text-[3.58974358974359vw] leading-[6.153846153846154vw] PingAR-Light text-[#707070] lg:mt-[0.4166666666666667vw] mt-[2vw]">
-                Partner with us to handle your ongoing health needs.
-              </p>
-            </div>
-          </div>
+      </div>
+    </div>
+    <div
+      data-aos="fade"
+      data-aos-delay={200}
+      className="sm:pt-[7.92682926829vw] sm:h-[36.5853658537vw] sm:w-[48%] lg:w-[23.3333333333vw] w-full bg-[#F5EBE8] lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw] lg:h-[13.3854166667vw] h-[47.1794871795vw] lg:pt-[1.85416666667vw] pt-[8.20512820513vw] items-start"
+    >
+      <div className="sm:w-[90%] lg:w-[20.8333333333vw] w-[76.4102564103vw] mx-[auto] flex flex-col items-center lg:gap-y-[0.72916666666vw] gap-y-[3.07692307692vw]">
+        <img
+          src="
+          /images/icons/healthcare-icons-home/5.svg"
+          alt="healthcare-icons"
+          className="lg:w-[2.91666666667vw] w-[10.2564102564vw] sm:w-[5.12195121951vw]"
+        />
+        <div className="text-center">
+          <h5 className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw]  lg:text-[1.354166666666667vw] lg:leading-[1.979166666666667vw] text-[4.871794871794872vw] leading-[9.743589743589744vw] PingAR-Medium text-[#3B3659]">
+          {arabic ? "إدارة الصحة على المدى الطويل": "Managing long-term health"}
+          </h5>
+          <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[1.14583333333vw] lg:leading-[1.458333333333333vw] text-[3.58974358974359vw] leading-[6.153846153846154vw] PingAR-Light text-[#707070] lg:mt-[0.4166666666666667vw] mt-[2vw]">
+          {arabic ? "شارك معنا للتعامل مع احتياجاتك الصحية المستمرة.": "Partner with us to handle your ongoing health needs."}
+          </p>
         </div>
-        <div
-          data-aos="fade"
-          data-aos-delay="400"
-          className="sm:h-[31.7073170732vw] sm:pt-[6.097561vw] lg:w-[23.3333333333vw] w-full bg-[#EBF0F7] lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw] lg:h-[13.3854166667vw] h-[47.1794871795vw] lg:pt-[1.85416666667vw] pt-[8.20512820513vw] items-start"
-        >
-          <div className="sm:gap-y-[1.46341463415vw] sm:w-[90%] lg:w-[20.8333333333vw] w-[76.4102564103vw] mx-[auto] flex flex-col items-center lg:gap-y-[0.72916666666vw] gap-y-[3.07692307692vw]">
-            <img
-              src="
-              /images/icons/healthcare-icons-home/6.svg"
-              alt="healthcare-icons"
-              className="lg:w-[2.55208333333vw] w-[8.97435897436vw] sm:w-[5.85365853659vw]"
-            />
-            <div className="text-center">
-              <h5 className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw] lg:text-[1.354166666666667vw] lg:leading-[1.979166666666667vw] text-[4.871794871794872vw] leading-[9.743589743589744vw] PingAR-Medium text-[#3B3659]">
-                Specialized care for seniors
-              </h5>
-              <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.9512195122vw] lg:text-[1.14583333333vw] lg:leading-[1.458333333333333vw] text-[3.58974358974359vw] leading-[6.153846153846154vw] PingAR-Light text-[#707070] lg:mt-[0.4166666666666667vw] mt-[2vw]">
-                Personalized support for older adults.
-              </p>
-            </div>
-          </div>
+      </div>
+    </div>
+    <div
+      data-aos="fade"
+      data-aos-delay={400}
+      className="sm:pt-[7.92682926829vw] sm:h-[36.5853658537vw] sm:w-[48%] lg:w-[23.3333333333vw] w-full bg-[#EBF0F7] lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw] lg:h-[13.3854166667vw] h-[47.1794871795vw] lg:pt-[1.85416666667vw] pt-[8.20512820513vw] items-start"
+    >
+      <div className="sm:w-[90%] lg:w-[20.8333333333vw] w-[76.4102564103vw] mx-[auto] flex flex-col items-center lg:gap-y-[0.72916666666vw] gap-y-[3.07692307692vw]">
+        <img
+          src="
+          /images/icons/healthcare-icons-home/6.svg"
+          alt="healthcare-icons"
+          className="lg:w-[2.55208333333vw] w-[8.97435897436vw] sm:w-[5.36585365854vw]"
+        />
+        <div className="text-center">
+          <h5 className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw]  lg:text-[1.354166666666667vw] lg:leading-[1.979166666666667vw] text-[4.871794871794872vw] leading-[9.743589743589744vw] PingAR-Medium text-[#3B3659]">
+          {arabic ? "رعاية متخصصة لكبار السن": "Specialized care for seniors"}
+          </h5>
+          <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[1.14583333333vw] lg:leading-[1.458333333333333vw] text-[3.58974358974359vw] leading-[6.153846153846154vw] PingAR-Light text-[#707070] lg:mt-[0.4166666666666667vw] mt-[2vw]">
+          {arabic ? "دعم شخصي لكبار السن.": "Personalized support for older adults."}
+          </p>
         </div>
+      </div>
+    </div>
       </div>
       <a
         href=""
@@ -194,7 +195,7 @@ const BringingLoving = () => {
         data-aos="fade-up"
       >
         <span className="lg:h-[1.19791666667vw] sm:h-[2.92682926829vw] h-[3.58974358974vw]">
-          View all services
+        {arabic ? "عرض جميع الخدمات": "View all services"}
         </span>
       </a>
     </div>

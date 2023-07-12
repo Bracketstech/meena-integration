@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Hero = () => {
+const Hero = ({arabic}) => {
   return (
     <section className="relative">
   <div className="h-[123.333333333vw] lg:h-[56.25vw] flex items-end lg:pb-[18.22916666666667vw] pb-[31.28205128205128vw]">
@@ -21,7 +21,20 @@ const Hero = () => {
     </div>
     <div className="Container1680 relative z-[2] text-white lg:text-[#3B3659]">
       <div className="lg:w-[32.03125vw]">
-        <h1 id="anchorFOrCards" data-aos="fade-up" className="heading54">
+        {arabic ?
+          <h1 id="anchorFOrCards" data-aos="fade-up" className="heading54">
+          مستقبل الرعاية الصحية  <span className="relative inline-block">
+          الأولية
+            <img
+              src="/images/icons/links-style3.svg"
+              alt="style"
+              className="absolute leftRightFixer1 bottom-[-5px] lg:bottom-[-0.7vw] w-full"
+            />
+          </span>
+          
+           
+        </h1>
+         : <h1 id="anchorFOrCards" data-aos="fade-up" className="heading54">
           The future of <span className="relative inline-block">
             primary
             <img
@@ -32,13 +45,13 @@ const Hero = () => {
           </span>
           
           healthcare
-        </h1>
+        </h1>}
         <div
           data-aos="fade-down"
           className="sm:mt-[3.65853658537vw] lg:mt-[2.291666666666667vw] mt-[4.10256410256vw]"
         >
           <p className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw] lg:text-[1.354166666666667vw] text-[4.871794871794872vw] lg:leading-[2.1875vw] PingAR-Medium">
-            Book your appointment
+            {arabic ? "احجز موعدك" :"Book your appointment"}
           </p>
           <div className="sm:gap-x-[2.926829268292683vw] sm:mt-[1.46341463415vw] text-[#FFFFFF] flex items-center lg:gap-x-[1.25vw] gap-x-[3.07692307692vw] lg:mt-[0.8333333333333333vw] mt-[2.05128205128vw] flex-wrap gap-y-[4.44444444444vw]">
             <a
@@ -48,7 +61,7 @@ const Hero = () => {
               className="anchor1"
             >
               <div>
-                <span> Get app </span>
+                <span>{arabic ? "احصل على التطبيق": " Get app "}</span>
                 <img src="/images/icons/get-app.svg" alt="get-app" />
               </div>
             </a>

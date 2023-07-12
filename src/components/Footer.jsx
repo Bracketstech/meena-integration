@@ -41,9 +41,9 @@ const Footer = async ({arabic}) => {
               />
             </a>
             <p className="sm:mt-[1.9512195122vw] sm:text-[1.82926829268vw] sm:leading-[2.68292682927vw] lg:text-[0.8333333333333333vw] lg:leading-[1.42361111111vw] text-[3.076923076923077vw] leading-[5.38461538462vw] PingAR-Light text-[#FFFFFF] lg:mt-[1.66666666667vw] mt-[4.102564102564103vw]">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-              erat, sed diam voluptua.
+            {arabic ? "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود . يوت انيم أد مينيم فينايم,كيواس نوستريد كسير سيتاشن يللأمكو سيتاشن يللأمكو": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."}
+              
+              
             </p>
           </div>
           <div className="text-[#E6E7E7]">
@@ -80,20 +80,20 @@ const Footer = async ({arabic}) => {
                 }
               
               <li>
-                <Link href="./terms-and-conditions">
-                  <span>Terms &amp; conditions</span>
+                <Link href={`{arabic ? "ar/terms-and-conditions": "./terms-and-conditions"}`}>
+                  <span>{arabic ? "البنود و الظروف": "Terms & conditions"}</span>
                 </Link>
               </li>
               <li>
-                <Link href="./privacy-policy">
-                  <span>Privacy policy</span>
+                <Link href={`{arabic ? "ar/privacy-policy": "./privacy-policy"}`}>
+                  <span>{arabic ? "سياسة الخصوصية": "Privacy policy"}</span>
                 </Link>
               </li>
             </ul>
           </div>
           <div>
             <h5 className="sm:leading-[3.65853658537vw] sm:text-[2.19512195122vw] PingAR-Medium lg:text-[1.14583333333vw] lg:leading-[1.66666666667vw] leading-[6.15384615385vw] text-[3.846153846153846vw] text-[#E6E7E7] text-center lg:text-start">
-              Follow us
+            {arabic ? "تابعنا": "Follow us"}
             </h5>
             <ul className="sm:mt-[1.46341463415vw] sm:gap-x-[2.43902439024vw] leading-[4.87179487179vw] footerLinks flex items-center lg:gap-x-[1.25vw] lg:mt-[0.41666666666vw] mt-[3.076923076923077vw] gap-x-[4.615384615384615vw]">
               <li>

@@ -7,8 +7,8 @@ const FutureHealthCareSwiper = () => {
   const [swiperGap,setSwiperGap] = useState(0)
   const [slidesPerView,setSlidesPerView] = useState(0)
   useEffect(()=>{
-    setSwiperGap(window.innerWidth>768? window.innerWidth /100 * 20.8333333333 : window.innerWidth /100 * 6.66666666667)
-    setSlidesPerView(window.innerWidth>768? 1: 1)
+    setSwiperGap(window.innerWidth>1024? window.innerWidth /100 * 20.8333333333 :window.innerWidth>640?window.innerWidth /100 * 6.09756097561: window.innerWidth /100 * 6.66666666667)
+    setSlidesPerView(window.innerWidth>1024? 1:window.innerWidth>640? 2.5: 1)
   },[])
   return (
    <>
@@ -30,7 +30,7 @@ const FutureHealthCareSwiper = () => {
             <div className="flex items-center justify-center lg:gap-x-[4.21875vw] flex-col lg:flex-row gap-y-[4.10256410256vw]">
               <div
                 data-aos="fade"
-                className="lg:w-[38.4895833333vw] w-[88.7179487179vw] lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw] relative"
+                className="sm:w-full lg:w-[38.4895833333vw] w-[88.7179487179vw] lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw] relative"
               >
                 <img
                   src="/images/about-app/future healthcare.jpg"
@@ -43,7 +43,7 @@ const FutureHealthCareSwiper = () => {
                     className="lg:w-[3.38541666667vw] w-[7.69230769231vw] lg:right-[3.125vw] lg:top-[3.125vw] top-[7.17948717949vw] right-[7.17948717949vw] absolute"
                   /> */}
                 <svg
-                  className="h-[8.20512820513vw] lg:h-[unset] lg:w-[3.38541666667vw] w-[7.69230769231vw]  lg:top-[3.125vw] top-[7.17948717949vw] aboutApp__Asterisk absolute"
+                  className="sm:w-[5.48780487805vw] sm:top-[3.65853658537vw] h-[8.20512820513vw] lg:h-[unset] lg:w-[3.38541666667vw] w-[7.69230769231vw]  lg:top-[3.125vw] top-[7.17948717949vw] aboutApp__Asterisk absolute"
                   id="Group_89637"
                   data-name="Group 89637"
                   xmlns="http://www.w3.org/2000/svg"
@@ -99,7 +99,7 @@ const FutureHealthCareSwiper = () => {
                   </g>
                 </svg>
               </div>
-              <div className=" lg:w-[32.2916666667vw] w-[88.7179487179vw] flex flex-col items-center lg:items-start">
+              <div className="sm:w-full lg:w-[32.2916666667vw] w-[88.7179487179vw] flex flex-col items-center lg:items-start">
                 <img
                   data-aos="fade"
                   data-aos-delay={400}
@@ -117,7 +117,7 @@ const FutureHealthCareSwiper = () => {
                 <p
                   data-aos="fade-down"
                   data-aos-delay={200}
-                  className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] PingAR-Light lg:text-[1.14583333333vw] lg:leading-[1.69270833333vw] text-[#505050] text-[3.58974358974vw] leading-[6.08058608059vw] lg:mt-[0.83333333333vw] mt-[2.05128205128vw] textAlignFixer"
+                  className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] PingAR-Light lg:text-[1.14583333333vw] lg:leading-[1.69270833333vw] text-[#505050] text-[3.58974358974vw] leading-[6.08058608059vw] lg:mt-[0.83333333333vw] mt-[2.05128205128vw] sm:text-start text-center"
                 >
                   Intuitive health tool designed to help you quickly and easily
                   assess your symptoms. By inputting your current health
@@ -133,7 +133,7 @@ const FutureHealthCareSwiper = () => {
             <div className="flex items-center justify-center lg:gap-x-[4.21875vw] flex-col lg:flex-row gap-y-[4.10256410256vw]">
               <div
                 data-aos="fade"
-                className="lg:w-[38.4895833333vw] w-[88.7179487179vw] lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw] relative"
+                className="sm:w-full lg:w-[38.4895833333vw] w-[88.7179487179vw] lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw] relative"
               >
                 <img
                   src="/images/about-app/future healthcare.jpg"
@@ -146,7 +146,7 @@ const FutureHealthCareSwiper = () => {
                     className="lg:w-[3.38541666667vw] w-[7.69230769231vw] lg:right-[3.125vw] lg:top-[3.125vw] top-[7.17948717949vw] right-[7.17948717949vw] absolute"
                   /> */}
                 <svg
-                  className="h-[8.20512820513vw] lg:h-[unset] lg:w-[3.38541666667vw] w-[7.69230769231vw]  lg:top-[3.125vw] top-[7.17948717949vw] aboutApp__Asterisk absolute"
+                  className="sm:w-[5.48780487805vw] sm:top-[3.65853658537vw] h-[8.20512820513vw] lg:h-[unset] lg:w-[3.38541666667vw] w-[7.69230769231vw]  lg:top-[3.125vw] top-[7.17948717949vw] aboutApp__Asterisk absolute"
                   id="Group_89637"
                   data-name="Group 89637"
                   xmlns="http://www.w3.org/2000/svg"
@@ -202,7 +202,7 @@ const FutureHealthCareSwiper = () => {
                   </g>
                 </svg>
               </div>
-              <div className=" lg:w-[32.2916666667vw] w-[88.7179487179vw] flex flex-col items-center lg:items-start">
+              <div className="sm:w-full lg:w-[32.2916666667vw] w-[88.7179487179vw] flex flex-col items-center lg:items-start">
                 <img
                   data-aos="fade"
                   data-aos-delay={400}
@@ -220,7 +220,7 @@ const FutureHealthCareSwiper = () => {
                 <p
                   data-aos="fade-down"
                   data-aos-delay={200}
-                  className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] PingAR-Light lg:text-[1.14583333333vw] lg:leading-[1.69270833333vw] text-[#505050] text-[3.58974358974vw] leading-[6.08058608059vw] lg:mt-[0.83333333333vw] mt-[2.05128205128vw] textAlignFixer"
+                  className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] PingAR-Light lg:text-[1.14583333333vw] lg:leading-[1.69270833333vw] text-[#505050] text-[3.58974358974vw] leading-[6.08058608059vw] lg:mt-[0.83333333333vw] mt-[2.05128205128vw] sm:text-start text-center"
                 >
                   Intuitive health tool designed to help you quickly and easily
                   assess your symptoms. By inputting your current health
@@ -236,7 +236,7 @@ const FutureHealthCareSwiper = () => {
             <div className="flex items-center justify-center lg:gap-x-[4.21875vw] flex-col lg:flex-row gap-y-[4.10256410256vw]">
               <div
                 data-aos="fade"
-                className="lg:w-[38.4895833333vw] w-[88.7179487179vw] lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw] relative"
+                className="sm:w-full lg:w-[38.4895833333vw] w-[88.7179487179vw] lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw] relative"
               >
                 <img
                   src="/images/about-app/future healthcare.jpg"
@@ -249,7 +249,7 @@ const FutureHealthCareSwiper = () => {
                     className="lg:w-[3.38541666667vw] w-[7.69230769231vw] lg:right-[3.125vw] lg:top-[3.125vw] top-[7.17948717949vw] right-[7.17948717949vw] absolute"
                   /> */}
                 <svg
-                  className="h-[8.20512820513vw] lg:h-[unset] lg:w-[3.38541666667vw] w-[7.69230769231vw]  lg:top-[3.125vw] top-[7.17948717949vw] aboutApp__Asterisk absolute"
+                  className="sm:w-[5.48780487805vw] sm:top-[3.65853658537vw] h-[8.20512820513vw] lg:h-[unset] lg:w-[3.38541666667vw] w-[7.69230769231vw]  lg:top-[3.125vw] top-[7.17948717949vw] aboutApp__Asterisk absolute"
                   id="Group_89637"
                   data-name="Group 89637"
                   xmlns="http://www.w3.org/2000/svg"
@@ -305,7 +305,7 @@ const FutureHealthCareSwiper = () => {
                   </g>
                 </svg>
               </div>
-              <div className=" lg:w-[32.2916666667vw] w-[88.7179487179vw] flex flex-col items-center lg:items-start">
+              <div className="sm:w-full lg:w-[32.2916666667vw] w-[88.7179487179vw] flex flex-col items-center lg:items-start">
                 <img
                   data-aos="fade"
                   data-aos-delay={400}
@@ -323,7 +323,7 @@ const FutureHealthCareSwiper = () => {
                 <p
                   data-aos="fade-down"
                   data-aos-delay={200}
-                  className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] PingAR-Light lg:text-[1.14583333333vw] lg:leading-[1.69270833333vw] text-[#505050] text-[3.58974358974vw] leading-[6.08058608059vw] lg:mt-[0.83333333333vw] mt-[2.05128205128vw] textAlignFixer"
+                  className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] PingAR-Light lg:text-[1.14583333333vw] lg:leading-[1.69270833333vw] text-[#505050] text-[3.58974358974vw] leading-[6.08058608059vw] lg:mt-[0.83333333333vw] mt-[2.05128205128vw] sm:text-start text-center"
                 >
                   Intuitive health tool designed to help you quickly and easily
                   assess your symptoms. By inputting your current health
@@ -339,7 +339,7 @@ const FutureHealthCareSwiper = () => {
             <div className="flex items-center justify-center lg:gap-x-[4.21875vw] flex-col lg:flex-row gap-y-[4.10256410256vw]">
               <div
                 data-aos="fade"
-                className="lg:w-[38.4895833333vw] w-[88.7179487179vw] lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw] relative"
+                className="sm:w-full lg:w-[38.4895833333vw] w-[88.7179487179vw] lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw] relative"
               >
                 <img
                   src="/images/about-app/future healthcare.jpg"
@@ -352,7 +352,7 @@ const FutureHealthCareSwiper = () => {
                     className="lg:w-[3.38541666667vw] w-[7.69230769231vw] lg:right-[3.125vw] lg:top-[3.125vw] top-[7.17948717949vw] right-[7.17948717949vw] absolute"
                   /> */}
                 <svg
-                  className="h-[8.20512820513vw] lg:h-[unset] lg:w-[3.38541666667vw] w-[7.69230769231vw]  lg:top-[3.125vw] top-[7.17948717949vw] aboutApp__Asterisk absolute"
+                  className="sm:w-[5.48780487805vw] sm:top-[3.65853658537vw] h-[8.20512820513vw] lg:h-[unset] lg:w-[3.38541666667vw] w-[7.69230769231vw]  lg:top-[3.125vw] top-[7.17948717949vw] aboutApp__Asterisk absolute"
                   id="Group_89637"
                   data-name="Group 89637"
                   xmlns="http://www.w3.org/2000/svg"
@@ -408,7 +408,7 @@ const FutureHealthCareSwiper = () => {
                   </g>
                 </svg>
               </div>
-              <div className=" lg:w-[32.2916666667vw] w-[88.7179487179vw] flex flex-col items-center lg:items-start">
+              <div className="sm:w-full lg:w-[32.2916666667vw] w-[88.7179487179vw] flex flex-col items-center lg:items-start">
                 <img
                   data-aos="fade"
                   data-aos-delay={400}
@@ -426,7 +426,7 @@ const FutureHealthCareSwiper = () => {
                 <p
                   data-aos="fade-down"
                   data-aos-delay={200}
-                  className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] PingAR-Light lg:text-[1.14583333333vw] lg:leading-[1.69270833333vw] text-[#505050] text-[3.58974358974vw] leading-[6.08058608059vw] lg:mt-[0.83333333333vw] mt-[2.05128205128vw] textAlignFixer"
+                  className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] PingAR-Light lg:text-[1.14583333333vw] lg:leading-[1.69270833333vw] text-[#505050] text-[3.58974358974vw] leading-[6.08058608059vw] lg:mt-[0.83333333333vw] mt-[2.05128205128vw] sm:text-start text-center"
                 >
                   Intuitive health tool designed to help you quickly and easily
                   assess your symptoms. By inputting your current health

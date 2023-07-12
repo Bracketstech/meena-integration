@@ -1,6 +1,6 @@
 import React from 'react'
 
-const HealthCareJourney = () => {
+const HealthCareJourney = ({arabic}) => {
   return (
     <div className="sm:pt-[4.87804878049vw] sm:pb-[7.31707317073vw] flex items-center lg:gap-x-[8.33333333333vw] justify-center flex-wrap lg:pt-[2.60416666667vw] lg:pb-[10.78125vw] gap-y-[12vw] pt-[6.15384615385vw] pb-[10.2564102564vw]">
           <div className="hidden lg:block" data-aos="fade">
@@ -25,12 +25,11 @@ const HealthCareJourney = () => {
               />
               <div className="lg:w-[32.2916666667vw] text-center lg:text-start">
                 <h5 className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw] lg:text-[1.354166666666667vw] lg:leading-[1.979166666666667vw] text-[4.871794871794872vw] leading-[9.743589743589744vw] PingAR-Medium text-[#3B3659]">
-                  Digital app
+                {arabic ? "تطبيق رقمي": "Digital app"} 
                 </h5>
                 <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.9512195122vw] lg:text-[1.04583333333vw] lg:leading-[1.666666666666667vw] text-[3.58974358974359vw] leading-[6.153846153846154vw] PingAR-Light text-[#707070] lg:text-[#505050] lg:mt-[0.625vw] mt-[2vw]">
-                  Lorem ipsum dolor sit amet, consetetur temporod t isadipscing
-                  elitr, sed diam nonumy eirmod tempood tr invidunt ut labore et
-                  dolore magna aliquyam erat, sed diam
+                {arabic ? "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور نكايديديونتيوت لابوري ات دولار ماجنا أليكيوا . يوت انيم أد مينيم فينايم,كيواس نوستريد كسير سيتاشن يللأمكو": "Lorem ipsum dolor sit amet, consetetur temporod t isadipscingelitr, sed diam nonumy eirmod tempood tr invidunt ut labore etdolore magna aliquyam erat, sed diam"
+                    } 
                 </p>
               </div>
             </div>
@@ -47,12 +46,12 @@ const HealthCareJourney = () => {
               />
               <div className="lg:w-[32.2916666667vw] text-center lg:text-start">
                 <h5 className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw] lg:text-[1.354166666666667vw] lg:leading-[1.979166666666667vw] text-[4.871794871794872vw] leading-[9.743589743589744vw] PingAR-Medium text-[#3B3659]">
-                  Yalla clinic
+                {arabic ? "عيادة يلا": "Yalla clinic"} 
                 </h5>
                 <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.9512195122vw] lg:text-[1.04583333333vw] lg:leading-[1.666666666666667vw] text-[3.58974358974359vw] leading-[6.153846153846154vw] PingAR-Light text-[#707070] lg:text-[#505050] lg:mt-[0.625vw] mt-[2vw]">
-                  Lorem ipsum dolor sit amet, ctempor itempor ietur sadipscing
-                  elitr, sed diam nonum ahacfteirmod tempor invidunt ut labore
-                  et dolore mtempor iagna aliquyam erat, sed diam
+                {arabic ? "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور نكايديديونتيوت لابوري ات دولار ماجنا أليكيوا . يوت انيم أد مينيم فينايم,كيواس نوستريد كسير سيتاشن يللأمكو": "Lorem ipsum dolor sit amet, ctempor itempor ietur sadipscingelitr, sed diam nonum ahacfteirmod tempor invidunt ut laboreet dolore mtempor iagna aliquyam erat, sed diam"}  
+                  
+                  
                 </p>
               </div>
             </div>
@@ -69,12 +68,12 @@ const HealthCareJourney = () => {
               />
               <div className="lg:w-[32.2916666667vw] text-center lg:text-start">
                 <h5 className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw] lg:text-[1.354166666666667vw] lg:leading-[1.979166666666667vw] text-[4.871794871794872vw] leading-[9.743589743589744vw] PingAR-Medium text-[#3B3659]">
-                  Nest clinic
+                {arabic ? "عيادة نيست": "Nest clinic"} 
                 </h5>
                 <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.9512195122vw] lg:text-[1.04583333333vw] lg:leading-[1.666666666666667vw] text-[3.58974358974359vw] leading-[6.153846153846154vw] PingAR-Light text-[#707070] lg:text-[#505050] lg:mt-[0.625vw] mt-[2vw]">
-                  Lorem ipsum dolor sit amet, consetetur sadiscing elitr, sed
-                  diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                  aliquyam erat, sed diam
+                {arabic ? "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور نكايديديونتيوت لابوري ات دولار ماجنا أليكيوا . يوت انيم أد مينيم فينايم,كيواس نوستريد كسير سيتاشن يللأمكو": "Lorem ipsum dolor sit amet, consetetur sadiscing elitr, seddiam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam"} 
+                  
+                  
                 </p>
               </div>
             </div>

@@ -87,9 +87,21 @@ body {
         leading-[10.2564102564vw] PingAR-Bold;
   }
 
-  .sub__Page .blueLogo,
-  .sub__Page .whiteLogo {
+  .ltr .sub__Page .blueLogo,
+  .ltr .sub__Page .whiteLogo {
     @apply lg:w-[12.7083333333vw] sm:w-[21.9512195122vw] w-[31.7948717949vw];
+  }
+  .rtl .sub__Page .blueLogo,
+  .rtl .sub__Page .whiteLogo {
+    @apply lg:w-[8.95833333333vw] sm:w-[14.6341463415vw] w-[20.5128205128vw];
+  }
+  .ltr .home__Page .blueLogo,
+  .ltr .home__Page .whiteLogo {
+    @apply lg:w-[12.7083333333vw] sm:w-[21.9512195122vw] w-[31.7948717949vw];
+  }
+  .rtl .home__Page .blueLogo,
+  .rtl .home__Page .whiteLogo {
+    @apply lg:w-[8.95833333333vw] sm:w-[14.6341463415vw] w-[20.5128205128vw];
   }
   .menu span {
     @apply block w-full mb-[4px] sm:mb-[0.73170731707vw]
@@ -117,6 +129,14 @@ cursor-pointer;
   }
   .anchor1 div {
     @apply flex lg:gap-x-[0.4166666666666667vw] h-[3.84615384615vw] lg:h-[0.9895833333333333vw] sm:h-[2.439024390243902vw] sm:gap-x-[1.463414634146341vw] gap-x-[2.051282051282051vw];
+  }
+  .ltr .anchor1 div,
+  .ltr .anchor2 div{
+    @apply flex-row
+  }
+  .rtl .anchor1 div,
+  .rtl .anchor2 div{
+    @apply flex-row-reverse
   }
   .anchor1 div img {
     @apply lg:w-[0.5729166666666667vw] w-[2.82051282051vw] sm:w-[1.829268292682927vw];
@@ -222,18 +242,18 @@ cursor-pointer;
   }
   .rtl .leftRightFixer2 {
     left: 0;
-  }
+  } 
   .ltr .patient__Quoteup {
     @apply lg:left-[1.09375vw] sm:left-[-3.17073170732vw];
   }
   .rtl .patient__Quoteup {
-    @apply lg:right-[1.09375vw] sm:right-[-3.17073170732vw];
+    @apply lg:right-[-0.26041666666vw] sm:right-[-3.17073170732vw];
   }
   .ltr .patient__Quotedown {
     @apply right-[30%] lg:right-[2.13541666667vw];
   }
   .rtl .patient__Quotedown {
-    @apply left-[30%] lg:left-[2.13541666667vw];
+    @apply left-[30%] sm:left-0 lg:left-[0.4vw];
   }
   .ltr .location__Asterik {
     @apply lg:right-[32.6041666667vw] right-[12.0512820513vw] sm:right-[23.1707317073vw];
@@ -264,7 +284,7 @@ cursor-pointer;
     @apply flipped;
   }
   .rtl .mob__Ar {
-    @apply h-[5.64102564103vw];
+    @apply h-[5.64102564103vw] sm:h-[4.87804878049vw];
   }
   .ltr .textAlignFixer {
     @apply text-center lg:text-left;
@@ -291,10 +311,10 @@ cursor-pointer;
     @apply pr-[5.64102564103vw] lg:pr-[unset];
   }
   .ltr .aboutApp__Asterisk {
-    @apply lg:right-[3.125vw] right-[7.17948717949vw];
+    @apply lg:right-[3.125vw] sm:right-[4.87804878049vw] right-[7.17948717949vw];
   }
   .rtl .aboutApp__Asterisk {
-    @apply lg:left-[3.125vw] left-[7.17948717949vw];
+    @apply lg:left-[3.125vw] sm:left-[4.87804878049vw] left-[7.17948717949vw];
   }
   .ltr .aboutAppFeature__Asterisk {
     @apply lg:left-[-1.51041666667vw] left-[8.20512820513vw] sm:left-[20.1219512195vw];
@@ -678,7 +698,7 @@ body.active {
     background-color: #8450ff;
   }
   .doctorsSwiper .swiper-wrapper .swiper-slide {
-    width: 70vw !important;
+    width: 54vw !important;
     border-radius: 20px;
   }
   .homeSwipers .swiper-button-next,
@@ -751,7 +771,7 @@ body.active {
     left: unset;
   }
   .homeSwipers .swiper-slide {
-    width: 70.2564102564vw !important;
+    width: 58vw !important;
   }
   .line_clamp3 {
     -webkit-line-clamp: 3;
@@ -759,8 +779,15 @@ body.active {
     overflow: hidden;
     display: -webkit-box;
   }
+  .aboutAppSwiper .swiper-slide {
+    width: 60vw !important;
+  }
 }
 @media (max-width: 640px) {
+  
+  .aboutAppSwiper .swiper-slide {
+    width: 100% !important;
+  }
   .cta .cta__Menu {
     left: -74%;
     clip-path: circle(10% at 85% 80%);

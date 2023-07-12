@@ -6,7 +6,11 @@ import VisionMission from './VisionMission'
 import LeaderSwiper from './LeaderSwiper'
 import Partners from './Partners'
 import Qualifications from './Qualifications'
-const Index = () => {
+import useAnimations from '@/hooks/useAnimations'
+
+const Index = ({arabic}) => {
+  useAnimations()
+  
   return (
     <main>
       <section>

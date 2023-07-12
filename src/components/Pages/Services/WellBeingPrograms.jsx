@@ -1,6 +1,6 @@
 import React from 'react'
 
-const WellBeingPrograms = () => {
+const WellBeingPrograms = ({arabic}) => {
   return (
     <div className="relative">
     <span className="healthCare__Overlay absolute w-full h-full bottom-0 leftRightFixer1"></span>
@@ -50,7 +50,14 @@ const WellBeingPrograms = () => {
     </svg>
     <div className="lg:mt-[5.72916666667vw] Container1440 relative z-[2] flex justify-between items-center flex-wrap gap-y-[6.15384615385vw] lg:py-[4.6875vw] pt-[14.358974359vw] pb-[16.6666666667vw] sm:py-[7.317073170731707vw]">
       <div className="lg:w-[32.7604166667vw]">
-        <h3
+      {arabic ? <h3
+          data-aos="fade-up"
+          className="PingAR-Regular heading54 tracking-[unset] text-[#3B3659]"
+        > 
+          <span className="PingAR-Bold"> نضعك  </span> في قلب رحلة الرعاية الصحية الخاصة
+          <span className="PingAR-Bold">  بك  </span>
+          من خلال برامج الرفاهية لدينا
+        </h3>: <h3
           data-aos="fade-up"
           className="PingAR-Regular heading54 tracking-[unset] text-[#3B3659]"
         >
@@ -58,14 +65,14 @@ const WellBeingPrograms = () => {
           <span className="PingAR-Bold"> you </span>at the center of
           <span className="PingAR-Bold"> your </span>
           healthcare journey with our wellbeing programs
-        </h3>
+        </h3>}
         <p
           data-aos="fade-down"
           className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[1.14583333333vw] lg:leading-[1.71875vw] text-[3.58974358974vw] leading-[6.02564102564vw] PingAR-Light text-[#505050] lg:w-[32.1875vw] lg:mt-[0.625vw] mt-[2.05128205128vw]"
         >
-          Lorem ipsum dolor sit amet, pscing consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          sed diam voluptua.
+          {arabic ? "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور نكايديديونتيوت لابوري ات لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور نكايديديونتيوت لابوري ات": "Lorem ipsum dolor sit amet, pscing consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."}
+         
+         
         </p>
       </div>
       <div

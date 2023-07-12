@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Cards = () => {
+const Cards = ({arabic}) => {
   return (
     <div className="flex lg:gap-x-[2.5vw] lg:w-[40.625vw] flex-wrap justify-between lg:justify-normal">
                             <div
@@ -16,11 +16,10 @@ const Cards = () => {
                                 />
                                 <div className="lg:mt-[0.625vw] mt-[4%]">
                                     <span className="sm:text-[2.68292682927vw] sm:leading-[4.87804878049vw] lg:text-[1.14583333333vw] lg:leading-[1.82291666667vw] PingAR-Medium text-[4.10256410256vw] leading-[6.66666666667vw] text-[#3B3659]">
-                                        Family medicine
+                                    {arabic ? "طب الأسرة": "Family medicine"}
                                     </span>
                                     <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[0.9375vw] lg:leading-[1.47569444444vw] text-[3.58974358974vw] leading-[6.05128205128vw] text-[#505050] PingAR-Light lg:mt-[0.41666666666vw] mt-[2.05128205128vw]">
-                                        Lorem ipsum dolor sit amet, pscing consetetur sadipscing elitr,
-                                        sed diam nonumy eirmod tempor invidunt ut
+                                        {arabic ? "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور نكايديديونتيوت لابوري ات": "Lorem ipsum dolor sit amet, pscing consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut"}
                                     </p>
                                 </div>
                             </div>
@@ -37,11 +36,11 @@ const Cards = () => {
                                 />
                                 <div className="lg:mt-[0.625vw] mt-[4%]">
                                     <span className="sm:text-[2.68292682927vw] sm:leading-[4.87804878049vw] lg:text-[1.14583333333vw] lg:leading-[1.82291666667vw] PingAR-Medium text-[4.10256410256vw] leading-[6.66666666667vw] text-[#3B3659]">
-                                        Women’s health
+                                    {arabic ? "صحة المرأة": "Women’s health"}
                                     </span>
                                     <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[0.9375vw] lg:leading-[1.47569444444vw] text-[3.58974358974vw] leading-[6.05128205128vw] text-[#505050] PingAR-Light lg:mt-[0.41666666666vw] mt-[2.05128205128vw]">
-                                        Lorem ipsum dolor sit amet, pscing consetetur sadipscing elitr,
-                                        sed diam nonumy eirmod tempor invidunt ut
+                                    {arabic ? "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور نكايديديونتيوت لابوري ات": "Lorem ipsum dolor sit amet, pscing consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut"}
+                                        
                                     </p>
                                 </div>
                             </div>
@@ -60,8 +59,7 @@ const Cards = () => {
                                         Pediatric care
                                     </span>
                                     <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[0.9375vw] lg:leading-[1.47569444444vw] text-[3.58974358974vw] leading-[6.05128205128vw] text-[#505050] PingAR-Light lg:mt-[0.41666666666vw] mt-[2.05128205128vw]">
-                                        Lorem ipsum dolor sit amet, pscing consetetur sadipscing elitr,
-                                        sed diam nonumy eirmod tempor invidunt ut
+                                        {arabic ? "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور نكايديديونتيوت لابوري ات": "Lorem ipsum dolor sit amet, pscing consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut"}
                                     </p>
                                 </div>
                             </div>
@@ -80,8 +78,7 @@ const Cards = () => {
                                         Dentistry
                                     </span>
                                     <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[0.9375vw] lg:leading-[1.47569444444vw] text-[3.58974358974vw] leading-[6.05128205128vw] text-[#505050] PingAR-Light lg:mt-[0.41666666666vw] mt-[2.05128205128vw]">
-                                        Lorem ipsum dolor sit amet, pscing consetetur sadipscing elitr,
-                                        sed diam nonumy eirmod tempor invidunt ut
+                                        {arabic ? "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور نكايديديونتيوت لابوري ات": "Lorem ipsum dolor sit amet, pscing consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut"}
                                     </p>
                                 </div>
                             </div>
@@ -100,8 +97,7 @@ const Cards = () => {
                                         General internal medicine
                                     </span>
                                     <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[0.9375vw] lg:leading-[1.47569444444vw] text-[3.58974358974vw] leading-[6.05128205128vw] text-[#505050] PingAR-Light lg:mt-[0.41666666666vw] mt-[2.05128205128vw]">
-                                        Lorem ipsum dolor sit amet, pscing consetetur sadipscing elitr,
-                                        sed diam nonumy eirmod tempor invidunt ut
+                                        {arabic ? "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور نكايديديونتيوت لابوري ات": "Lorem ipsum dolor sit amet, pscing consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut"}
                                     </p>
                                 </div>
                             </div>
@@ -120,8 +116,7 @@ const Cards = () => {
                                         Dermatology
                                     </span>
                                     <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[0.9375vw] lg:leading-[1.47569444444vw] text-[3.58974358974vw] leading-[6.05128205128vw] text-[#505050] PingAR-Light lg:mt-[0.41666666666vw] mt-[2.05128205128vw]">
-                                        Lorem ipsum dolor sit amet, pscing consetetur sadipscing elitr,
-                                        sed diam nonumy eirmod tempor invidunt ut
+                                        {arabic ? "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور نكايديديونتيوت لابوري ات": "Lorem ipsum dolor sit amet, pscing consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut"}
                                     </p>
                                 </div>
                             </div>
@@ -143,8 +138,7 @@ const Cards = () => {
                                         Endocrine medicine
                                     </span>
                                     <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[0.9375vw] lg:leading-[1.47569444444vw] text-[3.58974358974vw] leading-[6.05128205128vw] text-[#505050] PingAR-Light lg:mt-[0.41666666666vw] mt-[2.05128205128vw]">
-                                        Lorem ipsum dolor sit amet, pscing consetetur sadipscing elitr,
-                                        sed diam nonumy eirmod tempor invidunt ut
+                                        {arabic ? "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور نكايديديونتيوت لابوري ات": "Lorem ipsum dolor sit amet, pscing consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut"}
                                     </p>
                                 </div>
                             </div>
@@ -163,8 +157,7 @@ const Cards = () => {
                                         ENT
                                     </span>
                                     <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[0.9375vw] lg:leading-[1.47569444444vw] text-[3.58974358974vw] leading-[6.05128205128vw] text-[#505050] PingAR-Light lg:mt-[0.41666666666vw] mt-[2.05128205128vw]">
-                                        Lorem ipsum dolor sit amet, pscing consetetur sadipscing elitr,
-                                        sed diam nonumy eirmod tempor invidunt ut
+                                        {arabic ? "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور نكايديديونتيوت لابوري ات": "Lorem ipsum dolor sit amet, pscing consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut"}
                                     </p>
                                 </div>
                             </div>
@@ -183,8 +176,7 @@ const Cards = () => {
                                         Orthopedics
                                     </span>
                                     <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[0.9375vw] lg:leading-[1.47569444444vw] text-[3.58974358974vw] leading-[6.05128205128vw] text-[#505050] PingAR-Light lg:mt-[0.41666666666vw] mt-[2.05128205128vw]">
-                                        Lorem ipsum dolor sit amet, pscing consetetur sadipscing elitr,
-                                        sed diam nonumy eirmod tempor invidunt ut
+                                        {arabic ? "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور نكايديديونتيوت لابوري ات": "Lorem ipsum dolor sit amet, pscing consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut"}
                                     </p>
                                 </div>
                             </div>
@@ -203,8 +195,7 @@ const Cards = () => {
                                         Opthalmology
                                     </span>
                                     <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[0.9375vw] lg:leading-[1.47569444444vw] text-[3.58974358974vw] leading-[6.05128205128vw] text-[#505050] PingAR-Light lg:mt-[0.41666666666vw] mt-[2.05128205128vw]">
-                                        Lorem ipsum dolor sit amet, pscing consetetur sadipscing elitr,
-                                        sed diam nonumy eirmod tempor invidunt ut
+                                        {arabic ? "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور نكايديديونتيوت لابوري ات": "Lorem ipsum dolor sit amet, pscing consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut"}
                                     </p>
                                 </div>
                             </div>

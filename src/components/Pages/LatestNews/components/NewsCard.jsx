@@ -1,11 +1,11 @@
 import React from 'react'
 
-const NewsCard = ({image,date,heading,paragraph,anchor}) => {
+const NewsCard = ({image,date,heading,paragraph,anchor,classes}) => {
   return (
     <div
       data-aos="fade"
       data-aos-delay="00"
-      className="lg:w-[23.3333333333vw] w-[42.3076923077vw]"
+      className={`lg:w-[23.3333333333vw] sm:w-full w-[42.3076923077vw] ${classes}`}
     >
       <div className="w-full lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw] overflow-hidden">
         <a href="./article.html">

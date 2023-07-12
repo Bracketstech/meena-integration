@@ -23,15 +23,15 @@ export default async function Nav({ arabic, home, id }) {
       <div className="relative z-[10] Container1680 flex items-center lg:items-start justify-between">
         <div>
           <Link href={arabic ? "/ar" : "/"}>
-            <img
-              src="/images/icons/header-logo.svg"
+            <img 
+              src={`/images/icons/${arabic ?"Ar-header-whiteLogo" : "header-logo"}.svg`}
               alt="logo"
-              className="whiteLogo lg:w-[12.7083333333vw] w-[31.7948717949vw]"
+              className={`whiteLogo ${arabic ? "lg:w-[8.95833333333vw]" : "lg:w-[12.7083333333vw]"}  w-[31.7948717949vw]`}
             />
           </Link>
           <Link href={arabic ? "/ar" : "/"}>
             <img
-              src="/images/icons/header-logo-blue.svg"
+              src={`/images/icons/${arabic ? "Ar-header-blueLogo" :"header-logo-blue"}.svg`}
               alt="logo"
               className="blueLogo lg:w-[12.7083333333vw] w-[31.7948717949vw]"
             />
@@ -78,7 +78,7 @@ export default async function Nav({ arabic, home, id }) {
             >
               <span className="relative top-[0.15vw]">
                 {" "}
-                {arabic ? "Arabic Download" : "Download app"}{" "}
+                {arabic ? "تحميل التطبيق" : "Download app"}{" "}
               </span>
             </Link>
           </div>
@@ -115,7 +115,7 @@ export default async function Nav({ arabic, home, id }) {
             ))}
           </ul>
           <Link
-            href="./about-app"
+            href={`${arabic ? "ar/about-app": "./about-app"}`}
             className="sm:mt-[6.82926829268vw] sm:h-[7.31707317073vw] sm:text-[2.43902439024vw] mt-[12.3076923077vw] bg-[#845FFF] text-white text-[3.84615384615vw] rounded-[7.94871794872vw] w-full h-[10.5128205128vw] flex justify-center items-center"
           >
             <span> Download app </span>

@@ -7,8 +7,8 @@ const LeaderSwiper = () => {
   const [swiperGap,setSwiperGap] = useState(0)
   const [slidesPerView,setSlidesPerView] = useState(0)
   useEffect(()=>{
-    setSwiperGap(window.innerWidth>768? window.innerWidth /100 * 2.5 :window.innerWidth /100 * 4.10256410256)
-    setSlidesPerView(window.innerWidth>768? 4 : 1.31)
+    setSwiperGap(window.innerWidth>1024? window.innerWidth /100 * 2.5 :window.innerWidth>640?window.innerWidth /100 * 6.09756097561 :window.innerWidth /100 * 4.10256410256)
+    setSlidesPerView(window.innerWidth>1024? 4  : window.innerWidth > 640 ? 2.5: 1.31)
   },[])
   return (
     <div className="relative z-[2]">

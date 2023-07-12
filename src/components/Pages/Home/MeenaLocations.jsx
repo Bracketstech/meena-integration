@@ -1,6 +1,6 @@
 import React from 'react'
 
-const MeenaLocations = () => {
+const MeenaLocations = ({arabic}) => {
   return (
     <div className="relative">
     <div className="absolute w-full h-full leftRightFixer1 top-0">
@@ -130,7 +130,11 @@ const MeenaLocations = () => {
               alt="location-design2"
               className="hidden lg:block lg:w-[37.7604166667vw] leftRightFixer1 lg:top-[-7.08333333333vw] absolute"
             /> */}
-        <svg
+        {
+          arabic ?<svg className="sm:w-[40.0975609756vw] sm:top-[-11.5853658537vw]   hidden lg:h-[13.5197916667vw] sm:block lg:w-[44.0104166667vw] leftRightFixer1 lg:top-[-7.08333333333vw] absolute" xmlns="http://www.w3.org/2000/svg" width="850.067" height="259.583" viewBox="0 0 850.067 259.583">
+  <path id="Path_100979" data-name="Path 100979" d="M-3337.834,7177.609s-59.958,141.874-241.284,204.45-298.777,51.778-484.02,45.854c-37.049-1.185-78.113-1.9-120.123-2.275" transform="translate(4185.28 -7174.988)" fill="none" stroke="#8450ff" stroke-linecap="round" stroke-width="4"/>
+</svg>
+  : <svg
           className="sm:w-[31.0975609756vw] sm:top-[-11.5853658537vw] flipped hidden lg:h-[13.5197916667vw] sm:block lg:w-[37.7604166667vw] leftRightFixer1 lg:top-[-7.08333333333vw] absolute"
           xmlns="http://www.w3.org/2000/svg"
           width="729.988"
@@ -148,6 +152,7 @@ const MeenaLocations = () => {
             strokeWidth={4}
           />
         </svg>
+        }
         {/* <img
               src="/images/home/location-design2-mob.svg"
               alt="location-design2"
@@ -181,7 +186,11 @@ const MeenaLocations = () => {
               alt="location-design3"
               className="hidden lg:block lg:w-[37.65625vw] leftRightFixer2 lg:top-[5.78125vw] absolute"
             /> */}
-        <svg
+        
+            {arabic ? <svg className="sm:w-[40.0975609756vw]   hidden lg:h-[12.3015625vw] sm:block lg:w-[43.8541666667vw] leftRightFixer2 lg:top-[5.78125vw] absolute" xmlns="http://www.w3.org/2000/svg" width="847.546" height="234.311" viewBox="0 0 847.546 234.311">
+  <path id="Path_100980" data-name="Path 100980" d="M-5491.747,7627.023s200.2-155.438,441.345-207.251a1092.509,1092.509,0,0,1,113.956-18.4c61.881-6.587,231.675-3.031,287.439-3.027" transform="translate(5494.553 -7395.519)" fill="none" stroke="#8450ff" stroke-linecap="round" stroke-width="4"/>
+</svg>
+: <svg
           className="sm:w-[31.0975609756vw] flipped hidden lg:h-[12.3015625vw] sm:block lg:w-[37.65625vw] leftRightFixer2 lg:top-[5.78125vw] absolute"
           xmlns="http://www.w3.org/2000/svg"
           width="727.901"
@@ -198,7 +207,7 @@ const MeenaLocations = () => {
             strokeLinecap="round"
             strokeWidth={4}
           />
-        </svg>
+        </svg>}
         {/* <img
               src="/images/home/location-design3-mob.svg"
               alt="location-design3"
@@ -226,19 +235,26 @@ const MeenaLocations = () => {
     </div>
     <div className="sm:pt-[7.31707317073vw] relative z-[2] Container1440 pt-[12.3076923077vw] lg:pt-[4.6875vw] lg:pb-[5.98958333333vw]">
       <div className="lg:w-[37.5vw] mx-[auto]">
-        <h3
+      {arabic ? <h3
+          data-aos="fade-up"
+          className="heading54 PingAR-Regular text-center tracking-[unset] text-[#3B3659] lg:text-center"
+        >
+           
+          <span className="PingAR-Bold"> مواقع  </span>مينا
+        </h3>: <h3
           data-aos="fade-up"
           className="heading54 PingAR-Regular text-center tracking-[unset] text-[#3B3659] lg:text-center"
         >
           Meena
           <span className="PingAR-Bold"> locations </span>
-        </h3>
+        </h3>}
+        
         <p
           data-aos="fade-down"
           className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.9512195122vw] lg:text-[1.14583333333vw] lg:leading-[1.666666666666667vw] text-[3.58974358974359vw] leading-[6.153846153846154vw] PingAR-Light text-[#707070] lg:text-[#505050] text-center mt-[2.051282051282051vw] lg:mt-[0.625vw]"
         >
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-          eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+         {arabic ? "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود . يوت انيم أد مينيم فينايم,كيواسكسير سيتاشن يللأمكو": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumyeirmod tempor invidunt ut labore et dolore magna aliquyam erat,"} 
+          
         </p>
       </div>
       <div className="w-[94.1025641025641vw] lg:w-[unset] hideScroll overflow-scroll lg:overflow-auto flex items-center lg:gap-x-[2.5vw] gap-x-[4.102564102564103vw] lg:pt-[2.5vw] pt-[6.66666666667vw]">
@@ -256,7 +272,7 @@ const MeenaLocations = () => {
             <span className="absolute w-full h-full top-0 leftRightFixer1 bg-[#3B3659] bg-opacity-[0.2]" />
           </div>
           <span className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw] sm:mt-[1.46341463415vw] sm:mb-[unset] lg:text-[1.354166666666667vw] lg:leading-[1.458333333333333vw] text-[4.871794871794872vw] leading-[7.692307692307692vw] PingAR-Medium text-[#3B3659] text-center block lg:mt-[1.25vw] lg:mb-[0.3125vw] mb-[5.93333333333vw] mt-[3.07692307692vw]">
-            Clinic name 1
+            {arabic ? "اسم العيادة ": "Clinic name"} 1
           </span>
         </div>
         <div
@@ -273,7 +289,7 @@ const MeenaLocations = () => {
             <span className="absolute w-full h-full top-0 leftRightFixer1 bg-[#3B3659] bg-opacity-[0.2]" />
           </div>
           <span className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw] sm:mt-[1.46341463415vw] sm:mb-[unset] lg:text-[1.354166666666667vw] lg:leading-[1.458333333333333vw] text-[4.871794871794872vw] leading-[7.692307692307692vw] PingAR-Medium text-[#3B3659] text-center block lg:mt-[1.25vw] lg:mb-[0.3125vw] mb-[5.93333333333vw] mt-[3.07692307692vw]">
-            Clinic name 2
+            {arabic ? "اسم العيادة ": "Clinic name"} 2
           </span>
         </div>
         <div
@@ -294,11 +310,11 @@ const MeenaLocations = () => {
                 alt="clock"
                 className="lg:w-[1.45833333333vw]"
               />
-              <span className="text22 text-[#F5EBE8]">Coming soon</span>
+              <span className="text22 text-[#F5EBE8]">{arabic ? "قريباً": "Coming soon"}</span>
             </div>
           </div>
           <span className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw] sm:mt-[1.46341463415vw] sm:mb-[unset] lg:text-[1.354166666666667vw] lg:leading-[1.458333333333333vw] text-[4.871794871794872vw] leading-[7.692307692307692vw] PingAR-Medium text-[#3B3659] text-center block lg:mt-[1.25vw] lg:mb-[0.3125vw] mb-[5.93333333333vw] mt-[3.07692307692vw]">
-            Clinic name 3
+            {arabic ? "اسم العيادة ": "Clinic name"} 3
           </span>
         </div>
       </div>
@@ -308,7 +324,7 @@ const MeenaLocations = () => {
         className="sm:mt-[3.65853658537vw] sm:text-[1.9512195122vw] sm:leading-[3.41463414634vw] sm:h-[6.34146341463vw] lg:mt-[3.33333333333vw] mt-[8.205128205128205vw] mx-[auto] bg-[#8450FF] lg:text-[0.9375vw] lg:leading-[1.45833333333vw] text-[3.076923076923077vw] PingAR-Light lg:rounded-[5.20833333333vw] rounded-[7.948717948717949vw] lg:w-[12.7604166667vw] w-[37.94871794871795vw] lg:h-[3.22916666667vw] h-[9.23076923077vw] flex justify-center items-center hover:bg-[#3B3659] transition-all duration-300 text-[#FFFFFF]"
       >
         <span className="lg:h-[1.19791666667vw] sm:h-[2.92682926829vw] h-[3.58974358974vw]">
-          View all locations
+        {arabic ? "عرض كل المواقع": "View all locations"}
         </span>
       </a>
     </div>

@@ -1,9 +1,11 @@
+"use client"
 import SubPageHero from '@/components/SubPageHero'
-import React from 'react'
 import HiringPositions from './HiringPositions'
 import WorkAtMeena from './WorkAtMeena'
+import useAnimations from '@/hooks/useAnimations'
 
 const Index = () => {
+  useAnimations()
   return (
     <main>
         <SubPageHero 
