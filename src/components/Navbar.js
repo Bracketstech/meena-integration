@@ -23,15 +23,21 @@ export default async function Nav({ arabic, home, id }) {
       <div className="relative z-[10] Container1680 flex items-center lg:items-start justify-between">
         <div>
           <Link href={arabic ? "/ar" : "/"}>
-            <img 
-              src={`/images/icons/${arabic ?"Ar-header-whiteLogo" : "header-logo"}.svg`}
+            <img
+              src={`/images/icons/${
+                arabic ? "Ar-header-whiteLogo" : "header-logo"
+              }.svg`}
               alt="logo"
-              className={`whiteLogo ${arabic ? "lg:w-[8.95833333333vw]" : "lg:w-[12.7083333333vw]"}  w-[31.7948717949vw]`}
+              className={`whiteLogo ${
+                arabic ? "lg:w-[8.95833333333vw]" : "lg:w-[12.7083333333vw]"
+              }  w-[31.7948717949vw]`}
             />
           </Link>
           <Link href={arabic ? "/ar" : "/"}>
             <img
-              src={`/images/icons/${arabic ? "Ar-header-blueLogo" :"header-logo-blue"}.svg`}
+              src={`/images/icons/${
+                arabic ? "Ar-header-blueLogo" : "header-logo-blue"
+              }.svg`}
               alt="logo"
               className="blueLogo lg:w-[12.7083333333vw] w-[31.7948717949vw]"
             />
@@ -86,7 +92,7 @@ export default async function Nav({ arabic, home, id }) {
       </div>
       <div className="block lg:hidden sidebar bg-[#3B3659] bg-opacity-[0.9] w-full h-[100vh] absolute top-0 leftRightFixer1 opacity-0">
         <div className="sm:pt-[37.8048780488vw] w-[90%] mx-[auto] h-full flex flex-col pt-[54.8717948718vw]">
-          <ul className="sm:text-[3.41463414634vw] PingAr-Regular links w-full text-white text-[4.87179487179vw] flex flex-col gap-y-[4.10256410256vw]">
+          <ul className="sm:text-[3.41463414634vw] items-start PingAr-Regular links w-full text-white text-[4.87179487179vw] flex flex-col gap-y-[4.10256410256vw]">
             {bottomDataAccordingToSite.map((item) => (
               <li key={item.page.url}>
                 <Link href={item.page.url}>{item.page.title}</Link>
@@ -115,7 +121,7 @@ export default async function Nav({ arabic, home, id }) {
             ))}
           </ul>
           <Link
-            href={`${arabic ? "ar/about-app": "./about-app"}`}
+            href={`${arabic ? "ar/about-app" : "./about-app"}`}
             className="sm:mt-[6.82926829268vw] sm:h-[7.31707317073vw] sm:text-[2.43902439024vw] mt-[12.3076923077vw] bg-[#845FFF] text-white text-[3.84615384615vw] rounded-[7.94871794872vw] w-full h-[10.5128205128vw] flex justify-center items-center"
           >
             <span> Download app </span>
