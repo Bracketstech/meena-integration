@@ -33,7 +33,7 @@ const LatestNewsSwiper = ({arabic}) => {
   <div className="flex justify-end lg:justify-[normal]">
     <div className="lg:w-[75vw] w-[93%] lg:mx-[auto]">
       {/* Swiper */}
-      {swiperGap == 0 ||   <Swiper modules={[Navigation]} spaceBetween={swiperGap} slidesPerView={slidesPerView} className="sm:pb-[14.6341463415vw] sm:pt-[4.87804878049vw] swiper homeSwipers w-full lg:pt-[2.5vw] pt-[6.153846153846154vw] lg:pb-[unset] pb-[16.30769230769231vw]">
+      {swiperGap == 0 ||   <Swiper navigation={true} modules={[Navigation]} spaceBetween={swiperGap} slidesPerView={slidesPerView} className="sm:pb-[14.6341463415vw] sm:pt-[4.87804878049vw] swiper homeSwipers w-full lg:pt-[2.5vw] pt-[6.153846153846154vw] lg:pb-[unset] pb-[16.30769230769231vw]">
         
       { arabic?
       cardDataAr.map((CardDat,index)=>(

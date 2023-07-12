@@ -20,7 +20,7 @@ const DoctorsSwiper = ({arabic}) => {
         className="Container1440 PingAR-Regular lg:pt-[0.98958333333vw] heading54 tracking-[unset] text-[#3B3659]"
       >
         {arabic ? "قابل ": "Meet our"}
-        <span className="PingAR-Bold">{arabic ? "أطبائنا": "doctors"}  </span>
+        <span className="PingAR-Bold">{arabic ? "أطبائنا": " doctors"}  </span>
       </h3>
       <div className="flex justify-end lg:justify-[normal]">
         <div className="lg:w-[75vw] w-[93%] lg:mx-[auto]">

@@ -1,4 +1,5 @@
 'use client'
+import SwiperButtons from '@/components/SwiperButtons';
 import { useEffect, useState } from 'react';
 import { Navigation } from 'swiper/modules';
 import {Swiper,SwiperSlide} from 'swiper/react';
@@ -32,8 +33,8 @@ const LeaderSwiper = ({arabic}) => {
   <div className="flex justify-end lg:justify-[norma]">
     <div className="lg:w-[75vw] w-[93%] lg:mx-[auto]">
       {/* Swiper */}
-      {swiperGap == 0 ||   <Swiper modules={[Navigation]} spaceBetween={swiperGap} slidesPerView={slidesPerView} className="sm:pb-[14.6341463415vw] sm:pt-[4.87804878049vw] swiper doctorsSwiper w-full lg:pt-[2.5vw] pt-[6.15384615385vw] pb-[14.358974359vw] lg:pb-[5.885416666666667vw]">
-      <SwiperSlide data-aos="fade" data-aos-delay="00" className="swiper-slide">
+      {swiperGap == 0 ||   <Swiper navigation={true} modules={[Navigation]} spaceBetween={swiperGap} slidesPerView={slidesPerView} className="sm:pb-[14.6341463415vw] sm:pt-[4.87804878049vw] swiper doctorsSwiper w-full lg:pt-[2.5vw] pt-[6.15384615385vw] pb-[14.358974359vw] lg:pb-[5.885416666666667vw]">
+      <SwiperSlide  className="swiper-slide">
             <img
               src="/images/about-meena/leaders/1.jpg"
               alt="leaders"
@@ -48,7 +49,7 @@ const LeaderSwiper = ({arabic}) => {
               </span>
             </div>
           </SwiperSlide> 
-      <SwiperSlide data-aos="fade" data-aos-delay="00" className="swiper-slide">
+      <SwiperSlide  className="swiper-slide">
             <img
               src="/images/about-meena/leaders/2.jpg"
               alt="leaders"
@@ -63,7 +64,7 @@ const LeaderSwiper = ({arabic}) => {
               </span>
             </div>
           </SwiperSlide> 
-      <SwiperSlide data-aos="fade" data-aos-delay="00" className="swiper-slide">
+      <SwiperSlide  className="swiper-slide">
             <img
               src="/images/about-meena/leaders/3.jpg"
               alt="leaders"
@@ -78,7 +79,7 @@ const LeaderSwiper = ({arabic}) => {
               </span>
             </div>
           </SwiperSlide> 
-      <SwiperSlide data-aos="fade" data-aos-delay="00" className="swiper-slide">
+      <SwiperSlide  className="swiper-slide">
             <img
               src="/images/about-meena/leaders/4.jpg"
               alt="leaders"
@@ -93,7 +94,7 @@ const LeaderSwiper = ({arabic}) => {
               </span>
             </div>
           </SwiperSlide> 
-      <SwiperSlide data-aos="fade" data-aos-delay="00" className="swiper-slide">
+      <SwiperSlide  className="swiper-slide">
             <img
               src="/images/about-meena/leaders/1.jpg"
               alt="leaders"
@@ -108,7 +109,7 @@ const LeaderSwiper = ({arabic}) => {
               </span>
             </div>
           </SwiperSlide> 
-      <SwiperSlide data-aos="fade" data-aos-delay="00" className="swiper-slide">
+      <SwiperSlide  className="swiper-slide">
             <img
               src="/images/about-meena/leaders/2.jpg"
               alt="leaders"
@@ -123,7 +124,7 @@ const LeaderSwiper = ({arabic}) => {
               </span>
             </div>
           </SwiperSlide> 
-      <SwiperSlide data-aos="fade" data-aos-delay="00" className="swiper-slide">
+      <SwiperSlide  className="swiper-slide">
             <img
               src="/images/about-meena/leaders/3.jpg"
               alt="leaders"
@@ -138,7 +139,7 @@ const LeaderSwiper = ({arabic}) => {
               </span>
             </div>
           </SwiperSlide> 
-      <SwiperSlide data-aos="fade" data-aos-delay="00" className="swiper-slide">
+      <SwiperSlide  className="swiper-slide">
             <img
               src="/images/about-meena/leaders/4.jpg"
               alt="leaders"
@@ -153,18 +154,7 @@ const LeaderSwiper = ({arabic}) => {
               </span>
             </div>
           </SwiperSlide> 
-        <div className="swiper-button-next">
-          <img
-            src="/images/icons/swiper-arrow.svg"
-            alt="swiper-arrow"
-          />
-        </div>
-        <div className="swiper-button-prev">
-          <img
-            src="/images/icons/swiper-arrow-left.svg"
-            alt="swiper-arrow"
-          />
-        </div>
+        <SwiperButtons/>
       </Swiper>}
     </div>
   </div>

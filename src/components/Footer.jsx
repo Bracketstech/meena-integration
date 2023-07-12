@@ -28,7 +28,7 @@ const Footer = async ({arabic}) => {
       <img
         src="/images/icons/footerbg-design-mob.svg"
         alt="footerbg-design"
-        className="sm:w-[30.487804878vw] lg:hidden block w-[35.64102564102564vw] absolute leftRightFixer2 bottom-0"
+        className="sm:w-[30.487804878vw] flipped lg:hidden block w-[35.64102564102564vw] absolute leftRightFixer2 bottom-0"
       />
       <div className="sm:py-[7.31707317073vw] relative z-[2] Container1680 lg:pt-[4.16666666667vw] lg:pb-[4.47916666667vw] py-[12.30769230769231vw]">
         <div className="sm:gap-y-[7.31707317073vw] flex lg:gap-x-[9.375vw] flex-wrap gap-y-[12.30769230769231vw] gap-x-[12.30769230769231vw] justify-center lg:justify-normal">
