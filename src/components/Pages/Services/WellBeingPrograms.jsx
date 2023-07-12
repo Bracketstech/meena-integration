@@ -31,7 +31,7 @@ const WellBeingPrograms = ({arabic}) => {
         className="lg:hidden block w-full absolute leftRightFixer1 bottom-[-3.84615384615vw]"
       /> */}
     <svg
-      className="lg:hidden block w-full absolute leftRightFixer1 bottom-[-3.84615384615vw]"
+      className="sm:hidden block w-full absolute leftRightFixer1 bottom-[-3.84615384615vw]"
       xmlns="http://www.w3.org/2000/svg"
       width="392.647"
       height="221.402"

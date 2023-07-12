@@ -13,7 +13,7 @@ const Index = ({arabic}) => {
     text={arabic?"لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور نكايديديونتيوت لابوري ات":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna"} />
               <div
   className="lg:pt-[6.25vw] pt-[16.4102564103vw] sm:pb-[7.31707317073vw]
-  lg:pb-[unset]"
+  lg:pb-[unset] overflow-hidden"
 >
   <h2
     data-aos="fade-up"
