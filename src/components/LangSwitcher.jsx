@@ -3,7 +3,11 @@ import Link from 'next/link';
 import {usePathname, useSearchParams} from 'next/navigation'
 import Menu from './Menu';
 import { useRouter } from 'next/navigation';
+import { useEffect } from 'react';
 const LangSwitcher = ({arabic}) => {
+  useEffect(()=>{
+    document.querySelector('body').classList.remove('active')
+  },[])
     const pathname = usePathname(); 
     let newPath =pathname.includes('/ar') ? pathname.replace('/ar',""): "/ar" +pathname
     const searchParams = useSearchParams()
