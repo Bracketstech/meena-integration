@@ -1,14 +1,22 @@
 import React from 'react'
 
-const OurFeatures = () => {
+const OurFeatures = ({arabic}) => {
   return (
     <div className="Container1440">
   <h2
     data-aos="fade-up"
     className="mx-[auto] lg:w-[28.8020833333vw] text-center relative heading54 PingAR-Regular tracking-[unset] text-[#3B3659]"
-  >
-    Other
+  >{
+    arabic?
+    <>
+     <span className="PingAR-Bold"> ميزات  </span>
+     أخرى
+   </>
+  :<>
+   Other
     <span className="PingAR-Bold"> features </span>
+  </>
+   }
     {/* <img
             src="/images/about-app/design.png"
             alt="design"
@@ -78,7 +86,7 @@ const OurFeatures = () => {
         className="lg:w-[2.5vw] w-[8.20512820513vw] sm:w-[4.87804878049vw]"
       />
       <span className="sm:text-[1.9512195122vw] sm:leading-[3.41463414634vw] lg:text-[0.9375vw] lg:leading-[1.51041666667vw] PingAR-Regular text-[#3B3659] text-[3.58974358974vw] leading-[5.64102564103vw] text-center">
-        Online payment
+       {arabic?"الدفع الالكتروني": "Online payment"}
       </span>
     </div>
     <div
@@ -92,7 +100,7 @@ const OurFeatures = () => {
         className="lg:w-[1.875vw] w-[6.15384615385vw] sm:w-[4.87804878049vw]"
       />
       <span className="sm:text-[1.9512195122vw] sm:leading-[3.41463414634vw] lg:text-[0.9375vw] lg:leading-[1.51041666667vw] PingAR-Regular text-[#3B3659] text-[3.58974358974vw] leading-[5.64102564103vw] text-center">
-        Medical record
+       {arabic?"سجلات طبية": "Medical record"}
       </span>
     </div>
     <div
@@ -106,7 +114,7 @@ const OurFeatures = () => {
         className="lg:w-[2.34375vw] w-[8.20512820513vw] sm:w-[4.87804878049vw]"
       />
       <span className="sm:text-[1.9512195122vw] sm:leading-[3.41463414634vw] lg:text-[0.9375vw] lg:leading-[1.51041666667vw] PingAR-Regular text-[#3B3659] text-[3.58974358974vw] leading-[5.64102564103vw] text-center">
-        Voice integration
+       {arabic?"تكامل الصوت": "Voice integration"}
       </span>
     </div>
     <div
@@ -120,7 +128,7 @@ const OurFeatures = () => {
         className="lg:w-[1.77083333333vw] w-[5.64102564103vw]"
       />
       <span className="sm:text-[1.9512195122vw] sm:leading-[3.41463414634vw] lg:text-[0.9375vw] lg:leading-[1.51041666667vw] PingAR-Regular text-[#3B3659] text-[3.58974358974vw] leading-[5.64102564103vw] text-center">
-        Online QR check-in
+       {arabic?"تسجيل الوصول عبر الإنترنت QR": "Online QR check-in"}
       </span>
     </div>
     <div
@@ -133,7 +141,7 @@ const OurFeatures = () => {
         className="lg:w-[1.82291666667vw] w-[5.64102564103vw] sm:w-[4.87804878049vw]"
       />
       <span className="sm:text-[1.9512195122vw] sm:leading-[3.41463414634vw] lg:text-[0.9375vw] lg:leading-[1.51041666667vw] PingAR-Regular text-[#3B3659] text-[3.58974358974vw] leading-[5.64102564103vw] text-center">
-        Educational material
+       {arabic?"المواد التعليمية": "Educational material"}
       </span>
     </div>
     <div
@@ -147,7 +155,7 @@ const OurFeatures = () => {
         className="lg:w-[2.86458333333vw] w-[7.69230769231vw] sm:w-[6.09756097561vw]"
       />
       <span className="sm:text-[1.9512195122vw] sm:leading-[3.41463414634vw] lg:text-[0.9375vw] lg:leading-[1.51041666667vw] PingAR-Regular text-[#3B3659] text-[3.58974358974vw] leading-[5.64102564103vw] text-center">
-        Immediate consultation
+       {arabic?"استشارة فورية": "Immediate consultation"}
       </span>
     </div>
     <div
@@ -161,8 +169,8 @@ const OurFeatures = () => {
         className="lg:w-[2.5vw] w-[8.20512820513vw] sm:w-[4.87804878049vw]"
       />
       <span className="sm:text-[1.9512195122vw] sm:leading-[3.41463414634vw] lg:text-[0.9375vw] lg:leading-[1.51041666667vw] PingAR-Regular text-[#3B3659] text-[3.58974358974vw] leading-[5.64102564103vw] text-center">
-        Buddy/nutrition <br />
-        programs
+       {arabic?"الأصدقاء / برامج التغذية": <>Buddy/nutrition <br />
+        programs</>}
       </span>
     </div>
     <div
@@ -176,8 +184,8 @@ const OurFeatures = () => {
         className="lg:w-[2.5vw] w-[8.20512820513vw] sm:w-[4.87804878049vw]"
       />
       <span className="sm:text-[1.9512195122vw] sm:leading-[3.41463414634vw] lg:text-[0.9375vw] lg:leading-[1.51041666667vw] PingAR-Regular text-[#3B3659] text-[3.58974358974vw] leading-[5.64102564103vw] text-center">
-        Health devices <br />
-        integration
+       {arabic?"تكامل الأجهزة الصحية": <> Health devices <br />
+        integration</>}
       </span>
     </div>
     <div
@@ -190,8 +198,8 @@ const OurFeatures = () => {
         className="lg:w-[2.5vw] w-[8.20512820513vw] sm:w-[4.87804878049vw]"
       />
       <span className="sm:text-[1.9512195122vw] sm:leading-[3.41463414634vw] lg:text-[0.9375vw] lg:leading-[1.51041666667vw] PingAR-Regular text-[#3B3659] text-[3.58974358974vw] leading-[5.64102564103vw] text-center">
-        Insurance eligibility <br />
-        checker
+       {arabic?"مدقق أهلية التأمين": <> Insurance eligibility <br />
+        checker </>}
       </span>
     </div>
     <div
@@ -205,8 +213,8 @@ const OurFeatures = () => {
         className="lg:w-[2.23958333333vw] w-[7.4358974359vw] sm:w-[6.09756097561vw]"
       />
       <span className="sm:text-[1.9512195122vw] sm:leading-[3.41463414634vw] lg:text-[0.9375vw] lg:leading-[1.51041666667vw] PingAR-Regular text-[#3B3659] text-[3.58974358974vw] leading-[5.64102564103vw] text-center">
-        Social media <br />
-        sharing of milestones
+       {arabic?"مشاركة المعالم على وسائل التواصل الاجتماعي": <>Social media <br />
+        sharing of milestones</> }
       </span>
     </div>
     <div
@@ -220,8 +228,8 @@ const OurFeatures = () => {
         className="lg:w-[1.875vw] w-[6.15384615385vw] sm:w-[4.87804878049vw]"
       />
       <span className="sm:text-[1.9512195122vw] sm:leading-[3.41463414634vw] lg:text-[0.9375vw] lg:leading-[1.51041666667vw] PingAR-Regular text-[#3B3659] text-[3.58974358974vw] leading-[5.64102564103vw] text-center">
-        Display care team <br />
-        information
+       {arabic?"عرض معلومات فريق الرعاية":<> Display care team <br />
+        information</>}
       </span>
     </div>
     <div
@@ -235,8 +243,8 @@ const OurFeatures = () => {
         className="lg:w-[2.08333333333vw] w-[6.66666666667vw] sm:w-[4.87804878049vw]"
       />
       <span className="sm:text-[1.9512195122vw] sm:leading-[3.41463414634vw] lg:text-[0.9375vw] lg:leading-[1.51041666667vw] PingAR-Regular text-[#3B3659] text-[3.58974358974vw] leading-[5.64102564103vw] text-center">
-        Mobile health app <br />
-        integration
+       {arabic?"تكامل تطبيق الصحة المحمول": <>Mobile health app <br />
+        integration</>}
       </span>
     </div>
   </div>

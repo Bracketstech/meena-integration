@@ -4,15 +4,15 @@ import HiringPositions from './HiringPositions'
 import WorkAtMeena from './WorkAtMeena'
 import useAnimations from '@/hooks/useAnimations'
 
-const Index = () => {
+const Index = (arabic) => {
   useAnimations()
   return (
     <main>
         <SubPageHero 
-        boldtext="Careers"
-        text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna" />
-       <HiringPositions />
-       <WorkAtMeena />
+        boldtext={arabic?"وظائف": "Careers"}
+        text={arabic?"لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور نكايديديونتيوت لابوري ات": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna"} />
+       <HiringPositions arabic={arabic} />
+       <WorkAtMeena  arabic={arabic}/>
       
     </main>
   )

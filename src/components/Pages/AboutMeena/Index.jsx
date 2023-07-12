@@ -13,19 +13,18 @@ const Index = ({arabic}) => {
   
   return (
     <main>
-      <section>
+      <section >
       <SubPageHero
-        title="About"
-        boldtext="meena"
-        text="
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna"
+        title={arabic?"عن ":"About"}
+        boldtext={arabic?"مينا":"meena"}
+        text={arabic?"لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور نكايديديونتيوت لابوري ات": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna"}
          /> 
-         <OurStory />
-         <CoreValues />
-         <VisionMission />
-         <LeaderSwiper />
-         <Partners />
-         <Qualifications />
+         <OurStory arabic={arabic} />
+         <CoreValues arabic={arabic} />
+         <VisionMission arabic={arabic} />
+         <LeaderSwiper arabic={arabic} />
+         <Partners arabic={arabic} />
+         <Qualifications arabic={arabic} />
 
       </section>
     </main>

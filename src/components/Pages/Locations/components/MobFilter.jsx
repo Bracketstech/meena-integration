@@ -1,20 +1,20 @@
 import React from 'react'
 
-const MobFilter = () => {
+const MobFilter = ({arabic}) => {
   return (
     <div className="sm:mb-[14.6341463415vw] lg:hidden block rounded-[3.84615384615vw] overflow-hidden border-[#CECFD0] border-[1px] mt-[16.4102564103vw] sm:mt-[7.31707317073vw] mb-[20.5128205128vw]">
     <div>
       <div className="px-[6.15384615385vw] bg-[#F0F0F0] pt-[4.10256410256vw] sm:px-[3.65853658537vw]">
         <div className="flex items-center justify-between">
           <h5 className="sm:text-[2.68292682927vw] sm:leading-[4.87804878049vw] lg:text-[1.14583333333vw] lg:leading-[1.82291666667vw] text-[4.10256410256vw] leading-[6.66666666667vw] PingAR-Bold text-[#3B3659]">
-            Filter by
+          {arabic? "مصنف بواسطة" :"Filter by"}
           </h5>
           <a
             href=""
             className="sm:w-[24.3902439024vw] sm:h-[6.70731707317vw] sm:text-[1.9512195122vw] sm:leading-[3.41463414634vw] bg-[#3B3659] text-[#FFFFFF] lg:text-[0.9375vw] text-[3.07692307692vw] PingAR-Light lg:rounded-[1.35416666667vw] rounded-[6.66666666667vw] w-[27.4358974359vw] lg:w-[7.91666666667vw] lg:h-[2.70833333333vw] h-[10.2564102564vw] flex justify-center items-center"
           >
             <span className="lg:h-[1.19791666667vw] h-[3.58974358974vw] sm:h-[2.92682926829vw]">
-              Nearby
+            {arabic?"مجاور": "  Nearby"}
             </span>
           </a>
         </div>
@@ -37,7 +37,8 @@ const MobFilter = () => {
                 />
               </div>
               <span className="sm:text-[1.9512195122vw] sm:leading-[3.41463414634vw] lg:text-[0.9375vw] lg:leading-[1.45833333333vw] text-[3.58974358974vw] PingAR-Light text-[#3B3659]">
-                All
+              {arabic?"الكل": "All"}
+
               </span>
             </label>
             <label
@@ -57,7 +58,8 @@ const MobFilter = () => {
                 />
               </div>
               <span className="sm:text-[1.9512195122vw] sm:leading-[3.41463414634vw] lg:text-[0.9375vw] lg:leading-[1.45833333333vw] text-[3.58974358974vw] PingAR-Light text-[#3B3659]">
-                Yalla Clinic
+              {arabic?"عيادة يلا": "Yalla Clinic"}
+
               </span>
             </label>
           </div>
@@ -79,7 +81,8 @@ const MobFilter = () => {
                 />
               </div>
               <span className="sm:text-[1.9512195122vw] sm:leading-[3.41463414634vw] lg:text-[0.9375vw] lg:leading-[1.45833333333vw] text-[3.58974358974vw] PingAR-Light text-[#3B3659]">
-                NEST Clinic
+              {arabic?"عيادة نيست":"NEST Clinic"}
+
               </span>
             </label>
             <label
@@ -99,7 +102,7 @@ const MobFilter = () => {
                 />
               </div>
               <span className="sm:text-[1.9512195122vw] sm:leading-[3.41463414634vw] lg:text-[0.9375vw] lg:leading-[1.45833333333vw] text-[3.58974358974vw] PingAR-Light text-[#3B3659]">
-                Open Now
+               { arabic? "مفتوح الان": "Open Now"}
               </span>
             </label>
           </div>
@@ -109,7 +112,7 @@ const MobFilter = () => {
         <div className="sm:h-[8.53658536585vw] bg-[#F0F0F0] rounded-[6.66666666667vw] h-[11.7948717949vw] flex items-center justify-between px-[5.64102564103vw]">
           <input
             type="text"
-            placeholder="Search area"
+            placeholder={arabic?"منطقة البحث":"Search area"}
             className="sm:text-[1.9512195122vw] w-[90%] outline-none bg-transparent text-[3.58974358974vw] PingAR-Light placeholder:text-[#8F8F8F] h-full"
           />
           <img
@@ -121,7 +124,7 @@ const MobFilter = () => {
         <div className="sm:pt-[4.87804878049vw] sm:gap-y-[2.92682926829vw] pt-[6.15384615385vw] flex flex-col gap-y-[3.20512820513vw]">
           <div className="sm:pb-[2.92682926829vw] pb-[3.20512820513vw] border-[#CECFD0] border-b-[1px]">
             <h5 className="sm:text-[2.68292682927vw] sm:leading-[4.87804878049vw] text-[4.10256410256vw] leading-[6.66666666667vw] text-[#3B3659]">
-              Albaha clinic
+              {arabic? "عيادة الباحة": "Albaha clinic"}
             </h5>
             <div className="sm:mt-[1.9512195122vw] mt-[3.58974358974vw] flex flex-col gap-y-[2.30769230769vw]">
               <div className="sm:gap-x-[0.97560975609vw] flex items-start gap-x-[2.05128205128vw]">
@@ -131,7 +134,7 @@ const MobFilter = () => {
                   className="w-[5.12820512821vw] sm:w-[3.41463414634vw]"
                 />
                 <span className="sm:text-[1.9512195122vw] sm:leading-[3.41463414634vw] text-[3.58974358974vw] leading-[5.64102564103vw] PingAR-Light text-[#505050]">
-                  Sat-Thu (7AM - 4PM)
+                   {arabic?"السبت - الخميس (7 صباحًا - 4 مساءً)": " Sat-Thu (7AM - 4PM)"}
                 </span>
               </div>
               <a
@@ -143,7 +146,7 @@ const MobFilter = () => {
                   alt="phone"
                   className="w-[6.15384615385vw] sm:w-[3.41463414634vw]"
                 />
-                <span className="sm:text-[1.9512195122vw] sm:leading-[3.41463414634vw] text-[3.58974358974vw] leading-[5.64102564103vw] PingAR-Light text-[#505050]">
+                <span style={{direction:"ltr"}} className="sm:text-[1.9512195122vw] sm:leading-[3.41463414634vw] text-[3.58974358974vw] leading-[5.64102564103vw] PingAR-Light text-[#505050]">
                   +966 000 0000 00
                 </span>
               </a>
@@ -157,14 +160,14 @@ const MobFilter = () => {
                   className="w-[5.12820512821vw] sm:w-[3.41463414634vw]"
                 />
                 <span className="sm:text-[1.9512195122vw] sm:leading-[3.41463414634vw] text-[3.58974358974vw] leading-[5.64102564103vw] PingAR-Medium text-[#3B3659]">
-                  Open In Google Map
+                  {arabic?"افتح في خريطة جوجل": "Open In Google Map"}
                 </span>
               </a>
             </div>
           </div>
           <div className="sm:pb-[2.92682926829vw] pb-[3.20512820513vw] border-[#CECFD0] border-b-[1px]">
             <h5 className="sm:text-[2.68292682927vw] sm:leading-[4.87804878049vw] text-[4.10256410256vw] leading-[6.66666666667vw] text-[#3B3659]">
-              Albaha clinic
+              {arabic? "عيادة الباحة": "Albaha clinic"}
             </h5>
             <div className="sm:mt-[1.9512195122vw] mt-[3.58974358974vw] flex flex-col gap-y-[2.30769230769vw]">
               <div className="sm:gap-x-[0.97560975609vw] flex items-start gap-x-[2.05128205128vw]">
@@ -174,7 +177,7 @@ const MobFilter = () => {
                   className="w-[5.12820512821vw] sm:w-[3.41463414634vw]"
                 />
                 <span className="sm:text-[1.9512195122vw] sm:leading-[3.41463414634vw] text-[3.58974358974vw] leading-[5.64102564103vw] PingAR-Light text-[#505050]">
-                  Sat-Thu (7AM - 4PM)
+                   {arabic?"السبت - الخميس (7 صباحًا - 4 مساءً)": " Sat-Thu (7AM - 4PM)"}
                 </span>
               </div>
               <a
@@ -186,7 +189,7 @@ const MobFilter = () => {
                   alt="phone"
                   className="w-[6.15384615385vw] sm:w-[3.41463414634vw]"
                 />
-                <span className="sm:text-[1.9512195122vw] sm:leading-[3.41463414634vw] text-[3.58974358974vw] leading-[5.64102564103vw] PingAR-Light text-[#505050]">
+                <span style={{direction:"ltr"}} className="sm:text-[1.9512195122vw] sm:leading-[3.41463414634vw] text-[3.58974358974vw] leading-[5.64102564103vw] PingAR-Light text-[#505050]">
                   +966 000 0000 00
                 </span>
               </a>
@@ -200,14 +203,14 @@ const MobFilter = () => {
                   className="w-[5.12820512821vw] sm:w-[3.41463414634vw]"
                 />
                 <span className="sm:text-[1.9512195122vw] sm:leading-[3.41463414634vw] text-[3.58974358974vw] leading-[5.64102564103vw] PingAR-Medium text-[#3B3659]">
-                  Open In Google Map
+                  {arabic?"افتح في خريطة جوجل": "Open In Google Map"}
                 </span>
               </a>
             </div>
           </div>
           <div className="sm:pb-[2.92682926829vw] pb-[3.20512820513vw] border-[#CECFD0] border-b-[1px]">
             <h5 className="sm:text-[2.68292682927vw] sm:leading-[4.87804878049vw] text-[4.10256410256vw] leading-[6.66666666667vw] text-[#3B3659]">
-              Albaha clinic
+              {arabic? "عيادة الباحة": "Albaha clinic"}
             </h5>
             <div className="sm:mt-[1.9512195122vw] mt-[3.58974358974vw] flex flex-col gap-y-[2.30769230769vw]">
               <div className="sm:gap-x-[0.97560975609vw] flex items-start gap-x-[2.05128205128vw]">
@@ -217,7 +220,7 @@ const MobFilter = () => {
                   className="w-[5.12820512821vw] sm:w-[3.41463414634vw]"
                 />
                 <span className="sm:text-[1.9512195122vw] sm:leading-[3.41463414634vw] text-[3.58974358974vw] leading-[5.64102564103vw] PingAR-Light text-[#505050]">
-                  Sat-Thu (7AM - 4PM)
+                   {arabic?"السبت - الخميس (7 صباحًا - 4 مساءً)": " Sat-Thu (7AM - 4PM)"}
                 </span>
               </div>
               <a
@@ -229,7 +232,7 @@ const MobFilter = () => {
                   alt="phone"
                   className="w-[6.15384615385vw] sm:w-[3.41463414634vw]"
                 />
-                <span className="sm:text-[1.9512195122vw] sm:leading-[3.41463414634vw] text-[3.58974358974vw] leading-[5.64102564103vw] PingAR-Light text-[#505050]">
+                <span style={{direction:"ltr"}} className="sm:text-[1.9512195122vw] sm:leading-[3.41463414634vw] text-[3.58974358974vw] leading-[5.64102564103vw] PingAR-Light text-[#505050]">
                   +966 000 0000 00
                 </span>
               </a>
@@ -243,7 +246,7 @@ const MobFilter = () => {
                   className="w-[5.12820512821vw] sm:w-[3.41463414634vw]"
                 />
                 <span className="sm:text-[1.9512195122vw] sm:leading-[3.41463414634vw] text-[3.58974358974vw] leading-[5.64102564103vw] PingAR-Medium text-[#3B3659]">
-                  Open In Google Map
+                  {arabic?"افتح في خريطة جوجل": "Open In Google Map"}
                 </span>
               </a>
             </div>

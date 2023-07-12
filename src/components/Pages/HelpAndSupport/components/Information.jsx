@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Information = () => {
+const Information = ({arabic}) => {
   return (
     <div className="lg:w-[21.40625vw]">
     <div className="flex flex-col sm:gap-y-[1.70731707317vw] lg:gap-y-[0.98958333333vw] gap-y-[4.10256410256vw] PingAR-Light text-[#3B3659]">
@@ -14,8 +14,7 @@ const Information = () => {
           className="lg:w-[1.04166666667vw] w-[5.12820512821vw] sm:w-[3.65853658537vw]"
         />
         <span className="sm:text-[1.9512195122vw] lg:text-[0.9375vw] text-[3.58974358974vw] lg:w-[unset] w-[80vw] textAlignFixer">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-          diam nonumy eirmod
+          {arabic?"لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed   diam nonumy eirmod"}
         </span>
       </a>
       <a
@@ -27,7 +26,7 @@ const Information = () => {
           alt="mail"
           className="lg:w-[1.25vw] w-[6.15384615385vw] sm:w-[3.90243902439vw]"
         />
-        <span className="sm:text-[1.9512195122vw] lg:text-[0.9375vw] text-[3.58974358974vw] lg:w-[unset] w-[80vw] textAlignFixer">
+        <span style={{direction:"ltr"}} className="sm:text-[1.9512195122vw] lg:text-[0.9375vw] text-[3.58974358974vw] lg:w-[unset] w-[80vw] textAlignFixer">
           meena@meena.com
         </span>
       </a>
@@ -40,7 +39,7 @@ const Information = () => {
           alt="mobile"
           className="lg:w-[1.25vw] w-[6.15384615385vw] sm:w-[3.90243902439vw]"
         />
-        <span className="sm:text-[1.9512195122vw] lg:text-[0.9375vw] text-[3.58974358974vw] lg:w-[unset] w-[80vw] textAlignFixer">
+        <span style={{direction:"ltr"}} className="sm:text-[1.9512195122vw] lg:text-[0.9375vw] text-[3.58974358974vw] lg:w-[unset] w-[80vw] textAlignFixer">
           +966 000 0000 000
         </span>
       </a>

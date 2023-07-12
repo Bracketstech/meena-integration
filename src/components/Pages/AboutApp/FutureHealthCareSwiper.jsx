@@ -1,9 +1,10 @@
 'use client'
+import SwiperButtons from '@/components/SwiperButtons';
 import { useEffect, useState } from 'react';
 import { Navigation } from 'swiper/modules';
 import {Swiper,SwiperSlide} from 'swiper/react';
 
-const FutureHealthCareSwiper = () => {
+const FutureHealthCareSwiper = ({arabic}) => {
   const [swiperGap,setSwiperGap] = useState(0)
   const [slidesPerView,setSlidesPerView] = useState(0)
   useEffect(()=>{
@@ -15,13 +16,25 @@ const FutureHealthCareSwiper = () => {
      <h2
       data-aos="fade-up"
       className="Container1440 heading54 PingAR-Regular tracking-[unset] text-[#3B3659]"
-    >
+    >{arabic?
+      <>
+      اختبر  
+      <span className="PingAR-Bold">
+        {" "}
+        مستقبل {" "}
+      </span>
+      الرعاية  
+      <br />{" "}
+      الصحية
+      </>:
+      <>
       Experience the
       <span className="PingAR-Bold">
         {" "}
         future <br />{" "}
       </span>
       of healthcare
+      </>}
     </h2>
     {/* Swiper */}
     <div className="lg:pb-[8.4375vw] pb-[15.12820512820513vw] sm:pb-[14.6341463415vw]">
@@ -112,19 +125,14 @@ const FutureHealthCareSwiper = () => {
                   data-aos-delay={200}
                   className="sm:text-[3.41463414634vw] sm:leading-[5.12195121951vw] sm:mt-[1.9512195122vw] lg:text-[1.875vw] lg:leading-[3.02083333333vw] lg:mt-[1.25vw] mt-[3.07692307692vw] text-[#3B3659] PingAR-Medium text-[4.87179487179vw] leading-[7.69230769231vw]"
                 >
-                  Check your symptoms at any time
+                  {arabic?"تحقق من الأعراض الخاصة بك في أي وقت": "Check your symptoms at any time"}
                 </h4>
                 <p
                   data-aos="fade-down"
                   data-aos-delay={200}
                   className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] PingAR-Light lg:text-[1.14583333333vw] lg:leading-[1.69270833333vw] text-[#505050] text-[3.58974358974vw] leading-[6.08058608059vw] lg:mt-[0.83333333333vw] mt-[2.05128205128vw] sm:text-start text-center"
                 >
-                  Intuitive health tool designed to help you quickly and easily
-                  assess your symptoms. By inputting your current health
-                  concerns, the symptom checker evaluates possible causes and
-                  offers guidance on potential next steps such as whether you
-                  should seek further medical advice or recommend you an
-                  educational content
+                  {arabic?"أداة صحية بديهية مصممة لمساعدتك على تقييم أعراضك بسرعة وسهولة. من خلال إدخال مخاوفك الصحية الحالية ، يقوم مدقق الأعراض بتقييم الأسباب المحتملة وتقديم إرشادات حول الخطوات التالية المحتملة مثل ما إذا كان يجب عليك طلب المزيد من النصائح الطبية أو التوصية بمحتوى تعليمي لك": "Intuitive health tool designed to help you quickly and easily assess your symptoms. By inputting your current health concerns, the symptom checker evaluates possible causes and offers guidance on potential next steps such as whether you should seek further medical advice or recommend you an educational content"}
                 </p>
               </div>
             </div>
@@ -215,19 +223,15 @@ const FutureHealthCareSwiper = () => {
                   data-aos-delay={200}
                   className="sm:text-[3.41463414634vw] sm:leading-[5.12195121951vw] sm:mt-[1.9512195122vw] lg:text-[1.875vw] lg:leading-[3.02083333333vw] lg:mt-[1.25vw] mt-[3.07692307692vw] text-[#3B3659] PingAR-Medium text-[4.87179487179vw] leading-[7.69230769231vw]"
                 >
-                  Check your symptoms at any time
+                  {arabic?"تحقق من الأعراض الخاصة بك في أي وقت": "Check your symptoms at any time"}
                 </h4>
                 <p
                   data-aos="fade-down"
                   data-aos-delay={200}
                   className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] PingAR-Light lg:text-[1.14583333333vw] lg:leading-[1.69270833333vw] text-[#505050] text-[3.58974358974vw] leading-[6.08058608059vw] lg:mt-[0.83333333333vw] mt-[2.05128205128vw] sm:text-start text-center"
                 >
-                  Intuitive health tool designed to help you quickly and easily
-                  assess your symptoms. By inputting your current health
-                  concerns, the symptom checker evaluates possible causes and
-                  offers guidance on potential next steps such as whether you
-                  should seek further medical advice or recommend you an
-                  educational content
+                   {arabic?"أداة صحية بديهية مصممة لمساعدتك على تقييم أعراضك بسرعة وسهولة. من خلال إدخال مخاوفك الصحية الحالية ، يقوم مدقق الأعراض بتقييم الأسباب المحتملة وتقديم إرشادات حول الخطوات التالية المحتملة مثل ما إذا كان يجب عليك طلب المزيد من النصائح الطبية أو التوصية بمحتوى تعليمي لك": "Intuitive health tool designed to help you quickly and easily assess your symptoms. By inputting your current health concerns, the symptom checker evaluates possible causes and offers guidance on potential next steps such as whether you should seek further medical advice or recommend you an educational content"}
+                
                 </p>
               </div>
             </div>
@@ -318,19 +322,15 @@ const FutureHealthCareSwiper = () => {
                   data-aos-delay={200}
                   className="sm:text-[3.41463414634vw] sm:leading-[5.12195121951vw] sm:mt-[1.9512195122vw] lg:text-[1.875vw] lg:leading-[3.02083333333vw] lg:mt-[1.25vw] mt-[3.07692307692vw] text-[#3B3659] PingAR-Medium text-[4.87179487179vw] leading-[7.69230769231vw]"
                 >
-                  Check your symptoms at any time
+                  {arabic?"تحقق من الأعراض الخاصة بك في أي وقت": "Check your symptoms at any time"}
                 </h4>
                 <p
                   data-aos="fade-down"
                   data-aos-delay={200}
                   className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] PingAR-Light lg:text-[1.14583333333vw] lg:leading-[1.69270833333vw] text-[#505050] text-[3.58974358974vw] leading-[6.08058608059vw] lg:mt-[0.83333333333vw] mt-[2.05128205128vw] sm:text-start text-center"
                 >
-                  Intuitive health tool designed to help you quickly and easily
-                  assess your symptoms. By inputting your current health
-                  concerns, the symptom checker evaluates possible causes and
-                  offers guidance on potential next steps such as whether you
-                  should seek further medical advice or recommend you an
-                  educational content
+                   {arabic?"أداة صحية بديهية مصممة لمساعدتك على تقييم أعراضك بسرعة وسهولة. من خلال إدخال مخاوفك الصحية الحالية ، يقوم مدقق الأعراض بتقييم الأسباب المحتملة وتقديم إرشادات حول الخطوات التالية المحتملة مثل ما إذا كان يجب عليك طلب المزيد من النصائح الطبية أو التوصية بمحتوى تعليمي لك": "Intuitive health tool designed to help you quickly and easily assess your symptoms. By inputting your current health concerns, the symptom checker evaluates possible causes and offers guidance on potential next steps such as whether you should seek further medical advice or recommend you an educational content"}
+                
                 </p>
               </div>
             </div>
@@ -421,36 +421,20 @@ const FutureHealthCareSwiper = () => {
                   data-aos-delay={200}
                   className="sm:text-[3.41463414634vw] sm:leading-[5.12195121951vw] sm:mt-[1.9512195122vw] lg:text-[1.875vw] lg:leading-[3.02083333333vw] lg:mt-[1.25vw] mt-[3.07692307692vw] text-[#3B3659] PingAR-Medium text-[4.87179487179vw] leading-[7.69230769231vw]"
                 >
-                  Check your symptoms at any time
+                  {arabic?"تحقق من الأعراض الخاصة بك في أي وقت": "Check your symptoms at any time"}
                 </h4>
                 <p
                   data-aos="fade-down"
                   data-aos-delay={200}
                   className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] PingAR-Light lg:text-[1.14583333333vw] lg:leading-[1.69270833333vw] text-[#505050] text-[3.58974358974vw] leading-[6.08058608059vw] lg:mt-[0.83333333333vw] mt-[2.05128205128vw] sm:text-start text-center"
                 >
-                  Intuitive health tool designed to help you quickly and easily
-                  assess your symptoms. By inputting your current health
-                  concerns, the symptom checker evaluates possible causes and
-                  offers guidance on potential next steps such as whether you
-                  should seek further medical advice or recommend you an
-                  educational content
+                   {arabic?"أداة صحية بديهية مصممة لمساعدتك على تقييم أعراضك بسرعة وسهولة. من خلال إدخال مخاوفك الصحية الحالية ، يقوم مدقق الأعراض بتقييم الأسباب المحتملة وتقديم إرشادات حول الخطوات التالية المحتملة مثل ما إذا كان يجب عليك طلب المزيد من النصائح الطبية أو التوصية بمحتوى تعليمي لك": "Intuitive health tool designed to help you quickly and easily assess your symptoms. By inputting your current health concerns, the symptom checker evaluates possible causes and offers guidance on potential next steps such as whether you should seek further medical advice or recommend you an educational content"}
+                
                 </p>
               </div>
             </div>
           </SwiperSlide>
-        <div className="swiper-button-next">
-          <img
-            src="/images/icons/swiper-arrow.svg"
-            alt="swiper-arrow"
-          />
-        </div>
-        <div className="swiper-button-prev">
-          <img
-            src="/images/icons/swiper-arrow.svg"
-            alt="swiper-arrow"
-            className="transform scale-x-[-1]"
-          />
-        </div>
+        <SwiperButtons/>
       </Swiper>
     </div>
    </>

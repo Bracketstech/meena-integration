@@ -1,16 +1,16 @@
 import Cta from "@/components/Cta";
 import Footer from "@/components/Footer";
 import Nav from "@/components/Navbar";
-import PrivacyPolicy from "@/components/Pages/PrivacyPolicy/Index";
+import ArticlePage from "@/components/Pages/Article/Index";
 import ScrollToTop from "@/components/ScrollToTop";
-export default async function PrivacyPolicyPage() {
+export default async function Article() {
   return (
-    <div className="rtl">
+    <div className="ltr">
       <Cta />
       <ScrollToTop />
-      <Nav arabic />
-      <PrivacyPolicy arabic />
-      <Footer arabic />
+      <Nav />
+      <ArticlePage />
+      <Footer />
     </div>
   );
 }

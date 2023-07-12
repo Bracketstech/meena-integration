@@ -1,12 +1,12 @@
 import React from 'react'
 
-const Faqs = () => {
+const Faqs = ({arabic}) => {
   return (
     <div className="lg:w-[52.1875vw] w-[88.7179487179vw] mx-[auto] lg:mx-[unset] flex flex-col lg:gap-y-[1.25vw] gap-y-[4.10256410256vw] sm:gap-y-[3.65853658537vw]">
     <div className="faq active">
       <div className="faq__Question">
         <h5 className="PingAR-Medium">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr?
+         {arabic?"لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت": " Lorem ipsum dolor sit amet, consetetur sadipscing elitr?"}
         </h5>
         <svg
           className="sm:w-[3.90243902439vw] sm:min-w-[3.90243902439vw] w-[8.20512820513vw] lg:h-[2.1875vw] lg:w-[2.1875vw] lg:min-w-[2.1875vw] min-w-[8.20512820513vw] transition-all duration-300"
@@ -44,16 +44,14 @@ const Faqs = () => {
       </div>
       <div className="faq__Answer">
         <p className="PingAR-Light">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-          erat, sed diam voluptua.
+        {arabic?"لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيتلوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيتلوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج": "  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam  nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."}
         </p>
       </div>
     </div>
     <div className="faq">
       <div className="faq__Question">
         <h5 className="PingAR-Medium">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr?
+         {arabic?"لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت": " Lorem ipsum dolor sit amet, consetetur sadipscing elitr?"}
         </h5>
         <svg
           className="sm:w-[3.90243902439vw] sm:min-w-[3.90243902439vw] w-[8.20512820513vw] lg:h-[2.1875vw] lg:w-[2.1875vw] lg:min-w-[2.1875vw] min-w-[8.20512820513vw] transition-all duration-300"
@@ -91,16 +89,14 @@ const Faqs = () => {
       </div>
       <div className="faq__Answer">
         <p className="PingAR-Light">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-          erat, sed diam voluptua.
+        {arabic?"لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيتلوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيتلوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج": "  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."}
         </p>
       </div>
     </div>
     <div className="faq">
       <div className="faq__Question">
         <h5 className="PingAR-Medium">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr?
+         {arabic?"لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت": " Lorem ipsum dolor sit amet, consetetur sadipscing elitr?"}
         </h5>
         <svg
           className="sm:w-[3.90243902439vw] sm:min-w-[3.90243902439vw] w-[8.20512820513vw] lg:h-[2.1875vw] lg:w-[2.1875vw] lg:min-w-[2.1875vw] min-w-[8.20512820513vw] transition-all duration-300"
@@ -138,16 +134,14 @@ const Faqs = () => {
       </div>
       <div className="faq__Answer">
         <p className="PingAR-Light">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-          erat, sed diam voluptua.
+        {arabic?"لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيتلوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيتلوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج": "  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."}
         </p>
       </div>
     </div>
     <div className="faq">
       <div className="faq__Question">
         <h5 className="PingAR-Medium">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr?
+         {arabic?"لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت": " Lorem ipsum dolor sit amet, consetetur sadipscing elitr?"}
         </h5>
         <svg
           className="sm:w-[3.90243902439vw] sm:min-w-[3.90243902439vw] w-[8.20512820513vw] lg:h-[2.1875vw] lg:w-[2.1875vw] lg:min-w-[2.1875vw] min-w-[8.20512820513vw] transition-all duration-300"
@@ -185,9 +179,7 @@ const Faqs = () => {
       </div>
       <div className="faq__Answer">
         <p className="PingAR-Light">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-          erat, sed diam voluptua.
+        {arabic?"لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيتلوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيتلوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج": "  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."}
         </p>
       </div>
     </div>

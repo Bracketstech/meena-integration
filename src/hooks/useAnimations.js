@@ -8,13 +8,13 @@ const useAnimations = () => {
       once: true,
     });
     function isElementInViewport(element) {
-      var rect = element.getBoundingClientRect();
+      var rect = element?.getBoundingClientRect();
       return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <=
+        rect?.top >= 0 &&
+        rect?.left >= 0 &&
+        rect?.bottom <=
           (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <=
+        rect?.right <=
           (window.innerWidth || document.documentElement.clientWidth)
       );
     }

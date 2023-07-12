@@ -81,7 +81,7 @@ const WellBeingPrograms = ({arabic}) => {
         className="lg:w-[36.4583333333vw]"
       >
         <img
-          src="/images/services/wellbeing-program.png"
+          src={arabic?"/images/services/wellbeing-program-ar.png":"/images/services/wellbeing-program.png"}
           alt="wellbeing-program"
           className="w-full"
         />

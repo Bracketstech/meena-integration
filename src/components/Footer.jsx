@@ -80,12 +80,12 @@ const Footer = async ({arabic}) => {
                 }
               
               <li>
-                <Link href={`{arabic ? "ar/terms-and-conditions": "./terms-and-conditions"}`}>
+                <Link href={arabic ? "/ar/terms-and-conditions": "/terms-and-conditions"}>
                   <span>{arabic ? "البنود و الظروف": "Terms & conditions"}</span>
                 </Link>
               </li>
               <li>
-                <Link href={`{arabic ? "ar/privacy-policy": "./privacy-policy"}`}>
+                <Link href={arabic ? "/ar/privacy-policy": "/privacy-policy"}>
                   <span>{arabic ? "سياسة الخصوصية": "Privacy policy"}</span>
                 </Link>
               </li>
@@ -130,9 +130,9 @@ const Footer = async ({arabic}) => {
     </div>
     <div className="bg-[#474166] lg:py-[0.390625vw] py-[3.205128205128205vw]">
       <div className="sm:text-[1.82926829268vw] sm:leading-[2.68292682927vw] PingAR-Light Container1680 flex items-center justify-center lg:justify-between text-[#E6E7E7] lg:text-[0.8333333333333333vw] lg:leading-[1.45833333333vw] text-[2.564102564102564vw]">
-        <span>meena. All Rights Reserved @ 2023</span>
+        <span>{arabic?"مينا. جميع الحقوق محفوظة @ 2023": "meena. All Rights Reserved @ 2023"}</span>
         <div>
-          <span> Developed By </span>
+          <span> {arabic?"تم تطويره بواسطة" :"Developed By"} </span>
           <a href="https://brackets-tech.com/" target="_blank">
             Brackets Technology
           </a>

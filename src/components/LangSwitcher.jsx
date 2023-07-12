@@ -39,7 +39,7 @@ const LangSwitcher = ({arabic}) => {
                 // onclick="handleLang(this)"
                 className="mob__Ar sm:text-[3.41463414634vw] text-[4.61538461538vw] lg:hidden block arToggler cursor-pointer"
               >
-                {arabic? "ع" :"En"}
+                {arabic? "En" :"ع"}
                 
               </Link>
               <Menu />

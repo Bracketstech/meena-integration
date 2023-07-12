@@ -1,19 +1,19 @@
 import React from 'react'
 
-const DekstopFilter = () => {
+const DekstopFilter = ({arabic}) => {
   return (
     <div className="hidden lg:block lg:w-[25vw] bg-[#F0F0F0] lg:overflow-hidden">
       <div className="lg:pt-[1.66666666667vw] lg:pb-[0.98958333333vw] lg:w-[21.71875vw] py-[10%] mx-[auto]">
         <div className="flex items-center justify-between">
           <h5 className="lg:text-[1.14583333333vw] lg:leading-[1.82291666667vw] text-[4.10256410256vw] leading-[6.66666666667vw] PingAR-Bold text-[#3B3659]">
-            Filter by
+          {arabic? "مصنف بواسطة" :"Filter by"}
           </h5>
           <a
             href=""
             className="bg-[#3B3659] text-[#FFFFFF] lg:text-[0.9375vw] text-[3.07692307692vw] PingAR-Light lg:rounded-[1.35416666667vw] rounded-[6.66666666667vw] w-[27.4358974359vw] lg:w-[7.91666666667vw] lg:h-[2.70833333333vw] h-[10.2564102564vw] flex justify-center items-center"
           >
             <span className="lg:h-[1.19791666667vw] h-[3.58974358974vw]">
-              Nearby
+            {arabic?"مجاور": "  Nearby"}
             </span>
           </a>
         </div>
@@ -35,7 +35,7 @@ const DekstopFilter = () => {
               />
             </div>
             <span className="lg:text-[0.9375vw] lg:leading-[1.45833333333vw] text-[3.58974358974vw] PingAR-Light text-[#3B3659]">
-              All
+              {arabic?"الكل": "All"}
             </span>
           </label>
           <label
@@ -55,7 +55,7 @@ const DekstopFilter = () => {
               />
             </div>
             <span className="lg:text-[0.9375vw] lg:leading-[1.45833333333vw] text-[3.58974358974vw] PingAR-Light text-[#3B3659]">
-              Yalla Clinic
+              {arabic?"عيادة يلا": "Yalla Clinic"}
             </span>
           </label>
           <label
@@ -75,7 +75,7 @@ const DekstopFilter = () => {
               />
             </div>
             <span className="lg:text-[0.9375vw] lg:leading-[1.45833333333vw] text-[3.58974358974vw] PingAR-Light text-[#3B3659]">
-              NEST Clinic
+             {arabic?"عيادة نيست":"NEST Clinic"}
             </span>
           </label>
           <label
@@ -95,13 +95,14 @@ const DekstopFilter = () => {
               />
             </div>
             <span className="lg:text-[0.9375vw] lg:leading-[1.45833333333vw] text-[3.58974358974vw] PingAR-Light text-[#3B3659]">
-              Open Now
+            { arabic? "مفتوح الان": "Open Now"}
+
             </span>
           </label>
         </div>
         <div className="lg:pt-[1.25vw] flex flex-col lg:gap-y-[1.30208333333vw] pt-[6%] gap-y-[5.55555555556vw]">
           <div className="lg:pb-[1.30208333333vw] border-[#CECFD0] border-b-[1px] pb-[5%]">
-            <h5 className="text22 text-[#3B3659]">Albaha clinic</h5>
+            <h5 className="text22 text-[#3B3659]">{arabic? "عيادة الباحة": "Albaha clinic"}</h5>
             <div className="lg:pt-[0.41666666666vw] pt-[3%] flex flex-col lg:gap-y-[0.3125vw] gap-y-[2.77777777778vw]">
               <div className="flex items-start lg:gap-x-[0.625vw] gap-x-[2.22222222222vw]">
                 <img
@@ -110,7 +111,7 @@ const DekstopFilter = () => {
                   className="lg:w-[1.04166666667vw]"
                 />
                 <span className="text18 text-[#505050] PingAR-Light">
-                  Sat-Thu (7AM - 4PM)
+                 {arabic?"السبت - الخميس (7 صباحًا - 4 مساءً)": " Sat-Thu (7AM - 4PM)"}
                 </span>
               </div>
               <a
@@ -122,7 +123,7 @@ const DekstopFilter = () => {
                   alt="phone"
                   className="lg:w-[1.04166666667vw] w-[5.55555555556vw]"
                 />
-                <span className="text18 text-[#505050] PingAR-Light">
+                <span style={{direction:"ltr"}} className="text18 text-[#505050] PingAR-Light">
                   +966 000 0000 00
                 </span>
               </a>
@@ -136,13 +137,13 @@ const DekstopFilter = () => {
                   className="lg:w-[1.04166666667vw] w-[5.55555555556vw]"
                 />
                 <span className="text18 text-[#3B3659] PingAR-Medium">
-                  Open In Google Map
+                  {arabic?"افتح في خريطة جوجل": "Open In Google Map"}
                 </span>
               </a>
             </div>
           </div>
           <div className="lg:pb-[1.30208333333vw] border-[#CECFD0] border-b-[1px] pb-[5%]">
-            <h5 className="text22 text-[#3B3659]">Albaha clinic</h5>
+            <h5 className="text22 text-[#3B3659]">{arabic? "عيادة الباحة": "Albaha clinic"}</h5>
             <div className="lg:pt-[0.41666666666vw] pt-[3%] flex flex-col lg:gap-y-[0.3125vw] gap-y-[2.77777777778vw]">
               <div className="flex items-start lg:gap-x-[0.625vw] gap-x-[2.22222222222vw]">
                 <img
@@ -151,7 +152,7 @@ const DekstopFilter = () => {
                   className="lg:w-[1.04166666667vw]"
                 />
                 <span className="text18 text-[#505050] PingAR-Light">
-                  Sat-Thu (7AM - 4PM)
+                 {arabic?"السبت - الخميس (7 صباحًا - 4 مساءً)": " Sat-Thu (7AM - 4PM)"}
                 </span>
               </div>
               <a
@@ -163,7 +164,7 @@ const DekstopFilter = () => {
                   alt="phone"
                   className="lg:w-[1.04166666667vw] w-[5.55555555556vw]"
                 />
-                <span className="text18 text-[#505050] PingAR-Light">
+                <span style={{direction:"ltr"}} className="text18 text-[#505050] PingAR-Light">
                   +966 000 0000 00
                 </span>
               </a>
@@ -177,13 +178,13 @@ const DekstopFilter = () => {
                   className="lg:w-[1.04166666667vw] w-[5.55555555556vw]"
                 />
                 <span className="text18 text-[#3B3659] PingAR-Medium">
-                  Open In Google Map
+                  {arabic?"افتح في خريطة جوجل": "Open In Google Map"}
                 </span>
               </a>
             </div>
           </div>
           <div className="lg:pb-[1.30208333333vw] border-[#CECFD0] border-b-[1px] pb-[5%]">
-            <h5 className="text22 text-[#3B3659]">Albaha clinic</h5>
+            <h5 className="text22 text-[#3B3659]">{arabic? "عيادة الباحة": "Albaha clinic"}</h5>
             <div className="lg:pt-[0.41666666666vw] pt-[3%] flex flex-col lg:gap-y-[0.3125vw] gap-y-[2.77777777778vw]">
               <div className="flex items-start lg:gap-x-[0.625vw] gap-x-[2.22222222222vw]">
                 <img
@@ -192,7 +193,7 @@ const DekstopFilter = () => {
                   className="lg:w-[1.04166666667vw]"
                 />
                 <span className="text18 text-[#505050] PingAR-Light">
-                  Sat-Thu (7AM - 4PM)
+                 {arabic?"السبت - الخميس (7 صباحًا - 4 مساءً)": " Sat-Thu (7AM - 4PM)"}
                 </span>
               </div>
               <a
@@ -204,7 +205,7 @@ const DekstopFilter = () => {
                   alt="phone"
                   className="lg:w-[1.04166666667vw] w-[5.55555555556vw]"
                 />
-                <span className="text18 text-[#505050] PingAR-Light">
+                <span style={{direction:"ltr"}} className="text18 text-[#505050] PingAR-Light">
                   +966 000 0000 00
                 </span>
               </a>
@@ -218,13 +219,13 @@ const DekstopFilter = () => {
                   className="lg:w-[1.04166666667vw] w-[5.55555555556vw]"
                 />
                 <span className="text18 text-[#3B3659] PingAR-Medium">
-                  Open In Google Map
+                  {arabic?"افتح في خريطة جوجل": "Open In Google Map"}
                 </span>
               </a>
             </div>
           </div>
           <div>
-            <h5 className="text22 text-[#3B3659]">Albaha clinic</h5>
+            <h5 className="text22 text-[#3B3659]">{arabic? "عيادة الباحة": "Albaha clinic"}</h5>
             <div className="lg:pt-[0.41666666666vw] pt-[3%] flex flex-col lg:gap-y-[0.3125vw] gap-y-[2.77777777778vw]">
               <div className="flex items-start lg:gap-x-[0.625vw] gap-x-[2.22222222222vw]">
                 <img
@@ -233,7 +234,7 @@ const DekstopFilter = () => {
                   className="lg:w-[1.04166666667vw]"
                 />
                 <span className="text18 text-[#505050] PingAR-Light">
-                  Sat-Thu (7AM - 4PM)
+                 {arabic?"السبت - الخميس (7 صباحًا - 4 مساءً)": " Sat-Thu (7AM - 4PM)"}
                 </span>
               </div>
               <a
@@ -245,7 +246,7 @@ const DekstopFilter = () => {
                   alt="phone"
                   className="lg:w-[1.04166666667vw] w-[5.55555555556vw]"
                 />
-                <span className="text18 text-[#505050] PingAR-Light">
+                <span style={{direction:"ltr"}} className="text18 text-[#505050] PingAR-Light">
                   +966 000 0000 00
                 </span>
               </a>
@@ -259,7 +260,7 @@ const DekstopFilter = () => {
                   className="lg:w-[1.04166666667vw] w-[5.55555555556vw]"
                 />
                 <span className="text18 text-[#3B3659] PingAR-Medium">
-                  Open In Google Map
+                  {arabic?"افتح في خريطة جوجل": "Open In Google Map"}
                 </span>
               </a>
             </div>

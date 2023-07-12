@@ -1,15 +1,15 @@
 import Cta from "@/components/Cta";
 import Footer from "@/components/Footer";
 import Nav from "@/components/Navbar";
-import PrivacyPolicy from "@/components/Pages/PrivacyPolicy/Index";
+import LatestNewsPage from "@/components/Pages/LatestNews/Index";
 import ScrollToTop from "@/components/ScrollToTop";
-export default async function PrivacyPolicyPage() {
+export default async function LatestNews() {
   return (
     <div className="rtl">
       <Cta />
       <ScrollToTop />
       <Nav arabic />
-      <PrivacyPolicy arabic />
+      <LatestNewsPage arabic />
       <Footer arabic />
     </div>
   );

@@ -1,10 +1,11 @@
 'use client'
+import SwiperButtons from '@/components/SwiperButtons';
 import { useEffect, useState } from 'react';
 import { Navigation } from 'swiper/modules';
 import {Swiper,SwiperSlide} from 'swiper/react';
 
 
-const Partners = () => {
+const Partners = ({arabic}) => {
   const [swiperGap,setSwiperGap] = useState(0)
   const [slidesPerView,setSlidesPerView] = useState(0)
   useEffect(()=>{
@@ -17,16 +18,22 @@ const Partners = () => {
       <h3
         data-aos="fade-up"
         className="PingAR-Regular heading54 tracking-[unset] text-[#3B3659]"
-      >
+      >{
+        arabic?
+        <span className="PingAR-Bold"> شركاؤنا </span>
+        
+        :
+        <>
         Our
         <span className="PingAR-Bold"> partners </span>
+        </>
+        }
       </h3>
       <p
         data-aos="fade-down"
         className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:mt-[0.67708333333vw] mt-[2.05128205128vw] text-[#505050] lg:text-[1.14583333333vw] lg:leading-[1.70572916667vw] text-[3.58974358974vw] leading-[6.06837606838vw] PingAR-Regular"
       >
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-        eirmod tempor invidunt ut labore et dolore
+      {arabic?" لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور نكايديديونتيوت لابوري ات أليايت,سيت دو أيوسمود تيمبور نكايديديونتيوت لابوري ات": "  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore"}
       </p>
     </div>
     <div className="lg:w-[53.125vw] w-[94.358974359vw] aboutMeenaSwiper__Main">
@@ -101,15 +108,7 @@ const Partners = () => {
               className="w-full"
             />
           </SwiperSlide>
-        <div className="swiper-button-next">
-          <img src="/images/icons/swiper-arrow.svg" alt="swiper-arrow" />
-        </div>
-        <div className="swiper-button-prev">
-          <img
-            src="/images/icons/swiper-arrow-left.svg"
-            alt="swiper-arrow"
-          />
-        </div>
+        <SwiperButtons/>
       </Swiper>
     </div>
   </div>

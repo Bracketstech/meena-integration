@@ -2,7 +2,7 @@ import React from 'react'
 import FaqCategories from './components/FaqCategories'
 import Faqs from './components/Faqs'
 
-const Faq = () => {
+const Faq = ({arabic}) => {
   return (
     <div className="relative lg:pt-[2.5vw] pt-[6.15384615385vw] lg:pb-[10.41666666666667vw] pb-[20.5128205128vw] sm:pt-[4.87804878049vw] sm:pb-[14.6341463415vw]">
     {/* <img
@@ -50,8 +50,8 @@ const Faq = () => {
         className="sm:bottom-[-7.31707317073vw] lg:hidden block absolute bottom-[-2.05128205128vw] leftRightFixer2 w-full h-[56.1538461538vw]"
       /> */}
     <div className="relative z-[2] flex justify-center items-start flex-col lg:flex-row lg:gap-x-[7.29166666667vw] sm:gap-y-[4.87804878049vw] gap-y-[4.10256410256vw]">
-      <FaqCategories />
-      <Faqs /> 
+      <FaqCategories arabic={arabic} />
+      <Faqs arabic={arabic} /> 
     </div>
   </div>
   )

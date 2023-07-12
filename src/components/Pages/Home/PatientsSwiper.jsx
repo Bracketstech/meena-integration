@@ -1,4 +1,5 @@
 'use client'
+import SwiperButtons from '@/components/SwiperButtons';
 import { useEffect, useState } from 'react';
 import { Navigation } from 'swiper/modules';
 import {Swiper,SwiperSlide} from 'swiper/react';
@@ -35,8 +36,8 @@ const PatientsSwiper = ({arabic}) => {
            
       <SwiperSlide
               className="swiper-slide lg:rounded-[1.04166666667vw] rounded-[20px] bg-[#F5EBE8]"
-              data-aos="fade"
-              data-aos-delay="00"
+              
+              
             >
               <div className={`sm:w-[78%] sm:py-[3.65853658537vw] text-center ${arabic ?"lg:w-[19.2708333333vw]" : "lg:w-[20.52083333333333vw]"} w-[57.9487179487vw] mx-[auto] lg:pt-[3.489583333333333vw] lg:pb-[1.5625vw] py-[7.82051282051vw]`}>
                 <div className="relative">
@@ -62,8 +63,8 @@ const PatientsSwiper = ({arabic}) => {
               </SwiperSlide>
       <SwiperSlide
               className="swiper-slide lg:rounded-[1.04166666667vw] rounded-[20px] bg-[#F5EBE8]"
-              data-aos="fade"
-              data-aos-delay="00"
+              
+              
             >
               <div className={`sm:w-[78%] sm:py-[3.65853658537vw] text-center ${arabic ?"lg:w-[19.2708333333vw]" : "lg:w-[20.52083333333333vw]"} w-[57.9487179487vw] mx-[auto] lg:pt-[3.489583333333333vw] lg:pb-[1.5625vw] py-[7.82051282051vw]`}>
                 <div className="relative">
@@ -89,8 +90,8 @@ const PatientsSwiper = ({arabic}) => {
               </SwiperSlide>
       <SwiperSlide
               className="swiper-slide lg:rounded-[1.04166666667vw] rounded-[20px] bg-[#F5EBE8]"
-              data-aos="fade"
-              data-aos-delay="00"
+              
+              
             >
               <div className={`sm:w-[78%] sm:py-[3.65853658537vw] text-center ${arabic ?"lg:w-[19.2708333333vw]" : "lg:w-[20.52083333333333vw]"} w-[57.9487179487vw] mx-[auto] lg:pt-[3.489583333333333vw] lg:pb-[1.5625vw] py-[7.82051282051vw]`}>
                 <div className="relative">
@@ -116,8 +117,8 @@ const PatientsSwiper = ({arabic}) => {
               </SwiperSlide>
       <SwiperSlide
               className="swiper-slide lg:rounded-[1.04166666667vw] rounded-[20px] bg-[#F5EBE8]"
-              data-aos="fade"
-              data-aos-delay="00"
+              
+              
             >
               <div className={`sm:w-[78%] sm:py-[3.65853658537vw] text-center ${arabic ?"lg:w-[19.2708333333vw]" : "lg:w-[20.52083333333333vw]"} w-[57.9487179487vw] mx-[auto] lg:pt-[3.489583333333333vw] lg:pb-[1.5625vw] py-[7.82051282051vw]`}>
                 <div className="relative">
@@ -143,8 +144,8 @@ const PatientsSwiper = ({arabic}) => {
               </SwiperSlide>
       <SwiperSlide
               className="swiper-slide lg:rounded-[1.04166666667vw] rounded-[20px] bg-[#F5EBE8]"
-              data-aos="fade"
-              data-aos-delay="00"
+              
+              
             >
               <div className={`sm:w-[78%] sm:py-[3.65853658537vw] text-center ${arabic ?"lg:w-[19.2708333333vw]" : "lg:w-[20.52083333333333vw]"} w-[57.9487179487vw] mx-[auto] lg:pt-[3.489583333333333vw] lg:pb-[1.5625vw] py-[7.82051282051vw]`}>
                 <div className="relative">
@@ -170,8 +171,8 @@ const PatientsSwiper = ({arabic}) => {
               </SwiperSlide>
       <SwiperSlide
               className="swiper-slide lg:rounded-[1.04166666667vw] rounded-[20px] bg-[#F5EBE8]"
-              data-aos="fade"
-              data-aos-delay="00"
+              
+              
             >
               <div className={`sm:w-[78%] sm:py-[3.65853658537vw] text-center ${arabic ?"lg:w-[19.2708333333vw]" : "lg:w-[20.52083333333333vw]"} w-[57.9487179487vw] mx-[auto] lg:pt-[3.489583333333333vw] lg:pb-[1.5625vw] py-[7.82051282051vw]`}>
                 <div className="relative">
@@ -197,19 +198,7 @@ const PatientsSwiper = ({arabic}) => {
               </SwiperSlide>
        
             
-          <div className="swiper-button-next">
-            <img
-              src="/images/icons/swiper-arrow.svg"
-              alt="swiper-arrow"
-            />
-          </div>
-          <div className="swiper-button-prev">
-            <img
-              src="/images/icons/swiper-arrow-left.svg"
-              alt="swiper-arrow"
-              className=""
-            />
-          </div>
+          <SwiperButtons/>
           </Swiper>
       </div>
     </div>

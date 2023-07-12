@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Benefits = () => {
+const Benefits = ({arabic}) => {
   return (
     <div className="sm:pt-[4.87804878049vw] sm:pb-[14.6341463415vw] flex items-stretch justify-between lg:pt-[2.5vw] flex-wrap gap-y-[4.10256410256vw] sm:gap-y-[3.65853658537vw] lg:gap-y-[2.60416666667vw] pt-[6.15384615385vw] lg:pb-[10.4166666667vw] pb-[20.5128205128vw]">
     <div
@@ -17,10 +17,10 @@ const Benefits = () => {
         />
         <div className="text-center">
           <h5 className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw]  lg:text-[1.354166666666667vw] lg:leading-[1.979166666666667vw] text-[4.871794871794872vw] leading-[9.743589743589744vw] PingAR-Medium text-[#3B3659]">
-            Health insurance
+           {arabic? "فحوصات طبية منتظمة":" Health insurance"}
           </h5>
           <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[1.14583333333vw] lg:leading-[1.458333333333333vw] text-[3.58974358974359vw] leading-[6.153846153846154vw] PingAR-Light text-[#707070] lg:mt-[0.4166666666666667vw] mt-[2vw]">
-            Lorem ipsum dolor sit amet, consetur sadipscing elitr, sed diam
+          {arabic?"اعتني بصحتك العامة من خلال الفحوصات المنتظمة.": "  Lorem ipsum dolor sit amet, consetur sadipscing elitr, sed diam"}
           </p>
         </div>
       </div>
@@ -40,10 +40,10 @@ const Benefits = () => {
         />
         <div className="text-center">
           <h5 className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw]  lg:text-[1.354166666666667vw] lg:leading-[1.979166666666667vw] text-[4.871794871794872vw] leading-[9.743589743589744vw] PingAR-Medium text-[#3B3659]">
-            Life insurance
+            {arabic?"الرعاية العاجلة":"Life insurance"}
           </h5>
           <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[1.14583333333vw] lg:leading-[1.458333333333333vw] text-[3.58974358974359vw] leading-[6.153846153846154vw] PingAR-Light text-[#707070] lg:mt-[0.4166666666666667vw] mt-[2vw]">
-            Lorem ipsum dolor sit amet, consetur sadipscing elitr, sed diam
+          {arabic?"احصل على رعاية فورية للاحتياجات الطبية غير الطارئة.": "  Lorem ipsum dolor sit amet, consetur sadipscing elitr, sed diam"}
           </p>
         </div>
       </div>
@@ -62,10 +62,10 @@ const Benefits = () => {
         />
         <div className="text-center">
           <h5 className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw]  lg:text-[1.354166666666667vw] lg:leading-[1.979166666666667vw] text-[4.871794871794872vw] leading-[9.743589743589744vw] PingAR-Medium text-[#3B3659]">
-            Retirement planning
+           {arabic?"عافية المرأة":" Retirement planning"}
           </h5>
           <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[1.14583333333vw] lg:leading-[1.458333333333333vw] text-[3.58974358974359vw] leading-[6.153846153846154vw] PingAR-Light text-[#707070] lg:mt-[0.4166666666666667vw] mt-[2vw]">
-            Lorem ipsum dolor sit amet, consetur sadipscing elitr, sed diam
+          {arabic?"رعاية صحية شاملة مصممة للسيدات.": "  Lorem ipsum dolor sit amet, consetur sadipscing elitr, sed diam"}
           </p>
         </div>
       </div>
@@ -84,10 +84,10 @@ const Benefits = () => {
         />
         <div className="text-center">
           <h5 className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw]  lg:text-[1.354166666666667vw] lg:leading-[1.979166666666667vw] text-[4.871794871794872vw] leading-[9.743589743589744vw] PingAR-Medium text-[#3B3659]">
-            Professional development
+            {arabic?"رعاية الاطفال":"Professional development"}
           </h5>
           <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[1.14583333333vw] lg:leading-[1.458333333333333vw] text-[3.58974358974359vw] leading-[6.153846153846154vw] PingAR-Light text-[#707070] lg:mt-[0.4166666666666667vw] mt-[2vw]">
-            Lorem ipsum dolor sit amet, consetur sadipscing elitr, sed diam
+          {arabic?"رعاية صحية متخصصة لأطفالك الصغار.": "  Lorem ipsum dolor sit amet, consetur sadipscing elitr, sed diam"}
           </p>
         </div>
       </div>
@@ -106,10 +106,10 @@ const Benefits = () => {
         />
         <div className="text-center">
           <h5 className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw]  lg:text-[1.354166666666667vw] lg:leading-[1.979166666666667vw] text-[4.871794871794872vw] leading-[9.743589743589744vw] PingAR-Medium text-[#3B3659]">
-            Paid vacations
+           {arabic?"إدارة الصحة على المدى الطويل":" Paid vacations"}
           </h5>
           <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[1.14583333333vw] lg:leading-[1.458333333333333vw] text-[3.58974358974359vw] leading-[6.153846153846154vw] PingAR-Light text-[#707070] lg:mt-[0.4166666666666667vw] mt-[2vw]">
-            Lorem ipsum dolor sit amet, consetur sadipscing elitr, sed diam
+          {arabic?"شارك معنا للتعامل مع احتياجاتك الصحية المستمرة.": "  Lorem ipsum dolor sit amet, consetur sadipscing elitr, sed diam"}
           </p>
         </div>
       </div>
@@ -128,10 +128,10 @@ const Benefits = () => {
         />
         <div className="text-center">
           <h5 className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw]  lg:text-[1.354166666666667vw] lg:leading-[1.979166666666667vw] text-[4.871794871794872vw] leading-[9.743589743589744vw] PingAR-Medium text-[#3B3659]">
-            Paid sick days
+          { arabic?"رعاية متخصصة لكبار السن":"  Paid sick days"}
           </h5>
           <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[1.14583333333vw] lg:leading-[1.458333333333333vw] text-[3.58974358974359vw] leading-[6.153846153846154vw] PingAR-Light text-[#707070] lg:mt-[0.4166666666666667vw] mt-[2vw]">
-            Lorem ipsum dolor sit amet, consetur sadipscing elitr, sed diam
+          {arabic?"دعم شخصي لكبار السن.": "  Lorem ipsum dolor sit amet, consetur sadipscing elitr, sed diam"}
           </p>
         </div>
       </div>

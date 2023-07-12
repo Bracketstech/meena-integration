@@ -7,7 +7,7 @@ const infos = ({arabic}) => {
               data-aos-anchor="anchorFOrCards"
               data-aos="fade"
               data-aos-delay="400"
-              className="sm:h-[31.7073170732vw] sm:pt-[6.09756097561vw] sm:w-[48%] sm:pb-[5.36585365854vw] lg:pb-[2.34375vw] items-start w-full lg:pt-[1.74479166667vw] pb-[16px] pt-[8.20512820513vw] lg:h-[11.1979166667vw] lg:w-[23.3333333333vw] bg-[#F5EBE8] lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw] flex lg:items-stretch"
+              className="sm:h-[26.7073170732vw] sm:pt-[6.09756097561vw] sm:w-[100%] sm:pb-[5.36585365854vw] lg:pb-[2.34375vw] items-start w-full lg:pt-[1.74479166667vw] pb-[16px] pt-[8.20512820513vw] lg:h-[11.1979166667vw] lg:w-[23.3333333333vw] bg-[#F5EBE8] lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw] flex lg:items-stretch"
             >
               <div className="sm:h-full sm:w-[90%] sm:gap-y-[1.46341463415vw] w-[76.6666666667vw] gap-y-[2vw] lg:w-[19.1666666667vw] mx-[auto] flex flex-col lg:gap-y-[0.41666666666vw]">
                 <h4 className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw] text-[4.871794871794872vw] lg:text-[1.354166666666667vw] lg:leading-[1.875vw] PingAR-Medium text-[#845FFF] flex-grow-[1]">
@@ -22,7 +22,7 @@ const infos = ({arabic}) => {
               data-aos-anchor="anchorFOrCards"
               data-aos="fade"
               data-aos-delay="500"
-              className="sm:h-[31.7073170732vw] sm:pt-[6.09756097561vw] sm:w-[48%] flex items-start w-full lg:pt-[1.74479166667vw] pb-[16px] lg:pb-0 pt-[8.20512820513vw] lg:h-[11.1979166667vw] lg:w-[23.3333333333vw] bg-[#F5EBE8] lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw]"
+              className="sm:h-[26.7073170732vw] sm:pt-[6.09756097561vw] sm:w-[100%] flex items-start w-full lg:pt-[1.74479166667vw] pb-[16px] lg:pb-0 pt-[8.20512820513vw] lg:h-[11.1979166667vw] lg:w-[23.3333333333vw] bg-[#F5EBE8] lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw]"
             >
               <div className="sm:w-[90%] sm:gap-y-[1.46341463415vw] w-[76.6666666667vw] gap-y-[2vw] lg:w-[19.1666666667vw] mx-[auto] flex flex-col lg:gap-y-[0.41666666666vw]">
                 <h4 className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw] text-[4.871794871794872vw] lg:text-[1.354166666666667vw] lg:leading-[1.875vw] PingAR-Medium text-[#845FFF]">

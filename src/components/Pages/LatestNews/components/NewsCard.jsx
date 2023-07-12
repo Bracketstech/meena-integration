@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 const NewsCard = ({image,date,heading,paragraph,anchor,classes}) => {
@@ -8,13 +9,13 @@ const NewsCard = ({image,date,heading,paragraph,anchor,classes}) => {
       className={`lg:w-[23.3333333333vw] sm:w-full w-[42.3076923077vw] ${classes}`}
     >
       <div className="w-full lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw] overflow-hidden">
-        <a href="./article.html">
+        <Link href="/article">
           <img
             src={image}
             alt="card-img"
             className="w-full lg:h-[unset] h-[49.2307692308vw] object-cover lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw]"
           />
-        </a>
+        </Link>
       </div>
       <div className="sm:mt-[2.19512195122vw] text-[#3B3659] lg:w-[22.3958333333vw] lg:mt-[1.25104166667vw] mt-[3.07692307692vw]">
         <span className="sm:text-[1.70731707317vw] sm:leading-[2.68292682927vw] lg:text-[0.72916666666vw] lg:leading-[1.14583333333vw] text-[3.07692307692vw] leading-[4.87179487179vw] PingAR-Light">

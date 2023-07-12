@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ArticleImage = () => {
+const ArticleImage = ({arabic}) => {
   return (
     <div id="lineanimation2" className="relative overflow-hidden">
     <img

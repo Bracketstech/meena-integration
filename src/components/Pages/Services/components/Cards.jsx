@@ -56,7 +56,7 @@ const Cards = ({arabic}) => {
                                 />
                                 <div className="lg:mt-[0.625vw] mt-[4%]">
                                     <span className="sm:text-[2.68292682927vw] sm:leading-[4.87804878049vw] lg:text-[1.14583333333vw] lg:leading-[1.82291666667vw] PingAR-Medium text-[4.10256410256vw] leading-[6.66666666667vw] text-[#3B3659]">
-                                        Pediatric care
+                                      {arabic?"رعاية الأطفال":  "Pediatric care"}
                                     </span>
                                     <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[0.9375vw] lg:leading-[1.47569444444vw] text-[3.58974358974vw] leading-[6.05128205128vw] text-[#505050] PingAR-Light lg:mt-[0.41666666666vw] mt-[2.05128205128vw]">
                                         {arabic ? "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور نكايديديونتيوت لابوري ات": "Lorem ipsum dolor sit amet, pscing consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut"}
@@ -75,7 +75,7 @@ const Cards = ({arabic}) => {
                                 />
                                 <div className="lg:mt-[0.625vw] mt-[4%]">
                                     <span className="sm:text-[2.68292682927vw] sm:leading-[4.87804878049vw] lg:text-[1.14583333333vw] lg:leading-[1.82291666667vw] PingAR-Medium text-[4.10256410256vw] leading-[6.66666666667vw] text-[#3B3659]">
-                                        Dentistry
+                                      {arabic?"طب الأسنان": "  Dentistry"}
                                     </span>
                                     <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[0.9375vw] lg:leading-[1.47569444444vw] text-[3.58974358974vw] leading-[6.05128205128vw] text-[#505050] PingAR-Light lg:mt-[0.41666666666vw] mt-[2.05128205128vw]">
                                         {arabic ? "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور نكايديديونتيوت لابوري ات": "Lorem ipsum dolor sit amet, pscing consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut"}
@@ -94,7 +94,7 @@ const Cards = ({arabic}) => {
                                 />
                                 <div className="lg:mt-[0.625vw] mt-[4%]">
                                     <span className="sm:text-[2.68292682927vw] sm:leading-[4.87804878049vw] lg:text-[1.14583333333vw] lg:leading-[1.82291666667vw] PingAR-Medium text-[4.10256410256vw] leading-[6.66666666667vw] text-[#3B3659]">
-                                        General internal medicine
+                                       { arabic?"الطب الباطني العام": "General internal medicine"}
                                     </span>
                                     <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[0.9375vw] lg:leading-[1.47569444444vw] text-[3.58974358974vw] leading-[6.05128205128vw] text-[#505050] PingAR-Light lg:mt-[0.41666666666vw] mt-[2.05128205128vw]">
                                         {arabic ? "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور نكايديديونتيوت لابوري ات": "Lorem ipsum dolor sit amet, pscing consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut"}
@@ -113,7 +113,7 @@ const Cards = ({arabic}) => {
                                 />
                                 <div className="lg:mt-[0.625vw] mt-[4%]">
                                     <span className="sm:text-[2.68292682927vw] sm:leading-[4.87804878049vw] lg:text-[1.14583333333vw] lg:leading-[1.82291666667vw] PingAR-Medium text-[4.10256410256vw] leading-[6.66666666667vw] text-[#3B3659]">
-                                        Dermatology
+                                        {arabic?"الجلدية": "Dermatology"}
                                     </span>
                                     <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[0.9375vw] lg:leading-[1.47569444444vw] text-[3.58974358974vw] leading-[6.05128205128vw] text-[#505050] PingAR-Light lg:mt-[0.41666666666vw] mt-[2.05128205128vw]">
                                         {arabic ? "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور نكايديديونتيوت لابوري ات": "Lorem ipsum dolor sit amet, pscing consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut"}
@@ -135,7 +135,7 @@ const Cards = ({arabic}) => {
                                         id="lineanimation2"
                                         className="sm:text-[2.68292682927vw] sm:leading-[4.87804878049vw] lg:text-[1.14583333333vw] lg:leading-[1.82291666667vw] PingAR-Medium text-[4.10256410256vw] leading-[6.66666666667vw] text-[#3B3659]"
                                     >
-                                        Endocrine medicine
+                                       {arabic?"الطب الغدد الصماء": " Endocrine medicine"}
                                     </span>
                                     <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[0.9375vw] lg:leading-[1.47569444444vw] text-[3.58974358974vw] leading-[6.05128205128vw] text-[#505050] PingAR-Light lg:mt-[0.41666666666vw] mt-[2.05128205128vw]">
                                         {arabic ? "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور نكايديديونتيوت لابوري ات": "Lorem ipsum dolor sit amet, pscing consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut"}
@@ -154,7 +154,7 @@ const Cards = ({arabic}) => {
                                 />
                                 <div className="lg:mt-[0.625vw] mt-[4%]">
                                     <span className="sm:text-[2.68292682927vw] sm:leading-[4.87804878049vw] lg:text-[1.14583333333vw] lg:leading-[1.82291666667vw] PingAR-Medium text-[4.10256410256vw] leading-[6.66666666667vw] text-[#3B3659]">
-                                        ENT
+                                       {arabic?"الأنف و الأذن و الحنجرة": " ENT"}
                                     </span>
                                     <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[0.9375vw] lg:leading-[1.47569444444vw] text-[3.58974358974vw] leading-[6.05128205128vw] text-[#505050] PingAR-Light lg:mt-[0.41666666666vw] mt-[2.05128205128vw]">
                                         {arabic ? "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور نكايديديونتيوت لابوري ات": "Lorem ipsum dolor sit amet, pscing consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut"}
@@ -173,7 +173,7 @@ const Cards = ({arabic}) => {
                                 />
                                 <div className="lg:mt-[0.625vw] mt-[4%]">
                                     <span className="sm:text-[2.68292682927vw] sm:leading-[4.87804878049vw] lg:text-[1.14583333333vw] lg:leading-[1.82291666667vw] PingAR-Medium text-[4.10256410256vw] leading-[6.66666666667vw] text-[#3B3659]">
-                                        Orthopedics
+                                       {arabic?"طب العظام": " Orthopedics"}
                                     </span>
                                     <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[0.9375vw] lg:leading-[1.47569444444vw] text-[3.58974358974vw] leading-[6.05128205128vw] text-[#505050] PingAR-Light lg:mt-[0.41666666666vw] mt-[2.05128205128vw]">
                                         {arabic ? "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور نكايديديونتيوت لابوري ات": "Lorem ipsum dolor sit amet, pscing consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut"}
@@ -192,7 +192,7 @@ const Cards = ({arabic}) => {
                                 />
                                 <div className="lg:mt-[0.625vw] mt-[4%]">
                                     <span className="sm:text-[2.68292682927vw] sm:leading-[4.87804878049vw] lg:text-[1.14583333333vw] lg:leading-[1.82291666667vw] PingAR-Medium text-[4.10256410256vw] leading-[6.66666666667vw] text-[#3B3659]">
-                                        Opthalmology
+                                        {arabic?"طب العيون": "Opthalmology"}
                                     </span>
                                     <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[0.9375vw] lg:leading-[1.47569444444vw] text-[3.58974358974vw] leading-[6.05128205128vw] text-[#505050] PingAR-Light lg:mt-[0.41666666666vw] mt-[2.05128205128vw]">
                                         {arabic ? "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور نكايديديونتيوت لابوري ات": "Lorem ipsum dolor sit amet, pscing consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut"}

@@ -1,14 +1,14 @@
 import React from 'react'
 
-const FaqCategories = () => {
+const FaqCategories = ({arabic}) => {
   return (
     <div className="ml-[5.64102564103vw] lg:sticky lg:top-[4.97135416667vw] w-full lg:ml-[unset] lg:w-[15.46875vw] flex flex-row lg:flex-col lg:gap-y-[1.66666666667vw] gap-x-[3.07692307692vw] sm:gap-x-[1.9512195122vw] overflow-scroll lg:overflow-auto hideScroll">
     <div className="question active">
       <h5 className="lg:block hidden PingAR-Medium lg:text-[1.14583333333vw] text-[#b1afbd] lg:leading-[1.5625vw] text-[4.10256410256vw]">
-        General info
+        {arabic?"معلومات عامة": "General info"}
       </h5>
       <h5 className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] block lg:hidden PingAR-Light lg:text-[1.14583333333vw] text-[#707070] lg:leading-[1.5625vw] text-[4.10256410256vw]">
-        General info
+        {arabic?"معلومات عامة": "General info"}
       </h5>
       <svg
         className="flipped lg:block hidden w-[3.28125vw]"
@@ -61,10 +61,10 @@ const FaqCategories = () => {
     </div>
     <div className="question sm:min-w-[29.4358974359vw] min-w-[37.4358974359vw]">
       <h5 className="lg:block hidden PingAR-Medium lg:text-[1.14583333333vw] text-[#b1afbd] lg:leading-[1.5625vw] text-[4.10256410256vw]">
-        Prescriptions
+       {arabic?"الوصفات الطبية": " Prescriptions"}
       </h5>
       <h5 className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] block lg:hidden PingAR-Light lg:text-[1.14583333333vw] text-[#707070] lg:leading-[1.5625vw] text-[4.10256410256vw]">
-        Prescriptions
+       {arabic?"الوصفات الطبية": " Prescriptions"}
       </h5>
       <svg
         className="flipped lg:block hidden w-[3.28125vw]"
@@ -117,10 +117,10 @@ const FaqCategories = () => {
     </div>
     <div className="question sm:min-w-[33.8461538462vw] min-w-[53.8461538462vw]">
       <h5 className="lg:block hidden PingAR-Medium lg:text-[1.14583333333vw] text-[#b1afbd] lg:leading-[1.5625vw] text-[4.10256410256vw]">
-        Billing and insurance
+        {arabic?"الفواتير والتأمين": "Billing and insurance"}
       </h5>
       <h5 className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] block lg:hidden PingAR-Light lg:text-[1.14583333333vw] text-[#707070] lg:leading-[1.5625vw] text-[4.10256410256vw]">
-        Billing and insurance
+        {arabic?"الفواتير والتأمين": "Billing and insurance"}
       </h5>
       <svg
         className="flipped lg:block hidden w-[3.28125vw]"
@@ -173,10 +173,10 @@ const FaqCategories = () => {
     </div>
     <div className="question sm:min-w-[29.1538461538vw] min-w-[46.1538461538vw]">
       <h5 className="lg:block hidden PingAR-Medium lg:text-[1.14583333333vw] text-[#b1afbd] lg:leading-[1.5625vw] text-[4.10256410256vw]">
-        General medical
+       {arabic?"الطب العام": " General medical"}
       </h5>
       <h5 className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] block lg:hidden PingAR-Light lg:text-[1.14583333333vw] text-[#707070] lg:leading-[1.5625vw] text-[4.10256410256vw]">
-        General medical
+       {arabic?"الطب العام": " General medical"}
       </h5>
       <svg
         className="flipped lg:block hidden w-[3.28125vw]"
@@ -229,10 +229,10 @@ const FaqCategories = () => {
     </div>
     <div className="question sm:min-w-[27.461538vw] min-w-[38.4615384615vw]">
       <h5 className="lg:block hidden PingAR-Medium lg:text-[1.14583333333vw] text-[#b1afbd] lg:leading-[1.5625vw] text-[4.10256410256vw]">
-        Mental health
+       {arabic?"الصحة النفسية": " Mental health"}
       </h5>
       <h5 className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] block lg:hidden PingAR-Light lg:text-[1.14583333333vw] text-[#707070] lg:leading-[1.5625vw] text-[4.10256410256vw]">
-        Mental health
+       {arabic?"الصحة النفسية": " Mental health"}
       </h5>
       <svg
         className="flipped lg:block hidden w-[3.28125vw]"
@@ -285,10 +285,10 @@ const FaqCategories = () => {
     </div>
     <div className="question sm:min-w-[27.461538vw] min-w-[38.4615384615vw]">
       <h5 className="lg:block hidden PingAR-Medium lg:text-[1.14583333333vw] text-[#b1afbd] lg:leading-[1.5625vw] text-[4.10256410256vw]">
-        Account info
+        {arabic?"معلومات الحساب": "Account info"}
       </h5>
       <h5 className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] block lg:hidden PingAR-Light lg:text-[1.14583333333vw] text-[#707070] lg:leading-[1.5625vw] text-[4.10256410256vw]">
-        Account info
+        {arabic?"معلومات الحساب": "Account info"}
       </h5>
       <svg
         className="flipped lg:block hidden w-[3.28125vw]"
@@ -341,10 +341,10 @@ const FaqCategories = () => {
     </div>
     <div className="question sm:min-w-[27.461538vw] min-w-[38.4615384615vw]">
       <h5 className="lg:block hidden PingAR-Medium lg:text-[1.14583333333vw] text-[#b1afbd] lg:leading-[1.5625vw] text-[4.10256410256vw]">
-        Ways we help
+        {arabic?"طرق المساعدة": "Ways we help"}
       </h5>
       <h5 className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] block lg:hidden PingAR-Light lg:text-[1.14583333333vw] text-[#707070] lg:leading-[1.5625vw] text-[4.10256410256vw]">
-        Ways we help
+        {arabic?"طرق المساعدة": "Ways we help"}
       </h5>
       <svg
         className="flipped lg:block hidden w-[3.28125vw]"
@@ -400,10 +400,10 @@ const FaqCategories = () => {
       className="question sm:min-w-[27.461538vw] min-w-[38.4615384615vw]"
     >
       <h5 className="lg:block hidden PingAR-Medium lg:text-[1.14583333333vw] text-[#b1afbd] lg:leading-[1.5625vw] text-[4.10256410256vw]">
-        How it works
+        {arabic?"كيف تعمل": "How it works"}
       </h5>
       <h5 className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] block lg:hidden PingAR-Light lg:text-[1.14583333333vw] text-[#707070] lg:leading-[1.5625vw] text-[4.10256410256vw]">
-        How it works
+        {arabic?"كيف تعمل": "How it works"}
       </h5>
       <svg
         className="flipped lg:block hidden w-[3.28125vw]"

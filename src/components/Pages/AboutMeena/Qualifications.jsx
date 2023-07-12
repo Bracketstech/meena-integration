@@ -1,9 +1,10 @@
 'use client'
+import SwiperButtons from '@/components/SwiperButtons';
 import { useEffect, useState } from 'react';
 import { Navigation } from 'swiper/modules';
 import {Swiper,SwiperSlide} from 'swiper/react';
 
-const Qualifications = () => {
+const Qualifications = ({arabic}) => {
   const [swiperGap,setSwiperGap] = useState(0)
   const [slidesPerView,setSlidesPerView] = useState(0)
   useEffect(()=>{
@@ -87,18 +88,7 @@ const Qualifications = () => {
             />
           </SwiperSlide>
         <div className="absolute w-full bottom-0 lg:h-[2.29166666667vw] aboutLast_Swiper">
-          <div className="swiper-button-next">
-            <img
-              src="/images/icons/swiper-arrow.svg"
-              alt="swiper-arrow"
-            />
-          </div>
-          <div className="swiper-button-prev">
-            <img
-              src="/images/icons/swiper-arrow-left.svg"
-              alt="swiper-arrow"
-            />
-          </div>
+          <SwiperButtons/>
         </div>
       </Swiper>
     </div>
@@ -107,8 +97,16 @@ const Qualifications = () => {
         data-aos="fade-up"
         className="relative PingAR-Regular heading54 tracking-[unset] text-[#3B3659]"
       >
+        {arabic?
+        <> 
+        <span className="PingAR-Bold"> المؤهلات  </span> <br />
+        العملية
+        </>:
+        <>
         Practicing <br />
         <span className="PingAR-Bold"> qualifications </span>
+        </>
+        }
         {/* <img
             src="/images/about-app/design.png"
             alt="design"
@@ -175,8 +173,7 @@ const Qualifications = () => {
         data-aos="fade-down"
         className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] text-center lg:text-start text-[#505050] lg:text-[1.14583333333vw] lg:leading-[1.70572916667vw] text-[3.58974358974vw] leading-[6.06837606838vw] PingAR-Regular"
       >
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-        eirmod tempor invidunt ut labore et dolore
+        {arabic? "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود ت دو أيوسمود تيمبور نكايديديونتيوت لابوري ات": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore"}
       </p>
     </div>
   </div>
