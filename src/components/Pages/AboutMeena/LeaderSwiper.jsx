@@ -7,7 +7,7 @@ const LeaderSwiper = ({arabic}) => {
   const [swiperGap,setSwiperGap] = useState(0)
   const [slidesPerView,setSlidesPerView] = useState(0)
   useEffect(()=>{
-    setSwiperGap(window.innerWidth>1024? window.innerWidth /100 * 2.5 :window.innerWidth>640?window.innerWidth /100 * 6.09756097561 :window.innerWidth /100 * 4.10256410256)
+    setSwiperGap(window.innerWidth>1024? window.innerWidth /100 * 2.5 :window.innerWidth>640?window.innerWidth /100 * 2.09756097561 :window.innerWidth /100 * 4.10256410256)
     setSlidesPerView(window.innerWidth>1024? 4  : window.innerWidth > 640 ? 2.5: 1.31)
   },[])
   return (
@@ -32,7 +32,7 @@ const LeaderSwiper = ({arabic}) => {
   <div className="flex justify-end lg:justify-[norma]">
     <div className="lg:w-[75vw] w-[93%] lg:mx-[auto]">
       {/* Swiper */}
-      <Swiper modules={[Navigation]} spaceBetween={swiperGap} slidesPerView={slidesPerView} className="sm:pb-[14.6341463415vw] sm:pt-[4.87804878049vw] swiper doctorsSwiper w-full lg:pt-[2.5vw] pt-[6.15384615385vw] pb-[14.358974359vw] lg:pb-[5.885416666666667vw]">
+      {swiperGap == 0 ||   <Swiper modules={[Navigation]} spaceBetween={swiperGap} slidesPerView={slidesPerView} className="sm:pb-[14.6341463415vw] sm:pt-[4.87804878049vw] swiper doctorsSwiper w-full lg:pt-[2.5vw] pt-[6.15384615385vw] pb-[14.358974359vw] lg:pb-[5.885416666666667vw]">
       <SwiperSlide data-aos="fade" data-aos-delay="00" className="swiper-slide">
             <img
               src="/images/about-meena/leaders/1.jpg"
@@ -165,7 +165,7 @@ const LeaderSwiper = ({arabic}) => {
             alt="swiper-arrow"
           />
         </div>
-      </Swiper>
+      </Swiper>}
     </div>
   </div>
 </div>

@@ -131,12 +131,12 @@ cursor-pointer;
     @apply flex lg:gap-x-[0.4166666666666667vw] h-[3.84615384615vw] lg:h-[0.9895833333333333vw] sm:h-[2.439024390243902vw] sm:gap-x-[1.463414634146341vw] gap-x-[2.051282051282051vw];
   }
   .ltr .anchor1 div,
-  .ltr .anchor2 div{
-    @apply flex-row
+  .ltr .anchor2 div {
+    @apply flex-row;
   }
   .rtl .anchor1 div,
-  .rtl .anchor2 div{
-    @apply flex-row-reverse
+  .rtl .anchor2 div {
+    @apply flex-row-reverse;
   }
   .anchor1 div img {
     @apply lg:w-[0.5729166666666667vw] w-[2.82051282051vw] sm:w-[1.829268292682927vw];
@@ -242,7 +242,7 @@ cursor-pointer;
   }
   .rtl .leftRightFixer2 {
     left: 0;
-  } 
+  }
   .ltr .patient__Quoteup {
     @apply lg:left-[1.09375vw] sm:left-[-3.17073170732vw];
   }
@@ -698,7 +698,7 @@ body.active {
     background-color: #8450ff;
   }
   .doctorsSwiper .swiper-wrapper .swiper-slide {
-    width: 54vw !important;
+    width: 40vw !important;
     border-radius: 20px;
   }
   .homeSwipers .swiper-button-next,
@@ -771,7 +771,7 @@ body.active {
     left: unset;
   }
   .homeSwipers .swiper-slide {
-    width: 58vw !important;
+    width: 46vw !important;
   }
   .line_clamp3 {
     -webkit-line-clamp: 3;
@@ -784,7 +784,6 @@ body.active {
   }
 }
 @media (max-width: 640px) {
-  
   .aboutAppSwiper .swiper-slide {
     width: 100% !important;
   }

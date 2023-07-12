@@ -37,7 +37,7 @@ const Partners = ({arabic}) => {
       </p>
     </div>
     <div className="lg:w-[53.125vw] w-[94.358974359vw] aboutMeenaSwiper__Main">
-      <Swiper modules={[Navigation]} spaceBetween={swiperGap} slidesPerView={slidesPerView} className="sm:pb-[6.82926829268vw] swiper mySwiper aboutMeenaSwiper lg:pb-[3.38541666667vw] pb-[9.74358974359vw]">
+    {swiperGap == 0 || <Swiper modules={[Navigation]} spaceBetween={swiperGap} slidesPerView={slidesPerView} className="sm:pb-[6.82926829268vw] swiper mySwiper aboutMeenaSwiper lg:pb-[3.38541666667vw] pb-[9.74358974359vw]">
       <SwiperSlide data-aos="fade" data-aos-delay="00" className="swiper-slide">
             <img
               src="/images/about-meena/partners/1.svg"
@@ -109,7 +109,7 @@ const Partners = ({arabic}) => {
             />
           </SwiperSlide>
         <SwiperButtons/>
-      </Swiper>
+      </Swiper>}
     </div>
   </div>
   )

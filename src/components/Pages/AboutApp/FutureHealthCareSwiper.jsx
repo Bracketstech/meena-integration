@@ -8,7 +8,7 @@ const FutureHealthCareSwiper = ({arabic}) => {
   const [swiperGap,setSwiperGap] = useState(0)
   const [slidesPerView,setSlidesPerView] = useState(0)
   useEffect(()=>{
-    setSwiperGap(window.innerWidth>1024? window.innerWidth /100 * 20.8333333333 :window.innerWidth>640?window.innerWidth /100 * 6.09756097561: window.innerWidth /100 * 6.66666666667)
+    setSwiperGap(window.innerWidth>1024? window.innerWidth /100 * 20.8333333333 :window.innerWidth>640?window.innerWidth /100 * 2.09756097561: window.innerWidth /100 * 6.66666666667)
     setSlidesPerView(window.innerWidth>1024? 1:window.innerWidth>640? 2.5: 1)
   },[])
   return (
@@ -38,7 +38,7 @@ const FutureHealthCareSwiper = ({arabic}) => {
     </h2>
     {/* Swiper */}
     <div className="lg:pb-[8.4375vw] pb-[15.12820512820513vw] sm:pb-[14.6341463415vw]">
-      <Swiper modules={[Navigation]} spaceBetween={swiperGap} slidesPerView={slidesPerView} className="swiper mySwiper lg:w-[75vw] lg:pt-[2.5vw] pt-[6.15384615385vw] sm:pt-[4.87804878049vw]  lg:pb-[2.91666666667vw] pb-[8.717948717948718vw] aboutAppSwiper">
+    {swiperGap == 0 || <Swiper modules={[Navigation]} spaceBetween={swiperGap} slidesPerView={slidesPerView} className="swiper mySwiper lg:w-[75vw] lg:pt-[2.5vw] pt-[6.15384615385vw] sm:pt-[4.87804878049vw]  lg:pb-[2.91666666667vw] pb-[8.717948717948718vw] aboutAppSwiper">
       <SwiperSlide className="swiper-slide">
             <div className="flex items-center justify-center lg:gap-x-[4.21875vw] flex-col lg:flex-row gap-y-[4.10256410256vw]">
               <div
@@ -435,7 +435,7 @@ const FutureHealthCareSwiper = ({arabic}) => {
             </div>
           </SwiperSlide>
         <SwiperButtons/>
-      </Swiper>
+      </Swiper>}
     </div>
    </>
   )

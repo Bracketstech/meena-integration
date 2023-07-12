@@ -12,7 +12,7 @@ const LatestNewsSwiper = ({arabic}) => {
   const [swiperGap,setSwiperGap] = useState(0)
   const [slidesPerView,setSlidesPerView] = useState(0)
   useEffect(()=>{
-    setSwiperGap(window.innerWidth>1024? window.innerWidth /100 * 2.5 : window.innerWidth>640? window.innerWidth /100 * 6.09756097561 :window.innerWidth /100 * 4.10256410256)
+    setSwiperGap(window.innerWidth>1024? window.innerWidth /100 * 2.5 : window.innerWidth>640? window.innerWidth /100 * 2.09756097561 :window.innerWidth /100 * 4.10256410256)
     setSlidesPerView(window.innerWidth>1024? 3 : window.innerWidth>640? 2.5: 1.30)
   },[])
   return (
@@ -33,11 +33,11 @@ const LatestNewsSwiper = ({arabic}) => {
   <div className="flex justify-end lg:justify-[normal]">
     <div className="lg:w-[75vw] w-[93%] lg:mx-[auto]">
       {/* Swiper */}
-      <Swiper modules={[Navigation]} spaceBetween={swiperGap} slidesPerView={slidesPerView} className="sm:pb-[14.6341463415vw] sm:pt-[4.87804878049vw] swiper homeSwipers w-full lg:pt-[2.5vw] pt-[6.153846153846154vw] lg:pb-[unset] pb-[16.30769230769231vw]">
+      {swiperGap == 0 ||   <Swiper modules={[Navigation]} spaceBetween={swiperGap} slidesPerView={slidesPerView} className="sm:pb-[14.6341463415vw] sm:pt-[4.87804878049vw] swiper homeSwipers w-full lg:pt-[2.5vw] pt-[6.153846153846154vw] lg:pb-[unset] pb-[16.30769230769231vw]">
         
       { arabic?
       cardDataAr.map((CardDat,index)=>(
-        <SwiperSlide key={index} className="swiper-slide" data-aos="fade" data-aos-delay="00">
+        <SwiperSlide key={index} className="swiper-slide" >
           <NewsCard  
           image={CardDat.image}
           date={CardDat.date}
@@ -64,7 +64,7 @@ const LatestNewsSwiper = ({arabic}) => {
     
     }
         <SwiperButtons/>
-      </Swiper>
+      </Swiper>}
     </div>
   </div>
   <div className="Container1440">

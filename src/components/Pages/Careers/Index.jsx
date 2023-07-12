@@ -4,7 +4,7 @@ import HiringPositions from './HiringPositions'
 import WorkAtMeena from './WorkAtMeena'
 import useAnimations from '@/hooks/useAnimations'
 
-const Index = (arabic) => {
+const Index = ({arabic}) => {
   useAnimations()
   return (
     <main>

@@ -16,7 +16,7 @@ const Qualifications = ({arabic}) => {
   <span className="healthCare__Overlay absolute w-full lg:h-[49.4270833333vw] h-[258.717948718vw] top-0 leftRightFixer1"></span>
   <div className="sm:pt-[7.31707317073vw] sm:pb-[14.6341463415vw] relative z-[2] w-full flex lg:gap-x-[7.29166666667vw] lg:justify-start lg:items-stjustify-start items-end lg:flex-row flex-col-reverse gap-y-[6.41025641026vw] lg:pt-[6.96666666667vw] pt-[12.8205128205vw] lg:pb-[10.4166666667vw] pb-[20.5128205128vw]">
     <div className="lg:w-[53.125vw] w-[94.358974359vw] aboutMeenaSwiper__Main">
-      <Swiper modules={[Navigation]} spaceBetween={swiperGap} slidesPerView={slidesPerView} className="sm:pb-[6.82926829268vw] swiper mySwiper aboutMeenaSwiper lg:pb-[3.38541666667vw] pb-[9.74358974359vw]">
+    {swiperGap == 0 ||   <Swiper modules={[Navigation]} spaceBetween={swiperGap} slidesPerView={slidesPerView} className="sm:pb-[6.82926829268vw] swiper mySwiper aboutMeenaSwiper lg:pb-[3.38541666667vw] pb-[9.74358974359vw]">
       <SwiperSlide data-aos="fade" data-aos-delay="00" className="swiper-slide">
             <img
               src="/images/about-meena/partners/1.svg"
@@ -90,7 +90,7 @@ const Qualifications = ({arabic}) => {
         <div className="absolute w-full bottom-0 lg:h-[2.29166666667vw] aboutLast_Swiper">
           <SwiperButtons/>
         </div>
-      </Swiper>
+      </Swiper>}
     </div>
     <div className="lg:w-[27.0833333333vw] w-[88.7179487179vw] mx-[auto] lg:mx-[unset] lg:gap-y-[0.67708333333vw] gap-y-[2.05128205128vw] flex flex-col items-center lg:items-start">
       <h3
