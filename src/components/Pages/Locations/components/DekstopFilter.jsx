@@ -43,7 +43,7 @@ const DekstopFilter = ({
                 />
               </div>
               <span className="lg:text-[0.9375vw] lg:leading-[1.45833333333vw] text-[3.58974358974vw] PingAR-Light text-[#3B3659]">
-                {arabic ? filter.filterTitleAr : address.filterTitle}
+                {arabic ? filter.filterTitleAr : filter.filterTitle}
               </span>
             </label>
           ))}
