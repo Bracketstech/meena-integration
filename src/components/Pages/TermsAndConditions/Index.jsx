@@ -1,15 +1,20 @@
-import SubPageHero from '@/components/SubPageHero'
-import React from 'react'
-import TermsConditions from './TermsConditions'
+"use client";
+import SubPageHero from "@/components/SubPageHero";
+import React from "react";
+import TermsConditions from "./TermsConditions";
+import useHeader from "@/hooks/useHeader";
+import useAnimations from "@/hooks/useAnimations";
 
 const Index = () => {
-  return (
-   <main>
-    <SubPageHero
-    boldtext="Terms & conditions" /> 
-    <TermsConditions />
-   </main>
-  )
-}
+  useAnimations();
+  useHeader("Terms & Conditions");
 
-export default Index
+  return (
+    <main>
+      <SubPageHero boldtext="Terms & conditions" />
+      <TermsConditions />
+    </main>
+  );
+};
+
+export default Index;

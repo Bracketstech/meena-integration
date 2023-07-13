@@ -667,7 +667,9 @@ body.active {
 }
 
 /* SCROLL PROGREESS CSS  END    */
-
+.links li img.active {
+  width: 100%;
+}
 @media (max-width: 1024px) {
   .cta .cta__Menu {
     left: -74%;

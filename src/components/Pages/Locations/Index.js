@@ -1,10 +1,13 @@
 "use client";
 import SubPageHero from "@/components/SubPageHero";
-import Map from "./Map";
+import MapContainer from "./MapContainer";
 import useAnimations from "@/hooks/useAnimations";
+import useHeader from "@/hooks/useHeader";
 
 const Index = ({ arabic }) => {
   useAnimations();
+  useHeader("Locations");
+
   return (
     <main>
       <section className="relative overflow-hidden">
@@ -64,7 +67,7 @@ const Index = ({ arabic }) => {
               : " Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna"
           }
         />
-        <Map arabic={arabic} />
+        <MapContainer arabic={arabic} />
       </section>
     </main>
   );
