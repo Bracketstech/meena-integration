@@ -197,22 +197,22 @@ const MapComponent = ({
         >
           {/* Child components, such as markers, info windows, etc. */}
 
-          {addressContainer.map(({ title, isAr, address: { position } }) => (
-            <MapMarkers />
-            // <Marker
-            //   label={{
-            //     text: arabic ? "You" : "You",
-            //     className: "markerLabel",
-            //   }}
-            //   position={position}
-            //   key={position.lng}
-            //   icon={{
-            //     // path: google.maps.SymbolPath.CIRCLE,
-            //     url: "/images/icons/marker.svg",
-            //     // scale: 7,
-            //   }}
-            // />
-          ))}
+          <MapMarkers />
+          {/* {addressContainer.map(({ title, isAr, address: { position } }) => (
+            <Marker
+              label={{
+                text: arabic ? "You" : "You",
+                className: "markerLabel",
+              }}
+              position={position}
+              key={position.lng}
+              icon={{
+                // path: google.maps.SymbolPath.CIRCLE,
+                url: "/images/icons/marker.svg",
+                // scale: 7,
+              }}
+            />
+          ))} */}
 
           <></>
         </GoogleMap>
