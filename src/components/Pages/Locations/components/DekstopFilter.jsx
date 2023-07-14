@@ -5,6 +5,8 @@ const DekstopFilter = ({
   addressContainer,
   filters,
   handleCheckChange,
+  handleNearest,
+  isNearestActive,
 }) => {
   return (
     <div className="hidden lg:block lg:w-[25vw] bg-[#F0F0F0] lg:overflow-hidden">
@@ -13,14 +15,16 @@ const DekstopFilter = ({
           <h5 className="lg:text-[1.14583333333vw] lg:leading-[1.82291666667vw] text-[4.10256410256vw] leading-[6.66666666667vw] PingAR-Bold text-[#3B3659]">
             {arabic ? "مصنف بواسطة" : "Filter by"}
           </h5>
-          <a
-            href=""
-            className="bg-[#3B3659] text-[#FFFFFF] lg:text-[0.9375vw] text-[3.07692307692vw] PingAR-Light lg:rounded-[1.35416666667vw] rounded-[6.66666666667vw] w-[27.4358974359vw] lg:w-[7.91666666667vw] lg:h-[2.70833333333vw] h-[10.2564102564vw] flex justify-center items-center"
+          <div
+            onClick={handleNearest}
+            className={`${
+              isNearestActive ? "bg-[#845FFF]" : "bg-[#3B3659]"
+            } text-[#FFFFFF] lg:text-[0.9375vw] text-[3.07692307692vw] PingAR-Light lg:rounded-[1.35416666667vw] rounded-[6.66666666667vw] w-[27.4358974359vw] lg:w-[7.91666666667vw] lg:h-[2.70833333333vw] h-[10.2564102564vw] flex justify-center items-center`}
           >
             <span className="lg:h-[1.19791666667vw] h-[3.58974358974vw]">
               {arabic ? "مجاور" : "  Nearby"}
             </span>
-          </a>
+          </div>
         </div>
         <div className="lg:pt-[2.08333333333vw] lg:pb-[1.77083333333vw] pt-[6%] pb-[5%] border-[#CECFD0] border-b-[1px] flex items-center flex-wrap lg:gap-x-[2.91666666667vw] lg:gap-y-[1.25vw] gap-x-[10.5555555556vw] gap-y-[3.33333333333vw]">
           {filters.map((filter) => (
@@ -49,60 +53,72 @@ const DekstopFilter = ({
           ))}
         </div>
         <div className="lg:pt-[1.25vw] flex flex-col lg:gap-y-[1.30208333333vw] pt-[6%] gap-y-[5.55555555556vw]">
-          {addressContainer.map((address, index) => (
+          {addressContainer.length == 0 ? (
             <div
-              key={index}
               className={
-                addressContainer.length == index + 1 ||
                 "lg:pb-[1.30208333333vw] border-[#CECFD0] border-b-[1px] pb-[5%]"
               }
             >
               <h5 className="text22 text-[#3B3659]">
-                {arabic ? address.isAr.title : address.title}
+                {arabic ? "لايوجد عيادات" : "No Clinic found"}
               </h5>
-              <div className="lg:pt-[0.41666666666vw] pt-[3%] flex flex-col lg:gap-y-[0.3125vw] gap-y-[2.77777777778vw]">
-                <div className="flex items-start lg:gap-x-[0.625vw] gap-x-[2.22222222222vw]">
-                  <img
-                    src="/images/icons/clock1.svg"
-                    alt="clock"
-                    className="lg:w-[1.04166666667vw]"
-                  />
-                  <span className="text18 text-[#505050] PingAR-Light">
-                    {arabic ? address.isAr.timing : address.timing}
-                  </span>
-                </div>
-                <a
-                  href={`tel:${address.phone}`}
-                  className="flex items-start lg:gap-x-[0.625vw] gap-x-[2.22222222222vw]"
-                >
-                  <img
-                    src="/images/icons/phone1.svg"
-                    alt="phone"
-                    className="lg:w-[1.04166666667vw] w-[5.55555555556vw]"
-                  />
-                  <span
-                    style={{ direction: "ltr" }}
-                    className="text18 text-[#505050] PingAR-Light"
-                  >
-                    {address.phone}
-                  </span>
-                </a>
-                <a
-                  href=""
-                  className="flex items-start lg:gap-x-[0.625vw] gap-x-[2.22222222222vw]"
-                >
-                  <img
-                    src="/images/icons/open.svg"
-                    alt="open"
-                    className="lg:w-[1.04166666667vw] w-[5.55555555556vw]"
-                  />
-                  <span className="text18 text-[#3B3659] PingAR-Medium">
-                    {arabic ? "افتح في خريطة جوجل" : "Open In Google Map"}
-                  </span>
-                </a>
-              </div>
             </div>
-          ))}
+          ) : (
+            addressContainer.map((address, index) => (
+              <div
+                key={index}
+                className={
+                  addressContainer.length == index + 1 ||
+                  "lg:pb-[1.30208333333vw] border-[#CECFD0] border-b-[1px] pb-[5%]"
+                }
+              >
+                <h5 className="text22 text-[#3B3659]">
+                  {arabic ? address.isAr.title : address.title}
+                </h5>
+                <div className="lg:pt-[0.41666666666vw] pt-[3%] flex flex-col lg:gap-y-[0.3125vw] gap-y-[2.77777777778vw]">
+                  <div className="flex items-start lg:gap-x-[0.625vw] gap-x-[2.22222222222vw]">
+                    <img
+                      src="/images/icons/clock1.svg"
+                      alt="clock"
+                      className="lg:w-[1.04166666667vw]"
+                    />
+                    <span className="text18 text-[#505050] PingAR-Light">
+                      {arabic ? address.isAr.timing : address.timing}
+                    </span>
+                  </div>
+                  <a
+                    href={`tel:${address.phone}`}
+                    className="flex items-start lg:gap-x-[0.625vw] gap-x-[2.22222222222vw]"
+                  >
+                    <img
+                      src="/images/icons/phone1.svg"
+                      alt="phone"
+                      className="lg:w-[1.04166666667vw] w-[5.55555555556vw]"
+                    />
+                    <span
+                      style={{ direction: "ltr" }}
+                      className="text18 text-[#505050] PingAR-Light"
+                    >
+                      {address.phone}
+                    </span>
+                  </a>
+                  <a
+                    href=""
+                    className="flex items-start lg:gap-x-[0.625vw] gap-x-[2.22222222222vw]"
+                  >
+                    <img
+                      src="/images/icons/open.svg"
+                      alt="open"
+                      className="lg:w-[1.04166666667vw] w-[5.55555555556vw]"
+                    />
+                    <span className="text18 text-[#3B3659] PingAR-Medium">
+                      {arabic ? "افتح في خريطة جوجل" : "Open In Google Map"}
+                    </span>
+                  </a>
+                </div>
+              </div>
+            ))
+          )}
           {/* <div className="lg:pb-[1.30208333333vw] border-[#CECFD0] border-b-[1px] pb-[5%]">
             <h5 className="text22 text-[#3B3659]">{arabic? "عيادة الباحة": "Albaha clinic"}</h5>
             <div className="lg:pt-[0.41666666666vw] pt-[3%] flex flex-col lg:gap-y-[0.3125vw] gap-y-[2.77777777778vw]">

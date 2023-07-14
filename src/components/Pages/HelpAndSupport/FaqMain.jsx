@@ -168,6 +168,14 @@ const Faq = ({ arabic }) => {
     });
   }, []);
   const handleClick = (newData, index) => {
+    const faqEl = document.querySelectorAll(".faq");
+    faqEl.forEach((faq, index) => {
+      if (index == 0) {
+        faq.classList.add("active");
+      } else {
+        faq.classList.remove("active");
+      }
+    });
     setData(newData);
     document.querySelectorAll(".question").forEach((q, i) => {
       if (i == index) {

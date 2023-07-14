@@ -609,7 +609,24 @@ body.active {
 }
 
 /* SCROLL PROGREESS CSS      */
-
+.markerLabel {
+  font-size: 1.15416666667vw !important;
+  font-family: "PingAR-Bold" !important;
+  top: 4.45833333333vw !important;
+  position: absolute !important;
+  left: -50% !important;
+  transform: translateX(-50%) !important;
+  z-index: 200 !important;
+}
+.gm-style-mtc {
+  display: none;
+}
+.gm-style .gm-style-iw-c {
+  top: -2.91666666667vw;
+}
+.gm-style .gm-style-iw-tc {
+  top: -3vw;
+}
 .circle-container {
   box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.2);
   z-index: 10000;

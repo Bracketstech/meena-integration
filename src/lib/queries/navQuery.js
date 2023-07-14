@@ -71,3 +71,39 @@ export const bottomNav = gql`
     }
   }
 `;
+export const footerData = gql`
+  query MyQuery {
+    nav(handle: "footer_navigation") {
+      handle
+      title
+      ... on Navigation {
+        handle
+        title
+        treeEn: tree {
+          page {
+            title
+          }
+          children {
+            page {
+              title
+              url
+              id: entry_id
+            }
+          }
+        }
+        treeAr: tree(site: "arabic") {
+          page {
+            title
+          }
+          children {
+            page {
+              title
+              url
+              id: entry_id
+            }
+          }
+        }
+      }
+    }
+  }
+`;
