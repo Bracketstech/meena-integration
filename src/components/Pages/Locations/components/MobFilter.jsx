@@ -161,7 +161,9 @@ const MobFilter = ({
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className=" w-[24px] sm:w-[32px] h-[24px] sm:h-[32px] absolute right-[1vw] top-[50%] transform translate-y-[-50%]"
+                      className={` w-[24px] sm:w-[32px] h-[24px] sm:h-[32px] absolute ${
+                        arabic ? "left-[1vw]" : "right-[1vw]"
+                      } top-[50%] flipped transform translate-y-[-50%]`}
                     >
                       <path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" />
                     </svg>

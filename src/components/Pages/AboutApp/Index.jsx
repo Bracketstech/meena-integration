@@ -8,7 +8,7 @@ import useAnimations from "@/hooks/useAnimations";
 
 const Index = ({ arabic }) => {
   useAnimations();
-  useHeader("About App");
+  useHeader(arabic ? "حول التطبيق" : "About App");
   return (
     <main>
       <section>

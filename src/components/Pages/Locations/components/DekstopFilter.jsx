@@ -83,7 +83,9 @@ const DekstopFilter = ({
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className=" w-[1.5vw] h-[1.5vw] absolute right-[1vw] top-[50%] transform translate-y-[-50%]"
+                    className={` w-[1.5vw] h-[1.5vw] absolute ${
+                      arabic ? "left-[1vw]" : "right-[1vw]"
+                    } top-[50%] transform translate-y-[-50%] flipped`}
                   >
                     <path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" />
                   </svg>

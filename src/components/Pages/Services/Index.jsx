@@ -10,7 +10,7 @@ import useHeader from "@/hooks/useHeader";
 
 const Index = ({ arabic }) => {
   useAnimations();
-  useHeader("Services");
+  useHeader(arabic ? "الخدمات" : "Services");
 
   return (
     <main>
