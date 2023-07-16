@@ -1,4 +1,3 @@
-"use client";
 import {
   GoogleMap,
   InfoWindow,
@@ -6,7 +5,7 @@ import {
   Marker,
   useGoogleMap,
 } from "@react-google-maps/api";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useEffect } from "react";
 
 const containerStyle = {
   width: "100%",
@@ -17,52 +16,14 @@ const center = { lat: 22.811006, lng: 35.815725 };
 
 const MapComponent = ({
   arabic,
-  addressContainer,
   currentBounds,
+  addressContainer,
+  activeMarker,
+  setActiveMarker,
   isNearestActive,
+  handleMapClick,
+  handleMarkerClick,
 }) => {
-  const [activeMarker, setActiveMarker] = useState(null);
-  const handleMarkerClick = (marker) => {
-    setActiveMarker(marker);
-  };
-
-  const handleMapClick = () => {
-    setActiveMarker(null);
-  };
-  // const { isLoaded } = useJsApiLoader({
-  //   id: "google-map-script",
-  //   googleMapsApiKey: "AIzaSyAniunwXPqbRC4D6yTcbwKXW5kWIyw2y18",
-  // });
-  // const [map, setMap] = useState(null);
-  // const onLoad = useCallback(function callback(map) {
-  //   // This is just an example of getting and using the map instance!!! don't just blindly copy!
-  //   const bounds = new window.google.maps.LatLngBounds(center);
-  //   map.fitBounds(bounds);
-
-  //   setMap(map);
-  // }, []);
-
-  // const onUnmount = useCallback(function callback(map) {
-  //   setMap(null);
-  // }, []);
-  // const mapRef = useRef(null);
-
-  // useEffect(() => {
-  //   console.log(addressContainer);
-  //   if (mapRef.current && addressContainer.length > 0) {
-  //     const bounds = new window.google.maps.LatLngBounds();
-
-  //     // Extend the bounds to include each location
-  // addressContainer.forEach(({ address: { position } }) => {
-  //   bounds.extend(position);
-  // });
-
-  //     // Fit the map to the bounds
-  //     console.log(mapRef.current);
-  //     // mapRef.current?.fitBounds(bounds);
-  //   }
-  // }, [addressContainer]);
-
   const fitBoundsToMarkers = (map) => {
     const bounds = new window.google.maps.LatLngBounds();
 
@@ -83,7 +44,13 @@ const MapComponent = ({
         fitBoundsToMarkers(map);
       }
     }, [currentBounds, map]);
-    const width = (window.innerWidth / 100) * 3.85416666667;
+    const width =
+      window.innerWidth > 1024
+        ? (window.innerWidth / 100) * 2.45416666667
+        : window.innerWidth > 640
+        ? 36
+        : 24;
+
     return (
       <>
         {addressContainer.map(
@@ -181,58 +148,16 @@ const MapComponent = ({
     );
   }
   return (
-    <div className="hidden relative lg:block overflow-hidden mx-[auto] lg:mx-[unset] w-[90%] lg:w-[62.5vw] rounded-[unset]">
-      {/* <img
-        src="/images/locations/map.jpg"
-        alt="map"
-        className="w-full h-[100vw] lg:h-full object-cover"
-      /> */}
-      <LoadScript googleMapsApiKey="AIzaSyAniunwXPqbRC4D6yTcbwKXW5kWIyw2y18">
-        <GoogleMap
-          // ref={mapRef}
-          mapContainerStyle={containerStyle}
-          center={center}
-          zoom={4.5}
-          onClick={handleMapClick}
-        >
-          {/* Child components, such as markers, info windows, etc. */}
-
-          <MapMarkers />
-          {/* {addressContainer.map(({ title, isAr, address: { position } }) => (
-            <Marker
-              label={{
-                text: arabic ? "You" : "You",
-                className: "markerLabel",
-              }}
-              position={position}
-              key={position.lng}
-              icon={{
-                // path: google.maps.SymbolPath.CIRCLE,
-                url: "/images/icons/marker.svg",
-                // scale: 7,
-              }}
-            />
-          ))} */}
-
-          <></>
-        </GoogleMap>
-      </LoadScript>
-
-      <div className="absolute lg:top-[0.83333333333vw] leftRightFixer1 w-full lg:px-[1.25vw]">
-        <div className="bg-[#F0F0F0] lg:rounded-[1.35416666667vw] lg:w-[27.0833333333vw] lg:h-[2.60416666667vw] flex items-center justify-between lg:px-[1.25vw]">
-          <input
-            type="text"
-            placeholder={arabic ? "منطقة البحث" : "Search area"}
-            className="w-[90%] outline-none bg-transparent lg:text-[0.9375vw] PingAR-Light placeholder:text-[#8F8F8F] h-full"
-          />
-          <img
-            src="/images/icons/search.svg"
-            alt="search"
-            className="lg:w-[0.83333333333vw]"
-          />
-        </div>
-      </div>
-    </div>
+    <LoadScript googleMapsApiKey="AIzaSyAniunwXPqbRC4D6yTcbwKXW5kWIyw2y18">
+      <GoogleMap
+        mapContainerStyle={containerStyle}
+        center={center}
+        zoom={4.5}
+        onClick={handleMapClick}
+      >
+        <MapMarkers />
+      </GoogleMap>
+    </LoadScript>
   );
 };
 

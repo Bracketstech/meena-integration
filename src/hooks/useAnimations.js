@@ -50,7 +50,7 @@ const useAnimations = () => {
         ) {
           document.querySelector(".cta").style.opacity = 1;
         }
-        document.querySelector("header").classList.add("stickyHeader");
+        document.querySelector("header")?.classList.add("stickyHeader");
       } else {
         circleContainer.classList.remove("active");
         if (
@@ -59,7 +59,7 @@ const useAnimations = () => {
         ) {
           document.querySelector(".cta").style.opacity = 0;
         }
-        document.querySelector("header").classList.remove("stickyHeader");
+        document.querySelector("header")?.classList.remove("stickyHeader");
       }
     };
 

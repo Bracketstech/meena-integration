@@ -1,8 +1,9 @@
 "use client";
 import DekstopFilter from "./components/DekstopFilter";
 import MobFilter from "./components/MobFilter";
-import MapComponent from "./components/MapComponent";
+import DesktopMap from "./components/DesktopMap";
 import { useEffect, useState } from "react";
+import MapComponent from "./components/MapComponent";
 
 const addressContainer = [
   {
@@ -15,6 +16,7 @@ const addressContainer = [
     timing: "Sat-Thu (7AM - 4PM)",
     phone: "+966 000 0000 00",
     isOpen: false,
+    isActive: false,
     address: {
       position: {
         lng: 20.9314494,
@@ -34,6 +36,7 @@ const addressContainer = [
     timing: "Sat-Thu (7AM - 4PM)",
     phone: "+966 000 0000 00",
     isOpen: false,
+    isActive: false,
     address: {
       position: {
         lng: 25.5789267,
@@ -51,6 +54,7 @@ const addressContainer = [
     timing: "Sat-Thu (7AM - 4PM)",
     phone: "+966 000 0000 00",
     isOpen: false,
+    isActive: false,
     address: {
       position: {
         lng: 50.8516316,
@@ -68,6 +72,7 @@ const addressContainer = [
     timing: "Sat-Thu (7AM - 4PM)",
     phone: "+966 000 0000 00",
     isOpen: false,
+    isActive: false,
     address: {
       position: {
         lng: 19.565407,
@@ -101,11 +106,14 @@ const filters = [
 ];
 
 const MapContainer = ({ arabic }) => {
-  const [appliedFilters, setAppliedFilters] = useState([]);
+  const [appliedFilters, setAppliedFilters] = useState(["All"]);
   const [bounds, setBounds] = useState([]);
+  const [isWindowLoaded, setIsWindowLoaded] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const [isNearestActive, setIsNearestActive] = useState(false);
   const [renderingAddresses, setRenderingAddresses] =
     useState(addressContainer);
+  const [activeMarker, setActiveMarker] = useState(null);
 
   const handleAddresses = (fltrs) => {
     const newList = [];
@@ -193,28 +201,123 @@ const MapContainer = ({ arabic }) => {
     setBounds(newBounds);
   };
 
+  const handleResize = () => {
+    setIsMobile(window.innerWidth < 1024);
+    setIsWindowLoaded(window);
+  };
   useEffect(() => {
     settingBounds(renderingAddresses);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
-  console.log(bounds);
+
+  const settingActiveMarker = (marker) => {
+    let newAddresses = [];
+    renderingAddresses.forEach((address, index) => {
+      if (
+        address.address.position.lat == marker?.lat &&
+        address.address.position.lng == marker?.lng
+      ) {
+        let newAddress = { ...address };
+        newAddress.isActive = true;
+        newAddresses.push(newAddress);
+      } else {
+        let newAddress = { ...address };
+        newAddress.isActive = false;
+        newAddresses.push(newAddress);
+      }
+    });
+    setRenderingAddresses(newAddresses);
+  };
+
+  const handleMarkerClick = (marker) => {
+    setActiveMarker(marker);
+    settingActiveMarker(marker);
+  };
+  const handleMapClick = () => {
+    setActiveMarker(null);
+    settingActiveMarker();
+  };
+  const handleSearch = (event) => {
+    let newAddresses = [];
+    let searchedValue = event.target.value.toLowerCase();
+    renderingAddresses.forEach((address) => {
+      const {
+        title,
+        isAr: { title: arTitle },
+      } = address;
+      if (
+        title.toLowerCase().includes(searchedValue) ||
+        arTitle.toLowerCase().includes(searchedValue)
+      ) {
+        newAddresses.push(address);
+      }
+    });
+    setRenderingAddresses(newAddresses);
+    console.log("event");
+    if (!searchedValue) {
+      handleAddresses(appliedFilters);
+    }
+  };
+
   return (
     <div className="z-[2] lg:w-full w-[88.7179487179vw] mx-[auto] lg:mx-[unset] relative lg:pt-[4.16666666667vw] gap-y-[8.33333333333vw] lg:pb-[10.4166666667vw] flex justify-center items-stretch flex-col lg:flex-row">
-      <div className="flex justify-center md:h-[50.9895833333vw] items-stretch flex-col lg:flex-row lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw] overflow-hidden">
-        <DekstopFilter
-          handleCheckChange={handleCheckChange}
-          filters={filters}
-          addressContainer={renderingAddresses}
-          arabic={arabic}
-          handleNearest={handleNearest}
-          isNearestActive={isNearestActive}
-        />
-        <MobFilter arabic={arabic} />
-        <MapComponent
-          currentBounds={bounds}
-          addressContainer={renderingAddresses}
-          arabic={arabic}
-          isNearestActive={isNearestActive}
-        />
+      <div className="flex justify-center lg:h-[50.9895833333vw] items-stretch flex-col lg:flex-row lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw] overflow-hidden">
+        {isWindowLoaded ? (
+          isMobile ? (
+            <MobFilter
+              arabic={arabic}
+              handleCheckChange={handleCheckChange}
+              filters={filters}
+              addressContainer={renderingAddresses}
+              handleNearest={handleNearest}
+              isNearestActive={isNearestActive}
+              handleMarkerClick={handleMarkerClick}
+              appliedFilters={appliedFilters}
+              handleSearch={handleSearch}
+            >
+              <MapComponent
+                arabic={arabic}
+                currentBounds={bounds}
+                addressContainer={renderingAddresses}
+                isNearestActive={isNearestActive}
+                activeMarker={activeMarker}
+                setActiveMarker={setActiveMarker}
+                handleMapClick={handleMapClick}
+                handleMarkerClick={handleMarkerClick}
+                handleSearch={handleSearch}
+              />
+            </MobFilter>
+          ) : (
+            <>
+              <DekstopFilter
+                handleCheckChange={handleCheckChange}
+                filters={filters}
+                addressContainer={renderingAddresses}
+                arabic={arabic}
+                handleNearest={handleNearest}
+                isNearestActive={isNearestActive}
+                handleMarkerClick={handleMarkerClick}
+                appliedFilters={appliedFilters}
+              />
+              <DesktopMap arabic={arabic} handleSearch={handleSearch}>
+                <MapComponent
+                  arabic={arabic}
+                  currentBounds={bounds}
+                  addressContainer={renderingAddresses}
+                  isNearestActive={isNearestActive}
+                  activeMarker={activeMarker}
+                  setActiveMarker={setActiveMarker}
+                  handleMapClick={handleMapClick}
+                  handleMarkerClick={handleMarkerClick}
+                />
+              </DesktopMap>
+            </>
+          )
+        ) : (
+          <></>
+        )}
       </div>
     </div>
   );
