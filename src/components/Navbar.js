@@ -81,7 +81,7 @@ export default async function Nav({ arabic, home, id }) {
               ))}
             </ul>
             <Link
-              href={arabic ? "//ar/about-app" : "/about-app"}
+              href={arabic ? "/ar/about-app" : "/about-app"}
               className="download__App bg-[#845FFF] text-[#FFFFFF] PingAR-Regular text18 lg:rounded-[1.35416666667vw] lg:w-[9.47916666667vw] lg:py-[0.625vw] flex justify-center items-center hover:bg-[#3B3659] transition-all duration-300"
             >
               <span className="relative top-[0.15vw]">
