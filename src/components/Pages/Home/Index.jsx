@@ -13,7 +13,7 @@ const HomePage = ({ arabic }) => {
   useAnimations();
   useHeader(arabic ? "الرئيسية" : "Home");
   return (
-    <main>
+    <main className="overflow-hidden">
       <Hero arabic={arabic} />
       <Info arabic={arabic} />
       <section>

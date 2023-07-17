@@ -59,7 +59,7 @@ const Hero = ({ arabic }) => {
                 <Link
                   data-aos="fade"
                   data-aos-delay={200}
-                  href="about-app"
+                  href={arabic ? "/ar/about-app" : "/about-app"}
                   className="anchor1"
                 >
                   <div>

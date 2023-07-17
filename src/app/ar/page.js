@@ -8,7 +8,8 @@ export default async function Home() {
   return (
     <div className="rtl">
       <ScrollToTop />
-      <Cta />
+      <Cta arabic />
+
       <Nav home arabic />
       <HomePage arabic />
       <Footer arabic />

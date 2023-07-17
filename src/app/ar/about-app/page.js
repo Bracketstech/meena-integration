@@ -6,7 +6,8 @@ import ScrollToTop from "@/components/ScrollToTop";
 export default async function DownloadApp() {
   return (
     <div className="rtl">
-      <Cta />
+      <Cta arabic />
+
       <ScrollToTop />
       <Nav arabic />
       <AboutApp arabic />

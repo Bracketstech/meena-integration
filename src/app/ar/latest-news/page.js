@@ -6,7 +6,8 @@ import ScrollToTop from "@/components/ScrollToTop";
 export default async function LatestNews() {
   return (
     <div className="rtl">
-      <Cta />
+      <Cta arabic />
+
       <ScrollToTop />
       <Nav arabic />
       <LatestNewsPage arabic />

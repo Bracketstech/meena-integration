@@ -206,7 +206,7 @@ cursor-pointer;
   }
 
   .question {
-    @apply flex items-center gap-x-[0.625vw] min-w-[36.4102564103vw] sm:min-w-[25.410256vw]
+    @apply flex items-center gap-x-[0.625vw]  
         h-[11.5384615385vw] px-[15px] lg:px-0 sm:h-[7.31707317073vw] lg:w-[unset] lg:min-w-[unset] lg:h-[unset]  rounded-[12.3076923077vw] lg:rounded-[unset]
         justify-center lg:justify-normal cursor-pointer bg-[#D6D1ED];
   }
@@ -1123,6 +1123,22 @@ body.active {
   display: -webkit-box;
 }
 @media (max-width: 300px) {
+  .gm-style-iw.gm-style-iw-c {
+    padding: 8px !important;
+    padding-bottom: 8px !important;
+  }
+  .gm-style-iw.gm-style-iw-c * {
+    font-size: 12px !important;
+    line-height: 1;
+    row-gap: 6px;
+  }
+  .gm-style-iw.gm-style-iw-c .text22 {
+    font-size: 18px !important;
+    margin-bottom: 8px;
+  }
+  .gm-style-iw.gm-style-iw-c img {
+    width: 15px !important;
+  }
   .ustadakalkaro {
     padding-bottom: 45px;
   }
