@@ -417,8 +417,8 @@ cursor-pointer;
   opacity: 0.3;
 }
 .hero__Overlay3 {
-  background: #3e29bb 0% 0% no-repeat padding-box;
-  opacity: 0.1;
+  background: #3e29bbba 0 0 no-repeat padding-box;
+  opacity: 0.15;
 }
 .doctorsSwiper .swiper-wrapper .swiper-slide {
   overflow: hidden;
@@ -1131,5 +1131,21 @@ body.active {
   }
   .mp50 {
     padding-bottom: 50px !important;
+  }
+}
+
+@media (max-width: 800px) and (max-height: 550px) {
+  header {
+    padding-top: 12px !important;
+  }
+  .heightkhraba {
+    height: 620px !important;
+  }
+  .theekKar {
+    padding-top: 120px !important;
+  }
+  .theekKar ul {
+    font-size: 16px !important;
+    row-gap: 16px !important;
   }
 }

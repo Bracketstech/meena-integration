@@ -4,7 +4,7 @@ import React from "react";
 const Hero = ({ arabic }) => {
   return (
     <section className="relative">
-      <div className="h-[123.333333333vw] lg:h-[56.25vw] flex items-end lg:pb-[18.22916666666667vw] pb-[31.28205128205128vw]">
+      <div className="h-[123.333333333vw] heightkhraba lg:h-[56.25vw] flex items-end lg:pb-[18.22916666666667vw] pb-[31.28205128205128vw]">
         <div className="w-full h-[inherit] lg:h-full absolute top-0 leftRightFixer1">
           <img
             src="/images/home/hero.webp"
@@ -38,7 +38,7 @@ const Hero = ({ arabic }) => {
               <h1 id="anchorFOrCards" data-aos="fade-up" className="heading54">
                 The future of{" "}
                 <span className="relative inline-block">
-                  primary
+                  primary{" "}
                   <img
                     src="/images/icons/links-style3.svg"
                     alt="style"

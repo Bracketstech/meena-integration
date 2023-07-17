@@ -50,7 +50,7 @@ const LangSwitcher = ({ arabic }) => {
       <span
         onClick={handleLang}
         className={`mob__Ar sm:text-[3.41463414634vw] text-[4.61538461538vw] lg:hidden block arToggler cursor-pointer relative ${
-          arabic ? "top-[1.5vw]" : "top-[-0.5vw]"
+          arabic ? "top-[1.5vw]" : "top-[-2px]"
         }`}
       >
         {arabic ? "En" : "ع"}
