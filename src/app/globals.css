@@ -719,6 +719,12 @@ body.active {
 }
 
 @media (max-width: 1024px) {
+  .question {
+    flex-grow: 1;
+  }
+  .question h5 {
+    white-space: nowrap;
+  }
   .rtl .cta .cta__Menu {
     left: 175%;
     clip-path: circle(10% at 10% 80%);
