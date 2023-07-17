@@ -103,7 +103,9 @@ export default async function Nav({ arabic, home, id }) {
                   alt="style"
                   className={
                     (id == item.page.id && "active") ||
-                    (home && item.page.url == "/" && "active")
+                    (home && item.page.url == "/")
+                      ? "active"
+                      : home && item.page.url == "/ar" && "active"
                   }
                 />
               </li>
@@ -116,7 +118,9 @@ export default async function Nav({ arabic, home, id }) {
                   alt="style"
                   className={
                     (id == item.page.id && "active") ||
-                    (home && item.page.url == "/" && "active")
+                    (home && item.page.url == "/")
+                      ? "active"
+                      : home && item.page.url == "/ar" && "active"
                   }
                 />
               </li>
