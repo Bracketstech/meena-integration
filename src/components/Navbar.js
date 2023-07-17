@@ -45,7 +45,7 @@ export default async function Nav({ arabic, home, id }) {
         </div>
         <div className="flex flex-col lg:gap-y-[1.14583333333vw]">
           <div className="flex navTopList items-center justify-end lg:gap-x-[2.91666666667vw]">
-            <ul className="hidden links PingAR-Regular lg:text-[0.9375vw] lg:leading-[1.45833333333vw] lg:flex items-center lg:gap-x-[2.08333333333vw]">
+            <ul className="hidden links PingAR-Medium lg:text-[0.9375vw] lg:leading-[1.45833333333vw] lg:flex items-center lg:gap-x-[2.08333333333vw]">
               {topDataAccordingToSite.map((item) => (
                 <li key={item.page.url}>
                   <Link href={item.page.url}>{item.page.title}</Link>
@@ -63,7 +63,7 @@ export default async function Nav({ arabic, home, id }) {
             <LangSwitcher arabic={arabic} />
           </div>
           <div className="hidden lg:flex items-center lg:gap-x-[2.08333333333vw]">
-            <ul className="links navList PingAR-Regular lg:text-[1.04166666667vw] lg:leading-[1.45833333333vw] flex items-center lg:gap-x-[2.08333333333vw]">
+            <ul className="links navList PingAR-Medium lg:text-[1.04166666667vw] lg:leading-[1.45833333333vw] flex items-center lg:gap-x-[2.08333333333vw]">
               {bottomDataAccordingToSite.map((item) => (
                 <li key={item.page.url}>
                   <Link href={item.page.url}>{item.page.title}</Link>
