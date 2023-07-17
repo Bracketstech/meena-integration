@@ -116,7 +116,7 @@ const Footer = async ({ arabic }) => {
         </div>
       </div>
       <div className="bg-[#474166] lg:py-[0.390625vw] py-[3.205128205128205vw]">
-        <div className="sm:text-[1.82926829268vw] flex justify-center sm:leading-[2.68292682927vw] PingAR-Regular Container1680 flex items-center justify-center lg:justify-between text-[#E6E7E7] lg:text-[0.8333333333333333vw] lg:leading-[1.45833333333vw] text-[2.564102564102564vw]">
+        <div className="sm:text-[1.82926829268vw] flex justify-center sm:leading-[2.68292682927vw] PingAR-Regular Container1680 flex items-center justify-center   text-[#E6E7E7] lg:text-[0.8333333333333333vw] lg:leading-[1.45833333333vw] text-[2.564102564102564vw]">
           <span>
             {arabic
               ? "جميع الحقوق محفوظة. مينا الصحة @ 2023"
