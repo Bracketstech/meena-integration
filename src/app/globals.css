@@ -726,6 +726,12 @@ body.active {
 }
 
 @media (max-width: 1024px) {
+  .lin3e {
+    top: -8px !important;
+  }
+  .l1ine {
+    top: 10px !important;
+  }
   .question {
     flex-grow: 1;
   }
@@ -754,7 +760,7 @@ body.active {
 
   .markerLabel {
     /* font-size: 2vw !important; */
-    top: 65px;
+    top: 65px !important;
   }
   .cta .cta__Menu {
     left: -74%;
@@ -878,11 +884,15 @@ body.active {
     font-size: 8px !important;
   }
   .l1ine {
-    top: 4.5px;
+    top: 5px !important;
+  }
+  .lin3e {
+    top: -7px !important;
   }
   .markerLabel {
     /* font-size: 2vw !important; */
-    top: 8.85833333333vw !important;
+    /* top: 8.85833333333vw !important; */
+    top: 65px !important;
   }
   .aboutAppSwiper .swiper-slide {
     width: 100% !important;
@@ -1173,9 +1183,7 @@ body.active {
   .thordekhkr {
     bottom: -50px;
   }
-  .lin3e {
-    bottom: 2px !important;
-  }
+
   .mp50 {
     padding-bottom: 50px !important;
   }

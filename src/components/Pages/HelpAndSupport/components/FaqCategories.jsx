@@ -9,7 +9,7 @@ const FaqCategories = ({ arabic, categories, handleClick }) => {
           onClick={() => handleClick(category.data, index)}
           className={`question question${index} ${index == 0 && "active"}`}
         >
-          <h5 className="lg:block hidden PingAR-Medium lg:text-[1.14583333333vw] text-[#b1afbd] lg:leading-[1.5625vw] text-[4.10256410256vw]">
+          <h5 className="lg:block hidden PingAR-Medium whitespace-nowrap lg:text-[1.14583333333vw] text-[#b1afbd] lg:leading-[1.5625vw] text-[4.10256410256vw]">
             {arabic ? category.titleAr : category.titleEn}
           </h5>
           <h5 className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] block lg:hidden PingAR-Regular lg:text-[1.14583333333vw] text-[#707070] lg:leading-[1.5625vw] text-[4.10256410256vw]">
@@ -70,7 +70,7 @@ const FaqCategories = ({ arabic, categories, handleClick }) => {
         id="lineanimation2"
         className="question sm:min-w-[27.461538vw] min-w-[38.4615384615vw]"
       >
-        <h5 className="lg:block hidden PingAR-Medium lg:text-[1.14583333333vw] text-[#b1afbd] lg:leading-[1.5625vw] text-[4.10256410256vw]">
+        <h5 className="lg:block hidden PingAR-Medium whitespace-nowrap lg:text-[1.14583333333vw] text-[#b1afbd] lg:leading-[1.5625vw] text-[4.10256410256vw]">
           {arabic ? "كيف تعمل" : "How it works"}
         </h5>
         <h5 className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] block lg:hidden PingAR-Regular lg:text-[1.14583333333vw] text-[#707070] lg:leading-[1.5625vw] text-[4.10256410256vw]">
