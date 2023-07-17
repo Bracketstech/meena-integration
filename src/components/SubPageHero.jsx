@@ -31,7 +31,7 @@ const SubPageHero = ({ title, text, boldtext }) => {
         {text && (
           <p
             data-aos="fade-down"
-            className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[1.14583333333vw] lg:leading-[1.74479166667vw] text-[3.58974358974vw] leading-[5.9829059829vw] PingAR-Light text-[#707070] lg:text-[#505050] lg:mt-[1vw] mt-[1.02564102564vw]"
+            className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[1.14583333333vw] lg:leading-[1.74479166667vw] text-[3.58974358974vw] leading-[5.9829059829vw] PingAR-Regular text-[#707070] lg:text-[#505050] lg:mt-[1vw] mt-[1.02564102564vw]"
           >
             {text}
           </p>

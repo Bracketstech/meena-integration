@@ -18,7 +18,7 @@ const Content = ({ arabic }) => {
       </h2>
       <p
         data-aos="fade-down"
-        className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[1.14583333333vw] lg:leading-[1.70572916667vw] text-[3.58974358974vw] leading-[6.02564102564vw] text-[#707070] PingAR-Light lg:text-[#505050] lg:mt-[0.625vw] mt-[2.05128205128vw]"
+        className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[1.14583333333vw] lg:leading-[1.70572916667vw] text-[3.58974358974vw] leading-[6.02564102564vw] text-[#707070] PingAR-Regular lg:text-[#505050] lg:mt-[0.625vw] mt-[2.05128205128vw]"
       >
         {arabic
           ? "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور نكايديديونتيوت لابوري ات لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور نكايديديونتيوت لابوري ات"

@@ -74,7 +74,7 @@ const BringingLoving = ({ arabic }) => {
                 <h5 className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw]  lg:text-[1.354166666666667vw] lg:leading-[1.979166666666667vw] text-[4.871794871794872vw] leading-[9.743589743589744vw] PingAR-Medium text-[#3B3659]">
                   {arabic ? "فحوصات طبية منتظمة" : "Regular health checkups"}
                 </h5>
-                <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[1.14583333333vw] lg:leading-[1.458333333333333vw] text-[3.58974358974359vw] leading-[6.153846153846154vw] PingAR-Light text-[#707070] lg:mt-[0.4166666666666667vw] mt-[2vw]">
+                <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[1.14583333333vw] lg:leading-[1.458333333333333vw] text-[3.58974358974359vw] leading-[6.153846153846154vw] PingAR-Regular text-[#707070] lg:mt-[0.4166666666666667vw] mt-[2vw]">
                   {arabic
                     ? "اعتني بصحتك العامة من خلال الفحوصات المنتظمة."
                     : "Take care of your overall well-being with regular checkups."}
@@ -99,7 +99,7 @@ const BringingLoving = ({ arabic }) => {
                 <h5 className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw]  lg:text-[1.354166666666667vw] lg:leading-[1.979166666666667vw] text-[4.871794871794872vw] leading-[9.743589743589744vw] PingAR-Medium text-[#3B3659]">
                   {arabic ? "الرعاية العاجلة" : "Urgent care"}
                 </h5>
-                <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[1.14583333333vw] lg:leading-[1.458333333333333vw] text-[3.58974358974359vw] leading-[6.153846153846154vw] PingAR-Light text-[#707070] lg:mt-[0.4166666666666667vw] mt-[2vw]">
+                <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[1.14583333333vw] lg:leading-[1.458333333333333vw] text-[3.58974358974359vw] leading-[6.153846153846154vw] PingAR-Regular text-[#707070] lg:mt-[0.4166666666666667vw] mt-[2vw]">
                   {arabic
                     ? "احصل على رعاية فورية للاحتياجات الطبية غير الطارئة."
                     : "Get prompt care for non-emergency medical needs."}
@@ -123,7 +123,7 @@ const BringingLoving = ({ arabic }) => {
                 <h5 className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw]  lg:text-[1.354166666666667vw] lg:leading-[1.979166666666667vw] text-[4.871794871794872vw] leading-[9.743589743589744vw] PingAR-Medium text-[#3B3659]">
                   {arabic ? "عافية المرأة" : "Women's wellness"}
                 </h5>
-                <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[1.14583333333vw] lg:leading-[1.458333333333333vw] text-[3.58974358974359vw] leading-[6.153846153846154vw] PingAR-Light text-[#707070] lg:mt-[0.4166666666666667vw] mt-[2vw]">
+                <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[1.14583333333vw] lg:leading-[1.458333333333333vw] text-[3.58974358974359vw] leading-[6.153846153846154vw] PingAR-Regular text-[#707070] lg:mt-[0.4166666666666667vw] mt-[2vw]">
                   {arabic
                     ? "رعاية صحية شاملة مصممة للسيدات."
                     : "Comprehensive healthcare tailored for women."}
@@ -147,7 +147,7 @@ const BringingLoving = ({ arabic }) => {
                 <h5 className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw]  lg:text-[1.354166666666667vw] lg:leading-[1.979166666666667vw] text-[4.871794871794872vw] leading-[9.743589743589744vw] PingAR-Medium text-[#3B3659]">
                   {arabic ? "رعاية الاطفال" : "Caring for kids"}
                 </h5>
-                <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[1.14583333333vw] lg:leading-[1.458333333333333vw] text-[3.58974358974359vw] leading-[6.153846153846154vw] PingAR-Light text-[#707070] lg:mt-[0.4166666666666667vw] mt-[2vw]">
+                <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[1.14583333333vw] lg:leading-[1.458333333333333vw] text-[3.58974358974359vw] leading-[6.153846153846154vw] PingAR-Regular text-[#707070] lg:mt-[0.4166666666666667vw] mt-[2vw]">
                   {arabic
                     ? "رعاية صحية متخصصة لأطفالك الصغار."
                     : "Expert healthcare for your little ones."}
@@ -173,7 +173,7 @@ const BringingLoving = ({ arabic }) => {
                     ? "إدارة الصحة على المدى الطويل"
                     : "Managing long-term health"}
                 </h5>
-                <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[1.14583333333vw] lg:leading-[1.458333333333333vw] text-[3.58974358974359vw] leading-[6.153846153846154vw] PingAR-Light text-[#707070] lg:mt-[0.4166666666666667vw] mt-[2vw]">
+                <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[1.14583333333vw] lg:leading-[1.458333333333333vw] text-[3.58974358974359vw] leading-[6.153846153846154vw] PingAR-Regular text-[#707070] lg:mt-[0.4166666666666667vw] mt-[2vw]">
                   {arabic
                     ? "شارك معنا للتعامل مع احتياجاتك الصحية المستمرة."
                     : "Partner with us to handle your ongoing health needs."}
@@ -199,7 +199,7 @@ const BringingLoving = ({ arabic }) => {
                     ? "رعاية متخصصة لكبار السن"
                     : "Specialized care for seniors"}
                 </h5>
-                <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[1.14583333333vw] lg:leading-[1.458333333333333vw] text-[3.58974358974359vw] leading-[6.153846153846154vw] PingAR-Light text-[#707070] lg:mt-[0.4166666666666667vw] mt-[2vw]">
+                <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[1.14583333333vw] lg:leading-[1.458333333333333vw] text-[3.58974358974359vw] leading-[6.153846153846154vw] PingAR-Regular text-[#707070] lg:mt-[0.4166666666666667vw] mt-[2vw]">
                   {arabic
                     ? "دعم شخصي لكبار السن."
                     : "Personalized support for older adults."}
@@ -210,7 +210,7 @@ const BringingLoving = ({ arabic }) => {
         </div>
         <Link
           href={arabic ? "/ar/services" : "/services"}
-          className="sm:mt-[3.65853658537vw] sm:text-[1.9512195122vw] sm:leading-[3.41463414634vw] sm:h-[6.34146341463vw] lg:mt-[3.33333333333vw] mt-[6.15384615385vw] mx-[auto] bg-[#8450FF] lg:text-[0.9375vw] lg:leading-[1.45833333333vw] PingAR-Light text-[3.07692307692vw] lg:rounded-[5.20833333333vw] rounded-[7.948717948717949vw] lg:w-[12.1875vw] w-[31.7948717949vw] lg:h-[3.22916666667vw] h-[9.23076923077vw] flex justify-center items-center hover:bg-[#3B3659] transition-all duration-300 text-[#FFFFFF]"
+          className="sm:mt-[3.65853658537vw] sm:text-[1.9512195122vw] sm:leading-[3.41463414634vw] sm:h-[6.34146341463vw] lg:mt-[3.33333333333vw] mt-[6.15384615385vw] mx-[auto] bg-[#8450FF] lg:text-[0.9375vw] lg:leading-[1.45833333333vw] PingAR-Regular text-[3.07692307692vw] lg:rounded-[5.20833333333vw] rounded-[7.948717948717949vw] lg:w-[12.1875vw] w-[31.7948717949vw] lg:h-[3.22916666667vw] h-[9.23076923077vw] flex justify-center items-center hover:bg-[#3B3659] transition-all duration-300 text-[#FFFFFF]"
           data-aos="fade-up"
         >
           <span className="lg:h-[1.19791666667vw] sm:h-[2.92682926829vw] h-[3.58974358974vw]">

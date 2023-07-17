@@ -28,7 +28,7 @@ const Index = ({ arabic }) => {
               className="flipped lg:w-[0.63333333333vw] sm:w-[1.6vw] sm:mt-[0.9vw] w-[3.07692307692vw] lg:mt-[0.46875vw] mt-[1.53846153846vw]"
             />
           </div>
-          <span className="sm:text-[2.19512195122vw] lg:leading-[unset] sm:leading-[3.65853658537vw] sm:h-[1.9512195122vw] PingAR-Light lg:text-[1.14583333333vw] text-[#3B3659] text-[4.10256410256vw] lg:h-[1.04166666667vw] h-[2.5641025641vw]">
+          <span className="sm:text-[2.19512195122vw] lg:leading-[unset] sm:leading-[3.65853658537vw] sm:h-[1.9512195122vw] PingAR-Regular lg:text-[1.14583333333vw] text-[#3B3659] text-[4.10256410256vw] lg:h-[1.04166666667vw] h-[2.5641025641vw]">
             {arabic ? "اخر الاخبار" : " Latest news"}
           </span>
         </div>

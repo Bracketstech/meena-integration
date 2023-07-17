@@ -18,7 +18,7 @@ const BookYourAppointment = ({ arabic }) => {
         </h3>
         <p
           data-aos="fade-down"
-          className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[1.14583333333vw] lg:leading-[1.71875vw] text-[3.58974358974vw] leading-[6.02564102564vw] PingAR-Light text-[#707070] lg:text-[#505050] lg:w-[32.1875vw] text-start sm:text-center lg:text-start lg:mt-[0.625vw] mt-[6.15384615385vw]"
+          className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[1.14583333333vw] lg:leading-[1.71875vw] text-[3.58974358974vw] leading-[6.02564102564vw] PingAR-Regular text-[#707070] lg:text-[#505050] lg:w-[32.1875vw] text-start sm:text-center lg:text-start lg:mt-[0.625vw] mt-[6.15384615385vw]"
         >
           {arabic
             ? "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود . يوت انيم أد مينيم فينايم,كيواس نوستريد كسير سيتاشن يللأمكو سيتاشن يللأمكو"

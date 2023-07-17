@@ -17,7 +17,7 @@ const Form = ({ arabic }) => {
               <input
                 type="text"
                 placeholder={arabic ? "الاسم" : "Name"}
-                className="w-full outline-none bg-transparent h-full sm:text-[1.9512195122vw] lg:text-[0.9375vw] text-[3.58974358974vw] text-[#3B3659]"
+                className="w-full PingAR-Light outline-none bg-transparent h-full sm:text-[1.9512195122vw] lg:text-[0.9375vw] text-[3.58974358974vw] text-[#3B3659]"
               />
             </div>
             <span className="sm:text-[1.70731707317vw] sm:leading-[2.68292682927vw] hidden lg:text-[0.83333333333vw] text-[3.07692307692vw] text-[red]">
@@ -29,7 +29,7 @@ const Form = ({ arabic }) => {
               <input
                 type="email"
                 placeholder={arabic ? "البريد الالكتروني" : "Email"}
-                className="w-full outline-none bg-transparent h-full sm:text-[1.9512195122vw] lg:text-[0.9375vw] text-[3.58974358974vw] text-[#3B3659]"
+                className="w-full PingAR-Light outline-none bg-transparent h-full sm:text-[1.9512195122vw] lg:text-[0.9375vw] text-[3.58974358974vw] text-[#3B3659]"
               />
             </div>
             <span className="sm:text-[1.70731707317vw] sm:leading-[2.68292682927vw] hidden lg:text-[0.83333333333vw] text-[3.07692307692vw] text-[red]">
@@ -41,7 +41,7 @@ const Form = ({ arabic }) => {
               <input
                 type="number"
                 placeholder={arabic ? "الهاتف المحمول" : "Phone number"}
-                className="w-full outline-none bg-transparent h-full sm:text-[1.9512195122vw] lg:text-[0.9375vw] text-[3.58974358974vw] text-[#3B3659]"
+                className="w-full PingAR-Light outline-none bg-transparent h-full sm:text-[1.9512195122vw] lg:text-[0.9375vw] text-[3.58974358974vw] text-[#3B3659]"
               />
             </div>
             <span className="sm:text-[1.70731707317vw] sm:leading-[2.68292682927vw] hidden lg:text-[0.83333333333vw] text-[3.07692307692vw] text-[red]">
@@ -53,7 +53,7 @@ const Form = ({ arabic }) => {
               <textarea
                 placeholder={arabic ? "كيف يمكن أن نساعد" : "How can we help"}
                 name=""
-                className="resize-none PingAR-Light w-full outline-none bg-transparent h-full sm:text-[1.9512195122vw] lg:text-[0.9375vw] text-[3.58974358974vw] text-[#3B3659]"
+                className="resize-none PingAR-Regular w-full PingAR-Light outline-none bg-transparent h-full sm:text-[1.9512195122vw] lg:text-[0.9375vw] text-[3.58974358974vw] text-[#3B3659]"
                 defaultValue={""}
               />
             </div>
@@ -63,7 +63,7 @@ const Form = ({ arabic }) => {
           </div>
         </div>
         <button className="sm:mt-[3.65853658537vw] sm:h-[7.31707317073vw] lg:w-[8.22916666667vw] lg:h-[3.22916666667vw] bg-[#8450FF] lg:-[5.20833333333vw] rounded-[7.94871794872vw] h-[9.23076923077vw] w-full lg:mt-[1.66666666667vw] mt-[6.15384615385vw]">
-          <span className="sm:text-[1.9512195122vw] lg:text-[0.9375vw] text-[3.07692307692vw] text-[#FFFFFF] PingAR-Light">
+          <span className="sm:text-[1.9512195122vw] lg:text-[0.9375vw] text-[3.07692307692vw] text-[#FFFFFF] PingAR-Regular">
             {arabic ? "ارسل" : "Submit"}
           </span>
         </button>

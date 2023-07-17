@@ -617,11 +617,14 @@ body.active {
   opacity: 1;
 }
 
+.rtl .nayaFliped {
+  @apply transform scale-x-[-1];
+}
 /* SCROLL PROGREESS CSS      */
 .markerLabel {
   font-size: 1vw !important;
   font-family: "PingAR-Bold" !important;
-  top: 4.45833333333vw !important;
+  top: 4.05833333333vw !important;
   position: absolute !important;
   left: -50% !important;
   transform: translateX(-50%) !important;
@@ -1005,11 +1008,11 @@ body.active {
   .stickyHeader .whiteLogo {
     width: 10.708vw;
     position: relative;
-    top: 0.2vw;
+    top: 0.1vw;
   }
   .stickyHeader {
-    padding-top: 0.83229166667vw !important;
-    padding-bottom: 0.83229166667vw !important;
+    padding-top: 1.13229166667vw !important;
+    padding-bottom: 1.13229166667vw !important;
     background-color: #3b3659;
   }
   .faq.active .faq__Answer {
@@ -1120,6 +1123,9 @@ body.active {
   display: -webkit-box;
 }
 @media (max-width: 300px) {
+  .ustadakalkaro {
+    padding-bottom: 45px;
+  }
   .lineNichylo {
     bottom: -22px !important;
   }

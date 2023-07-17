@@ -51,7 +51,7 @@ const FutureHealthCareSwiper = ({ arabic }) => {
             modules={[Navigation]}
             spaceBetween={swiperGap}
             slidesPerView={slidesPerView}
-            className="swiper mySwiper lg:w-[75vw] lg:pt-[2.5vw] pt-[6.15384615385vw] sm:pt-[4.87804878049vw]  lg:pb-[2.91666666667vw] pb-[8.717948717948718vw] aboutAppSwiper"
+            className="swiper ustadakalkaro mySwiper lg:w-[75vw] lg:pt-[2.5vw] pt-[6.15384615385vw] sm:pt-[4.87804878049vw]  lg:pb-[2.91666666667vw] pb-[8.717948717948718vw] aboutAppSwiper"
           >
             <SwiperSlide className="swiper-slide">
               <div className="flex items-center justify-center lg:gap-x-[4.21875vw] flex-col lg:flex-row gap-y-[4.10256410256vw]">
@@ -146,7 +146,7 @@ const FutureHealthCareSwiper = ({ arabic }) => {
                   <p
                     data-aos="fade-down"
                     data-aos-delay={200}
-                    className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] PingAR-Light lg:text-[1.14583333333vw] lg:leading-[1.69270833333vw] text-[#505050] text-[3.58974358974vw] leading-[6.08058608059vw] lg:mt-[0.83333333333vw] mt-[2.05128205128vw] sm:text-start text-center"
+                    className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] PingAR-Regular lg:text-[1.14583333333vw] lg:leading-[1.69270833333vw] text-[#505050] text-[3.58974358974vw] leading-[6.08058608059vw] lg:mt-[0.83333333333vw] mt-[2.05128205128vw] sm:text-start text-center"
                   >
                     {arabic
                       ? "أداة صحية بديهية مصممة لمساعدتك على تقييم أعراضك بسرعة وسهولة. من خلال إدخال مخاوفك الصحية الحالية ، يقوم مدقق الأعراض بتقييم الأسباب المحتملة وتقديم إرشادات حول الخطوات التالية المحتملة مثل ما إذا كان يجب عليك طلب المزيد من النصائح الطبية أو التوصية بمحتوى تعليمي لك"
@@ -248,7 +248,7 @@ const FutureHealthCareSwiper = ({ arabic }) => {
                   <p
                     data-aos="fade-down"
                     data-aos-delay={200}
-                    className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] PingAR-Light lg:text-[1.14583333333vw] lg:leading-[1.69270833333vw] text-[#505050] text-[3.58974358974vw] leading-[6.08058608059vw] lg:mt-[0.83333333333vw] mt-[2.05128205128vw] sm:text-start text-center"
+                    className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] PingAR-Regular lg:text-[1.14583333333vw] lg:leading-[1.69270833333vw] text-[#505050] text-[3.58974358974vw] leading-[6.08058608059vw] lg:mt-[0.83333333333vw] mt-[2.05128205128vw] sm:text-start text-center"
                   >
                     {arabic
                       ? "أداة صحية بديهية مصممة لمساعدتك على تقييم أعراضك بسرعة وسهولة. من خلال إدخال مخاوفك الصحية الحالية ، يقوم مدقق الأعراض بتقييم الأسباب المحتملة وتقديم إرشادات حول الخطوات التالية المحتملة مثل ما إذا كان يجب عليك طلب المزيد من النصائح الطبية أو التوصية بمحتوى تعليمي لك"
@@ -350,7 +350,7 @@ const FutureHealthCareSwiper = ({ arabic }) => {
                   <p
                     data-aos="fade-down"
                     data-aos-delay={200}
-                    className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] PingAR-Light lg:text-[1.14583333333vw] lg:leading-[1.69270833333vw] text-[#505050] text-[3.58974358974vw] leading-[6.08058608059vw] lg:mt-[0.83333333333vw] mt-[2.05128205128vw] sm:text-start text-center"
+                    className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] PingAR-Regular lg:text-[1.14583333333vw] lg:leading-[1.69270833333vw] text-[#505050] text-[3.58974358974vw] leading-[6.08058608059vw] lg:mt-[0.83333333333vw] mt-[2.05128205128vw] sm:text-start text-center"
                   >
                     {arabic
                       ? "أداة صحية بديهية مصممة لمساعدتك على تقييم أعراضك بسرعة وسهولة. من خلال إدخال مخاوفك الصحية الحالية ، يقوم مدقق الأعراض بتقييم الأسباب المحتملة وتقديم إرشادات حول الخطوات التالية المحتملة مثل ما إذا كان يجب عليك طلب المزيد من النصائح الطبية أو التوصية بمحتوى تعليمي لك"
@@ -452,7 +452,7 @@ const FutureHealthCareSwiper = ({ arabic }) => {
                   <p
                     data-aos="fade-down"
                     data-aos-delay={200}
-                    className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] PingAR-Light lg:text-[1.14583333333vw] lg:leading-[1.69270833333vw] text-[#505050] text-[3.58974358974vw] leading-[6.08058608059vw] lg:mt-[0.83333333333vw] mt-[2.05128205128vw] sm:text-start text-center"
+                    className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] PingAR-Regular lg:text-[1.14583333333vw] lg:leading-[1.69270833333vw] text-[#505050] text-[3.58974358974vw] leading-[6.08058608059vw] lg:mt-[0.83333333333vw] mt-[2.05128205128vw] sm:text-start text-center"
                   >
                     {arabic
                       ? "أداة صحية بديهية مصممة لمساعدتك على تقييم أعراضك بسرعة وسهولة. من خلال إدخال مخاوفك الصحية الحالية ، يقوم مدقق الأعراض بتقييم الأسباب المحتملة وتقديم إرشادات حول الخطوات التالية المحتملة مثل ما إذا كان يجب عليك طلب المزيد من النصائح الطبية أو التوصية بمحتوى تعليمي لك"

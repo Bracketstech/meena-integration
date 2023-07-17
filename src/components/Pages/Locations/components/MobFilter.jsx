@@ -11,6 +11,8 @@ const MobFilter = ({
   addressContainer,
   handleMarkerClick,
   handleSearch,
+  scrollTo,
+  myMap,
 }) => {
   return (
     <div className="sm:mb-[14.6341463415vw] lg:hidden block rounded-[3.84615384615vw] overflow-hidden border-[#CECFD0] border-[1px] mt-[16.4102564103vw] sm:mt-[7.31707317073vw] mb-[20.5128205128vw]">
@@ -24,7 +26,7 @@ const MobFilter = ({
               onClick={handleNearest}
               className={`${
                 isNearestActive ? "bg-[#845FFF]" : "bg-[#3B3659]"
-              }  hover:opacity-[0.9] sm:w-[24.3902439024vw] sm:h-[6.70731707317vw] sm:text-[1.9512195122vw] sm:leading-[3.41463414634vw]   text-[#FFFFFF] lg:text-[0.9375vw] text-[3.07692307692vw] PingAR-Light lg:rounded-[1.35416666667vw] rounded-[6.66666666667vw] w-[27.4358974359vw] lg:w-[7.91666666667vw] lg:h-[2.70833333333vw] h-[10.2564102564vw] flex justify-center items-center`}
+              }  hover:opacity-[0.9] sm:w-[24.3902439024vw] sm:h-[6.70731707317vw] sm:text-[1.9512195122vw] sm:leading-[3.41463414634vw]   text-[#FFFFFF] lg:text-[0.9375vw] text-[3.07692307692vw] PingAR-Regular lg:rounded-[1.35416666667vw] rounded-[6.66666666667vw] w-[27.4358974359vw] lg:w-[7.91666666667vw] lg:h-[2.70833333333vw] h-[10.2564102564vw] flex justify-center items-center`}
             >
               <span className="lg:h-[1.19791666667vw] h-[3.58974358974vw] sm:h-[2.92682926829vw]">
                 {arabic ? "مجاور" : "  Nearby"}
@@ -53,7 +55,7 @@ const MobFilter = ({
                       className="checkedIcon"
                     />
                   </div>
-                  <span className="sm:text-[1.9512195122vw] relative top-[2px] sm:top-[3px] sm:leading-[3.41463414634vw] lg:text-[0.9375vw] lg:leading-[1.45833333333vw] text-[3.58974358974vw] PingAR-Light text-[#3B3659]">
+                  <span className="sm:text-[1.9512195122vw] relative top-[2px] sm:top-[3px] sm:leading-[3.41463414634vw] lg:text-[0.9375vw] lg:leading-[1.45833333333vw] text-[3.58974358974vw] PingAR-Regular text-[#3B3659]">
                     {arabic ? filter.filterTitleAr : filter.filterTitle}
                   </span>
                 </label>
@@ -75,7 +77,7 @@ const MobFilter = ({
                     className="checkedIcon"
                   />
                 </div>
-                <span className="sm:text-[1.9512195122vw] sm:leading-[3.41463414634vw] lg:text-[0.9375vw] lg:leading-[1.45833333333vw] text-[3.58974358974vw] PingAR-Light text-[#3B3659]">
+                <span className="sm:text-[1.9512195122vw] sm:leading-[3.41463414634vw] lg:text-[0.9375vw] lg:leading-[1.45833333333vw] text-[3.58974358974vw] PingAR-Regular text-[#3B3659]">
                   {arabic ? "عيادة يلا" : "Yalla Clinic"}
                 </span>
               </label> */}
@@ -97,7 +99,7 @@ const MobFilter = ({
                     className="checkedIcon"
                   />
                 </div>
-                <span className="sm:text-[1.9512195122vw] sm:leading-[3.41463414634vw] lg:text-[0.9375vw] lg:leading-[1.45833333333vw] text-[3.58974358974vw] PingAR-Light text-[#3B3659]">
+                <span className="sm:text-[1.9512195122vw] sm:leading-[3.41463414634vw] lg:text-[0.9375vw] lg:leading-[1.45833333333vw] text-[3.58974358974vw] PingAR-Regular text-[#3B3659]">
                   {arabic ? "عيادة نيست" : "NEST Clinic"}
                 </span>
               </label>
@@ -117,7 +119,7 @@ const MobFilter = ({
                     className="checkedIcon"
                   />
                 </div>
-                <span className="sm:text-[1.9512195122vw] sm:leading-[3.41463414634vw] lg:text-[0.9375vw] lg:leading-[1.45833333333vw] text-[3.58974358974vw] PingAR-Light text-[#3B3659]">
+                <span className="sm:text-[1.9512195122vw] sm:leading-[3.41463414634vw] lg:text-[0.9375vw] lg:leading-[1.45833333333vw] text-[3.58974358974vw] PingAR-Regular text-[#3B3659]">
                   {arabic ? "مفتوح الان" : "Open Now"}
                 </span>
               </label>
@@ -130,7 +132,7 @@ const MobFilter = ({
               type="text"
               placeholder={arabic ? "منطقة البحث" : "Search area"}
               onChange={handleSearch}
-              className="sm:text-[1.9512195122vw] w-[90%] outline-none bg-transparent text-[3.58974358974vw] PingAR-Light placeholder:text-[#8F8F8F] h-full"
+              className="sm:text-[1.9512195122vw] w-[90%] outline-none bg-transparent text-[3.58974358974vw] PingAR-Regular placeholder:text-[#8F8F8F] h-full"
             />
             <img
               src="/images/icons/search.svg"
@@ -157,13 +159,16 @@ const MobFilter = ({
                 >
                   <div
                     className="absolute left-0 top-0 w-full h-full cursor-pointer"
-                    onClick={() => handleMarkerClick(address.address.position)}
+                    onClick={() => {
+                      scrollTo();
+                      handleMarkerClick(address.address.position);
+                    }}
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className={` w-[24px] sm:w-[32px] h-[24px] sm:h-[32px] absolute ${
                         arabic ? "left-[1vw]" : "right-[1vw]"
-                      } top-[50%] flipped transform translate-y-[-50%]`}
+                      } top-[50%] nayaFliped transform translate-y-[-50%]`}
                     >
                       <path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" />
                     </svg>
@@ -218,7 +223,10 @@ const MobFilter = ({
           </div>
         </div>
       </div>
-      <div className="lg:hidden block mt-[6.15384615385vw] h-[101.794871795vw] sm:h-[60.9756097561vw]">
+      <div
+        ref={myMap}
+        className="lg:hidden block mt-[6.15384615385vw] h-[101.794871795vw] sm:h-[60.9756097561vw]"
+      >
         {children}
       </div>
     </div>

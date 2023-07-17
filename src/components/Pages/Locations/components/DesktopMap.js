@@ -25,7 +25,7 @@ const DesktopMap = ({ arabic, handleSearch, children }) => {
             type="text"
             placeholder={arabic ? "منطقة البحث" : "Search area"}
             onChange={handleSearch}
-            className="w-[90%] outline-none bg-transparent lg:text-[0.9375vw] PingAR-Light placeholder:text-[#8F8F8F] h-full"
+            className="w-[90%] outline-none bg-transparent lg:text-[0.9375vw] PingAR-Regular placeholder:text-[#8F8F8F] h-full"
           />
           <img
             src="/images/icons/search.svg"

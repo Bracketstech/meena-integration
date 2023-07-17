@@ -58,7 +58,7 @@ const LeaderSwiper = ({ arabic }) => {
                   <h5 className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw] lg:text-[1.354166666666667vw] lg:leading-[1.979166666666667vw] text-[4.871794871794872vw] leading-[9.743589743589744vw] PingAR-Medium">
                     {arabic ? "اسم الطبيب" : "Name Of Doctor"}
                   </h5>
-                  <span className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[0.9375vw] lg:leading-[1.458333333333333vw] text-[3.58974358974359vw] leading-[7.179487179487179vw] PingAR-Light lg:mt-[0.3645833333333333vw] block">
+                  <span className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[0.9375vw] lg:leading-[1.458333333333333vw] text-[3.58974358974359vw] leading-[7.179487179487179vw] PingAR-Regular lg:mt-[0.3645833333333333vw] block">
                     {arabic ? "التخصص" : "Speciality name"}
                   </span>
                 </div>
@@ -73,7 +73,7 @@ const LeaderSwiper = ({ arabic }) => {
                   <h5 className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw] lg:text-[1.354166666666667vw] lg:leading-[1.979166666666667vw] text-[4.871794871794872vw] leading-[9.743589743589744vw] PingAR-Medium">
                     {arabic ? "اسم الطبيب" : "Name Of Doctor"}
                   </h5>
-                  <span className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[0.9375vw] lg:leading-[1.458333333333333vw] text-[3.58974358974359vw] leading-[7.179487179487179vw] PingAR-Light lg:mt-[0.3645833333333333vw] block">
+                  <span className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[0.9375vw] lg:leading-[1.458333333333333vw] text-[3.58974358974359vw] leading-[7.179487179487179vw] PingAR-Regular lg:mt-[0.3645833333333333vw] block">
                     {arabic ? "التخصص" : "Speciality name"}
                   </span>
                 </div>
@@ -88,7 +88,7 @@ const LeaderSwiper = ({ arabic }) => {
                   <h5 className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw] lg:text-[1.354166666666667vw] lg:leading-[1.979166666666667vw] text-[4.871794871794872vw] leading-[9.743589743589744vw] PingAR-Medium">
                     {arabic ? "اسم الطبيب" : "Name Of Doctor"}
                   </h5>
-                  <span className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[0.9375vw] lg:leading-[1.458333333333333vw] text-[3.58974358974359vw] leading-[7.179487179487179vw] PingAR-Light lg:mt-[0.3645833333333333vw] block">
+                  <span className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[0.9375vw] lg:leading-[1.458333333333333vw] text-[3.58974358974359vw] leading-[7.179487179487179vw] PingAR-Regular lg:mt-[0.3645833333333333vw] block">
                     {arabic ? "التخصص" : "Speciality name"}
                   </span>
                 </div>
@@ -103,7 +103,7 @@ const LeaderSwiper = ({ arabic }) => {
                   <h5 className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw] lg:text-[1.354166666666667vw] lg:leading-[1.979166666666667vw] text-[4.871794871794872vw] leading-[9.743589743589744vw] PingAR-Medium">
                     {arabic ? "اسم الطبيب" : "Name Of Doctor"}
                   </h5>
-                  <span className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[0.9375vw] lg:leading-[1.458333333333333vw] text-[3.58974358974359vw] leading-[7.179487179487179vw] PingAR-Light lg:mt-[0.3645833333333333vw] block">
+                  <span className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[0.9375vw] lg:leading-[1.458333333333333vw] text-[3.58974358974359vw] leading-[7.179487179487179vw] PingAR-Regular lg:mt-[0.3645833333333333vw] block">
                     {arabic ? "التخصص" : "Speciality name"}
                   </span>
                 </div>
@@ -118,7 +118,7 @@ const LeaderSwiper = ({ arabic }) => {
                   <h5 className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw] lg:text-[1.354166666666667vw] lg:leading-[1.979166666666667vw] text-[4.871794871794872vw] leading-[9.743589743589744vw] PingAR-Medium">
                     {arabic ? "اسم الطبيب" : "Name Of Doctor"}
                   </h5>
-                  <span className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[0.9375vw] lg:leading-[1.458333333333333vw] text-[3.58974358974359vw] leading-[7.179487179487179vw] PingAR-Light lg:mt-[0.3645833333333333vw] block">
+                  <span className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[0.9375vw] lg:leading-[1.458333333333333vw] text-[3.58974358974359vw] leading-[7.179487179487179vw] PingAR-Regular lg:mt-[0.3645833333333333vw] block">
                     {arabic ? "التخصص" : "Speciality name"}
                   </span>
                 </div>
@@ -133,7 +133,7 @@ const LeaderSwiper = ({ arabic }) => {
                   <h5 className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw] lg:text-[1.354166666666667vw] lg:leading-[1.979166666666667vw] text-[4.871794871794872vw] leading-[9.743589743589744vw] PingAR-Medium">
                     {arabic ? "اسم الطبيب" : "Name Of Doctor"}
                   </h5>
-                  <span className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[0.9375vw] lg:leading-[1.458333333333333vw] text-[3.58974358974359vw] leading-[7.179487179487179vw] PingAR-Light lg:mt-[0.3645833333333333vw] block">
+                  <span className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[0.9375vw] lg:leading-[1.458333333333333vw] text-[3.58974358974359vw] leading-[7.179487179487179vw] PingAR-Regular lg:mt-[0.3645833333333333vw] block">
                     {arabic ? "التخصص" : "Speciality name"}
                   </span>
                 </div>
@@ -148,7 +148,7 @@ const LeaderSwiper = ({ arabic }) => {
                   <h5 className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw] lg:text-[1.354166666666667vw] lg:leading-[1.979166666666667vw] text-[4.871794871794872vw] leading-[9.743589743589744vw] PingAR-Medium">
                     {arabic ? "اسم الطبيب" : "Name Of Doctor"}
                   </h5>
-                  <span className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[0.9375vw] lg:leading-[1.458333333333333vw] text-[3.58974358974359vw] leading-[7.179487179487179vw] PingAR-Light lg:mt-[0.3645833333333333vw] block">
+                  <span className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[0.9375vw] lg:leading-[1.458333333333333vw] text-[3.58974358974359vw] leading-[7.179487179487179vw] PingAR-Regular lg:mt-[0.3645833333333333vw] block">
                     {arabic ? "التخصص" : "Speciality name"}
                   </span>
                 </div>
@@ -163,7 +163,7 @@ const LeaderSwiper = ({ arabic }) => {
                   <h5 className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw] lg:text-[1.354166666666667vw] lg:leading-[1.979166666666667vw] text-[4.871794871794872vw] leading-[9.743589743589744vw] PingAR-Medium">
                     {arabic ? "اسم الطبيب" : "Name Of Doctor"}
                   </h5>
-                  <span className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[0.9375vw] lg:leading-[1.458333333333333vw] text-[3.58974358974359vw] leading-[7.179487179487179vw] PingAR-Light lg:mt-[0.3645833333333333vw] block">
+                  <span className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[0.9375vw] lg:leading-[1.458333333333333vw] text-[3.58974358974359vw] leading-[7.179487179487179vw] PingAR-Regular lg:mt-[0.3645833333333333vw] block">
                     Speciality name
                   </span>
                 </div>

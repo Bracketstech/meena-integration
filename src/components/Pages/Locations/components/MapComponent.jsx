@@ -88,7 +88,7 @@ const MapComponent = ({
                           alt="clock"
                           className="lg:w-[1.04166666667vw]"
                         />
-                        <span className="text18 relative top-[4px] lg:top-0 text-[#505050] PingAR-Light">
+                        <span className="text18 relative top-[4px] lg:top-0 text-[#505050] PingAR-Regular">
                           {arabic ? isAr.timing : timing}
                         </span>
                       </div>
@@ -103,7 +103,7 @@ const MapComponent = ({
                         />
                         <span
                           style={{ direction: "ltr" }}
-                          className="text18 relative top-[4px] lg:top-0 text-[#505050] PingAR-Light"
+                          className="text18 relative top-[4px] lg:top-0 text-[#505050] PingAR-Regular"
                         >
                           {phone}
                         </span>

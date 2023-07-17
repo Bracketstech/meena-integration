@@ -54,7 +54,7 @@ const Footer = async ({ arabic }) => {
               <h5 className="sm:leading-[3.65853658537vw] sm:text-[2.19512195122vw] PingAR-Medium lg:text-[1.14583333333vw] lg:leading-[1.66666666667vw] leading-[6.15384615385vw] text-[3.846153846153846vw] text-center lg:text-start">
                 {arabic ? " خريطة الموقع" : "Site map"}
               </h5>
-              <ul className="sm:mt-[1.46341463415vw] sm:gap-y-[1.46341463415vw] sm:text-[1.82926829268vw] sm:leading-[3.0487804878vw] leading-[4.87179487179vw] items-center lg:items-start footerLinks PingAR-Light lg:text-[0.9375vw] lg:leading-[1.45833333333vw] text-[3.076923076923077vw] lg:mt-[0.41666666666vw] flex flex-col lg:gap-y-[0.26041666666vw] gap-y-[2.051282051282051vw] mt-[3.076923076923077vw]">
+              <ul className="sm:mt-[1.46341463415vw] sm:gap-y-[1.46341463415vw] sm:text-[1.82926829268vw] sm:leading-[3.0487804878vw] leading-[4.87179487179vw] items-center lg:items-start footerLinks PingAR-Regular lg:text-[0.9375vw] lg:leading-[1.45833333333vw] text-[3.076923076923077vw] lg:mt-[0.41666666666vw] flex flex-col lg:gap-y-[0.26041666666vw] gap-y-[2.051282051282051vw] mt-[3.076923076923077vw]">
                 {siteMapData.map((item) => (
                   <li key={item.page.title}>
                     <Link href={item.page.url}>
@@ -68,7 +68,7 @@ const Footer = async ({ arabic }) => {
               <h5 className="sm:leading-[3.65853658537vw] sm:text-[2.19512195122vw] PingAR-Medium lg:text-[1.14583333333vw] lg:leading-[1.66666666667vw] leading-[6.15384615385vw] text-[3.846153846153846vw] text-center lg:text-start">
                 {arabic ? "روابط أخرى" : "Other links"}
               </h5>
-              <ul className="sm:mt-[1.46341463415vw] sm:gap-y-[1.46341463415vw] sm:text-[1.82926829268vw] sm:leading-[3.0487804878vw] leading-[4.87179487179vw] items-center lg:items-start footerLinks PingAR-Light lg:text-[0.9375vw] lg:leading-[1.45833333333vw] text-[3.076923076923077vw] lg:mt-[0.41666666666vw] flex flex-col lg:gap-y-[0.26041666666vw] gap-y-[2.051282051282051vw] mt-[3.076923076923077vw]">
+              <ul className="sm:mt-[1.46341463415vw] sm:gap-y-[1.46341463415vw] sm:text-[1.82926829268vw] sm:leading-[3.0487804878vw] leading-[4.87179487179vw] items-center lg:items-start footerLinks PingAR-Regular lg:text-[0.9375vw] lg:leading-[1.45833333333vw] text-[3.076923076923077vw] lg:mt-[0.41666666666vw] flex flex-col lg:gap-y-[0.26041666666vw] gap-y-[2.051282051282051vw] mt-[3.076923076923077vw]">
                 {otherLinksData.map((item) => (
                   <li key={item.page.title}>
                     <Link href={item.page.url}>
@@ -116,7 +116,7 @@ const Footer = async ({ arabic }) => {
         </div>
       </div>
       <div className="bg-[#474166] lg:py-[0.390625vw] py-[3.205128205128205vw]">
-        <div className="sm:text-[1.82926829268vw] sm:leading-[2.68292682927vw] PingAR-Light Container1680 flex items-center justify-center lg:justify-between text-[#E6E7E7] lg:text-[0.8333333333333333vw] lg:leading-[1.45833333333vw] text-[2.564102564102564vw]">
+        <div className="sm:text-[1.82926829268vw] sm:leading-[2.68292682927vw] PingAR-Regular Container1680 flex items-center justify-center lg:justify-between text-[#E6E7E7] lg:text-[0.8333333333333333vw] lg:leading-[1.45833333333vw] text-[2.564102564102564vw]">
           <span>
             {arabic
               ? "جميع الحقوق محفوظة. مينا الصحة @ 2023"

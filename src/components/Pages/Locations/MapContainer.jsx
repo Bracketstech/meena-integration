@@ -2,7 +2,7 @@
 import DekstopFilter from "./components/DekstopFilter";
 import MobFilter from "./components/MobFilter";
 import DesktopMap from "./components/DesktopMap";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import MapComponent from "./components/MapComponent";
 
 const addressContainer = [
@@ -111,9 +111,28 @@ const MapContainer = ({ arabic }) => {
   const [isWindowLoaded, setIsWindowLoaded] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [isNearestActive, setIsNearestActive] = useState(false);
+  const myMap = useRef(null);
   const [renderingAddresses, setRenderingAddresses] =
     useState(addressContainer);
   const [activeMarker, setActiveMarker] = useState(null);
+
+  const scrollTo = () => {
+    const scrollOptions = {
+      behavior: "smooth",
+      block: "nearest",
+      inline: "start",
+    };
+
+    const element = myMap.current;
+    const topOffset = -100; // Adjust the value to scroll above by desired pixels
+    const topPosition =
+      element.getBoundingClientRect().top + window.pageYOffset + topOffset;
+
+    window.scrollTo({
+      top: topPosition,
+      ...scrollOptions,
+    });
+  };
 
   const handleAddresses = (fltrs) => {
     const newList = [];
@@ -276,6 +295,8 @@ const MapContainer = ({ arabic }) => {
               handleMarkerClick={handleMarkerClick}
               appliedFilters={appliedFilters}
               handleSearch={handleSearch}
+              scrollTo={scrollTo}
+              myMap={myMap}
             >
               <MapComponent
                 arabic={arabic}

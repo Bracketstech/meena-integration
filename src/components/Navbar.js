@@ -72,15 +72,17 @@ export default async function Nav({ arabic, home, id }) {
                     alt="style"
                     className={
                       (id == item.page.id && "active") ||
-                      (home && item.page.url == "/" && "active")
+                      (home && item.page.url == "/")
+                        ? "active"
+                        : home && item.page.url == "/ar" && "active"
                     }
                   />
                 </li>
               ))}
             </ul>
             <Link
-              href={arabic ? "/ar/about-app" : "/about-app"}
-              className="download__App bg-[#845FFF] text-[#FFFFFF] PingAR-Light text18 lg:rounded-[1.35416666667vw] lg:w-[9.47916666667vw] lg:py-[0.625vw] flex justify-center items-center hover:bg-[#3B3659] transition-all duration-300"
+              href={arabic ? "//ar/about-app" : "/about-app"}
+              className="download__App bg-[#845FFF] text-[#FFFFFF] PingAR-Regular text18 lg:rounded-[1.35416666667vw] lg:w-[9.47916666667vw] lg:py-[0.625vw] flex justify-center items-center hover:bg-[#3B3659] transition-all duration-300"
             >
               <span className="relative top-[0.15vw]">
                 {" "}
@@ -121,7 +123,7 @@ export default async function Nav({ arabic, home, id }) {
             ))}
           </ul>
           <Link
-            href={`${arabic ? "ar/about-app" : "./about-app"}`}
+            href={`${arabic ? "/ar/about-app" : "/about-app"}`}
             className="sm:mt-[6.82926829268vw] sm:h-[7.31707317073vw] sm:text-[2.43902439024vw] mt-[12.3076923077vw] bg-[#845FFF] text-white text-[3.84615384615vw] rounded-[7.94871794872vw] w-full h-[10.5128205128vw] flex justify-center items-center"
           >
             <span> Download app </span>

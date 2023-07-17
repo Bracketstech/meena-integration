@@ -21,7 +21,7 @@ const DekstopFilter = ({
             onClick={handleNearest}
             className={`${
               isNearestActive ? "bg-[#845FFF]" : "bg-[#3B3659]"
-            } text-[#FFFFFF] lg:text-[0.9375vw] cursor-pointer hover:opacity-[0.9] text-[3.07692307692vw] PingAR-Light lg:rounded-[1.35416666667vw] rounded-[6.66666666667vw] w-[27.4358974359vw] lg:w-[7.91666666667vw] lg:h-[2.70833333333vw] h-[10.2564102564vw] flex justify-center items-center`}
+            } text-[#FFFFFF] lg:text-[0.9375vw] cursor-pointer hover:opacity-[0.9] text-[3.07692307692vw] PingAR-Regular lg:rounded-[1.35416666667vw] rounded-[6.66666666667vw] w-[27.4358974359vw] lg:w-[7.91666666667vw] lg:h-[2.70833333333vw] h-[10.2564102564vw] flex justify-center items-center`}
           >
             <span className="lg:h-[1.19791666667vw] h-[3.58974358974vw]">
               {arabic ? "مجاور" : "  Nearby"}
@@ -49,7 +49,7 @@ const DekstopFilter = ({
                   className="checkedIcon"
                 />
               </div>
-              <span className="lg:text-[0.9375vw] lg:leading-[1.45833333333vw] text-[3.58974358974vw] PingAR-Light text-[#3B3659]">
+              <span className="lg:text-[0.9375vw] lg:leading-[1.45833333333vw] text-[3.58974358974vw] PingAR-Regular text-[#3B3659]">
                 {arabic ? filter.filterTitleAr : filter.filterTitle}
               </span>
             </label>
@@ -83,9 +83,9 @@ const DekstopFilter = ({
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className={` w-[1.5vw] h-[2vw] absolute ${
+                    className={` w-[1.5vw] h-[1.5vw] absolute ${
                       arabic ? "left-[1vw]" : "right-[1vw]"
-                    } top-[45%] transform translate-y-[-50%] flipped`}
+                    } top-[50%] transform translate-y-[-50%] nayaFliped`}
                   >
                     <path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" />
                   </svg>
@@ -150,7 +150,7 @@ const DekstopFilter = ({
                   alt="clock"
                   className="lg:w-[1.04166666667vw]"
                 />
-                <span className="text18 text-[#505050] PingAR-Light">
+                <span className="text18 text-[#505050] PingAR-Regular">
                  {arabic?"السبت - الخميس (7 صباحًا - 4 مساءً)": " Sat-Thu (7AM - 4PM)"}
                 </span>
               </div>
@@ -163,7 +163,7 @@ const DekstopFilter = ({
                   alt="phone"
                   className="lg:w-[1.04166666667vw] w-[5.55555555556vw]"
                 />
-                <span style={{direction:"ltr"}} className="text18 text-[#505050] PingAR-Light">
+                <span style={{direction:"ltr"}} className="text18 text-[#505050] PingAR-Regular">
                   +966 000 0000 00
                 </span>
               </a>
@@ -191,7 +191,7 @@ const DekstopFilter = ({
                   alt="clock"
                   className="lg:w-[1.04166666667vw]"
                 />
-                <span className="text18 text-[#505050] PingAR-Light">
+                <span className="text18 text-[#505050] PingAR-Regular">
                  {arabic?"السبت - الخميس (7 صباحًا - 4 مساءً)": " Sat-Thu (7AM - 4PM)"}
                 </span>
               </div>
@@ -204,7 +204,7 @@ const DekstopFilter = ({
                   alt="phone"
                   className="lg:w-[1.04166666667vw] w-[5.55555555556vw]"
                 />
-                <span style={{direction:"ltr"}} className="text18 text-[#505050] PingAR-Light">
+                <span style={{direction:"ltr"}} className="text18 text-[#505050] PingAR-Regular">
                   +966 000 0000 00
                 </span>
               </a>
@@ -232,7 +232,7 @@ const DekstopFilter = ({
                   alt="clock"
                   className="lg:w-[1.04166666667vw]"
                 />
-                <span className="text18 text-[#505050] PingAR-Light">
+                <span className="text18 text-[#505050] PingAR-Regular">
                  {arabic?"السبت - الخميس (7 صباحًا - 4 مساءً)": " Sat-Thu (7AM - 4PM)"}
                 </span>
               </div>
@@ -245,7 +245,7 @@ const DekstopFilter = ({
                   alt="phone"
                   className="lg:w-[1.04166666667vw] w-[5.55555555556vw]"
                 />
-                <span style={{direction:"ltr"}} className="text18 text-[#505050] PingAR-Light">
+                <span style={{direction:"ltr"}} className="text18 text-[#505050] PingAR-Regular">
                   +966 000 0000 00
                 </span>
               </a>
@@ -273,7 +273,7 @@ const DekstopFilter = ({
                   alt="clock"
                   className="lg:w-[1.04166666667vw]"
                 />
-                <span className="text18 text-[#505050] PingAR-Light">
+                <span className="text18 text-[#505050] PingAR-Regular">
                  {arabic?"السبت - الخميس (7 صباحًا - 4 مساءً)": " Sat-Thu (7AM - 4PM)"}
                 </span>
               </div>
@@ -286,7 +286,7 @@ const DekstopFilter = ({
                   alt="phone"
                   className="lg:w-[1.04166666667vw] w-[5.55555555556vw]"
                 />
-                <span style={{direction:"ltr"}} className="text18 text-[#505050] PingAR-Light">
+                <span style={{direction:"ltr"}} className="text18 text-[#505050] PingAR-Regular">
                   +966 000 0000 00
                 </span>
               </a>
