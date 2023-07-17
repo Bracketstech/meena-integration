@@ -2,7 +2,7 @@ import React from "react";
 
 const FaqCategories = ({ arabic, categories, handleClick }) => {
   return (
-    <div className="ml-[5.64102564103vw] pt-[8px] lg:pt-0 pl lg:sticky lg:top-[4.97135416667vw] w-full lg:ml-[unset] lg:w-[15.46875vw] flex flex-row lg:flex-col lg:gap-y-[1.66666666667vw] gap-x-[3.07692307692vw] sm:gap-x-[1.9512195122vw] overflow-scroll lg:overflow-auto hideScroll">
+    <div className="ml-[5.64102564103vw] pt-[8px] lg:pt-0 pl lg:sticky lg:top-[4.97135416667vw] w-full lg:ml-[unset] lg:w-[15.46875vw] flex flex-row lg:flex-col lg:gap-y-[1.66666666667vw] gap-x-[3.07692307692vw] sm:gap-x-[1.9512195122vw] overflow-scroll lg:overflow-hidden hideScroll">
       {categories.map((category, index) => (
         <div
           key={index}

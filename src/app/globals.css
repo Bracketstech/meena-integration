@@ -1189,6 +1189,7 @@ body.active {
   }
   .lin3e {
     bottom: 6px;
+    top: -5px !important;
   }
   .l1ine {
     top: 7.5px;
