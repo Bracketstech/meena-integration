@@ -630,7 +630,7 @@ body.active {
   transform: translateX(-50%) !important;
   z-index: 200 !important;
   background: #8450ff;
-  color: white;
+  color: white !important;
   padding: 4px;
   border-radius: 10px;
   font-size: 14px !important;
@@ -871,6 +871,12 @@ body.active {
   }
 }
 @media (max-width: 640px) {
+  .markerLabel {
+    background: #8450ff;
+    color: white !important;
+    padding: 4px;
+    font-size: 8px !important;
+  }
   .l1ine {
     top: 4.5px;
   }
@@ -1139,6 +1145,9 @@ body.active {
   display: -webkit-box;
 }
 @media (max-width: 300px) {
+  .markerLabel {
+    display: none;
+  }
   .gm-style-iw.gm-style-iw-c {
     padding: 8px !important;
     padding-bottom: 8px !important;
