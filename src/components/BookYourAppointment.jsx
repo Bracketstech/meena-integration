@@ -37,7 +37,10 @@ const BookYourAppointment = ({ arabic }) => {
           </Link>
           <a href="tel:920011111" className="anchor2">
             <div>
-              <span className=""> 9200 11111 </span>
+              <span style={{ direction: "ltr" }} className="">
+                {" "}
+                9200 11111{" "}
+              </span>
               <img src="/images/icons/phone.svg" alt="phone" />
             </div>
           </a>

@@ -14,7 +14,7 @@ const Index = ({ arabic }) => {
   useHeader(arabic ? "عن مينا" : "About Us");
 
   return (
-    <main>
+    <main className="overflow-hidden">
       <section>
         <SubPageHero
           title={arabic ? "عن " : "About"}

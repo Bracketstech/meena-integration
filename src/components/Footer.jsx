@@ -35,7 +35,11 @@ const Footer = async ({ arabic }) => {
             <div className="lg:w-[22.9166666667vw] text-center lg:text-start">
               <a href="./index">
                 <img
-                  src="/images/icons/footer-logo.svg"
+                  src={
+                    arabic
+                      ? "/images/icons/footer-ar-logo.svg"
+                      : "/images/icons/footer-logo.svg"
+                  }
                   alt="logo"
                   className="lg:w-[15.1041666667vw] sm:w-[26.8292682927vw] w-[48.46153846153846vw] mx-[auto] lg:mx-[unset]"
                 />
@@ -48,7 +52,7 @@ const Footer = async ({ arabic }) => {
             </div>
             <div className="text-[#E6E7E7]">
               <h5 className="sm:leading-[3.65853658537vw] sm:text-[2.19512195122vw] PingAR-Medium lg:text-[1.14583333333vw] lg:leading-[1.66666666667vw] leading-[6.15384615385vw] text-[3.846153846153846vw] text-center lg:text-start">
-                Site map
+                {arabic ? " خريطة الموقع" : "Site map"}
               </h5>
               <ul className="sm:mt-[1.46341463415vw] sm:gap-y-[1.46341463415vw] sm:text-[1.82926829268vw] sm:leading-[3.0487804878vw] leading-[4.87179487179vw] items-center lg:items-start footerLinks PingAR-Light lg:text-[0.9375vw] lg:leading-[1.45833333333vw] text-[3.076923076923077vw] lg:mt-[0.41666666666vw] flex flex-col lg:gap-y-[0.26041666666vw] gap-y-[2.051282051282051vw] mt-[3.076923076923077vw]">
                 {siteMapData.map((item) => (
@@ -62,7 +66,7 @@ const Footer = async ({ arabic }) => {
             </div>
             <div className="text-[#E6E7E7]">
               <h5 className="sm:leading-[3.65853658537vw] sm:text-[2.19512195122vw] PingAR-Medium lg:text-[1.14583333333vw] lg:leading-[1.66666666667vw] leading-[6.15384615385vw] text-[3.846153846153846vw] text-center lg:text-start">
-                Other links
+                {arabic ? "روابط أخرى" : "Other links"}
               </h5>
               <ul className="sm:mt-[1.46341463415vw] sm:gap-y-[1.46341463415vw] sm:text-[1.82926829268vw] sm:leading-[3.0487804878vw] leading-[4.87179487179vw] items-center lg:items-start footerLinks PingAR-Light lg:text-[0.9375vw] lg:leading-[1.45833333333vw] text-[3.076923076923077vw] lg:mt-[0.41666666666vw] flex flex-col lg:gap-y-[0.26041666666vw] gap-y-[2.051282051282051vw] mt-[3.076923076923077vw]">
                 {otherLinksData.map((item) => (
@@ -115,8 +119,8 @@ const Footer = async ({ arabic }) => {
         <div className="sm:text-[1.82926829268vw] sm:leading-[2.68292682927vw] PingAR-Light Container1680 flex items-center justify-center lg:justify-between text-[#E6E7E7] lg:text-[0.8333333333333333vw] lg:leading-[1.45833333333vw] text-[2.564102564102564vw]">
           <span>
             {arabic
-              ? "مينا. جميع الحقوق محفوظة @ 2023"
-              : "meena. All Rights Reserved @ 2023"}
+              ? "جميع الحقوق محفوظة. مينا الصحة @ 2023"
+              : "All Rights Reserved. Meena Health @ 2023"}
           </span>
           <div>
             <span> {arabic ? "تم تطويره بواسطة" : "Developed By"} </span>

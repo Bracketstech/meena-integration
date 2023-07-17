@@ -27,7 +27,7 @@ const BringingLoving = ({ arabic }) => {
         />
       </svg>
       <svg
-        className="absolute flipped sm:hidden w-full lg:h-full bottom-[20px] lg:top-0 leftRightFixer1"
+        className="absolute flipped lineNichylo sm:hidden w-full lg:h-full bottom-[20px] lg:top-0 leftRightFixer1"
         xmlns="http://www.w3.org/2000/svg"
         width="389.58"
         height="288.575"
@@ -49,7 +49,7 @@ const BringingLoving = ({ arabic }) => {
           data-aos="fade-up"
           className="lg:w-[34.2708333333vw] PingAR-Regular heading54 tracking-[unset] text-[#3B3659]"
         >
-          {arabic ? "جلب الرعاية المحبة " : "Bringing loving care to"}
+          {arabic ? "جلب الرعاية المحبة " : "Bringing loving care to "}
           <span className="PingAR-Bold">
             {arabic ? "للرعاية الصحية" : "health care."}{" "}
           </span>

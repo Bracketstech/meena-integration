@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 const SubPageHero = ({ title, text, boldtext }) => {
   return (
@@ -22,23 +22,23 @@ const SubPageHero = ({ title, text, boldtext }) => {
         />
       </div>
       <div className="lg:w-[37.5vw] lg:mt-[1.14583333333vw] sm:mt-[1.70731707317vw] mt-[4.10256410256vw]">
-
-        <h1 data-aos="fade-up" className="heading54 PingAR-Regular tracking-[unset] text-[#3B3659]">
-          {title} <span className="PingAR-Bold">{boldtext}</span>
-
-
-        </h1>
-        {text && <p
-          data-aos="fade-down"
-          className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[1.14583333333vw] lg:leading-[1.74479166667vw] text-[3.58974358974vw] leading-[5.9829059829vw] PingAR-Light text-[#707070] lg:text-[#505050] lg:mt-[0.625vw] mt-[1.02564102564vw]"
+        <h1
+          data-aos="fade-up"
+          className="heading54 PingAR-Regular tracking-[unset] text-[#3B3659]"
         >
-          {text}
-        </p>
-        }
+          {title} <span className="PingAR-Bold">{boldtext}</span>
+        </h1>
+        {text && (
+          <p
+            data-aos="fade-down"
+            className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[1.14583333333vw] lg:leading-[1.74479166667vw] text-[3.58974358974vw] leading-[5.9829059829vw] PingAR-Light text-[#707070] lg:text-[#505050] lg:mt-[1vw] mt-[1.02564102564vw]"
+          >
+            {text}
+          </p>
+        )}
       </div>
     </div>
+  );
+};
 
-  )
-}
-
-export default SubPageHero
+export default SubPageHero;

@@ -88,7 +88,7 @@ const MapComponent = ({
                           alt="clock"
                           className="lg:w-[1.04166666667vw]"
                         />
-                        <span className="text18 text-[#505050] PingAR-Light">
+                        <span className="text18 relative top-[4px] lg:top-0 text-[#505050] PingAR-Light">
                           {arabic ? isAr.timing : timing}
                         </span>
                       </div>
@@ -103,7 +103,7 @@ const MapComponent = ({
                         />
                         <span
                           style={{ direction: "ltr" }}
-                          className="text18 text-[#505050] PingAR-Light"
+                          className="text18 relative top-[4px] lg:top-0 text-[#505050] PingAR-Light"
                         >
                           {phone}
                         </span>
@@ -117,7 +117,7 @@ const MapComponent = ({
                           alt="open"
                           className="lg:w-[1.04166666667vw] w-[5.55555555556vw]"
                         />
-                        <span className="text18 text-[#3B3659] PingAR-Medium">
+                        <span className="text18 relative top-[6px] lg:top-0  text-[#3B3659] PingAR-Medium">
                           {arabic ? "افتح في خريطة جوجل" : "Open In Google Map"}
                         </span>
                       </a>

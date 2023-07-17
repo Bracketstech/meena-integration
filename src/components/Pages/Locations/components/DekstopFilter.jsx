@@ -55,7 +55,7 @@ const DekstopFilter = ({
             </label>
           ))}
         </div>
-        <div className="lg:pt-[0] max-h-[39vw] overflow-auto flex flex-col lg:gap-y-[0] pt-[6%] gap-y-[5.55555555556vw]">
+        <div className="lg:pt-[0] max-h-[40vw] overflow-auto flex flex-col lg:gap-y-[0] pt-[6%] gap-y-[5.55555555556vw]">
           {addressContainer.length == 0 ? (
             <div
               className={
@@ -83,9 +83,9 @@ const DekstopFilter = ({
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className={` w-[1.5vw] h-[1.5vw] absolute ${
+                    className={` w-[1.5vw] h-[2vw] absolute ${
                       arabic ? "left-[1vw]" : "right-[1vw]"
-                    } top-[50%] transform translate-y-[-50%] flipped`}
+                    } top-[45%] transform translate-y-[-50%] flipped`}
                   >
                     <path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" />
                   </svg>
@@ -97,7 +97,7 @@ const DekstopFilter = ({
                 >
                   {arabic ? address.isAr.title : address.title}
                 </h5>
-                <div className="lg:pt-[0.41666666666vw] pt-[3%] flex flex-col lg:gap-y-[0.3125vw] gap-y-[2.77777777778vw]">
+                <div className="lg:pt-[0.41666666666vw] items-start pt-[3%] flex flex-col lg:gap-y-[0.3125vw] gap-y-[2.77777777778vw]">
                   <div className="flex items-start lg:gap-x-[0.625vw] gap-x-[2.22222222222vw]">
                     <img
                       src="/images/icons/clock1.svg"

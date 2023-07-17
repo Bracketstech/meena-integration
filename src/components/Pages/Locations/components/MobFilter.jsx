@@ -171,7 +171,7 @@ const MobFilter = ({
                   <h5 className="sm:text-[2.68292682927vw] sm:leading-[4.87804878049vw] text-[4.10256410256vw] leading-[6.66666666667vw] text-[#3B3659]">
                     {arabic ? address.isAr.title : address.title}
                   </h5>
-                  <div className="sm:mt-[1.9512195122vw] mt-[3.58974358974vw] flex flex-col gap-y-[2.30769230769vw]">
+                  <div className="sm:mt-[1.9512195122vw] items-start mt-[3.58974358974vw] flex flex-col gap-y-[2.30769230769vw]">
                     <div className="sm:gap-x-[0.97560975609vw] flex items-start gap-x-[2.05128205128vw]">
                       <img
                         src="/images/icons/clock1.svg"

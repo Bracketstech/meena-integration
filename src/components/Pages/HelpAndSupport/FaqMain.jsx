@@ -43,7 +43,7 @@ const faqData1 = [
 ];
 const faqData2 = [
   {
-    question: " Lorem ipsum dolor sit amet, consetetur sadipscing elitr? 22",
+    question: "FAQ DATA 2 Example Dummy Dataa",
     answer:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam  nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
     questionAr:
@@ -52,7 +52,7 @@ const faqData2 = [
       "22 لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيتلوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيتلوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج",
   },
   {
-    question: " Lorem ipsum dolor sit amet, consetetur sadipscing elitr? 22",
+    question: "FAQ DATA 2 Example Dummy Dataa",
     answer:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam  nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
     questionAr:
@@ -61,7 +61,7 @@ const faqData2 = [
       "22 لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيتلوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيتلوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج",
   },
   {
-    question: " Lorem ipsum dolor sit amet, consetetur sadipscing elitr? 22",
+    question: "FAQ DATA 2 Example Dummy Dataa",
     answer:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam  nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
     questionAr:
@@ -70,7 +70,7 @@ const faqData2 = [
       "22 لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيتلوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيتلوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج",
   },
   {
-    question: " Lorem ipsum dolor sit amet, consetetur sadipscing elitr? 22",
+    question: "FAQ DATA 2 Example Dummy Dataa",
     answer:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam  nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
     questionAr:
@@ -81,7 +81,7 @@ const faqData2 = [
 ];
 const faqData3 = [
   {
-    question: " Lorem ipsum dolor sit amet, consetetur sadipscing elitr? 33",
+    question: " FAQ DATA 3 Example Dummy Dataa",
     answer:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam  nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
     questionAr:
@@ -90,7 +90,7 @@ const faqData3 = [
       "33 لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيتلوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيتلوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج",
   },
   {
-    question: " Lorem ipsum dolor sit amet, consetetur sadipscing elitr? 33",
+    question: " FAQ DATA 3 Example Dummy Dataa",
     answer:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam  nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
     questionAr:
@@ -99,7 +99,7 @@ const faqData3 = [
       "33 لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيتلوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيتلوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج",
   },
   {
-    question: " Lorem ipsum dolor sit amet, consetetur sadipscing elitr? 33",
+    question: " FAQ DATA 3 Example Dummy Dataa",
     answer:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam  nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
     questionAr:
@@ -108,7 +108,7 @@ const faqData3 = [
       "33 لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيتلوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيتلوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج",
   },
   {
-    question: " Lorem ipsum dolor sit amet, consetetur sadipscing elitr? 33",
+    question: " FAQ DATA 3 Example Dummy Dataa",
     answer:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam  nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
     questionAr:

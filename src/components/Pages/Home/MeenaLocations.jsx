@@ -347,7 +347,7 @@ const MeenaLocations = ({ arabic }) => {
                 className="w-full"
               />
               <span className="absolute w-full h-full top-0 leftRightFixer1 bg-[#3B3659] bg-opacity-[0.6]" />
-              <div className="flex flex-col items-center lg:gap-y-[0.78125vw] absolute top-[50%] left-[50%] transform translate-x-[-50%] translate-y-[-50%] z-[2]">
+              <div className="flex flex-col items-center lg:gap-y-[0.78125vw] absolute top-[29.2857142857%] left-[50%] transform translate-x-[-50%]   z-[2]">
                 <img
                   src="/images/icons/clock.svg"
                   alt="clock"

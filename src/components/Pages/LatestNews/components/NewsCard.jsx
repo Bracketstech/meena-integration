@@ -1,7 +1,7 @@
-import Link from 'next/link'
-import React from 'react'
+import Link from "next/link";
+import React from "react";
 
-const NewsCard = ({image,date,heading,paragraph,anchor,classes}) => {
+const NewsCard = ({ image, date, heading, paragraph, anchor, classes }) => {
   return (
     <div
       data-aos="fade"
@@ -13,7 +13,7 @@ const NewsCard = ({image,date,heading,paragraph,anchor,classes}) => {
           <img
             src={image}
             alt="card-img"
-            className="w-full lg:h-[unset] h-[49.2307692308vw] object-cover lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw]"
+            className="w-full lg:h-[unset] h-[280px]  object-cover lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw]"
           />
         </Link>
       </div>
@@ -22,10 +22,10 @@ const NewsCard = ({image,date,heading,paragraph,anchor,classes}) => {
           {date}
         </span>
         <h4 className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw] line_clamp1g lg:text-[1.35416666667vw] lg:leading-[2.1875vw] text-[3.58974358974vw] leading-[5.89743589744vw] PingAR-Medium">
-        {heading}
+          {heading}
         </h4>
         <p className="sm:text-[1.82926829268vw] sm:leading-[2.68292682927vw] sm:mt-[1.46341463415vw] line_clamp3g text-[#505050] lg:mt-[0.625vw] line_clamp3 mt-[2.05128205128vw] lg:text-[0.83333333333vw] lg:leading-[1.21527777778vw] text-[3.07692307692vw] leading-[5.38461538462vw] PingAR-Light">
-        {paragraph}
+          {paragraph}
         </p>
         <a
           href="./article.html"
@@ -35,7 +35,7 @@ const NewsCard = ({image,date,heading,paragraph,anchor,classes}) => {
         </a>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default NewsCard
+export default NewsCard;

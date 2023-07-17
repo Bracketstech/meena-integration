@@ -19,8 +19,8 @@ const addressContainer = [
     isActive: false,
     address: {
       position: {
-        lng: 20.9314494,
-        lat: 24.1395481,
+        lat: 24.763221,
+        lng: 46.713752,
       },
     },
   },
@@ -39,8 +39,8 @@ const addressContainer = [
     isActive: false,
     address: {
       position: {
-        lng: 25.5789267,
-        lat: 26.8170857,
+        lat: 24.649691,
+        lng: 46.57093,
       },
     },
   },
@@ -57,8 +57,8 @@ const addressContainer = [
     isActive: false,
     address: {
       position: {
-        lng: 50.8516316,
-        lat: 21.3735019,
+        lat: 24.739525,
+        lng: 46.844215,
       },
     },
   },
@@ -75,8 +75,8 @@ const addressContainer = [
     isActive: false,
     address: {
       position: {
-        lng: 19.565407,
-        lat: 15.5468422,
+        lat: 24.819323,
+        lng: 46.642341,
       },
     },
   },
