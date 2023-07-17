@@ -122,12 +122,6 @@ const Footer = async ({ arabic }) => {
               ? "جميع الحقوق محفوظة. مينا الصحة @ 2023"
               : "All Rights Reserved. Meena Health @ 2023"}
           </span>
-          <div>
-            <span> {arabic ? "تم تطويره بواسطة" : "Developed By"} </span>
-            <a href="https://brackets-tech.com/" target="_blank">
-              Brackets Technology
-            </a>
-          </div>
         </div>
       </div>
     </footer>

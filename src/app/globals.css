@@ -754,7 +754,7 @@ body.active {
 
   .markerLabel {
     /* font-size: 2vw !important; */
-    top: 9.45833333333vw !important;
+    top: 65px;
   }
   .cta .cta__Menu {
     left: -74%;
