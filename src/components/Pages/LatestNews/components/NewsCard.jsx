@@ -17,7 +17,7 @@ const NewsCard = ({
       className={`lg:w-[23.3333333333vw] sm:w-full w-[42.3076923077vw] ${classes}`}
     >
       <div className="w-full lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw] overflow-hidden">
-        <Link href="/article">
+        <Link href={arabic ? "/ar/article" : "/article"}>
           <img
             src={image}
             alt="card-img"
