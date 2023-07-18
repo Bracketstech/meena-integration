@@ -1,7 +1,15 @@
 import Link from "next/link";
 import React from "react";
 
-const NewsCard = ({ image, date, heading, paragraph, anchor, classes }) => {
+const NewsCard = ({
+  image,
+  date,
+  heading,
+  paragraph,
+  anchor,
+  classes,
+  arabic,
+}) => {
   return (
     <div
       data-aos="fade"
@@ -28,7 +36,7 @@ const NewsCard = ({ image, date, heading, paragraph, anchor, classes }) => {
           {paragraph}
         </p>
         <a
-          href="./article.html"
+          href={arabic ? "/ar/article" : "/article"}
           className="sm:text-[1.9512195122vw] sm:leading-[3.41463414634vw] sm:mt-[3.65853658537vw] lg:mt-[1.25vw] mt-[4.10256410256vw] block lg:text-[0.9375vw] lg:leading-[1.51041666667vw] text-[3.58974358974vw] leading-[5.64102564103vw] PingAR-Regular"
         >
           {anchor}

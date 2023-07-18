@@ -5,6 +5,7 @@ import ArticleImage from "./ArticleImage";
 import Articles from "./Articles";
 import useAnimations from "@/hooks/useAnimations";
 import useHeader from "@/hooks/useHeader";
+import Link from "next/link";
 
 const Index = ({ arabic }) => {
   useAnimations();
@@ -15,13 +16,13 @@ const Index = ({ arabic }) => {
       <div className="Container1680 lg:pt-[13.9583333333vw] sm:pt-[24.3902439024vw] pt-[40.7692307692vw]">
         <div className="flex items-center lg:gap-x-[0.625vw] sm:gap-x-[2.92682926829vw] gap-x-[4.10256410256vw]">
           <div className="flex items-center lg:gap-x-[0.625vw] sm:gap-x-[1.589744vw] gap-x-[3.58974358974vw]">
-            <a href="./index.html">
+            <Link href={arabic ? "/ar" : "/"}>
               <img
                 src="/images/icons/home.svg"
                 alt="home"
                 className="lg:w-[2.44791666667vw] sm:w-[5vw] w-[9.48717948718vw]"
               />
-            </a>
+            </Link>
             <img
               src="/images/icons/next.svg"
               alt="chevron"

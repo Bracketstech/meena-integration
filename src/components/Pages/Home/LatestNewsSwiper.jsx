@@ -56,6 +56,7 @@ const LatestNewsSwiper = ({ arabic }) => {
                 ? cardDataAr.map((CardDat, index) => (
                     <SwiperSlide key={index} className="swiper-slide">
                       <NewsCard
+                        arabic={arabic}
                         image={CardDat.image}
                         date={CardDat.date}
                         heading={CardDat.heading}

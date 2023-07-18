@@ -63,15 +63,15 @@ const MainNews = ({ arabic }) => {
             ? "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور نكايديديونتيوت لابوري ات لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور نكايديديونتيوت لابوري ات"
             : "  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos"}
         </p>
-        <a
+        <Link
           data-aos="fade"
           data-aos-anchor="#feb"
           data-aos-delay={800}
-          href=""
+          href={arabic ? "/ar/article" : "/article"}
           className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[3.65853658537vw] lg:mt-[2.5vw] mt-[4.10256410256vw] block lg:text-[1.14583333333vw] lg:leading-[1.82291666667vw] text-[3.58974358974vw] leading-[5.64102564103vw] PingAR-Regular"
         >
           {arabic ? "اقرا المزيد" : " Read more"}
-        </a>
+        </Link>
       </div>
     </div>
   );
