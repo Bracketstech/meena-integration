@@ -17,6 +17,7 @@ const Index = ({ arabic }) => {
     <main className="overflow-hidden">
       <section>
         <SubPageHero
+          arabic={arabic}
           title={arabic ? "عن " : "About"}
           boldtext={arabic ? "مينا" : "meena"}
           text={

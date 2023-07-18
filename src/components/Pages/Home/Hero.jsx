@@ -38,7 +38,7 @@ const Hero = ({ arabic }) => {
               <h1 id="anchorFOrCards" data-aos="fade-up" className="heading54">
                 The future of{" "}
                 <span className="relative inline-block">
-                  {" "}
+                  Primary{" "}
                   <img
                     src="/images/icons/links-style3.svg"
                     alt="style"

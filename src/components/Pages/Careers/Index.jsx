@@ -12,6 +12,7 @@ const Index = ({ arabic }) => {
   return (
     <main>
       <SubPageHero
+        arabic={arabic}
         boldtext={arabic ? "وظائف" : "Careers"}
         text={
           arabic

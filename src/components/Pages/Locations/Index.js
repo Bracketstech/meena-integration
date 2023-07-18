@@ -59,6 +59,7 @@ const Index = ({ arabic }) => {
         </div>
 
         <SubPageHero
+          arabic={arabic}
           title={arabic ? "مواقع " : "Meena"}
           boldtext={arabic ? "مينا" : "locations"}
           text={

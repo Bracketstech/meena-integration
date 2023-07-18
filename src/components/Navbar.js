@@ -127,10 +127,10 @@ export default async function Nav({ arabic, home, id }) {
             ))}
           </ul>
           <Link
-            href={`${arabic ? "/ar/about-app" : "/about-app"}`}
+            href={arabic ? "/ar/about-app" : "/about-app"}
             className="sm:mt-[6.82926829268vw] sm:h-[7.31707317073vw] sm:text-[2.43902439024vw] mt-[12.3076923077vw] bg-[#845FFF] text-white text-[3.84615384615vw] rounded-[7.94871794872vw] w-full h-[10.5128205128vw] flex justify-center items-center"
           >
-            <span> Download app </span>
+            <span> {arabic ? "تحميل التطبيق" : "Download app"} </span>
           </Link>
         </div>
       </div>

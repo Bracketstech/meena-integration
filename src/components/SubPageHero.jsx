@@ -1,6 +1,7 @@
+import Link from "next/link";
 import React from "react";
 
-const SubPageHero = ({ title, text, boldtext }) => {
+const SubPageHero = ({ title, text, boldtext, arabic }) => {
   return (
     <div className="Container1680 lg:pt-[13.9583333333vw] sm:pt-[24.3902439024vw] pt-[40.7692307692vw]">
       <div
@@ -8,13 +9,13 @@ const SubPageHero = ({ title, text, boldtext }) => {
         data-aos-delay={400}
         className="flex items-center lg:gap-x-[0.625vw] sm:gap-x-[1.589744vw] gap-x-[3.58974358974vw]"
       >
-        <a href="./index.html">
+        <Link href={arabic ? "/ar" : "/"}>
           <img
             src="/images/icons/home.svg"
             alt="home"
             className="lg:w-[2.44791666667vw] sm:w-[5vw] w-[9.48717948718vw]"
           />
-        </a>
+        </Link>
         <img
           src="/images/icons/next.svg"
           alt="chevron"

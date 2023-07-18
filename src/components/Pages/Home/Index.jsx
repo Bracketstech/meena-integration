@@ -11,7 +11,7 @@ import useHeader from "@/hooks/useHeader";
 
 const HomePage = ({ arabic }) => {
   useAnimations();
-  useHeader(arabic ? "الرئيسية" : "Home", "home");
+  useHeader(arabic ? "الرئيسية" : "Home");
   return (
     <main className="overflow-hidden">
       <Hero arabic={arabic} />

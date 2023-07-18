@@ -9,7 +9,9 @@ const LangSwitcher = ({ arabic }) => {
     document.querySelector("body").classList.remove("active");
   }, []);
   const pathname = usePathname();
-  let newPath = pathname.includes("/ar")
+  let newPath = pathname.includes("/ar/")
+    ? pathname.replace("/ar", "")
+    : pathname == "/ar"
     ? pathname.replace("/ar", "")
     : "/ar" + pathname;
   const searchParams = useSearchParams();

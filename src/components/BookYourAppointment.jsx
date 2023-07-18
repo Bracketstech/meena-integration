@@ -29,7 +29,10 @@ const BookYourAppointment = ({ arabic }) => {
           data-aos-delay={200}
           className="sm:mt-[3.658536585365854vw] sm:gap-x-[2.926829268292683vw] text-[#FFFFFF] flex items-center justify-start sm:justify-center lg:justify-start lg:gap-x-[1.25vw] gap-x-[4.44444444444vw] mt-[6.153846153846154vw] lg:mt-[2.5vw] flex-wrap gap-y-[4.44444444444vw]"
         >
-          <Link href="/about-app" className="anchor1">
+          <Link
+            href={arabic ? "/ar/about-app" : "/about-app"}
+            className="anchor1"
+          >
             <div>
               <span> {arabic ? "احصل على التطبيق" : "Get app"} </span>
               <img src="/images/icons/get-app.svg" alt="get-app" />
