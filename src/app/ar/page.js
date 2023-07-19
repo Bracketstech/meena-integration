@@ -14,7 +14,7 @@ export default async function Home() {
       <Cta arabic />
 
       <Nav home arabic />
-      <HomePage arabic data={data} />
+      <HomePage arabic data={data.entry} />
       <Footer arabic />
     </div>
   );
