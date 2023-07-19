@@ -1,11 +1,10 @@
 "use client";
-import Hero from "./Hero";
-import Info from "./Info";
-import MeenaLocations from "./MeenaLocations";
+import Hero from "./components/Hero";
+import Info from "./components/Info";
+import MeenaLocations from "./components/MeenaLocations";
 import BookYourAppointment from "@/components/BookYourAppointment";
-import DoctorsSwiper from "./DoctorsSwiper";
-import PatientsSwiper from "./PatientsSwiper";
-import LatestNewsSwiper from "./LatestNewsSwiper";
+import DoctorsSwiper from "./components/DoctorsSwiper";
+import PatientsSwiper from "./components/PatientsSwiper";
 import useAnimations from "@/hooks/useAnimations";
 import useHeader from "@/hooks/useHeader";
 
@@ -56,7 +55,10 @@ const HomePage = ({ data, arabic }) => {
           <div className="relative">
             <span className="healthCare__Overlay top-0 absolute w-full h-full lg:h-[62.8125vw] bottom-0 leftRightFixer1"></span>
             <div className="sm:py-[14.6341463415vw] py-[20.51282051282051vw] lg:pt-[4.6875vw] lg:pb-[10.4166666667vw]">
-              <BookYourAppointment arabic={arabic} />
+              <BookYourAppointment
+                data={data.booking_reminder_content}
+                arabic={arabic}
+              />
             </div>
           </div>
         </div>

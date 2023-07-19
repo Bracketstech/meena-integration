@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import ClinicsSvgs from "./components/ClinicsSvgs";
+import ClinicsSvgs from "./ClinicsSvgs";
 
 const MeenaLocations = ({ arabic, title, des, clinics }) => {
   return (

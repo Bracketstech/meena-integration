@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-const SubPageHero = ({ title, text, boldtext, arabic }) => {
+const SubPageHero = ({ title, text, boldtext, arabic, markupTitle }) => {
   return (
     <div className="Container1680 lg:pt-[13.9583333333vw] sm:pt-[24.3902439024vw] pt-[40.7692307692vw]">
       <div
@@ -23,12 +23,20 @@ const SubPageHero = ({ title, text, boldtext, arabic }) => {
         />
       </div>
       <div className="lg:w-[37.5vw] lg:mt-[1.14583333333vw] sm:mt-[1.70731707317vw] mt-[4.10256410256vw]">
-        <h1
-          data-aos="fade-up"
-          className="heading54 PingAR-Regular tracking-[unset] text-[#3B3659]"
-        >
-          {title} <span className="PingAR-Bold">{boldtext}</span>
-        </h1>
+        {markupTitle ? (
+          <div
+            data-aos="fade-up"
+            className="heading54 PingAR-Regular tracking-[unset] text-[#3B3659]"
+            dangerouslySetInnerHTML={{ __html: markupTitle }}
+          ></div>
+        ) : (
+          <h1
+            data-aos="fade-up"
+            className="heading54 PingAR-Regular tracking-[unset] text-[#3B3659]"
+          >
+            {title} <span className="PingAR-Bold">{boldtext}</span>
+          </h1>
+        )}
         {text && (
           <p
             data-aos="fade-down"

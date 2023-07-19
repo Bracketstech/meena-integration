@@ -1,6 +1,6 @@
 import Link from "next/link";
-import HeroLines from "./components/HeroLines";
-import HeroImgsAndOverlays from "./components/HeroImgsAndOverlays";
+import HeroLines from "./HeroLines";
+import HeroImgsAndOverlays from "./HeroImgsAndOverlays";
 
 const Hero = ({ arabic, title, des, img }) => {
   return (

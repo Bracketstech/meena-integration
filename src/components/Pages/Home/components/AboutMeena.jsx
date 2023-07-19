@@ -33,7 +33,7 @@ const AboutMeena = ({ arabic, companyValues, title, img, data }) => {
                 className="sm:gap-y-[2.92682926829vw] flex justify-center lg:justify-start items-start lg:gap-x-[1.04166666667vw] flex-wrap gap-y-[4.10256410256vw]"
               >
                 <img
-                  src={item.icon.path}
+                  src={item.icon?.path}
                   alt={item.title}
                   className="lg:w-[1.19791666667vw] w-[4.87179487179vw] sm:w-[3.0487804878vw]"
                 />

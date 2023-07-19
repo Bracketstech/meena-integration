@@ -10,6 +10,7 @@ export const homeQuery = () => {
         blueprint
         ... on Entry_Pages_Homepage {
           title
+
           hero_image {
             id
             path: url
@@ -84,6 +85,14 @@ export const homeQuery = () => {
               }
               description
             }
+          }
+          booking_reminder_content {
+            image {
+              id
+              path: url
+            }
+            booking_section_title
+            description
           }
         }
       }

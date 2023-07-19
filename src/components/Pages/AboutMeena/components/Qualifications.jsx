@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-const Qualifications = ({ arabic }) => {
+const Qualifications = ({ arabic, title, des, qualifications }) => {
   const [swiperGap, setSwiperGap] = useState(0);
   const [slidesPerView, setSlidesPerView] = useState(0);
   useEffect(() => {
@@ -28,76 +28,18 @@ const Qualifications = ({ arabic }) => {
               slidesPerView={slidesPerView}
               className="sm:pb-[6.82926829268vw] mp50 swiper mySwiper aboutMeenaSwiper lg:pb-[3.38541666667vw] pb-[9.74358974359vw]"
             >
-              <SwiperSlide className="swiper-slide">
-                <img
-                  src="/images/about-meena/partners/1.svg"
-                  alt="partners"
-                  className="w-full"
-                />
-              </SwiperSlide>
-              <SwiperSlide className="swiper-slide">
-                <img
-                  src="/images/about-meena/partners/2.svg"
-                  alt="partners"
-                  className="w-full"
-                />
-              </SwiperSlide>
-              <SwiperSlide className="swiper-slide">
-                <img
-                  src="/images/about-meena/partners/3.svg"
-                  alt="partners"
-                  className="w-full"
-                />
-              </SwiperSlide>
-              <SwiperSlide className="swiper-slide">
-                <img
-                  src="/images/about-meena/partners/4.svg"
-                  alt="partners"
-                  className="w-full"
-                />
-              </SwiperSlide>
-              <SwiperSlide className="swiper-slide">
-                <img
-                  src="/images/about-meena/partners/5.svg"
-                  alt="partners"
-                  className="w-full"
-                />
-              </SwiperSlide>
-              <SwiperSlide className="swiper-slide">
-                <img
-                  src="/images/about-meena/partners/1.svg"
-                  alt="partners"
-                  className="w-full"
-                />
-              </SwiperSlide>
-              <SwiperSlide className="swiper-slide">
-                <img
-                  src="/images/about-meena/partners/2.svg"
-                  alt="partners"
-                  className="w-full"
-                />
-              </SwiperSlide>
-              <SwiperSlide className="swiper-slide">
-                <img
-                  src="/images/about-meena/partners/3.svg"
-                  alt="partners"
-                  className="w-full"
-                />
-              </SwiperSlide>
-              <SwiperSlide className="swiper-slide">
-                <img
-                  src="/images/about-meena/partners/4.svg"
-                  alt="partners"
-                  className="w-full"
-                />
-              </SwiperSlide>
-              <SwiperSlide className="swiper-slide">
-                <img
-                  src="/images/about-meena/partners/5.svg"
-                  alt="partners"
-                  className="w-full"
-                />
-              </SwiperSlide>
+              {qualifications.map((qualification, index) => (
+                <SwiperSlide
+                  key={qualification.icon.path}
+                  className="swiper-slide"
+                >
+                  <img
+                    src={qualification.icon.path}
+                    alt="partners"
+                    className="w-full"
+                  />
+                </SwiperSlide>
+              ))}
               <div className="absolute w-full bottom-0 lg:h-[2.29166666667vw] aboutLast_Swiper">
                 <SwiperButtons />
               </div>
@@ -105,28 +47,14 @@ const Qualifications = ({ arabic }) => {
           )}
         </div>
         <div className="lg:w-[27.0833333333vw] w-[88.7179487179vw] mx-[auto] lg:mx-[unset] lg:gap-y-[0.67708333333vw] gap-y-[2.05128205128vw] flex flex-col items-center lg:items-start">
-          <h3
+          <div
             data-aos="fade-up"
             className={`relative PingAR-Regular heading54 tracking-[unset] text-[#3B3659] text-center ${
               arabic ? "lg:text-right" : "lg:text-left"
             }`}
           >
-            {arabic ? (
-              <>
-                <span className="PingAR-Bold"> المؤهلات </span> <br />
-                العملية
-              </>
-            ) : (
-              <>
-                Practicing <br />
-                <span className="PingAR-Bold"> qualifications </span>
-              </>
-            )}
-            {/* <img
-            src="/images/about-app/design.png"
-            alt="design"
-            className="lg:w-[3.02083333333vw] w-[7.69230769231vw] lg:top-[-3.22916666667vw] lg:left-[-3.02083333333vw] left-[-7.69230769231vw] top-[-8.20512820513vw] absolute"
-          /> */}
+            <div dangerouslySetInnerHTML={{ __html: title }}></div>
+
             <svg
               className="sm:w-[5.36585365854vw] sm:top-[-6.09756097561vw] h-[8.46153846154vw] lg:h-[unset] lg:w-[3.02083333333vw] asterisk about__Asterisk w-[7.69230769231vw] lg:top-[-3.22916666667vw] top-[-8.20512820513vw] absolute"
               id="Group_89637"
@@ -183,14 +111,12 @@ const Qualifications = ({ arabic }) => {
                 />
               </g>
             </svg>
-          </h3>
+          </div>
           <p
             data-aos="fade-down"
             className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] text-center lg:text-start text-[#505050] lg:text-[1.14583333333vw] lg:leading-[1.70572916667vw] text-[3.58974358974vw] leading-[6.06837606838vw] PingAR-Regular"
           >
-            {arabic
-              ? "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود ت دو أيوسمود تيمبور نكايديديونتيوت لابوري ات"
-              : "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore"}
+            {des}{" "}
           </p>
         </div>
       </div>

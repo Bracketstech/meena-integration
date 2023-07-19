@@ -1,6 +1,6 @@
 import React from "react";
-import AboutMeena from "./components/AboutMeena";
-import NutShell from "./components/NutShell";
+import AboutMeena from "./AboutMeena";
+import NutShell from "./NutShell";
 
 const Info = ({
   arabic,

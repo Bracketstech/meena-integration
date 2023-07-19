@@ -1,11 +1,19 @@
 import React from "react";
+const colors = [
+  "#EBF0F7",
+  "#D6D1ED",
+  "#F0F0F0",
+  "#F0F0F0",
+  "#F5EBE8",
+  "#EBF0F7",
+];
 
 const NutShellFeature = ({ feature, index }) => {
   return (
     <div
       data-aos="fade"
       data-aos-delay={index * 100}
-      className="sm:pt-[7.92682926829vw] sm:h-[36.5853658537vw] sm:w-[48%] lg:w-[23.3333333333vw] w-full bg-[#EBF0F7] lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw] lg:h-[13.3854166667vw] h-[47.1794871795vw] lg:pt-[1.85416666667vw] pt-[8.20512820513vw] items-start"
+      className={`sm:pt-[7.92682926829vw] sm:h-[36.5853658537vw] sm:w-[48%] lg:w-[23.3333333333vw] w-full bg-[${colors[index]}] lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw] lg:h-[13.3854166667vw] h-[47.1794871795vw] lg:pt-[1.85416666667vw] pt-[8.20512820513vw] items-start`}
     >
       <div className="sm:w-[90%] lg:w-[20.8333333333vw] w-[76.4102564103vw] mx-[auto] flex flex-col items-center lg:gap-y-[0.72916666666vw] gap-y-[3.07692307692vw]">
         <img

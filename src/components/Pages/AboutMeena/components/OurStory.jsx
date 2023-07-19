@@ -1,6 +1,6 @@
 import React from "react";
 
-const OurStory = ({ arabic }) => {
+const OurStory = ({ arabic, data }) => {
   return (
     <div className="sm:gap-y-[3.65853658537vw] sm:py-[7.31707317073vw] Container1440 lg:pt-[6.25vw] pt-[16.4102564103vw] flex items-center justify-between flex-col-reverse lg:flex-row lg:pb-[3.85416666667vw] pb-[6.15384615385vw] gap-y-[6.15384615385vw]">
       <div className="lg:w-[37.5vw]">
@@ -11,33 +11,17 @@ const OurStory = ({ arabic }) => {
           id="lineanimation2"
           className="sm:text-[1.9512195122vw] sm:leading-[3.41463414634vw] text-[#3B3659] lg:text-[0.9375vw] lg:leading-[1.51041666667vw] text-[3.07692307692vw] leading-[4.87179487179vw] PingAR-Regular"
         >
-          {arabic ? "قصتنا" : "Our story"}
+          {data.title_caption}
         </span>
         <div data-aos="fade-down" data-aos-anchor="#story" data-aos-delay={400}>
-          <h3 className="lg:mt-[0.625vw] mt-[1.02564102564vw] text-[#3B3659] lg:text-[2.29166666667vw] lg:leading-[3.64583333333vw] text-[5.64102564103vw] leading-[8.97435897436vw] PingAR-Regular">
-            {arabic ? (
-              <>
-                حان الوقت <span className="PingAR-Bold"> لكسر </span> القالب
-              </>
-            ) : (
-              <>
-                It’s time to <span className="PingAR-Bold"> break </span> the
-                mold
-              </>
-            )}
-          </h3>
-          <div className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] sm:gap-y-[1.46341463415vw] lg:mt-[0.625vw] mt-[3.07692307692vw] text-[#505050] lg:text-[1.14583333333vw] lg:leading-[1.70572916667vw] text-[3.58974358974vw] leading-[6.06837606838vw] flex flex-col lg:gap-y-[0.83333333333vw] gap-y-[3.07692307692vw]">
-            <p className="PingAR-Regular">
-              {arabic
-                ? "لهذا السبب نحدد نموذجًا جديدًا لرفاهية الإنسان ، ونرسم المسارات التي تؤدي إلى أفضل أيامك بما يتماشى مع رؤية 2030. نظامنا البيئي ذكي ومتكامل ومصمم وفقًا لاحتياجاتك - كما ينبغي أن يكون كما نعلم كل شخص فريد."
-                : "That’s why we’re defining a new paradigm for human well-being, laying the tracks that lead to your best days in line with Vision 2030. Our ecosystem is smart, integrated, and made around your needs – as it should be since we know each person is unique."}
-            </p>
-            <p className="PingAR-Regular">
-              {arabic
-                ? "نحن في مكانك ، في أي مكان مألوف في حيك أو في راحة يدك. معًا ، تبني إمكاناتك."
-                : " We’re where you are, in any familiar place in your neighborhood or in the palm of your hand. Together, embrace your potential."}
-            </p>
-          </div>
+          <div
+            dangerouslySetInnerHTML={{ __html: data.title }}
+            className="lg:mt-[0.625vw] mt-[1.02564102564vw] text-[#3B3659] lg:text-[2.29166666667vw] lg:leading-[3.64583333333vw] text-[5.64102564103vw] leading-[8.97435897436vw] PingAR-Regular"
+          ></div>
+          <div
+            dangerouslySetInnerHTML={{ __html: data.content }}
+            className="sm:text-[2.19512195122vw] PingAR-Regular sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] sm:gap-y-[1.46341463415vw] lg:mt-[0.625vw] mt-[3.07692307692vw] text-[#505050] lg:text-[1.14583333333vw] lg:leading-[1.70572916667vw] text-[3.58974358974vw] leading-[6.06837606838vw] flex flex-col lg:gap-y-[0.83333333333vw] gap-y-[3.07692307692vw]"
+          ></div>
           <h5 className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw] sm:mt-[1.46341463415vw] text-[#8450FF] lg:text-[1.35416666667vw] lg:leading-[2.1875vw] text-[4.87179487179vw] leading-[7.69230769231vw] PingAR-Regular lg:mt-[1.25vw] mt-[4.10256410256vw]">
             {arabic ? "قابل مينا" : " Meet meena"}
           </h5>
@@ -55,8 +39,8 @@ const OurStory = ({ arabic }) => {
         data-aos-delay={600}
       >
         <img
-          src="/images/about-meena/card-img.jpg"
-          alt="card-img"
+          src={data.image.path}
+          alt={data.title}
           className="w-full lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw]"
         />
         <svg

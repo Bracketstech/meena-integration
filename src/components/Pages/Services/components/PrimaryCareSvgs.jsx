@@ -1,20 +1,8 @@
 import React from "react";
-import Cards from "./components/Cards";
-import Content from "./components/Content";
 
-const PrimaryCare = ({ arabic }) => {
+const PrimaryCareSvgs = () => {
   return (
-    <div className="relative">
-      {/* <img
-      src="/images/services/primarycare-bgDesign.png"
-      alt="bgDesign"
-      className="hidden lg:block absolute leftRightFixer2 lg:bottom-[-1vw] w-full lg:h-[57.2520833333vw]"
-    /> */}
-      {/* <img
-      src="/images/services/primarycare-bgDesign-mob.png"
-      alt="bgDesign"
-      className="lg:hidden block absolute leftRightFixer2 bottom-[-24.6153846154vw] w-full lg:h-[57.2520833333vw]"
-    /> */}
+    <>
       <svg
         className="h-[55.8974358974vw] flipped lg:hidden block absolute leftRightFixer2 bottom-[-70px] sm:bottom-[-15.8536585366vw] w-full lg:h-[57.2520833333vw]"
         xmlns="http://www.w3.org/2000/svg"
@@ -51,14 +39,8 @@ const PrimaryCare = ({ arabic }) => {
           strokeWidth={4}
         />
       </svg>
-      <div className="sm:pt-[7.31707317073vw] lg:mt-[5.10416666667vw] Container1440 relative z-[2] lg:pt-[1.14583333333vw] pt-[16.4102564103vw] lg:pb-[10.46875vw]">
-        <div className="flex items-start justify-between flex-wrap sm:gap-y-[4.87804878049vw] gap-y-[6.15384615385vw] flex-col-reverse lg:flex-row">
-          <Cards arabic={arabic} />
-          <Content arabic={arabic} />
-        </div>
-      </div>
-    </div>
+    </>
   );
 };
 
-export default PrimaryCare;
+export default PrimaryCareSvgs;

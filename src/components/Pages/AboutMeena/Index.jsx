@@ -1,15 +1,15 @@
 "use client";
 import SubPageHero from "@/components/SubPageHero";
-import OurStory from "./OurStory";
-import CoreValues from "./CoreValues";
-import VisionMission from "./VisionMission";
-import LeaderSwiper from "./LeaderSwiper";
-import Partners from "./Partners";
-import Qualifications from "./Qualifications";
+import OurStory from "./components/OurStory";
+import CoreValues from "./components/CoreValues";
+import VisionMission from "./components/VisionMission";
+import LeaderSwiper from "./components/LeaderSwiper";
+import Partners from "./components/Partners";
+import Qualifications from "./components/Qualifications";
 import useAnimations from "@/hooks/useAnimations";
 import useHeader from "@/hooks/useHeader";
 
-const Index = ({ arabic }) => {
+const Index = ({ arabic, data }) => {
   useAnimations();
   useHeader(arabic ? "عن مينا" : "About Us");
 
@@ -18,20 +18,33 @@ const Index = ({ arabic }) => {
       <section>
         <SubPageHero
           arabic={arabic}
-          title={arabic ? "عن " : "About"}
-          boldtext={arabic ? "مينا" : "meena"}
-          text={
-            arabic
-              ? "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور نكايديديونتيوت لابوري ات"
-              : "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna"
-          }
+          markupTitle={data.top_header_content[0].header_title}
+          text={data.top_header_content[0].header_description}
         />
-        <OurStory arabic={arabic} />
-        <CoreValues arabic={arabic} />
-        <VisionMission arabic={arabic} />
-        <LeaderSwiper arabic={arabic} />
-        <Partners arabic={arabic} />
-        <Qualifications arabic={arabic} />
+        <OurStory arabic={arabic} data={data.our_story_content[0]} />
+        <CoreValues
+          arabic={arabic}
+          title={data.coreValuesSectionTitle}
+          features={data.coreValuesFeatures}
+        />
+        <VisionMission data={data.two_cards_view} arabic={arabic} />
+        <LeaderSwiper
+          title={data.leaders_section_title}
+          leaders={data.leaders}
+          arabic={arabic}
+        />
+        <Partners
+          title={data.partners_section_title}
+          des={data.partners_section_description}
+          partners={data.partners}
+          arabic={arabic}
+        />
+        <Qualifications
+          title={data.qualifications_section_title}
+          des={data.qualifications_section_description}
+          qualifications={data.qualifications}
+          arabic={arabic}
+        />
       </section>
     </main>
   );

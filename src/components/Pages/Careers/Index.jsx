@@ -5,23 +5,23 @@ import WorkAtMeena from "./WorkAtMeena";
 import useAnimations from "@/hooks/useAnimations";
 import useHeader from "@/hooks/useHeader";
 
-const Index = ({ arabic }) => {
+const Index = ({ arabic, data }) => {
   useAnimations();
   useHeader(arabic ? "وظائف" : "Careers");
 
   return (
     <main>
       <SubPageHero
-        arabic={arabic}
-        boldtext={arabic ? "وظائف" : "Careers"}
-        text={
-          arabic
-            ? "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور نكايديديونتيوت لابوري ات"
-            : "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna"
-        }
+        markupTitle={data.top_header_section[0].header_title}
+        text={data.top_header_section[0].header_description}
       />
-      <HiringPositions arabic={arabic} />
-      <WorkAtMeena arabic={arabic} />
+      <HiringPositions data={data.jobs_category_content[0]} arabic={arabic} />
+      <WorkAtMeena
+        title={data.nuttshellValuesTitle}
+        des={data.nuttshellValuesDescription}
+        cards={data.nuttshellValuesFeatures}
+        arabic={arabic}
+      />
     </main>
   );
 };
