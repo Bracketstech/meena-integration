@@ -9,23 +9,49 @@ import LatestNewsSwiper from "./LatestNewsSwiper";
 import useAnimations from "@/hooks/useAnimations";
 import useHeader from "@/hooks/useHeader";
 
-const HomePage = ({ arabic }) => {
+const HomePage = ({ data, arabic }) => {
   useAnimations();
   useHeader(arabic ? "الرئيسية" : "Home");
   return (
     <main className="overflow-hidden">
-      <Hero arabic={arabic} />
-      <Info arabic={arabic} />
+      <Hero
+        arabic={arabic}
+        title={data.hero_title}
+        des={data.hero_caption}
+        img={data.hero_image[0].path}
+      />
+      <Info
+        arabic={arabic}
+        companyValues={data.company_values}
+        aboutTitle={data.aboutMeenaSectionTitle}
+        aboutImg={data.aboutMeenaSectionImage.path}
+        aboutData={data.aboutMeenaSection}
+        nutShellTitle={data.nutshellMidValueSectionTitle}
+        nutShellFeatures={data.nutshellMidValueSectionFeatures}
+      />
       <section>
         <div>
-          <DoctorsSwiper arabic={arabic} />
-          <PatientsSwiper arabic={arabic} />
-          <MeenaLocations arabic={arabic} />
+          <DoctorsSwiper
+            doctors={data.doctors}
+            title={data.doctorsCarouselTitle}
+            arabic={arabic}
+          />
+          <PatientsSwiper
+            testimonials={data.testimonials}
+            title={data.testimonials_section_title}
+            arabic={arabic}
+          />
+          <MeenaLocations
+            clinics={data.clinics}
+            title={data.clinics_section_title}
+            des={data.clinics_section_description}
+            arabic={arabic}
+          />
         </div>
       </section>
       <section>
         <div>
-          <LatestNewsSwiper arabic={arabic} />
+          {/* <LatestNewsSwiper title={data.news_section_title} news={data.news} arabic={arabic} /> */}
 
           <div className="relative">
             <span className="healthCare__Overlay top-0 absolute w-full h-full lg:h-[62.8125vw] bottom-0 leftRightFixer1"></span>

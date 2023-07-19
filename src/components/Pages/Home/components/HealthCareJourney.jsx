@@ -1,6 +1,6 @@
 import React from "react";
 
-const HealthCareJourney = ({ arabic }) => {
+const HealthCareJourney = ({ arabic, title }) => {
   return (
     <div className="sm:pt-[4.87804878049vw] sm:pb-[7.31707317073vw] flex items-center lg:gap-x-[8.33333333333vw] justify-center flex-wrap lg:pt-[2.60416666667vw] lg:pb-[10.78125vw] gap-y-[12vw] pt-[6.15384615385vw] pb-[10.2564102564vw]">
       <div className="hidden lg:block" data-aos="fade">
