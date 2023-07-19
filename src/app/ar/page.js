@@ -6,7 +6,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 import getHomeData from "@/lib/data-hooks/getHomeData";
 
 export default async function Home() {
-  const data = await getHomeData("Ar");
+  // const data = await getHomeData("Ar");
 
   return (
     <div className="rtl">
@@ -14,7 +14,7 @@ export default async function Home() {
       <Cta arabic />
 
       <Nav home arabic />
-      <HomePage arabic data={data.entry} />
+      {/* <HomePage arabic data={data.entry} /> */}
       <Footer arabic />
     </div>
   );
