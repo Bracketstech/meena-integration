@@ -5,115 +5,114 @@ import DesktopMap from "./components/DesktopMap";
 import { useEffect, useRef, useState } from "react";
 import MapComponent from "./components/MapComponent";
 
-const addressContainer = [
-  {
-    isAr: {
-      title: "عيادة الباحة",
-      timing: "السبت - الخميس (7 صباحًا - 4 مساءً)",
-    },
-    filterId: "Yalla Clinic",
-    title: "Yalla Clinic",
-    timing: "Sat-Thu (7AM - 4PM)",
-    phone: "+966 000 0000 00",
-    isOpen: false,
-    isActive: false,
-    address: {
-      position: {
-        lat: 24.763221,
-        lng: 46.713752,
-      },
-    },
-  },
-  {
-    isAr: {
-      title: "عيادة الباحة",
-      timing: "السبت - الخميس (7 صباحًا - 4 مساءً)",
-      filterTitle: "عيادة نيست",
-    },
-    filterId: "NEST Clinic",
-    filterTitle: "NEST Clinic",
-    title: "NEST Clinic",
-    timing: "Sat-Thu (7AM - 4PM)",
-    phone: "+966 000 0000 00",
-    isOpen: false,
-    isActive: false,
-    address: {
-      position: {
-        lat: 24.649691,
-        lng: 46.57093,
-      },
-    },
-  },
-  {
-    isAr: {
-      title: "عيادة الباحة",
-      timing: "السبت - الخميس (7 صباحًا - 4 مساءً)",
-    },
-    filterId: "Yalla Clinic",
-    title: "Yalla Clinic",
-    timing: "Sat-Thu (7AM - 4PM)",
-    phone: "+966 000 0000 00",
-    isOpen: false,
-    isActive: false,
-    address: {
-      position: {
-        lat: 24.739525,
-        lng: 46.844215,
-      },
-    },
-  },
-  {
-    isAr: {
-      title: "عيادة الباحة",
-      timing: "السبت - الخميس (7 صباحًا - 4 مساءً)",
-    },
-    filterId: "NEST Clinic",
-    title: "NEST Clinic",
-    timing: "Sat-Thu (7AM - 4PM)",
-    phone: "+966 000 0000 00",
-    isOpen: false,
-    isActive: false,
-    address: {
-      position: {
-        lat: 24.819323,
-        lng: 46.642341,
-      },
-    },
-  },
-];
+// const addressContainer = [
+//   {
+//     isAr: {
+//       title: "عيادة الباحة",
+//       timing: "السبت - الخميس (7 صباحًا - 4 مساءً)",
+//     },
+//     filterId: "Yalla Clinic",
+//     title: "Yalla Clinic",
+//     timing: "Sat-Thu (7AM - 4PM)",
+//     phone: "+966 000 0000 00",
+//     isOpen: false,
+//     isActive: false,
+//     address: {
+//       position: {
+//         lat: 24.763221,
+//         lng: 46.713752,
+//       },
+//     },
+//   },
+//   {
+//     isAr: {
+//       title: "عيادة الباحة",
+//       timing: "السبت - الخميس (7 صباحًا - 4 مساءً)",
+//       filterTitle: "عيادة نيست",
+//     },
+//     filterId: "NEST Clinic",
+//     filterTitle: "NEST Clinic",
+//     title: "NEST Clinic",
+//     timing: "Sat-Thu (7AM - 4PM)",
+//     phone: "+966 000 0000 00",
+//     isOpen: false,
+//     isActive: false,
+//     address: {
+//       position: {
+//         lat: 24.649691,
+//         lng: 46.57093,
+//       },
+//     },
+//   },
+//   {
+//     isAr: {
+//       title: "عيادة الباحة",
+//       timing: "السبت - الخميس (7 صباحًا - 4 مساءً)",
+//     },
+//     filterId: "Yalla Clinic",
+//     title: "Yalla Clinic",
+//     timing: "Sat-Thu (7AM - 4PM)",
+//     phone: "+966 000 0000 00",
+//     isOpen: false,
+//     isActive: false,
+//     address: {
+//       position: {
+//         lat: 24.739525,
+//         lng: 46.844215,
+//       },
+//     },
+//   },
+//   {
+//     isAr: {
+//       title: "عيادة الباحة",
+//       timing: "السبت - الخميس (7 صباحًا - 4 مساءً)",
+//     },
+//     filterId: "NEST Clinic",
+//     title: "NEST Clinic",
+//     timing: "Sat-Thu (7AM - 4PM)",
+//     phone: "+966 000 0000 00",
+//     isOpen: false,
+//     isActive: false,
+//     address: {
+//       position: {
+//         lat: 24.819323,
+//         lng: 46.642341,
+//       },
+//     },
+//   },
+// ];
 
-const filters = [
-  {
-    filterId: "All",
-    filterTitleAr: "الكل",
-    filterTitle: "All",
-  },
-  {
-    filterId: "Yalla Clinic",
-    filterTitleAr: "عيادة يلا",
-    filterTitle: "Yalla Clinic",
-  },
-  {
-    filterId: "NEST Clinic",
-    filterTitleAr: "عيادة نيست",
-    filterTitle: "NEST Clinic",
-  },
-  {
-    filterId: "Open Now",
-    filterTitleAr: "مفتوح الان",
-    filterTitle: "Open Now",
-  },
-];
+// const filters = [
+//   {
+//     filterId: "All",
+//     filterTitleAr: "الكل",
+//     filterTitle: "All",
+//   },
+//   {
+//     filterId: "Yalla Clinic",
+//     filterTitleAr: "عيادة يلا",
+//     filterTitle: "Yalla Clinic",
+//   },
+//   {
+//     filterId: "NEST Clinic",
+//     filterTitleAr: "عيادة نيست",
+//     filterTitle: "NEST Clinic",
+//   },
+//   {
+//     filterId: "Open Now",
+//     filterTitleAr: "مفتوح الان",
+//     filterTitle: "Open Now",
+//   },
+// ];
 
-const MapContainer = ({ arabic }) => {
+const MapContainer = ({ arabic, filters, addressContainer }) => {
   const [appliedFilters, setAppliedFilters] = useState(["All"]);
   const [bounds, setBounds] = useState([]);
   const [isWindowLoaded, setIsWindowLoaded] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [isNearestActive, setIsNearestActive] = useState(false);
   const myMap = useRef(null);
-  const [renderingAddresses, setRenderingAddresses] =
-    useState(addressContainer);
+  const [renderingAddresses, setRenderingAddresses] = useState([]);
   const [activeMarker, setActiveMarker] = useState(null);
 
   const scrollTo = () => {
@@ -225,11 +224,19 @@ const MapContainer = ({ arabic }) => {
     setIsWindowLoaded(window);
   };
   useEffect(() => {
-    settingBounds(renderingAddresses);
+    setRenderingAddresses(addressContainer);
+  }, [addressContainer, filters]);
+
+  useEffect(() => {
     handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+  useEffect(() => {
+    if (renderingAddresses.length != 0) {
+      settingBounds(renderingAddresses);
+    }
+  }, [renderingAddresses]);
 
   const settingActiveMarker = (marker) => {
     let newAddresses = [];

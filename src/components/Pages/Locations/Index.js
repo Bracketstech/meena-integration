@@ -3,13 +3,122 @@ import SubPageHero from "@/components/SubPageHero";
 import MapContainer from "./MapContainer";
 import useAnimations from "@/hooks/useAnimations";
 import useHeader from "@/hooks/useHeader";
+import useAddresses from "@/hooks/useAddresses";
+import useFilters from "@/hooks/useFilters";
+import useUserTime from "@/hooks/useUserTime";
 
-const Index = ({ arabic }) => {
+const Index = ({ arabic, data }) => {
   useAnimations();
   useHeader(arabic ? "الاماكن" : "Locations");
+  const [addressContainer, setAddressContainer] = useState([]);
+  const [filters, setFilters] = useState([]);
+  const userTime = useUserTime();
+
+  const checkingIsClinicOpen = (openingTime, closingTime) => {
+    const [openHours, openMinutes] = openingTime.split(":");
+    const [closeHours, closeMinutes] = closingTime.split(":");
+    const [userHours, userMinutes, userSeconds] = userTime.split(":");
+
+    const clinicOpen = new Date();
+    clinicOpen.setHours(openHours, openMinutes, 0);
+
+    const clinicClose = new Date();
+    clinicClose.setHours(closeHours, closeMinutes, 0);
+
+    const userCurrentTime = new Date();
+    userCurrentTime.setHours(userHours, userMinutes, userSeconds);
+
+    return userCurrentTime >= clinicOpen && userCurrentTime <= clinicClose;
+  };
+
+  const ampmConvertor = (timeStr) => {
+    const timeParts = timeStr.split(":");
+    const hours = parseInt(timeParts[0]);
+    const minutes = parseInt(timeParts[1]);
+
+    let period = "AM";
+    let convertedHours = hours;
+
+    if (hours >= 12) {
+      period = "PM";
+      convertedHours = hours === 12 ? 12 : hours - 12;
+    }
+    return `${convertedHours.toString().padStart(2, "0")}:${
+      timeParts[1]
+    } ${period}`;
+  };
+  useEffect(() => {
+    let newAddresses = [];
+    data.forEach((item) => {
+      const isClinicOpen = checkingIsClinicOpen(
+        item.working_time[0].from_time,
+        item.working_time[0].to_time
+      );
+
+      const startingTime = ampmConvertor(item.working_time[0].from_time);
+      const endingTime = ampmConvertor(item.working_time[0].to_time);
+      const timing =
+        item.working_days_span + ` (${startingTime} - ${endingTime})`;
+      const newAddress = {
+        isAr: {
+          title: item.title,
+          timing: timing,
+        },
+        title: item.title,
+        timing: timing,
+        phone: item.clinic_phone,
+        isOpen: isClinicOpen,
+        filterId: item.clinic_type[0].title,
+        isActive: false,
+        address: {
+          position: {
+            lat: +item.coordinates[0].lat,
+            lng: +item.coordinates[0].lng,
+          },
+        },
+      };
+      newAddresses.push(newAddress);
+    });
+    setAddressContainer(newAddresses);
+  }, [data]);
+
+  useEffect(() => {
+    let newFilters = [
+      {
+        filterId: "All",
+        filterTitleAr: "الكل",
+        filterTitle: "All",
+      },
+    ];
+    data.forEach((item) => {
+      let newFilter = item.clinic_type[0].title;
+
+      let isFilterInList = false;
+      newFilters.forEach((filter) => {
+        if (filter.filterId == newFilter) {
+          isFilterInList = true;
+        }
+      });
+      if (!isFilterInList) {
+        newFilters.push({
+          filterId: newFilter,
+          filterTitleAr: newFilter,
+          filterTitle: newFilter,
+        });
+      }
+    });
+
+    newFilters.push({
+      filterId: "Open Now",
+      filterTitleAr: "مفتوح الان",
+      filterTitle: "Open Now",
+    });
+    setFilters(newFilters);
+  }, [data]);
 
   return (
     <main>
+      {JSON.stringify(data)}
       <section className="relative overflow-hidden">
         <div className="flipped hidden lg:block absolute top-[15.3125vw] leftRightFixer2 w-[31.4583333333vw]">
           <svg
@@ -68,7 +177,11 @@ const Index = ({ arabic }) => {
               : " Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna"
           }
         />
-        <MapContainer arabic={arabic} />
+        <MapContainer
+          addressContainer={addressContainer}
+          filters={filters}
+          arabic={arabic}
+        />
       </section>
     </main>
   );

@@ -1,6 +1,7 @@
 import getAboutData from "./getAboutData";
 import getCareerData from "./getCareerData";
 import getHomeData from "./getHomeData";
+import getLocationData from "./getLocationData";
 import getServicesData from "./getServicesData";
 
 const getData = async (id, arabic) => {
@@ -8,11 +9,8 @@ const getData = async (id, arabic) => {
     case "300942ec-7d92-4f42-b8b2-15250cbf1c04":
       return await getServicesData(id, arabic);
     case "b797d4f3-9da1-48c2-9b37-89250fd85a84":
-      return (
-        <>
-          <Locations />
-        </>
-      );
+      return await getLocationData(arabic);
+
     case "ab9bc9b1-cd72-42b7-b086-14ea9e1489ff":
     // return (
     //   <>
@@ -38,11 +36,7 @@ const getData = async (id, arabic) => {
     case "a4ebcba3-3ba6-4d3b-bd01-29ea514119ed":
       return await getServicesData(id, arabic);
     case "e9a0fcb1-57be-499d-ae50-ec17fb7bc69a":
-    // return (
-    //   <>
-    //     <Locations arabic />
-    //   </>
-    // );
+      return await getLocationData(arabic);
     case "e1880864-7e75-491a-a301-fad016620580":
     // return (
     //   <>
