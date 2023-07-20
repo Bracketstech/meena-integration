@@ -9,6 +9,11 @@ const getServicesData = async (id, isAr) => {
   const { data } = await getClient().query({
     query: servicesQuery(),
     variables,
+    context: {
+      fetchOptions: {
+        next: { revalidate: 5 },
+      },
+    },
   });
   return data;
 };

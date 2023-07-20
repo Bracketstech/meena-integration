@@ -6,7 +6,15 @@ const getAboutData = async (id, isAr) => {
     id: id,
     site: isAr ? "arabic" : "default",
   };
-  const { data } = await getClient().query({ query: aboutQuery(), variables });
+  const { data } = await getClient().query({
+    query: aboutQuery(),
+    variables,
+    context: {
+      fetchOptions: {
+        next: { revalidate: 5 },
+      },
+    },
+  });
   return data;
 };
 

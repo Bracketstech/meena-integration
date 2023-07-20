@@ -6,7 +6,15 @@ const getCareerData = async (id, isAr) => {
     id: id,
     site: isAr ? "arabic" : "default",
   };
-  const { data } = await getClient().query({ query: careerQuery(), variables });
+  const { data } = await getClient().query({
+    query: careerQuery(),
+    variables,
+    context: {
+      fetchOptions: {
+        next: { revalidate: 5 },
+      },
+    },
+  });
   return data;
 };
 
