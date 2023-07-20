@@ -117,7 +117,6 @@ const Index = ({ arabic, data }) => {
 
   return (
     <main>
-      {JSON.stringify(data)}
       <section className="relative overflow-hidden">
         <div className="flipped hidden lg:block absolute top-[15.3125vw] leftRightFixer2 w-[31.4583333333vw]">
           <svg
@@ -176,11 +175,13 @@ const Index = ({ arabic, data }) => {
               : " Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna"
           }
         />
-        <MapContainer
-          addressContainer={addressContainer}
-          filters={filters}
-          arabic={arabic}
-        />
+        {addressContainer.length != 0 && (
+          <MapContainer
+            addressContainer={addressContainer}
+            filters={filters}
+            arabic={arabic}
+          />
+        )}
       </section>
     </main>
   );
