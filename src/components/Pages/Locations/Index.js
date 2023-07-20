@@ -48,7 +48,7 @@ const Index = ({ arabic, data }) => {
   };
   useEffect(() => {
     let newAddresses = [];
-    data.forEach((item) => {
+    data?.forEach((item) => {
       const isClinicOpen = checkingIsClinicOpen(
         item.working_time[0].from_time,
         item.working_time[0].to_time
@@ -89,7 +89,7 @@ const Index = ({ arabic, data }) => {
         filterTitle: "All",
       },
     ];
-    data.forEach((item) => {
+    data?.forEach((item) => {
       let newFilter = item.clinic_type[0].title;
 
       let isFilterInList = false;
