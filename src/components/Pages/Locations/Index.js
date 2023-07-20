@@ -4,6 +4,7 @@ import MapContainer from "./MapContainer";
 import useAnimations from "@/hooks/useAnimations";
 import useHeader from "@/hooks/useHeader";
 import useUserTime from "@/hooks/useUserTime";
+import { useEffect, useState } from "react";
 
 const Index = ({ arabic, data }) => {
   useAnimations();
