@@ -3,8 +3,6 @@ import SubPageHero from "@/components/SubPageHero";
 import MapContainer from "./MapContainer";
 import useAnimations from "@/hooks/useAnimations";
 import useHeader from "@/hooks/useHeader";
-import useAddresses from "@/hooks/useAddresses";
-import useFilters from "@/hooks/useFilters";
 import useUserTime from "@/hooks/useUserTime";
 
 const Index = ({ arabic, data }) => {
