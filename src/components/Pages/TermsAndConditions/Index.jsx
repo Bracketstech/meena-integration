@@ -5,13 +5,13 @@ import TermsConditions from "./TermsConditions";
 import useHeader from "@/hooks/useHeader";
 import useAnimations from "@/hooks/useAnimations";
 
-const Index = ({ arabic }) => {
+const Index = ({ arabic, data }) => {
   useAnimations();
   useHeader("Terms & Conditions");
 
   return (
     <main>
-      <SubPageHero arabic={arabic} boldtext="Terms & conditions" />
+      <SubPageHero arabic={arabic} markupTitle={data.title} />
       <TermsConditions arabic={arabic} />
     </main>
   );
