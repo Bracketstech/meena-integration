@@ -22,13 +22,13 @@ export default async function Page({ params }) {
     case "e9a0fcb1-57be-499d-ae50-ec17fb7bc69a":
       return (
         <>
-          <Locations arabic data={data?.entry} />
+          <Locations arabic data={data?.branches?.data} />
         </>
       );
     case "e1880864-7e75-491a-a301-fad016620580":
       return (
         <>
-          <HelpAndSupport arabic data={data?.entry} />
+          <HelpAndSupport arabic data={data} />
         </>
       );
     case "b6f20761-83c3-4cff-8090-aac0b7ab9b9d":

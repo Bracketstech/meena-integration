@@ -22,13 +22,13 @@ export default async function Page({ params }) {
     case "b797d4f3-9da1-48c2-9b37-89250fd85a84":
       return (
         <>
-          <Locations data={data.branches.data} />
+          <Locations data={data?.branches?.data} />
         </>
       );
     case "ab9bc9b1-cd72-42b7-b086-14ea9e1489ff":
       return (
         <>
-          <HelpAndSupport data={data?.entry} />
+          <HelpAndSupport data={data} />
         </>
       );
     case "464bc255-fcaa-40f3-a9b3-6dff74e5436b":

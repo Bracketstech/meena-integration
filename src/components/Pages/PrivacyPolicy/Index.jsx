@@ -6,12 +6,12 @@ import useAnimations from "@/hooks/useAnimations";
 import useHeader from "@/hooks/useHeader";
 import PrimaryCare from "../AboutApp/PrimaryCare";
 
-const Index = ({ arabic }) => {
+const Index = ({ arabic, data }) => {
   useAnimations();
   useHeader("Privacy Policy");
   return (
     <main>
-      <SubPageHero arabic={arabic} boldtext="Privacy policy" />
+      <SubPageHero arabic={arabic} markupTitle={data.title} />
       <PrivacyPolicies arabic={arabic} />
     </main>
   );
