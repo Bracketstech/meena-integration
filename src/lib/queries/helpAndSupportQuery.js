@@ -20,10 +20,7 @@ export const helpAndSupportQuery = () => {
           uri
         }
       }
-      questions: entries(
-        collection: "faq_question"
-        filter: { site: "arabic" }
-      ) {
+      questions: entries(collection: "faq_question", filter: { site: $site }) {
         current_page
         total
         per_page
@@ -42,7 +39,7 @@ export const helpAndSupportQuery = () => {
       }
       questionsCategories: terms(
         taxonomy: "faq_categories"
-        filter: { site: "arabic" }
+        filter: { site: $site }
         sort: ["title asc"]
       ) {
         current_page
