@@ -4,7 +4,7 @@ const QuestionsSvgs = () => {
   return (
     <>
       <svg
-        className="hidden flipped lg:h-[56.209375vw] lg:block absolute lg:top-[-6.925vw] leftRightFixer2 w-full"
+        className="hidden flipped lg:h-[56.209375vw] lg:block absolute lg:bottom-[-3.5vw] leftRightFixer2 w-full"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1965.025 1104.528"
       >

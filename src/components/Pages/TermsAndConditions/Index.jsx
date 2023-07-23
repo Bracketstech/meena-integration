@@ -12,7 +12,7 @@ const Index = ({ arabic, data }) => {
   return (
     <main>
       <SubPageHero arabic={arabic} markupTitle={data.title} />
-      <TermsConditions arabic={arabic} />
+      <TermsConditions arabic={arabic} content={data.content} />
     </main>
   );
 };

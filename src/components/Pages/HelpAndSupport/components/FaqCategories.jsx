@@ -6,8 +6,8 @@ const FaqCategories = ({ arabic, categories, handleClick }) => {
       {categories?.data.map((category, index) => (
         <div
           key={index}
-          onClick={() => handleClick(category.slug)}
-          id={categories.length - 1 == index ? "lineanimation2" : ""}
+          onClick={() => handleClick(category.slug, index)}
+          id={categories.data.length - 1 == index ? "lineanimation2" : ""}
           className={`question question${index} ${index == 0 && "active"}`}
         >
           <h5 className="lg:block hidden PingAR-Medium whitespace-nowrap lg:text-[1.14583333333vw] text-[#b1afbd] lg:leading-[1.5625vw] text-[4.10256410256vw]">
