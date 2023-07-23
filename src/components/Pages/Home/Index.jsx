@@ -7,6 +7,7 @@ import DoctorsSwiper from "./components/DoctorsSwiper";
 import PatientsSwiper from "./components/PatientsSwiper";
 import useAnimations from "@/hooks/useAnimations";
 import useHeader from "@/hooks/useHeader";
+import LatestNewsSwiper from "./components/LatestNewsSwiper";
 
 const HomePage = ({ data, arabic }) => {
   useAnimations();
@@ -50,7 +51,11 @@ const HomePage = ({ data, arabic }) => {
       </section>
       <section>
         <div>
-          {/* <LatestNewsSwiper title={data.news_section_title} news={data.news} arabic={arabic} /> */}
+          <LatestNewsSwiper
+            title={data.news_section_title}
+            news={data.news}
+            arabic={arabic}
+          />
 
           <div className="relative">
             <span className="healthCare__Overlay top-0 absolute w-full h-full lg:h-[62.8125vw] bottom-0 leftRightFixer1"></span>
