@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import Nav from "@/components/Navbar";
 import LatestNewsPage from "@/components/Pages/LatestNews/Index";
 import ScrollToTop from "@/components/ScrollToTop";
+import getNewsData from "@/lib/data-hooks/getNewsData";
 export default async function LatestNews({ searchParams }) {
   const limit = 1;
   const data = await getNewsData(
