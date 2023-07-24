@@ -35,8 +35,14 @@ const Index = ({ arabic, data }) => {
         </div>
       </div>
       <div className="lg:pt-[6.25vw] sm:pt-[7.31707317073vw] pt-[16.4102564103vw]">
-        <ArticleImage arabic={arabic} img={data?.image?.path} />
-        <Articles arabic={arabic} content={data?.content} />
+        {data ? (
+          <>
+            <ArticleImage arabic={arabic} img={data?.image?.path} />
+            <Articles arabic={arabic} content={data?.content} />
+          </>
+        ) : (
+          <h1 className="text-center pb-[10vw]">There is No Such News!</h1>
+        )}
       </div>
     </main>
   );

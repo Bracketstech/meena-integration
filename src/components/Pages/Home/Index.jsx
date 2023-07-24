@@ -51,11 +51,11 @@ const HomePage = ({ data, arabic }) => {
       </section>
       <section>
         <div>
-          {/* <LatestNewsSwiper
+          <LatestNewsSwiper
             title={data.news_section_title}
             news={data.news}
             arabic={arabic}
-          /> */}
+          />
 
           <div className="relative">
             <span className="healthCare__Overlay top-0 absolute w-full h-full lg:h-[62.8125vw] bottom-0 leftRightFixer1"></span>
