@@ -43,7 +43,10 @@ const MainNews = ({ arabic, data }) => {
           const newYear = newDate.getFullYear();
           const finalDate = newD + " " + newMonth + " " + newYear;
           return (
-            <div className="flex justify-between items-center flex-col lg:flex-row sm:gap-y-[3.65853658537vw] gap-y-[6.15384615385vw]">
+            <div
+              key={index}
+              className="flex justify-between items-center flex-col lg:flex-row sm:gap-y-[3.65853658537vw] gap-y-[6.15384615385vw]"
+            >
               <div
                 data-aos="fade"
                 data-aos-anchor="#feb"
