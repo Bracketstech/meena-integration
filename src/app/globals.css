@@ -88,20 +88,35 @@ body {
           lg:tracking-[0.084375vw] sm:text-[4.26829268293vw] sm:leading-[6.09756097561vw] text-[7.69230769231vw]
         leading-[10.2564102564vw] PingAR-Bold;
   }
-  .termsContent h2 {
+  .termsContent h2,
+  .termsContent h3,
+  .termsContent h1 {
     @apply text-[#3B3659] PingAR-Medium lg:mb-[1.66666666667vw] sm:mb-[1.9512195122vw] mb-[6.15384615385vw] lg:text-[1.875vw] sm:text-[3.41463414634vw] sm:leading-[5.12195121951vw] text-[4.87179487179vw] lg:leading-[3.02083333333vw] leading-[7.52136752136vw];
   }
-  .termsContent h5 {
+  .newsContent h2,
+  .newsContent h3,
+  .newsContent h1 {
+    @apply sm:text-[3.65853658537vw] sm:leading-[5.48780487805vw] lg:text-[2.29166666667vw] text-[4.87179487179vw] lg:leading-[3.09027777778vw] leading-[7.52136752136vw] text-[#3B3659] PingAR-Medium;
+  }
+  .termsContent h5,
+  .termsContent h4,
+  .termsContent h6,
+  .newsContent h5,
+  .newsContent h4,
+  .newsContent h6 {
     @apply sm:mb-[1.46341463415vw] lg:mb-[1.25vw] mb-[4.10256410256vw] lg:mt-[1.66666666667vw] sm:mt-[3.41463414634vw] mt-[6.15384615385vw] lg:text-[1.35416666667vw] lg:leading-[2.1875vw] sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw] text-[#3B3659] text-[4.10256410256vw] leading-[6.66666666667vw];
   }
-  .termsContent p {
+  .termsContent p,
+  .newsContent p {
     @apply text-[#505050] sm:text-[1.9512195122vw] sm:leading-[3.41463414634vw] PingAR-Regular lg:text-[0.9375vw] text-[3.58974358974vw]   lg:leading-[1.46875vw] leading-[6.15384615385vw];
   }
-  .termsContent ul {
+  .termsContent ul,
+  .newsContent ul {
     @apply sm:mt-[1.46341463415vw] text-[#505050] sm:text-[1.9512195122vw] sm:leading-[3.41463414634vw] PingAR-Regular lg:text-[0.9375vw] text-[3.58974358974vw] lg:mt-[1.25vw] mt-[4.10256410256vw] lg:w-[62.5vw] lg:leading-[1.46875vw] leading-[6.15384615385vw];
   }
-  .termsContent li {
-    @apply flex lg:gap-x-[0.59333333333vw] gap-x-[3.07692307692vw];
+  .termsContent li,
+  .newsContent li {
+    @apply flex relative lg:gap-x-[0.59333333333vw] gap-x-[3.07692307692vw];
   }
   .ltr .sub__Page .blueLogo,
   .ltr .sub__Page .whiteLogo {
@@ -519,6 +534,22 @@ header {
 .Booking {
   box-shadow: 0px 3px 10px #d6d1ed66;
 }
+
+.termsContent li,
+.newsContent li {
+  text-indent: 0.8vw;
+}
+.termsContent li::before,
+.newsContent li::before {
+  content: "";
+  position: absolute;
+  height: 0.4vw;
+  width: 0.4vw;
+  background-color: #505050;
+  border-radius: 50%;
+  top: 0.4vw;
+  text-indent: 0.8vw;
+}
 /* HAMBURGER  */
 
 .menu {
@@ -891,6 +922,17 @@ body.active {
   }
 }
 @media (max-width: 640px) {
+  .termsContent li,
+  .newsContent li {
+    text-indent: 14px;
+  }
+  .termsContent li::before,
+  .newsContent li::before {
+    height: 6px;
+    width: 6px;
+    top: 6px;
+    text-indent: 14px;
+  }
   .markerLabel {
     background: #8450ff;
     color: white !important;

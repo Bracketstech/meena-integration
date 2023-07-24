@@ -14,6 +14,7 @@ const MainNews = ({ arabic }) => {
           id="lineanimation2"
           src="/images/latest-news/card-img.jpg"
           alt="card-img"
+          className="w-full"
         />
         <svg
           className="absolute lg:h-[21.1458333333vw] w-full top-[-25.5929487179vw] lg:top-[1.40625vw] sm:top-[5%] leftRightFixer1 lg:w-[37.6041666667vw]"

@@ -1,11 +1,12 @@
 "use client";
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import NewsCard from "../LatestNews/components/NewsCard";
-import { cardData, cardDataAr } from "../LatestNews/CardData";
+// import NewsCard from "../LatestNews/components/NewsCard";
 import { useEffect, useState } from "react";
 import SwiperButtons from "@/components/SwiperButtons";
 import Link from "next/link";
+import NewsCard from "../../LatestNews/components/NewsCard";
+import { cardData, cardDataAr } from "../../LatestNews/CardData";
 
 const LatestNewsSwiper = ({ arabic }) => {
   const [swiperGap, setSwiperGap] = useState(0);

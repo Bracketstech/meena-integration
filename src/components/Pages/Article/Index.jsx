@@ -7,7 +7,7 @@ import useAnimations from "@/hooks/useAnimations";
 import useHeader from "@/hooks/useHeader";
 import Link from "next/link";
 
-const Index = ({ arabic }) => {
+const Index = ({ arabic, data }) => {
   useAnimations();
   useHeader("Single News");
 
@@ -35,8 +35,8 @@ const Index = ({ arabic }) => {
         </div>
       </div>
       <div className="lg:pt-[6.25vw] sm:pt-[7.31707317073vw] pt-[16.4102564103vw]">
-        <ArticleImage arabic={arabic} />
-        <Articles arabic={arabic} />
+        <ArticleImage arabic={arabic} img={data?.image?.path} />
+        <Articles arabic={arabic} content={data?.content} />
       </div>
     </main>
   );
