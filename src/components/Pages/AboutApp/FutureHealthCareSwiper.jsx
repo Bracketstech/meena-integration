@@ -37,11 +37,8 @@ const FutureHealthCareSwiper = ({ arabic, title, content }) => {
             className="swiper ustadakalkaro mySwiper lg:w-[75vw] lg:pt-[2.5vw] pt-[6.15384615385vw] sm:pt-[4.87804878049vw]  lg:pb-[2.91666666667vw] pb-[8.717948717948718vw] aboutAppSwiper"
           >
             {content.map((item, index) => (
-              <SwiperSlide className="swiper-slide">
-                <div
-                  key={item.main_image.path}
-                  className="flex items-center justify-center lg:gap-x-[4.21875vw] flex-col lg:flex-row gap-y-[4.10256410256vw]"
-                >
+              <SwiperSlide key={item.main_image.path} className="swiper-slide">
+                <div className="flex items-center justify-center lg:gap-x-[4.21875vw] flex-col lg:flex-row gap-y-[4.10256410256vw]">
                   <div
                     data-aos="fade"
                     className="sm:w-full lg:w-[38.4895833333vw] w-[88.7179487179vw] lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw] relative"
