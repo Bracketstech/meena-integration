@@ -54,7 +54,7 @@ const HomePage = ({ data, arabic }) => {
           <LatestNewsSwiper
             title={data.news_section_title}
             news={data.news}
-            arabic={arabic}
+            // arabic={arabic}
           />
 
           <div className="relative">
