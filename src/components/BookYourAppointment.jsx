@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-const BookYourAppointment = ({ arabic, data }) => {
+const BookYourAppointment = async ({ arabic, data, fabData }) => {
   return (
     <div className="lg:w-[75vw] mx-[auto] w-[88.7179487179vw] sm:w-[71%] sm:gap-y-[2.926829268292683vw] flex-col-reverse lg:flex-row flex-wrap gap-y-[6.153846153846154vw] relative z-[2]   flex justify-between items-center lg:items-center sm:items-start">
       <div className="lg:w-[33.75vw]">
@@ -21,20 +21,16 @@ const BookYourAppointment = ({ arabic, data }) => {
           data-aos-delay={200}
           className="sm:mt-[3.658536585365854vw] sm:gap-x-[2.926829268292683vw] text-[#FFFFFF] flex items-center justify-start sm:justify-center lg:justify-start lg:gap-x-[1.25vw] gap-x-[4.44444444444vw] mt-[6.153846153846154vw] lg:mt-[2.5vw] flex-wrap gap-y-[4.44444444444vw]"
         >
-          <Link
-            href={arabic ? "/ar/about-app" : "/about-app"}
-            className="anchor1"
-          >
+          <Link href={fabData.fab.app_download} className="anchor1">
             <div>
-              <span> {arabic ? "احصل على التطبيق" : "Get app"} </span>
+              <span> {fabData.fab.app_download_btn_text} </span>
               <img src="/images/icons/get-app.svg" alt="get-app" />
             </div>
           </Link>
-          <a href="tel:920011111" className="anchor2">
+          <a href={`tel:${fabData.fab.phone}`} className="anchor2">
             <div>
               <span style={{ direction: "ltr" }} className="">
-                {" "}
-                9200 11111{" "}
+                {fabData.fab.phone}
               </span>
               <img src="/images/icons/phone.svg" alt="phone" />
             </div>

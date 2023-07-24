@@ -26,7 +26,23 @@ const NewsCard = ({
     "Nov",
     "Dec",
   ];
-  const newMonth = monthNames[newDate.getMonth() + 1];
+  const monthNamesArabic = [
+    "يناير",
+    "فبراير",
+    "مارس",
+    "أبريل",
+    "مايو",
+    "يونيو",
+    "يوليو",
+    "أغسطس",
+    "سبتمبر",
+    "أكتوبر",
+    "نوفمبر",
+    "ديسمبر",
+  ];
+  const newMonth = arabic
+    ? monthNamesArabic[newDate.getMonth() + 1]
+    : monthNames[newDate.getMonth() + 1];
   const newYear = newDate.getFullYear();
   const finalDate = newD + " " + newMonth + " " + newYear;
   return (
@@ -36,11 +52,11 @@ const NewsCard = ({
       className={`lg:w-[23.3333333333vw] sm:w-full w-[42.3076923077vw] ${classes}`}
     >
       <div className="w-full lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw] overflow-hidden">
-        <Link href={`/news/${slug}`}>
+        <Link href={`${arabic ? "/ar" : ""}/news/${slug}`}>
           <img
             src={image}
             alt="card-img"
-            className="w-full lg:h-[unset] h-[280px]  object-cover lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw]"
+            className="w-full lg:h-[20.8333333333vw] h-[280px]  object-cover lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw]"
           />
         </Link>
       </div>
@@ -55,7 +71,7 @@ const NewsCard = ({
           {paragraph}
         </p>
         <Link
-          href={`/news/${slug}`}
+          href={`${arabic ? "/ar" : ""}/news/${slug}`}
           className="sm:text-[1.9512195122vw] sm:leading-[3.41463414634vw] sm:mt-[3.65853658537vw] lg:mt-[1.25vw] mt-[4.10256410256vw] block lg:text-[0.9375vw] lg:leading-[1.51041666667vw] text-[3.58974358974vw] leading-[5.64102564103vw] PingAR-Regular"
         >
           {arabic ? "اقرا المزيد" : "Read more"}

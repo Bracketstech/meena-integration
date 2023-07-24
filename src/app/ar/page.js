@@ -3,10 +3,12 @@ import Footer from "@/components/Footer";
 import Nav from "@/components/Navbar";
 import HomePage from "@/components/Pages/Home/Index";
 import ScrollToTop from "@/components/ScrollToTop";
+import getFABData from "@/lib/data-hooks/getFABData";
 import getHomeData from "@/lib/data-hooks/getHomeData";
 
 export default async function Home() {
   const data = await getHomeData("Ar");
+  const fabData = await getFABData("Ar");
 
   return (
     <div className="rtl">
@@ -14,7 +16,7 @@ export default async function Home() {
       <Cta arabic />
 
       <Nav home arabic />
-      <HomePage arabic data={data.entry} />
+      <HomePage arabic data={data.entry} fabData={fabData} />
       <Footer arabic />
     </div>
   );

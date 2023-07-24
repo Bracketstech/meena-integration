@@ -1,52 +1,22 @@
 import React from "react";
 
-const PrimaryCare = ({ arabic }) => {
+const PrimaryCare = ({ arabic, content }) => {
   return (
     <div className="Container1440 flex justify-between items-center lg:flex-row flex-col-reverse sm:gap-y-[3.65853658537vw] gap-y-[6.15384615385vw] lg:pt-[6.25vw] sm:py-[7.31707317073vw] pt-[16.4102564103vw] lg:pb-[5.67708333333vw] pb-[6.15384615385vw]">
-      <div className="lg:w-[32.2916666667vw]">
-        <h2
-          data-aos="fade-up"
-          data-aos-anchor="#finger"
-          data-aos-delay={400}
-          className="heading54 PingAR-Regular tracking-[unset] text-[#3B3659]"
-        >
-          {arabic ? (
-            <>
-              رعاية أولية مخصصة في
-              <span className="PingAR-Bold"> متناول يدك </span>
-            </>
-          ) : (
-            <>
-              Personalized primary care at your
-              <span className="PingAR-Bold"> fingertips </span>
-            </>
-          )}
-        </h2>
+      <div className="lg:w-[32.2916666667vw] appContent">
         <div
-          data-aos="fade-down"
-          data-aos-anchor="#finger"
-          data-aos-delay={400}
-        >
-          <span className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw] sm:mt-[1.46341463415vw] block lg:text-[1.354166666666667vw] text-[#3B3659] PingAR-Medium text-[4.87179487179vw] lg:leading-[2.08333333333vw] leading-[7.52136752136vw] lg:mt-[0.625vw] mt-[3.07692307692vw]">
-            {arabic
-              ? "احصل على تطبيق مينا واختبر أحدث الميزات المصممة خصيصًا لاحتياجاتك الفريدة."
-              : "  Get the meena App and experience state-of-the-art features tailored to your unique needs."}
-          </span>
-          <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.9512195122vw] lg:mt-[0.83333333333vw] mt-[3.07692307692vw] lg:text-[1.14583333333vw] lg:leading-[1.70572916667vw] text-[#505050] PingAR-Regular text-[3.58974358974vw] leading-[6.02564102564vw]">
-            {arabic
-              ? "قم بتنزيل تطبيقنا واستمتع بميزاتنا المبتكرة ، من حجز المواعيد بسلاسة إلى فحص الأعراض ، وكلها مصممة لتبسيط رحلتك الصحية وتعزيزها."
-              : " Download our app and enjoy our innovative features, from seamless appointment booking to symptoms checker all designed to simplify and enhance your health journey."}
-          </p>
-        </div>
+          className="appContent"
+          dangerouslySetInnerHTML={{ __html: content.text_content }}
+        ></div>
         <div className="lg:h-[2.86458333333vw] sm:h-[unset] h-[10.7692307692vw] flex sm:gap-x-[1.9512195122vw] lg:gap-x-[1.25vw] gap-x-[4.61538461538vw] lg:mt-[2.5vw] mt-[6.15384615385vw] sm:mt-[2.92682926829vw]">
           <a
             data-aos="fade"
             data-aos-anchor="#finger"
             data-aos-delay={500}
-            href=""
+            href={content.android_download_link}
           >
             <img
-              src="/images/icons/google-play.svg"
+              src={content.android_download_icon.path}
               alt="google-play"
               className="lg:w-[9.375vw] w-[35.3846153846vw] h-full sm:w-[18.2926829268vw]"
             />
@@ -55,10 +25,10 @@ const PrimaryCare = ({ arabic }) => {
             data-aos="fade-up"
             data-aos-anchor="#finger"
             data-aos-delay={600}
-            href=""
+            href={content.ios_download_link}
           >
             <img
-              src="/images/icons/app-store.svg"
+              src={content.ios_download_icon.path}
               alt="app-store"
               className="lg:w-[9.375vw] 4.61538461538w-[35.3846153846vw] h-full sm:w-[18.2926829268vw]"
             />
@@ -72,11 +42,7 @@ const PrimaryCare = ({ arabic }) => {
         className="relative lg:h-[32.7083333333vw] h-[69.0256410256vw] w-full sm:w-[75%] lg:w-[33.4895833333vw] flex justify-end items-center"
       >
         <img
-          src={
-            arabic
-              ? "/images/about-app/mobile-ar.jpg"
-              : "/images/about-app/mobile.jpg"
-          }
+          src={content.main_phone_image.path}
           alt="mobile"
           className="absolute lg:w-[16.875vw] w-[35.6102564103vw] top-0 leftRightFixer1"
         />
@@ -86,12 +52,12 @@ const PrimaryCare = ({ arabic }) => {
           lg:px-[1.66666666667vw] px-[4.10256410256vw]"
           >
             <img
-              src="/images/icons/Booking.svg"
-              alt="Booking"
+              src={content.feature_on_phone_screen[0].icon.path}
+              alt={content.feature_on_phone_screen[0].display_text}
               className="lg:w-[1.82291666667vw] w-[6.66666666667vw] sm:w-[3.90243902439vw]"
             />
             <span className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] lg:text-[1.14583333333vw] text-[4.10256410256vw] PingAR-Regular text-[#3B3659]">
-              {arabic ? "حجز موعد" : "  Appointment booking"}
+              {content.feature_on_phone_screen[0].display_text}
             </span>
           </div>
           <div
@@ -99,12 +65,12 @@ const PrimaryCare = ({ arabic }) => {
           lg:px-[1.66666666667vw] px-[4.10256410256vw]"
           >
             <img
-              src="/images/icons/Symptom.svg"
-              alt="Symptom"
+              src={content.feature_on_phone_screen[1].icon.path}
+              alt={content.feature_on_phone_screen[1].display_text}
               className="lg:w-[1.5625vw] w-[5.89743589744vw] sm:w-[3.90243902439vw]"
             />
             <span className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] lg:text-[1.14583333333vw] text-[4.10256410256vw] PingAR-Regular text-[#3B3659]">
-              {arabic ? "مدقق الأعراض" : " Symptom checker"}
+              {content.feature_on_phone_screen[1].display_text}
             </span>
           </div>
         </div>

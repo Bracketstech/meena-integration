@@ -769,7 +769,15 @@ body.active {
   right: unset !important;
   left: 0;
 }
-
+.appContent h2 {
+  @apply heading54 PingAR-Regular tracking-[unset] text-[#3B3659];
+}
+.appContent p {
+  @apply sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.9512195122vw] lg:mt-[0.83333333333vw] mt-[3.07692307692vw] lg:text-[1.14583333333vw] lg:leading-[1.70572916667vw] text-[#505050] PingAR-Regular text-[3.58974358974vw] leading-[6.02564102564vw];
+}
+.appContent p:first-of-type {
+  @apply sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw] sm:mt-[1.46341463415vw] block lg:text-[1.354166666666667vw] text-[#3B3659] PingAR-Medium text-[4.87179487179vw] lg:leading-[2.08333333333vw] leading-[7.52136752136vw] lg:mt-[0.625vw] mt-[3.07692307692vw];
+}
 @media (max-width: 1024px) {
   .lin3e {
     top: -8px !important;
@@ -786,6 +794,9 @@ body.active {
   .rtl .cta .cta__Menu {
     left: 175%;
     clip-path: circle(10% at 10% 80%);
+  }
+  .hidebr br {
+    display: none;
   }
   .gm-style-iw.gm-style-iw-c {
     padding: 12px !important;

@@ -83,6 +83,8 @@ export const homeQuery = () => {
                 path: url
                 extension
               }
+              slug
+              date
               description
             }
           }

@@ -7,7 +7,7 @@ import Menu from "./Menu";
 
 export default async function Nav({ arabic, home, id }) {
   const topData = await getTopNavData();
-  const bottomData = await getBottomNavData();
+  const bottomData = await getBottomNavData(arabic);
   const bottomDataAccordingToSite = arabic
     ? bottomData.nav.treeAr
     : bottomData.nav.treeEn;
@@ -24,9 +24,10 @@ export default async function Nav({ arabic, home, id }) {
         <div>
           <Link href={arabic ? "/ar" : "/"}>
             <img
-              src={`/images/icons/${
-                arabic ? "Ar-header-whiteLogo" : "header-logo"
-              }.svg`}
+              // src={`/images/icons/${
+              //   arabic ? "Ar-header-whiteLogo" : "header-logo"
+              // }.svg`}
+              src={bottomData?.headerLogo?.header_logo_light?.path}
               alt="logo"
               className={`whiteLogo ${
                 arabic ? "lg:w-[8.95833333333vw]" : "lg:w-[12.7083333333vw]"
@@ -35,9 +36,10 @@ export default async function Nav({ arabic, home, id }) {
           </Link>
           <Link href={arabic ? "/ar" : "/"}>
             <img
-              src={`/images/icons/${
-                arabic ? "Ar-header-blueLogo" : "header-logo-blue"
-              }.svg`}
+              // src={`/images/icons/${
+              //   arabic ? "Ar-header-blueLogo" : "header-logo-blue"
+              // }.svg`}
+              src={bottomData?.headerLogo?.header_logo_dark?.path}
               alt="logo"
               className="blueLogo lg:w-[12.7083333333vw] w-[31.7948717949vw]"
             />

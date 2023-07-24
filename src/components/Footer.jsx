@@ -12,6 +12,8 @@ const Footer = async ({ arabic }) => {
   const otherLinksData = arabic
     ? footerData.nav.treeAr[1].children
     : footerData.nav.treeEn[1].children;
+
+  const fData = arabic ? footerData.footerDataAr : footerData.footerDataEn;
   return (
     <footer>
       <div className="bg-[#3B3659] relative">
@@ -21,7 +23,7 @@ const Footer = async ({ arabic }) => {
       className="hidden lg:block lg:w-[18.6458333333vw] absolute leftRightFixer2 top-0"
     /> */}
         <img
-          src="/images/icons/footerbg-design.svg"
+          src={"/images/icons/footerbg-design.svg"}
           alt="footerbg-design"
           className="hidden lg:block flipped lg:w-[18.1458333333vw] absolute leftRightFixer2 bottom-0"
         />
@@ -35,19 +37,13 @@ const Footer = async ({ arabic }) => {
             <div className="lg:w-[22.9166666667vw] text-center lg:text-start">
               <Link href={arabic ? "/ar" : "/"}>
                 <img
-                  src={
-                    arabic
-                      ? "/images/icons/footer-ar-logo.svg"
-                      : "/images/icons/footer-logo.svg"
-                  }
+                  src={fData.logo.path}
                   alt="logo"
                   className="lg:w-[15.1041666667vw] sm:w-[26.8292682927vw] w-[48.46153846153846vw] mx-[auto] lg:mx-[unset]"
                 />
               </Link>
               <p className="sm:mt-[1.9512195122vw] sm:text-[1.82926829268vw] sm:leading-[2.68292682927vw] lg:text-[0.8333333333333333vw] lg:leading-[1.42361111111vw] text-[3.076923076923077vw] leading-[5.38461538462vw] PingAR-Light text-[#FFFFFF] lg:mt-[1.66666666667vw] mt-[4.102564102564103vw]">
-                {arabic
-                  ? "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود . يوت انيم أد مينيم فينايم,كيواس نوستريد كسير سيتاشن يللأمكو سيتاشن يللأمكو"
-                  : "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."}
+                {fData.description}{" "}
               </p>
             </div>
             <div className="text-[#E6E7E7]">
@@ -80,36 +76,20 @@ const Footer = async ({ arabic }) => {
             </div>
             <div>
               <h5 className="sm:leading-[3.65853658537vw] sm:text-[2.19512195122vw] PingAR-Medium lg:text-[1.14583333333vw] lg:leading-[1.66666666667vw] leading-[6.15384615385vw] text-[3.846153846153846vw] text-[#E6E7E7] text-center lg:text-start">
-                {arabic ? "تابعنا" : "Follow us"}
+                {fData.follow_us_title}
               </h5>
               <ul className="sm:mt-[1.46341463415vw] sm:gap-x-[2.43902439024vw] leading-[4.87179487179vw] footerLinks flex items-center lg:gap-x-[1.25vw] lg:mt-[0.41666666666vw] mt-[3.076923076923077vw] gap-x-[4.615384615384615vw]">
-                <li>
-                  <a href="#" target="_blank">
-                    <img
-                      src="/images/icons/social-links/twitter.svg"
-                      alt="twitter"
-                      className="sm:w-[3.65853658537vw] lg:w-[1.77083333333vw] w-[6.944444444444444vw]"
-                    />
-                  </a>
-                </li>
-                <li>
-                  <a href="#" target="_blank">
-                    <img
-                      src="/images/icons/social-links/linkedin.svg"
-                      alt="linkedin"
-                      className="sm:w-[3.65853658537vw] lg:w-[1.77083333333vw] w-[6.944444444444444vw]"
-                    />
-                  </a>
-                </li>
-                <li>
-                  <a href="#" target="_blank">
-                    <img
-                      src="/images/icons/social-links/insta.svg"
-                      alt="instagram"
-                      className="sm:w-[3.65853658537vw] lg:w-[1.77083333333vw] w-[6.944444444444444vw]"
-                    />
-                  </a>
-                </li>
+                {fData?.social_media_links?.map((item) => (
+                  <li key={item.icon.path}>
+                    <a href={item.link} target="_blank">
+                      <img
+                        src={item.icon.path}
+                        alt="Social Link"
+                        className="sm:w-[3.65853658537vw] lg:w-[1.77083333333vw] w-[6.944444444444444vw]"
+                      />
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
@@ -117,11 +97,7 @@ const Footer = async ({ arabic }) => {
       </div>
       <div className="bg-[#474166] lg:py-[0.390625vw] py-[3.205128205128205vw]">
         <div className="sm:text-[1.82926829268vw] flex justify-center sm:leading-[2.68292682927vw] PingAR-Regular Container1680 flex items-center justify-center   text-[#E6E7E7] lg:text-[0.8333333333333333vw] lg:leading-[1.45833333333vw] text-[2.564102564102564vw]">
-          <span>
-            {arabic
-              ? "جميع الحقوق محفوظة. مينا الصحة @ 2023"
-              : "All Rights Reserved. Meena Health @ 2023"}
-          </span>
+          <span>{fData.copyrights_text}</span>
         </div>
       </div>
     </footer>

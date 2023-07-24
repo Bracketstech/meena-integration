@@ -9,7 +9,7 @@ import useAnimations from "@/hooks/useAnimations";
 import useHeader from "@/hooks/useHeader";
 import LatestNewsSwiper from "./components/LatestNewsSwiper";
 
-const HomePage = ({ data, arabic }) => {
+const HomePage = ({ data, arabic, fabData }) => {
   useAnimations();
   useHeader(arabic ? "الرئيسية" : "Home");
   return (
@@ -54,7 +54,7 @@ const HomePage = ({ data, arabic }) => {
           <LatestNewsSwiper
             title={data.news_section_title}
             news={data.news}
-            // arabic={arabic}
+            arabic={arabic}
           />
 
           <div className="relative">
@@ -63,6 +63,7 @@ const HomePage = ({ data, arabic }) => {
               <BookYourAppointment
                 data={data.booking_reminder_content}
                 arabic={arabic}
+                fabData={fabData}
               />
             </div>
           </div>

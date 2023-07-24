@@ -14,18 +14,21 @@ import getAboutData from "@/lib/data-hooks/getAboutData";
 import getCareerData from "@/lib/data-hooks/getCareerData";
 import getTermsData from "@/lib/data-hooks/getTermsData";
 import getPrivacyData from "@/lib/data-hooks/getPrivacyData";
+import getFABData from "@/lib/data-hooks/getFABData";
 
 export const revalidate = 5;
 
 export default async function Page({ params }) {
   const { slug } = params;
   const id = await usePageId(slug);
+  const fabData = await getFABData();
+
   switch (id) {
     case "300942ec-7d92-4f42-b8b2-15250cbf1c04":
       const servicesData = await getServicesData(id);
       return (
         <>
-          <Services data={servicesData?.entry} />
+          <Services data={servicesData?.entry} fabData={fabData} />
         </>
       );
     case "b797d4f3-9da1-48c2-9b37-89250fd85a84":

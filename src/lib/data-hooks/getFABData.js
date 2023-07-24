@@ -1,10 +1,12 @@
 import { getClient } from "../client";
-import { bottomNav } from "../queries/navQuery";
+import { fabQuery } from "../queries/fabQuery";
 
-const getBottomNavData = async (isAr) => {
-  const variables = { site: isAr ? "arabic" : "default" };
+const getFABData = async (isAr) => {
+  const variables = {
+    site: isAr ? "arabic" : "default",
+  };
   const { data } = await getClient().query({
-    query: bottomNav,
+    query: fabQuery(),
     variables,
     context: {
       fetchOptions: {
@@ -15,4 +17,4 @@ const getBottomNavData = async (isAr) => {
   return data;
 };
 
-export default getBottomNavData;
+export default getFABData;

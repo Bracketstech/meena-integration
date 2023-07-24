@@ -8,7 +8,7 @@ import BookYourAppointment from "@/components/BookYourAppointment";
 import useAnimations from "@/hooks/useAnimations";
 import useHeader from "@/hooks/useHeader";
 
-const Index = ({ arabic, data }) => {
+const Index = ({ arabic, data, fabData }) => {
   useAnimations();
   useHeader(arabic ? "الخدمات" : "Services");
 
@@ -37,6 +37,7 @@ const Index = ({ arabic, data }) => {
         <BookYourAppointment
           data={data.booking_reminder_content}
           arabic={arabic}
+          fabData={fabData}
         />
       </div>
     </main>

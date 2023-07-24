@@ -1,7 +1,7 @@
 import React from "react";
 import { cardData, cardDataAr } from "./CardData";
 import NewsCard from "./components/NewsCard";
-const NewsCards = ({ arabic, data }) => {
+const NewsCards = ({ arabic, data, isHome }) => {
   return (
     <div
       id="newsCards"
@@ -29,17 +29,21 @@ const NewsCards = ({ arabic, data }) => {
               anchor={CardDat.anchor}
             />
           ))} */}
-      {data.data.map((card, index) => (
-        <NewsCard
-          key={index}
-          image={card.thumbnail.path}
-          date={card.date}
-          heading={card.title}
-          paragraph={card.description}
-          slug={card.slug}
-          arabic={arabic}
-        />
-      ))}
+      {data.data.map((card, index) => {
+        if (isHome || index !== 0) {
+          return (
+            <NewsCard
+              key={index}
+              image={card.thumbnail.path}
+              date={card.date}
+              heading={card.title}
+              paragraph={card.description}
+              slug={card.slug}
+              arabic={arabic}
+            />
+          );
+        }
+      })}
     </div>
   );
 };

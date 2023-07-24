@@ -8,7 +8,7 @@ import Link from "next/link";
 import NewsCard from "../../LatestNews/components/NewsCard";
 import { cardData, cardDataAr } from "../../LatestNews/CardData";
 
-const LatestNewsSwiper = ({ arabic }) => {
+const LatestNewsSwiper = ({ arabic, title, news }) => {
   const [swiperGap, setSwiperGap] = useState(0);
   const [slidesPerView, setSlidesPerView] = useState(0);
   useEffect(() => {
@@ -25,23 +25,11 @@ const LatestNewsSwiper = ({ arabic }) => {
   }, []);
   return (
     <div className="sm:pt-[14.6341463415vw] pt-[14.35897435897436vw] lg:pt-[5.72916666667vw] lg:pb-[5.72916666667vw]">
-      {arabic ? (
-        <h3
-          data-aos="fade-up"
-          className="Container1440 heading54 tracking-[unset] PingAR-Regular text-[#3B3659]"
-        >
-          أحدث
-          <span className="PingAR-Bold"> الأخبار </span>
-        </h3>
-      ) : (
-        <h3
-          data-aos="fade-up"
-          className="Container1440 heading54 tracking-[unset] PingAR-Regular text-[#3B3659]"
-        >
-          Latest
-          <span className="PingAR-Bold"> news </span>
-        </h3>
-      )}
+      <div
+        data-aos="fade-up"
+        className="Container1440 heading54 tracking-[unset] PingAR-Regular text-[#3B3659]"
+        dangerouslySetInnerHTML={{ __html: title }}
+      ></div>
       <div className="flex justify-end lg:justify-[normal]">
         <div className="lg:w-[75vw] w-[93%] lg:mx-[auto]">
           {/* Swiper */}
@@ -53,32 +41,19 @@ const LatestNewsSwiper = ({ arabic }) => {
               slidesPerView={slidesPerView}
               className="sm:pb-[14.6341463415vw] sm:pt-[4.87804878049vw] swiper homeSwipers w-full lg:pt-[2.5vw] pt-[6.153846153846154vw] lg:pb-[unset] pb-[16.30769230769231vw]"
             >
-              {arabic
-                ? cardDataAr.map((CardDat, index) => (
-                    <SwiperSlide key={index} className="swiper-slide">
-                      <NewsCard
-                        arabic={arabic}
-                        image={CardDat.image}
-                        date={CardDat.date}
-                        heading={CardDat.heading}
-                        paragraph={CardDat.paragraph}
-                        anchor={CardDat.anchor}
-                        classes="w-full"
-                      />
-                    </SwiperSlide>
-                  ))
-                : cardData.map((CardDat, index) => (
-                    <SwiperSlide key={index} className="swiper-slide">
-                      <NewsCard
-                        image={CardDat.image}
-                        date={CardDat.date}
-                        heading={CardDat.heading}
-                        paragraph={CardDat.paragraph}
-                        anchor={CardDat.anchor}
-                        classes="w-full"
-                      />
-                    </SwiperSlide>
-                  ))}
+              {news?.map((CardDat, index) => (
+                <SwiperSlide key={index} className="swiper-slide">
+                  <NewsCard
+                    arabic={arabic}
+                    image={CardDat.thumbnail.path}
+                    date={CardDat.date}
+                    heading={CardDat.title}
+                    paragraph={CardDat.description}
+                    slug={CardDat.slug}
+                    classes="w-full"
+                  />
+                </SwiperSlide>
+              ))}
               <SwiperButtons />
             </Swiper>
           )}

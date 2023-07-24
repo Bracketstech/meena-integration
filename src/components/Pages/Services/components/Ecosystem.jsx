@@ -7,7 +7,7 @@ const Ecosystem = ({ arabic, title, cards }) => {
       <div
         dangerouslySetInnerHTML={{ __html: title }}
         data-aos="fade-up"
-        className="mx-[auto] lg:w-[49.9479166667vw] PingAR-Regular PingAR-Regular heading54 tracking-[unset] text-[#3B3659] text-center"
+        className="mx-[auto] hidebr lg:w-[49.9479166667vw] PingAR-Regular PingAR-Regular heading54 tracking-[unset] text-[#3B3659] text-center"
       ></div>
 
       <EcoCards cards={cards} arabic={arabic} />

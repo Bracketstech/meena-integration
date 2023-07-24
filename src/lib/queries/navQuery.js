@@ -46,7 +46,18 @@ export const topNav = gql`
   }
 `;
 export const bottomNav = gql`
-  query MyQuery {
+  query MyQuery($site: String!) {
+    headerLogo: globalSet(handle: "header_logo", site: $site) {
+      ... on GlobalSet_HeaderLogo {
+        header_logo_dark {
+          path: url
+        }
+        header_logo_light {
+          path: url
+        }
+      }
+    }
+
     nav(handle: "top_navigation") {
       handle
       title
@@ -103,6 +114,38 @@ export const footerData = gql`
             }
           }
         }
+      }
+    }
+    footerDataEn: globalSet(handle: "footer_g", site: "default") {
+      ... on GlobalSet_FooterG {
+        logo {
+          path: url
+        }
+        description
+        follow_us_title
+        social_media_links {
+          icon {
+            path: url
+          }
+          link
+        }
+        copyrights_text
+      }
+    }
+    footerDataAr: globalSet(handle: "footer_g", site: "arabic") {
+      ... on GlobalSet_FooterG {
+        logo {
+          path: url
+        }
+        description
+        follow_us_title
+        social_media_links {
+          icon {
+            path: url
+          }
+          link
+        }
+        copyrights_text
       }
     }
   }
