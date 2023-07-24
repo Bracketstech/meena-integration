@@ -6,7 +6,7 @@ const getFooterData = async () => {
     query: footerData,
     context: {
       fetchOptions: {
-        next: { revalidate: 5 },
+        next: { revalidate: 0 },
       },
     },
   });

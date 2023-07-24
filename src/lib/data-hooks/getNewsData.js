@@ -13,7 +13,7 @@ const getNewsData = async (id, isAr, current_page, limit) => {
     variables,
     context: {
       fetchOptions: {
-        next: { revalidate: 5 },
+        next: { revalidate: 0 },
       },
     },
   });

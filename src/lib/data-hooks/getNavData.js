@@ -9,7 +9,7 @@ const getNavData = async (arabic) => {
     variables,
     context: {
       fetchOptions: {
-        next: { revalidate: 5 },
+        next: { revalidate: 0 },
       },
     },
   });

@@ -11,7 +11,7 @@ const getServicesData = async (id, isAr) => {
     variables,
     context: {
       fetchOptions: {
-        next: { revalidate: 1 },
+        next: { revalidate: 0 },
       },
     },
   });

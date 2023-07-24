@@ -11,7 +11,7 @@ const getNewsDetails = async (slug, isAr) => {
     variables,
     context: {
       fetchOptions: {
-        next: { revalidate: 5 },
+        next: { revalidate: 0 },
       },
     },
   });

@@ -11,7 +11,7 @@ const getTermsData = async (id, isAr) => {
     variables,
     context: {
       fetchOptions: {
-        next: { revalidate: 5 },
+        next: { revalidate: 0 },
       },
     },
   });

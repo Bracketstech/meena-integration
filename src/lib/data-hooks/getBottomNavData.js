@@ -6,7 +6,7 @@ const getBottomNavData = async () => {
     query: bottomNav,
     context: {
       fetchOptions: {
-        next: { revalidate: 5 },
+        next: { revalidate: 0 },
       },
     },
   });

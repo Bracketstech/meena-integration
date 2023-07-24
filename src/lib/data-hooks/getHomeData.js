@@ -13,7 +13,7 @@ const getHomeData = async (isAr) => {
     variables,
     context: {
       fetchOptions: {
-        next: { revalidate: 5 },
+        next: { revalidate: 0 },
       },
     },
   });
