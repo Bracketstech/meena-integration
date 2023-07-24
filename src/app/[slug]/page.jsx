@@ -8,6 +8,8 @@ import PrivacyPolicy from "@/components/Pages/PrivacyPolicy/Index";
 import usePageId from "@/hooks/usePageId";
 import getData from "@/lib/data-hooks/getData";
 
+export const revalidate = 5;
+
 export default async function Page({ params }) {
   const { slug } = params;
   const id = await usePageId(slug);
