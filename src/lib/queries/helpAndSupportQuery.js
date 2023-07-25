@@ -18,6 +18,23 @@ export const helpAndSupportQuery = () => {
           slug
           url
           uri
+          contact_us_content {
+            main_title
+            form_caption
+            address
+            email
+            phone_number
+          }
+        }
+      }
+      socialMediaData: globalSet(handle: "footer_g", site: $site) {
+        ... on GlobalSet_FooterG {
+          social_media_links {
+            icon {
+              path: url
+            }
+            link
+          }
         }
       }
       questions: entries(collection: "faq_question", filter: { site: $site }) {
@@ -58,6 +75,17 @@ export const helpAndSupportQuery = () => {
             }
           }
           slug
+        }
+      }
+      contactUsForm: form(handle: "contact_us_form") {
+        title
+        honeypot
+        fields {
+          handle
+          type
+          display
+          instructions
+          config
         }
       }
     }
