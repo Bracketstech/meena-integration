@@ -34,11 +34,11 @@ const Index = ({ arabic, data, fabData }) => {
         arabic={arabic}
       />
       <div className="py-[20.5128205128vw] Container1440 flex justify-between items-center lg:pt-[5.78125vw] lg:pb-[10.4166666667vw] sm:pt-[7.317073170731707vw] sm:pb-[14.63414634146341vw]">
-        <BookYourAppointment
+        {/* <BookYourAppointment
           data={data.booking_reminder_content}
           arabic={arabic}
           fabData={fabData}
-        />
+        /> */}
       </div>
     </main>
   );
