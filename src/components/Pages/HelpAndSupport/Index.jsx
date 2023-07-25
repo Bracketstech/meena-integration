@@ -30,7 +30,12 @@ const Index = ({ arabic, data }) => {
           questionsCategories={data?.questionsCategories}
           questionsData={data?.questions}
         />
-        <GetInTouch arabic={arabic} />
+        <GetInTouch
+          arabic={arabic}
+          data={data?.entry}
+          socialData={data?.socialMediaData?.social_media_links}
+          formContent={data?.contactUsForm}
+        />
       </div>
     </main>
   );

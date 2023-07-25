@@ -1,6 +1,53 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 
-const Form = ({ arabic }) => {
+const Form = ({ arabic, title, formContent }) => {
+  const [state, setState] = useState({});
+  useEffect(() => {
+    let newStates = {};
+    formContent.fields.forEach((field) => {
+      if (field.handle != honeyPot) {
+        newStates[field.handle] = "";
+      }
+    });
+    setState({ ...newStates });
+  }, []);
+  const honeyPot = formContent?.honeypot;
+  const hanldeChange = (event) => {
+    setState({ ...state, [event.target.id]: event.target.value });
+  };
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    let isNoError = false;
+    document
+      .querySelectorAll(["form input", "form textarea"])
+      .forEach((item) => {
+        if (item.id !== honeyPot) {
+          if (!item.value) {
+            item.parentElement.parentElement.classList.add("error");
+            isNoError = true;
+            setTimeout(() => {
+              item.parentElement.parentElement.classList.remove("error");
+            }, 8000);
+          }
+        }
+      });
+    if (!isNoError) {
+      axios
+        .post(
+          `https://meenacms.brackets-tech.com/!/forms/contact_us_form`,
+          {
+            ...state,
+          },
+          {
+            headers: {
+              "X-Requested-With": "XMLHttpRequest",
+            },
+          }
+        )
+        .then((res) => console.log(res));
+    }
+  };
   return (
     <div className="lg:w-[39.2708333333vw]">
       <h4
@@ -8,59 +55,59 @@ const Form = ({ arabic }) => {
           arabic ? "lg:text-right" : "lg:text-left"
         }`}
       >
-        {arabic ? "اترك لنا رسالة" : " Leave us a message"}
+        {title}
       </h4>
-      <form action="">
+      <form action="" onSubmit={handleSubmit}>
         <div className="lg:pt-[0.78125vw] pt-[4.10256410256vw] flex flex-col lg:gap-y-[0.83333333333vw] gap-y-[3.07692307692vw]">
-          <div className="flex flex-col lg:gap-y-[0.625vw] gap-y-[1.53846153846vw]">
-            <div className="sm:h-[7.31707317073vw] lg:h-[3.22916666667vw] h-[13.3333333333vw] bg-[#F0F0F0] lg:rounded-[0.52083333333vw] rounded-[1.53846153846vw] lg:px-[1.25vw] px-[4.10256410256vw]">
-              <input
-                type="text"
-                placeholder={arabic ? "الاسم" : "Name"}
-                className="w-full PingAR-Light outline-none bg-transparent h-full sm:text-[1.9512195122vw] lg:text-[0.9375vw] text-[3.58974358974vw] text-[#3B3659]"
-              />
-            </div>
-            <span className="sm:text-[1.70731707317vw] sm:leading-[2.68292682927vw] hidden lg:text-[0.83333333333vw] text-[3.07692307692vw] text-[red]">
-              *Fill Name*
-            </span>
-          </div>
-          <div className="flex flex-col lg:gap-y-[0.625vw] gap-y-[1.53846153846vw]">
-            <div className="sm:h-[7.31707317073vw] lg:h-[3.22916666667vw] h-[13.3333333333vw] bg-[#F0F0F0] lg:rounded-[0.52083333333vw] rounded-[1.53846153846vw] lg:px-[1.25vw] px-[4.10256410256vw]">
-              <input
-                type="email"
-                placeholder={arabic ? "البريد الالكتروني" : "Email"}
-                className="w-full PingAR-Light outline-none bg-transparent h-full sm:text-[1.9512195122vw] lg:text-[0.9375vw] text-[3.58974358974vw] text-[#3B3659]"
-              />
-            </div>
-            <span className="sm:text-[1.70731707317vw] sm:leading-[2.68292682927vw] hidden lg:text-[0.83333333333vw] text-[3.07692307692vw] text-[red]">
-              *Fill Name*
-            </span>
-          </div>
-          <div className="flex flex-col lg:gap-y-[0.625vw] gap-y-[1.53846153846vw]">
-            <div className="sm:h-[7.31707317073vw] lg:h-[3.22916666667vw] h-[13.3333333333vw] bg-[#F0F0F0] lg:rounded-[0.52083333333vw] rounded-[1.53846153846vw] lg:px-[1.25vw] px-[4.10256410256vw]">
-              <input
-                type="number"
-                placeholder={arabic ? "الهاتف المحمول" : "Phone number"}
-                className="w-full PingAR-Light outline-none bg-transparent h-full sm:text-[1.9512195122vw] lg:text-[0.9375vw] text-[3.58974358974vw] text-[#3B3659]"
-              />
-            </div>
-            <span className="sm:text-[1.70731707317vw] sm:leading-[2.68292682927vw] hidden lg:text-[0.83333333333vw] text-[3.07692307692vw] text-[red]">
-              *Fill Name*
-            </span>
-          </div>
-          <div className="flex flex-col lg:gap-y-[0.625vw] gap-y-[1.53846153846vw]">
-            <div className="sm:h-[23.1707317073vw] lg:h-[11.9791666667vw] h-[43.3333333333vw] bg-[#F0F0F0] lg:rounded-[0.52083333333vw] rounded-[1.53846153846vw] lg:px-[1.25vw] px-[4.10256410256vw] lg:pt-[0.98958333333vw] pt-[3.84615384615vw]">
-              <textarea
-                placeholder={arabic ? "كيف يمكن أن نساعد" : "How can we help"}
-                name=""
-                className="resize-none PingAR-Regular w-full PingAR-Light outline-none bg-transparent h-full sm:text-[1.9512195122vw] lg:text-[0.9375vw] text-[3.58974358974vw] text-[#3B3659]"
-                defaultValue={""}
-              />
-            </div>
-            <span className="sm:text-[1.70731707317vw] sm:leading-[2.68292682927vw] hidden lg:text-[0.83333333333vw] text-[3.07692307692vw] text-[red]">
-              *Fill Name*
-            </span>
-          </div>
+          {formContent?.fields?.map((field) => {
+            if (field.type == "textarea") {
+              return (
+                <div
+                  key={field.display}
+                  className="flex flex-col lg:gap-y-[0.625vw] gap-y-[1.53846153846vw]"
+                >
+                  <div className="sm:h-[23.1707317073vw] lg:h-[11.9791666667vw] h-[43.3333333333vw] bg-[#F0F0F0] lg:rounded-[0.52083333333vw] rounded-[1.53846153846vw] lg:px-[1.25vw] px-[4.10256410256vw] lg:pt-[0.98958333333vw] pt-[3.84615384615vw]">
+                    <textarea
+                      placeholder={field.display}
+                      value={state[field.handle]}
+                      id={field.handle}
+                      onChange={hanldeChange}
+                      name=""
+                      className="resize-none PingAR-Regular w-full PingAR-Light outline-none bg-transparent h-full sm:text-[1.9512195122vw] lg:text-[0.9375vw] text-[3.58974358974vw] text-[#3B3659]"
+                      defaultValue={""}
+                    />
+                  </div>
+                  <span className="sm:text-[1.70731707317vw] sm:leading-[2.68292682927vw] hidden lg:text-[0.83333333333vw] text-[3.07692307692vw] text-[red]">
+                    *Fill Name*
+                  </span>
+                </div>
+              );
+            } else {
+              return (
+                <div
+                  key={field.display}
+                  className={`flex flex-col lg:gap-y-[0.625vw] gap-y-[1.53846153846vw] ${
+                    field.handle == honeyPot &&
+                    "absolute opacity-0 pointer-events-none "
+                  }`}
+                >
+                  <div className="sm:h-[7.31707317073vw] lg:h-[3.22916666667vw] h-[13.3333333333vw] bg-[#F0F0F0] lg:rounded-[0.52083333333vw] rounded-[1.53846153846vw] lg:px-[1.25vw] px-[4.10256410256vw]">
+                    <input
+                      type={field.config.input_type}
+                      id={field.handle}
+                      onChange={hanldeChange}
+                      value={state[field.handle]}
+                      placeholder={field.display}
+                      className="w-full PingAR-Light outline-none bg-transparent h-full sm:text-[1.9512195122vw] lg:text-[0.9375vw] text-[3.58974358974vw] text-[#3B3659]"
+                    />
+                  </div>
+                  <span className="sm:text-[1.70731707317vw] sm:leading-[2.68292682927vw] hidden lg:text-[0.83333333333vw] text-[3.07692307692vw] text-[red]">
+                    *Fill Name*
+                  </span>
+                </div>
+              );
+            }
+          })}
         </div>
         <button className="sm:mt-[3.65853658537vw] sm:h-[7.31707317073vw] lg:w-[8.22916666667vw] lg:h-[3.22916666667vw] bg-[#8450FF] lg:-[5.20833333333vw] rounded-[7.94871794872vw] h-[9.23076923077vw] w-full lg:mt-[1.66666666667vw] mt-[6.15384615385vw]">
           <span className="sm:text-[1.9512195122vw] lg:text-[0.9375vw] text-[3.07692307692vw] text-[#FFFFFF] PingAR-Regular">
