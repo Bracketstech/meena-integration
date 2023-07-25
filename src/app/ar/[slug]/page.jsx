@@ -7,16 +7,19 @@ import TermsAndConditions from "@/components/Pages/TermsAndConditions/Index";
 import PrivacyPolicy from "@/components/Pages/PrivacyPolicy/Index";
 import usePageId from "@/hooks/usePageId";
 import getData from "@/lib/data-hooks/getData";
+import getFABData from "@/lib/data-hooks/getFABData";
 
 export default async function Page({ params }) {
   const { slug } = params;
   const id = await usePageId(slug, "arabic");
   const data = await getData(id, "arabic");
+  const fabData = await getFABData("arabic");
+
   switch (id) {
     case "a4ebcba3-3ba6-4d3b-bd01-29ea514119ed":
       return (
         <>
-          <Services arabic data={data?.entry} />
+          <Services arabic data={data?.entry} fabData={fabData} />
         </>
       );
     case "e9a0fcb1-57be-499d-ae50-ec17fb7bc69a":
