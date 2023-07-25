@@ -2,7 +2,6 @@ import Link from "next/link";
 import React from "react";
 
 const MainNews = ({ arabic, data }) => {
-  console.log(arabic);
   return (
     <>
       {data.data.map((card, index) => {

@@ -21,16 +21,16 @@ const BookYourAppointment = async ({ arabic, data, fabData }) => {
           data-aos-delay={200}
           className="sm:mt-[3.658536585365854vw] sm:gap-x-[2.926829268292683vw] text-[#FFFFFF] flex items-center justify-start sm:justify-center lg:justify-start lg:gap-x-[1.25vw] gap-x-[4.44444444444vw] mt-[6.153846153846154vw] lg:mt-[2.5vw] flex-wrap gap-y-[4.44444444444vw]"
         >
-          <Link href={fabData.fab.app_download} className="anchor1">
+          <Link href={fabData?.fab?.app_download} className="anchor1">
             <div>
-              <span> {fabData.fab.app_download_btn_text} </span>
+              <span> {fabData?.fab?.app_download_btn_text} </span>
               <img src="/images/icons/get-app.svg" alt="get-app" />
             </div>
           </Link>
-          <a href={`tel:${fabData.fab.phone}`} className="anchor2">
+          <a href={`tel:${fabData?.fab?.phone}`} className="anchor2">
             <div>
               <span style={{ direction: "ltr" }} className="">
-                {fabData.fab.phone}
+                {fabData?.fab?.phone}
               </span>
               <img src="/images/icons/phone.svg" alt="phone" />
             </div>

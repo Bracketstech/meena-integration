@@ -5,7 +5,6 @@ import HomePage from "@/components/Pages/Home/Index";
 import ScrollToTop from "@/components/ScrollToTop";
 import getFABData from "@/lib/data-hooks/getFABData";
 import getHomeData from "@/lib/data-hooks/getHomeData";
-import Head from "next/head";
 
 export default async function Home() {
   const data = await getHomeData();

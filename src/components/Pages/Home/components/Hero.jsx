@@ -18,7 +18,7 @@ const Hero = ({ arabic, title, des, img }) => {
               <img
                 src="/images/icons/links-style3.svg"
                 alt="style"
-                className="absolute right-[6vw] top-[8.9vw] w-[33vw]  sm:right-0 sm:w-[17vw] sm:top-[5vw]   lg:top-[2.9vw] lg:w-[12vw] object-contain"
+                className={imgClasses}
               />
             </h1>
 
