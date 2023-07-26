@@ -5,8 +5,9 @@ import Locations from "@/components/Pages/Locations/Index";
 import Services from "@/components/Pages/Services/Index";
 import TermsAndConditions from "@/components/Pages/TermsAndConditions/Index";
 import PrivacyPolicy from "@/components/Pages/PrivacyPolicy/Index";
-import getPageId from "@/hooks/getPageId";
 import getData from "@/lib/data-hooks/getData";
+import getPageId from "@/hooks/getPageId";
+
 import getFABData from "@/lib/data-hooks/getFABData";
 
 export async function generateMetadata({ params, searchParams }, parent) {
