@@ -1,6 +1,6 @@
 import getFooterData from "@/lib/data-hooks/getFooterData";
 
-const usePageId = async (slug, arabic) => {
+const getPageId = async (slug, arabic) => {
   const footerData = await getFooterData();
   const filteredDataSiteMapLinks = arabic
     ? footerData.nav.treeAr[0].children.filter(
@@ -22,4 +22,4 @@ const usePageId = async (slug, arabic) => {
   return id;
 };
 
-export default usePageId;
+export default getPageId;

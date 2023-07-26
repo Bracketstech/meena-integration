@@ -5,14 +5,14 @@ import Locations from "@/components/Pages/Locations/Index";
 import Services from "@/components/Pages/Services/Index";
 import TermsAndConditions from "@/components/Pages/TermsAndConditions/Index";
 import PrivacyPolicy from "@/components/Pages/PrivacyPolicy/Index";
-import usePageId from "@/hooks/usePageId";
+import getPageId from "@/hooks/getPageId";
 import getData from "@/lib/data-hooks/getData";
 import getFABData from "@/lib/data-hooks/getFABData";
 
 export async function generateMetadata({ params, searchParams }, parent) {
   // fetch data
   const { slug } = params;
-  const id = await usePageId(slug, "arabic");
+  const id = await getPageId(slug, "arabic");
   const data = await getData(id, "arabic");
   const previousImages = (await parent).openGraph?.images || [];
   const previousTitle = (await parent).title;
@@ -57,7 +57,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
 
 export default async function Page({ params }) {
   const { slug } = params;
-  const id = await usePageId(slug, "arabic");
+  const id = await getPageId(slug, "arabic");
   const data = await getData(id, "arabic");
   const fabData = await getFABData("arabic");
 

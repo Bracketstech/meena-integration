@@ -5,7 +5,7 @@ import Locations from "@/components/Pages/Locations/Index";
 import Services from "@/components/Pages/Services/Index";
 import TermsAndConditions from "@/components/Pages/TermsAndConditions/Index";
 import PrivacyPolicy from "@/components/Pages/PrivacyPolicy/Index";
-import usePageId from "@/hooks/usePageId";
+import getPageId from "@/hooks/getPageId";
 import getData from "@/lib/data-hooks/getData";
 import getServicesData from "@/lib/data-hooks/getServicesData";
 import getLocationData from "@/lib/data-hooks/getLocationData";
@@ -21,7 +21,7 @@ export const revalidate = 5;
 export async function generateMetadata({ params, searchParams }, parent) {
   // fetch data
   const { slug } = params;
-  const id = await usePageId(slug);
+  const id = await getPageId(slug);
   const data = await getData(id);
   const previousImages = (await parent).openGraph?.images || [];
   const previousTitle = (await parent).title;
@@ -66,7 +66,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
 
 export default async function Page({ params }) {
   const { slug } = params;
-  const id = await usePageId(slug);
+  const id = await getPageId(slug);
   const data = await getData(id);
   const fabData = await getFABData();
 

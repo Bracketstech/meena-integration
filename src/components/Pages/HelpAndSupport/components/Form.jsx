@@ -78,16 +78,16 @@ const Form = ({ arabic, title, formContent }) => {
         )
         .then((res) => console.log(res));
     }
-    setTimeout(() => {
-      if (firstErrorElement) {
-        let vw = window.innerWidth;
-        const headerHeight =
-          vw > 1024 ? (vw / 100) * 4.3 : vw > 640 ? (vw / 100) * 8.0125 : 55;
-        let offsetTop = getOffsetTop(firstErrorElement) - headerHeight;
-        console.log(offsetTop);
-        window.scrollTo(0, offsetTop);
-      }
-    }, 500);
+    // setTimeout(() => {
+    //   if (firstErrorElement) {
+    //     let vw = window.innerWidth;
+    //     const headerHeight =
+    //       vw > 1024 ? (vw / 100) * 4.3 : vw > 640 ? (vw / 100) * 8.0125 : 55;
+    //     let offsetTop = getOffsetTop(firstErrorElement) - headerHeight;
+    //     console.log(offsetTop);
+    //     window.scrollTo(0, offsetTop);
+    //   }
+    // }, 500);
   };
   return (
     <div className="lg:w-[39.2708333333vw]">
@@ -162,7 +162,7 @@ const Form = ({ arabic, title, formContent }) => {
           })}
         </div>
         <ReCAPTCHA
-          sitekey="6LfOjVQnAAAAAOLFI49HRFgT0DOEoF0F3pjcQnUF"
+          sitekey="6Les-1QnAAAAAGg82FEaIT2MjE4Di0_oi_McPYd9"
           onChange={handleRecaptchaChange}
         />
 
