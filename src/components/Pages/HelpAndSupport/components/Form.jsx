@@ -161,10 +161,12 @@ const Form = ({ arabic, title, formContent }) => {
             }
           })}
         </div>
-        <ReCAPTCHA
-          sitekey="6Les-1QnAAAAAGg82FEaIT2MjE4Di0_oi_McPYd9"
-          onChange={handleRecaptchaChange}
-        />
+        <div className="mt-[10px] sm:mt-[1vw] ">
+          <ReCAPTCHA
+            sitekey="6Les-1QnAAAAAGg82FEaIT2MjE4Di0_oi_McPYd9"
+            onChange={handleRecaptchaChange}
+          />
+        </div>
 
         <button className="sm:mt-[3.65853658537vw] sm:h-[7.31707317073vw] lg:w-[8.22916666667vw] lg:h-[3.22916666667vw] bg-[#8450FF] lg:-[5.20833333333vw] rounded-[7.94871794872vw] h-[9.23076923077vw] w-full lg:mt-[1.66666666667vw] mt-[6.15384615385vw]">
           <span className="sm:text-[1.9512195122vw] lg:text-[0.9375vw] text-[3.07692307692vw] text-[#FFFFFF] PingAR-Regular">
