@@ -8,6 +8,11 @@ export const downloadAppQuery = () => {
         title
         slug
         ... on Entry_Pages_AboutAppPage {
+          seo_title
+          seo_description
+          seo_image {
+            path: url
+          }
           title
           top_header_content {
             header_title

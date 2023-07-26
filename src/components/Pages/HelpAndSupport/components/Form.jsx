@@ -1,14 +1,14 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Form = ({ arabic, title, formContent }) => {
   const [state, setState] = useState({});
+  const [isVerified, setIsVerified] = useState(false);
   useEffect(() => {
     let newStates = {};
     formContent.fields.forEach((field) => {
-      if (field.handle != honeyPot) {
-        newStates[field.handle] = "";
-      }
+      newStates[field.handle] = "";
     });
     setState({ ...newStates });
   }, []);
@@ -16,22 +16,53 @@ const Form = ({ arabic, title, formContent }) => {
   const hanldeChange = (event) => {
     setState({ ...state, [event.target.id]: event.target.value });
   };
+
+  const emailIsValid = (value) => {
+    // Basic email validation using a regular expression
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(value);
+  };
+  function getOffsetTop(element) {
+    let offsetTop = 0;
+    while (element) {
+      offsetTop += element.offsetTop;
+      element = element.offsetParent;
+    }
+    return offsetTop;
+  }
+
+  const handleRecaptchaChange = (token) => {
+    // This callback will be called when the user verifies the CAPTCHA
+    setIsVerified(true);
+  };
   const handleSubmit = (event) => {
     event.preventDefault();
     let isNoError = false;
+    let firstErrorElement = null;
     document
       .querySelectorAll(["form input", "form textarea"])
       .forEach((item) => {
         if (item.id !== honeyPot) {
           if (!item.value) {
+            if (!isNoError) {
+              firstErrorElement = item;
+            }
             item.parentElement.parentElement.classList.add("error");
             isNoError = true;
             setTimeout(() => {
               item.parentElement.parentElement.classList.remove("error");
             }, 8000);
           }
+          if (item.type == "email" && !emailIsValid(item.value)) {
+            item.parentElement.parentElement.classList.add("emailError");
+            isNoError = true;
+            setTimeout(() => {
+              item.parentElement.parentElement.classList.remove("emailError");
+            }, 8000);
+          }
         }
       });
+
     if (!isNoError) {
       axios
         .post(
@@ -47,6 +78,16 @@ const Form = ({ arabic, title, formContent }) => {
         )
         .then((res) => console.log(res));
     }
+    setTimeout(() => {
+      if (firstErrorElement) {
+        let vw = window.innerWidth;
+        const headerHeight =
+          vw > 1024 ? (vw / 100) * 4.3 : vw > 640 ? (vw / 100) * 8.0125 : 55;
+        let offsetTop = getOffsetTop(firstErrorElement) - headerHeight;
+        console.log(offsetTop);
+        window.scrollTo(0, offsetTop);
+      }
+    }, 500);
   };
   return (
     <div className="lg:w-[39.2708333333vw]">
@@ -77,8 +118,8 @@ const Form = ({ arabic, title, formContent }) => {
                       defaultValue={""}
                     />
                   </div>
-                  <span className="sm:text-[1.70731707317vw] sm:leading-[2.68292682927vw] hidden lg:text-[0.83333333333vw] text-[3.07692307692vw] text-[red]">
-                    *Fill Name*
+                  <span className="sm:text-[1.70731707317vw] sm:leading-[1] hidden lg:text-[0.83333333333vw] text-[3.07692307692vw] text-[red]">
+                    {arabic ? "هذه الخانة مطلوبه" : "This field is Required"}
                   </span>
                 </div>
               );
@@ -93,7 +134,13 @@ const Form = ({ arabic, title, formContent }) => {
                 >
                   <div className="sm:h-[7.31707317073vw] lg:h-[3.22916666667vw] h-[13.3333333333vw] bg-[#F0F0F0] lg:rounded-[0.52083333333vw] rounded-[1.53846153846vw] lg:px-[1.25vw] px-[4.10256410256vw]">
                     <input
-                      type={field.config.input_type}
+                      type={
+                        field.config.input_type == "email"
+                          ? "text"
+                          : field.config.input_type == "tel"
+                          ? "number"
+                          : field.config.input_type
+                      }
                       id={field.handle}
                       onChange={hanldeChange}
                       value={state[field.handle]}
@@ -101,14 +148,24 @@ const Form = ({ arabic, title, formContent }) => {
                       className="w-full PingAR-Light outline-none bg-transparent h-full sm:text-[1.9512195122vw] lg:text-[0.9375vw] text-[3.58974358974vw] text-[#3B3659]"
                     />
                   </div>
-                  <span className="sm:text-[1.70731707317vw] sm:leading-[2.68292682927vw] hidden lg:text-[0.83333333333vw] text-[3.07692307692vw] text-[red]">
-                    *Fill Name*
+                  <span className="sm:text-[1.70731707317vw] sm:leading-[1] hidden lg:text-[0.83333333333vw] text-[3.07692307692vw] text-[red]">
+                    {arabic ? "هذه الخانة مطلوبه" : "This field is required"}
                   </span>
+                  <p className="sm:text-[1.70731707317vw] sm:leading-[1] hidden lg:text-[0.83333333333vw] text-[3.07692307692vw] text-[red]">
+                    {arabic
+                      ? "البريد الإلكتروني غير صالح!"
+                      : "Email is not Valid!"}
+                  </p>
                 </div>
               );
             }
           })}
         </div>
+        <ReCAPTCHA
+          sitekey="6LfOjVQnAAAAAOLFI49HRFgT0DOEoF0F3pjcQnUF"
+          onChange={handleRecaptchaChange}
+        />
+
         <button className="sm:mt-[3.65853658537vw] sm:h-[7.31707317073vw] lg:w-[8.22916666667vw] lg:h-[3.22916666667vw] bg-[#8450FF] lg:-[5.20833333333vw] rounded-[7.94871794872vw] h-[9.23076923077vw] w-full lg:mt-[1.66666666667vw] mt-[6.15384615385vw]">
           <span className="sm:text-[1.9512195122vw] lg:text-[0.9375vw] text-[3.07692307692vw] text-[#FFFFFF] PingAR-Regular">
             {arabic ? "ارسل" : "Submit"}

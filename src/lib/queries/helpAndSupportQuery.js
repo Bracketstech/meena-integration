@@ -9,6 +9,11 @@ export const helpAndSupportQuery = () => {
         slug
         blueprint
         ... on Entry_Pages_HelpAndSupportPage {
+          seo_title
+          seo_description
+          seo_image {
+            path: url
+          }
           title
           top_header_content {
             header_title

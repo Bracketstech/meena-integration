@@ -9,6 +9,11 @@ export const servicesQuery = () => {
         slug
         blueprint
         ... on Entry_Pages_ServicesPage {
+          seo_title
+          seo_description
+          seo_image {
+            path: url
+          }
           top_header {
             header_title
             header_description

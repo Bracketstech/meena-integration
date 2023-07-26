@@ -5,6 +5,11 @@ export const aboutQuery = () => {
     query MyQuery($id: String!, $site: String!) {
       entry(id: $id, site: $site) {
         ... on Entry_Pages_AboutPage {
+          seo_title
+          seo_description
+          seo_image {
+            path: url
+          }
           title
           top_header_section
           top_header_content {

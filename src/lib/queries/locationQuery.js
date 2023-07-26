@@ -11,6 +11,11 @@ export const locationQuery = () => {
         data {
           locale
           ... on Entry_MeenaClincs_MeenaClinc {
+            seo_title
+            seo_description
+            seo_image {
+              path: url
+            }
             title
             coming_soon
             images {

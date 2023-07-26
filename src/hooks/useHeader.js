@@ -45,7 +45,7 @@ const useHeader = (title, home) => {
         <meta name="msapplication-TileColor" content="#2b5797" />
         <meta name="theme-color" content="#333333" />`;
     }
-    document.querySelector("head title").innerHTML = title;
+    // document.querySelector("head title").innerHTML = title;
   }, []);
 };
 

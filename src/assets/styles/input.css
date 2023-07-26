@@ -573,6 +573,9 @@ body.active {
 .error span {
   display: block !important;
 }
+.emailError p {
+  display: block;
+}
 .Pagination svg {
   transition: all 0.5s;
   cursor: pointer;

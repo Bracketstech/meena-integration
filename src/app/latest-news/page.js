@@ -4,8 +4,36 @@ import Nav from "@/components/Navbar";
 import LatestNewsPage from "@/components/Pages/LatestNews/Index";
 import ScrollToTop from "@/components/ScrollToTop";
 import getNewsData from "@/lib/data-hooks/getNewsData";
+
+export async function generateMetadata({ params, searchParams }, parent) {
+  // fetch data
+  const limit = 3;
+
+  const data = await getNewsData(
+    "9d62a577-0afb-428f-92f0-52b643d41636",
+    false,
+    searchParams.page ? +searchParams.page : 1,
+    limit
+  );
+  const previousImages = (await parent).openGraph?.images || [];
+  let newImages;
+  if (data?.entry?.seo_image?.path) {
+    newImages = [data?.entry?.seo_image?.path, ...previousImages];
+  } else {
+    newImages = [...previousImages];
+  }
+  return {
+    title: data?.entry?.seo_title,
+    description: data?.entry?.seo_description,
+    openGraph: {
+      images: [...newImages],
+    },
+  };
+}
+
 export default async function LatestNews({ searchParams }) {
   const limit = 3;
+
   const data = await getNewsData(
     "9d62a577-0afb-428f-92f0-52b643d41636",
     false,

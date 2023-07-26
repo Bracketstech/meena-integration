@@ -9,6 +9,11 @@ export const careerQuery = () => {
         slug
         blueprint
         ... on Entry_Pages_CareerPage {
+          seo_title
+          seo_description
+          seo_image {
+            path: url
+          }
           top_header_section {
             header_title
             header_description

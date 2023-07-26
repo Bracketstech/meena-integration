@@ -14,6 +14,11 @@ export const newsQuery = () => {
         slug
         blueprint
         ... on Entry_Pages_Page {
+          seo_title
+          seo_description
+          seo_image {
+            path: url
+          }
           title
           header_title
           header_description

@@ -9,6 +9,11 @@ export const homeQuery = () => {
         slug
         blueprint
         ... on Entry_Pages_Homepage {
+          seo_title
+          seo_description
+          seo_image {
+            path: url
+          }
           title
 
           hero_image {

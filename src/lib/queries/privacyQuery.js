@@ -9,6 +9,11 @@ export const privacyQuery = () => {
         slug
         blueprint
         ... on Entry_Pages_TermsConditions {
+          seo_title
+          seo_description
+          seo_image {
+            path: url
+          }
           title
           content
           slug
