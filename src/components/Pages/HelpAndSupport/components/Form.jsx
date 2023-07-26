@@ -163,7 +163,7 @@ const Form = ({ arabic, title, formContent }) => {
         </div>
         <div className="mt-[10px] sm:mt-[1vw] ">
           <ReCAPTCHA
-            sitekey="6LdUlVcnAAAAAMcetons6Hxa93bckjZZzE0jnt0"
+            sitekey="6LdUlVcnAAAAAMcetons6Hxa93bckjZZzE0jnt0-"
             onChange={handleRecaptchaChange}
           />
         </div>
