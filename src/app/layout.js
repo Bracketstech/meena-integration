@@ -8,25 +8,6 @@ import getGlobalMetaData from "@/lib/data-hooks/getGlobalMetaData";
 
 // const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "Home || Meena",
-  description: " Meena",
-  colorScheme: "light",
-
-  robots: {
-    index: false,
-    follow: false,
-    nocache: false,
-    googleBot: {
-      index: false,
-      follow: false,
-      noimageindex: false,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-};
 // export const revalidate = 5;
 
 export async function generateMetadata({ params, searchParams }, parent) {
