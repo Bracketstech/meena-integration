@@ -64,30 +64,31 @@ const Form = ({ arabic, title, formContent }) => {
       });
 
     if (!isNoError) {
-      axios
-        .post(
-          `https://meenacms.brackets-tech.com/!/forms/contact_us_form`,
-          {
-            ...state,
-          },
-          {
-            headers: {
-              "X-Requested-With": "XMLHttpRequest",
+      if (isVerified) {
+        axios
+          .post(
+            `https://meenacms.brackets-tech.com/!/forms/contact_us_form`,
+            {
+              ...state,
             },
-          }
-        )
-        .then((res) => console.log(res));
+            {
+              headers: {
+                "X-Requested-With": "XMLHttpRequest",
+              },
+            }
+          )
+          .then((res) => console.log(res));
+      }
     }
-    // setTimeout(() => {
-    //   if (firstErrorElement) {
-    //     let vw = window.innerWidth;
-    //     const headerHeight =
-    //       vw > 1024 ? (vw / 100) * 4.3 : vw > 640 ? (vw / 100) * 8.0125 : 55;
-    //     let offsetTop = getOffsetTop(firstErrorElement) - headerHeight;
-    //     console.log(offsetTop);
-    //     window.scrollTo(0, offsetTop);
-    //   }
-    // }, 500);
+    if (firstErrorElement) {
+      let vw = window.innerWidth;
+      const headerHeight =
+        vw > 1024 ? (vw / 100) * 4.3 : vw > 640 ? (vw / 100) * 8.0125 : 55;
+      let offsetTop = getOffsetTop(firstErrorElement) - headerHeight;
+      console.log(offsetTop);
+      // window.scrollTo(0, offsetTop);
+      window.scrollTo(0, offsetTop);
+    }
   };
   return (
     <div className="lg:w-[39.2708333333vw]">
