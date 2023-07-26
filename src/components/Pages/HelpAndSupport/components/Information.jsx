@@ -56,7 +56,7 @@ const Information = ({ arabic, address, email, phone, socialData }) => {
             <li key={index}>
               <a href={item.link}>
                 <img
-                  src={item.icon.path}
+                  src={item.icon_dark.path}
                   alt="Social Link"
                   className="lg:w-[1.5625vw] w-[5.12820512821vw] sm:w-[3.65853658537vw]"
                 />

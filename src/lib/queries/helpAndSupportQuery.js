@@ -35,7 +35,7 @@ export const helpAndSupportQuery = () => {
       socialMediaData: globalSet(handle: "footer_g", site: $site) {
         ... on GlobalSet_FooterG {
           social_media_links {
-            icon {
+            icon_dark {
               path: url
             }
             link

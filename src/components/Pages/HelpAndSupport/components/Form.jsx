@@ -1,16 +1,22 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 
 const Form = ({ arabic, title, formContent }) => {
   const [state, setState] = useState({});
   const [isVerified, setIsVerified] = useState(false);
-  useEffect(() => {
+  const [isSuccess, setIsSuccess] = useState(false);
+  const captchaRef = useRef(null);
+
+  const initiateFormValues = () => {
     let newStates = {};
     formContent.fields.forEach((field) => {
       newStates[field.handle] = "";
     });
     setState({ ...newStates });
+  };
+  useEffect(() => {
+    initiateFormValues();
   }, []);
   const honeyPot = formContent?.honeypot;
   const hanldeChange = (event) => {
@@ -35,6 +41,12 @@ const Form = ({ arabic, title, formContent }) => {
     // This callback will be called when the user verifies the CAPTCHA
     setIsVerified(true);
   };
+  const resetForm = () => {
+    initiateFormValues();
+    setIsVerified(false);
+    captchaRef.current.reset();
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
     let isNoError = false;
@@ -77,13 +89,21 @@ const Form = ({ arabic, title, formContent }) => {
               },
             }
           )
-          .then((res) => console.log(res));
+          .then((res) => {
+            if (res.data.success) {
+              resetForm();
+              setIsSuccess(true);
+              setTimeout(() => {
+                setIsSuccess(false);
+              }, 12000);
+            }
+          });
       }
     }
     if (firstErrorElement) {
       let vw = window.innerWidth;
       const headerHeight =
-        vw > 1024 ? (vw / 100) * 4.3 : vw > 640 ? (vw / 100) * 8.0125 : 55;
+        vw > 1024 ? (vw / 100) * 6 : vw > 640 ? (vw / 100) * 8.0125 : 55;
       let offsetTop = getOffsetTop(firstErrorElement) - headerHeight;
       console.log(offsetTop);
       // window.scrollTo(0, offsetTop);
@@ -102,6 +122,8 @@ const Form = ({ arabic, title, formContent }) => {
       <form action="" onSubmit={handleSubmit}>
         <div className="lg:pt-[0.78125vw] pt-[4.10256410256vw] flex flex-col lg:gap-y-[0.83333333333vw] gap-y-[3.07692307692vw]">
           {formContent?.fields?.map((field) => {
+            let splitted = field.display.split("/");
+            let placeholder = arabic ? splitted[1] : splitted[0];
             if (field.type == "textarea") {
               return (
                 <div
@@ -110,7 +132,7 @@ const Form = ({ arabic, title, formContent }) => {
                 >
                   <div className="sm:h-[23.1707317073vw] lg:h-[11.9791666667vw] h-[43.3333333333vw] bg-[#F0F0F0] lg:rounded-[0.52083333333vw] rounded-[1.53846153846vw] lg:px-[1.25vw] px-[4.10256410256vw] lg:pt-[0.98958333333vw] pt-[3.84615384615vw]">
                     <textarea
-                      placeholder={field.display}
+                      placeholder={placeholder}
                       value={state[field.handle]}
                       id={field.handle}
                       onChange={hanldeChange}
@@ -145,7 +167,7 @@ const Form = ({ arabic, title, formContent }) => {
                       id={field.handle}
                       onChange={hanldeChange}
                       value={state[field.handle]}
-                      placeholder={field.display}
+                      placeholder={placeholder}
                       className="w-full PingAR-Light outline-none bg-transparent h-full sm:text-[1.9512195122vw] lg:text-[0.9375vw] text-[3.58974358974vw] text-[#3B3659]"
                     />
                   </div>
@@ -164,13 +186,23 @@ const Form = ({ arabic, title, formContent }) => {
         </div>
         <div className="mt-[10px] sm:mt-[1vw] ">
           <ReCAPTCHA
+            ref={captchaRef}
             sitekey="6Le7MFgnAAAAAMjfxdVsrOkEhIB1-R7ugcl4ept6"
             // sitekey="6Les-1QnAAAAAGg82FEaIT2MjE4Di0_oi_McPYd9"
             onChange={handleRecaptchaChange}
           />
         </div>
+        {isSuccess && (
+          <div className="mt-[10px] sm:mt-[1vw] ">
+            <span className="sm:text-[2vw] sm:leading-[1]  lg:text-[1.2vw] text-[4.4vw] text-[green]">
+              {arabic
+                ? "شكرًا لتركك لنا رسالة ، وسنعاود الاتصال بك قريبًا!"
+                : "Thanks for leaving us a message, we will get back to you soon!"}
+            </span>
+          </div>
+        )}
 
-        <button className="sm:mt-[3.65853658537vw] sm:h-[7.31707317073vw] lg:w-[8.22916666667vw] lg:h-[3.22916666667vw] bg-[#8450FF] lg:-[5.20833333333vw] rounded-[7.94871794872vw] h-[9.23076923077vw] w-full lg:mt-[1.66666666667vw] mt-[6.15384615385vw]">
+        <button className="sm:mt-[3.05853658537vw] sm:h-[7.31707317073vw] lg:w-[8.22916666667vw] lg:h-[3.22916666667vw] bg-[#8450FF] lg:-[5.20833333333vw] rounded-[7.94871794872vw] h-[9.23076923077vw] w-full lg:mt-[1.26666666667vw] mt-[5.15384615385vw]">
           <span className="sm:text-[1.9512195122vw] lg:text-[0.9375vw] text-[3.07692307692vw] text-[#FFFFFF] PingAR-Regular">
             {arabic ? "ارسل" : "Submit"}
           </span>
