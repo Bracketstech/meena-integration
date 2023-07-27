@@ -124,7 +124,7 @@ const Form = ({ arabic, title, formContent }) => {
           {formContent?.fields?.map((field) => {
             let splitted = field.display.split("/");
             let placeholder = arabic ? splitted[1] : splitted[0];
-            if (field.type == "textarea") {
+            if (field.type == "textarea" && state[field.handle] != null) {
               return (
                 <div
                   key={field.display}
@@ -133,12 +133,11 @@ const Form = ({ arabic, title, formContent }) => {
                   <div className="sm:h-[23.1707317073vw] lg:h-[11.9791666667vw] h-[43.3333333333vw] bg-[#F0F0F0] lg:rounded-[0.52083333333vw] rounded-[1.53846153846vw] lg:px-[1.25vw] px-[4.10256410256vw] lg:pt-[0.98958333333vw] pt-[3.84615384615vw]">
                     <textarea
                       placeholder={placeholder}
-                      value={state[field.handle] ? state[field.handle] : ""}
+                      value={state[field.handle]}
                       id={field.handle}
                       onChange={hanldeChange}
                       name=""
                       className="resize-none PingAR-Regular w-full PingAR-Light outline-none bg-transparent h-full sm:text-[1.9512195122vw] lg:text-[0.9375vw] text-[3.58974358974vw] text-[#3B3659]"
-                      defaultValue={""}
                     />
                   </div>
                   <span className="sm:text-[1.70731707317vw] sm:leading-[1] hidden lg:text-[0.83333333333vw] text-[3.07692307692vw] text-[red]">
@@ -146,13 +145,14 @@ const Form = ({ arabic, title, formContent }) => {
                   </span>
                 </div>
               );
-            } else {
+            } else if (state[field.handle] != null) {
               return (
                 <div
                   key={field.display}
                   className={`flex flex-col lg:gap-y-[0.625vw] gap-y-[1.53846153846vw] ${
-                    field.handle == honeyPot &&
-                    "absolute opacity-0 pointer-events-none "
+                    field.handle == honeyPot
+                      ? "absolute opacity-0 pointer-events-none "
+                      : ""
                   }`}
                 >
                   <div className="sm:h-[7.31707317073vw] lg:h-[3.22916666667vw] h-[13.3333333333vw] bg-[#F0F0F0] lg:rounded-[0.52083333333vw] rounded-[1.53846153846vw] lg:px-[1.25vw] px-[4.10256410256vw]">
@@ -166,7 +166,7 @@ const Form = ({ arabic, title, formContent }) => {
                       }
                       id={field.handle}
                       onChange={hanldeChange}
-                      value={state[field.handle] ? state[field.handle] : ""}
+                      value={state[field.handle]}
                       placeholder={placeholder}
                       className="w-full PingAR-Light outline-none bg-transparent h-full sm:text-[1.9512195122vw] lg:text-[0.9375vw] text-[3.58974358974vw] text-[#3B3659]"
                     />

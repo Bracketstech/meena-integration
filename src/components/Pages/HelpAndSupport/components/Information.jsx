@@ -54,9 +54,9 @@ const Information = ({ arabic, address, email, phone, socialData }) => {
         <ul className="footerLinks flex justify-center lg:justify-start items-end lg:gap-x-[1.09375vw] lg:mt-[3.22916666667vw] mt-[8.20512820513vw] gap-x-[3.84615384615vw]">
           {socialData?.map((item, index) => (
             <li key={index}>
-              <a href={item.link}>
+              <a href={item?.link}>
                 <img
-                  src={item.icon_dark.path}
+                  src={item?.icon_dark?.path}
                   alt="Social Link"
                   className="lg:w-[1.5625vw] w-[5.12820512821vw] sm:w-[3.65853658537vw]"
                 />
