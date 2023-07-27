@@ -6,7 +6,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 import getFABData from "@/lib/data-hooks/getFABData";
 import getHomeData from "@/lib/data-hooks/getHomeData";
 
-export const revalidate = 0;
+// export const revalidate = 0;
 
 export async function generateMetadata({ params, searchParams }, parent) {
   // fetch data

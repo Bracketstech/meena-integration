@@ -5,7 +5,7 @@ import AboutApp from "@/components/Pages/AboutApp/Index";
 import ScrollToTop from "@/components/ScrollToTop";
 import getDownloadAppData from "@/lib/data-hooks/getDownloadAppData";
 
-export const revalidate = 0;
+// export const revalidate = 0;
 
 export async function generateMetadata({ params, searchParams }, parent) {
   // fetch data
