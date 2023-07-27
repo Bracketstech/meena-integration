@@ -6,11 +6,11 @@ const ClinicsSvgs = ({ arabic }) => {
       <span className="healthCare__Overlay absolute w-full h-full bottom-0 leftRightFixer1"></span>
 
       <svg
-        classname="sm:w-[5.36585365854vw] h-[8.46153846154vw] lg:h-[unset] lg:w-[3.22916666667vw] asterisk w-[7.69230769231vw] absolute top-[4.61538461538vw] sm:top-[0.73170731707vw] lg:top-[1.25vw] location__Asterik"
+        className="sm:w-[5.36585365854vw] h-[8.46153846154vw] lg:h-[unset] lg:w-[3.22916666667vw] asterisk w-[7.69230769231vw] absolute top-[4.61538461538vw] sm:top-[0.73170731707vw] lg:top-[1.25vw] location__Asterik"
         id="Group_89637"
         data-name="Group 89637"
         xmlns="http://www.w3.org/2000/svg"
-        xmlnsxlink="http://www.w3.org/1999/xlink"
+        xmlnsXlink="http://www.w3.org/1999/xlink"
         width="64.896"
         height="69.743"
         viewBox="0 0 64.896 69.743"
@@ -26,7 +26,7 @@ const ClinicsSvgs = ({ arabic }) => {
             />
           </clipPath>
         </defs>
-        <g id="Group_89412" data-name="Group 89412" clippath="url(#clip-path)">
+        <g id="Group_89412" data-name="Group 89412" clipPath="url(#clip-path)">
           <path
             id="Path_100878"
             data-name="Path 100878"
@@ -61,7 +61,7 @@ const ClinicsSvgs = ({ arabic }) => {
       <div className="absolute w-full h-full top-0 leftRightFixer1">
         {arabic ? (
           <svg
-            classname="sm:w-[40.0975609756vw] sm:top-[-11.5853658537vw]   hidden lg:h-[13.5197916667vw] sm:block lg:w-[44.0104166667vw] leftRightFixer1 lg:top-[-7.08333333333vw] absolute"
+            className="sm:w-[40.0975609756vw] sm:top-[-11.5853658537vw]   hidden lg:h-[13.5197916667vw] sm:block lg:w-[44.0104166667vw] leftRightFixer1 lg:top-[-7.08333333333vw] absolute"
             xmlns="http://www.w3.org/2000/svg"
             width="850.067"
             height="259.583"
@@ -74,13 +74,13 @@ const ClinicsSvgs = ({ arabic }) => {
               transform="translate(4185.28 -7174.988)"
               fill="none"
               stroke="#8450ff"
-              strokeLinecap="round"
-              strokeWidth={4}
+              stroke-linecap="round"
+              stroke-width="4"
             />
           </svg>
         ) : (
           <svg
-            classname="sm:w-[31.0975609756vw] sm:top-[-11.5853658537vw] flipped hidden lg:h-[13.5197916667vw] sm:block lg:w-[37.7604166667vw] leftRightFixer1 lg:top-[-7.08333333333vw] absolute"
+            className="sm:w-[31.0975609756vw] sm:top-[-11.5853658537vw] flipped hidden lg:h-[13.5197916667vw] sm:block lg:w-[37.7604166667vw] leftRightFixer1 lg:top-[-7.08333333333vw] absolute"
             xmlns="http://www.w3.org/2000/svg"
             width="729.988"
             height="259.58"
@@ -93,8 +93,8 @@ const ClinicsSvgs = ({ arabic }) => {
               transform="translate(4185.882 -7174.988)"
               fill="none"
               stroke="#8450ff"
-              strokelinecap="round"
-              strokeWidth="{4}"
+              strokeLinecap="round"
+              strokeWidth={4}
             />
           </svg>
         )}
@@ -104,7 +104,7 @@ const ClinicsSvgs = ({ arabic }) => {
           className="lg:hidden block w-[17.4358974359vw] leftRightFixer1 top-[4.615384615384615vw] absolute"
         /> */}
         <svg
-          classname="flipped sm:hidden block w-[17.4358974359vw] leftRightFixer1 top-[4.615384615384615vw] absolute"
+          className="flipped sm:hidden block w-[17.4358974359vw] leftRightFixer1 top-[4.615384615384615vw] absolute"
           xmlns="http://www.w3.org/2000/svg"
           width="70.742"
           height="49.491"
@@ -117,11 +117,10 @@ const ClinicsSvgs = ({ arabic }) => {
             transform="translate(4184.572 -7176.299)"
             fill="none"
             stroke="#8450ff"
-            strokelinecap="round"
-            strokeWidth="{2}"
+            strokeLinecap="round"
+            strokeWidth={2}
           />
         </svg>
-
         {/* <img
           src="/images/home/location-design3.png"
           alt="location-design3"
@@ -135,7 +134,7 @@ const ClinicsSvgs = ({ arabic }) => {
 
         {arabic ? (
           <svg
-            classname="sm:w-[40.0975609756vw]   hidden lg:h-[12.3015625vw] sm:block lg:w-[43.8541666667vw] leftRightFixer2 lg:top-[5.78125vw] absolute"
+            className="sm:w-[40.0975609756vw]   hidden lg:h-[12.3015625vw] sm:block lg:w-[43.8541666667vw] leftRightFixer2 lg:top-[5.78125vw] absolute"
             xmlns="http://www.w3.org/2000/svg"
             width="847.546"
             height="234.311"
@@ -148,13 +147,13 @@ const ClinicsSvgs = ({ arabic }) => {
               transform="translate(5494.553 -7395.519)"
               fill="none"
               stroke="#8450ff"
-              strokeLinecap="round"
-              strokeWidth={4}
+              stroke-linecap="round"
+              stroke-width="4"
             />
           </svg>
         ) : (
           <svg
-            classname="sm:w-[31.0975609756vw] flipped hidden lg:h-[12.3015625vw] sm:block lg:w-[37.65625vw] leftRightFixer2 lg:top-[5.78125vw] absolute"
+            className="sm:w-[31.0975609756vw] flipped hidden lg:h-[12.3015625vw] sm:block lg:w-[37.65625vw] leftRightFixer2 lg:top-[5.78125vw] absolute"
             xmlns="http://www.w3.org/2000/svg"
             width="727.901"
             height="236.198"
@@ -167,8 +166,8 @@ const ClinicsSvgs = ({ arabic }) => {
               transform="translate(5374.101 -7393.63)"
               fill="none"
               stroke="#8450ff"
-              strokelinecap="round"
-              strokeWidth="{4}"
+              strokeLinecap="round"
+              strokeWidth={4}
             />
           </svg>
         )}
@@ -178,7 +177,7 @@ const ClinicsSvgs = ({ arabic }) => {
           className="lg:hidden block lg:w-[17.6923076923vw] leftRightFixer2 top-[16.92307692307692vw] absolute"
         /> */}
         <svg
-          classname="flipped sm:hidden w-[17.8205128205vw] block leftRightFixer2 top-[16.92307692307692vw] absolute"
+          className="flipped sm:hidden w-[17.8205128205vw] block leftRightFixer2 top-[16.92307692307692vw] absolute"
           xmlns="http://www.w3.org/2000/svg"
           width="72.193"
           height="39.142"
@@ -191,8 +190,8 @@ const ClinicsSvgs = ({ arabic }) => {
             transform="translate(5296.675 -7404.628)"
             fill="none"
             stroke="#8450ff"
-            strokelinecap="round"
-            strokeWidth="{2}"
+            strokeLinecap="round"
+            strokeWidth={2}
           />
         </svg>
       </div>
