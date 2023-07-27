@@ -1,15 +1,15 @@
-'use client'
+"use client";
 
-import Image from "next/image"
+import Image from "next/image";
 
-const PaginationCard = ({data}) => {
-    console.log(data)
+const PaginationCard = ({ data }) => {
+  // console.log(data)
   return (
     <div>
       {data.title}
-      <Image src={data.image[0].url} width={50} height={50}/>
+      <Image src={data.image[0].url} width={50} height={50} />
     </div>
-  )
-}
+  );
+};
 
-export default PaginationCard
+export default PaginationCard;
