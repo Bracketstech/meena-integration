@@ -6,6 +6,8 @@ import ScrollToTop from "@/components/ScrollToTop";
 import getFABData from "@/lib/data-hooks/getFABData";
 import getHomeData from "@/lib/data-hooks/getHomeData";
 
+export const revalidate = 50000;
+
 export async function generateMetadata({ params, searchParams }, parent) {
   // fetch data
   const data = await getHomeData("arabic");

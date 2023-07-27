@@ -133,7 +133,7 @@ const Form = ({ arabic, title, formContent }) => {
                   <div className="sm:h-[23.1707317073vw] lg:h-[11.9791666667vw] h-[43.3333333333vw] bg-[#F0F0F0] lg:rounded-[0.52083333333vw] rounded-[1.53846153846vw] lg:px-[1.25vw] px-[4.10256410256vw] lg:pt-[0.98958333333vw] pt-[3.84615384615vw]">
                     <textarea
                       placeholder={placeholder}
-                      value={state[field.handle]}
+                      value={state[field.handle] ? state[field.handle] : ""}
                       id={field.handle}
                       onChange={hanldeChange}
                       name=""
@@ -166,7 +166,7 @@ const Form = ({ arabic, title, formContent }) => {
                       }
                       id={field.handle}
                       onChange={hanldeChange}
-                      value={state[field.handle]}
+                      value={state[field.handle] ? state[field.handle] : ""}
                       placeholder={placeholder}
                       className="w-full PingAR-Light outline-none bg-transparent h-full sm:text-[1.9512195122vw] lg:text-[0.9375vw] text-[3.58974358974vw] text-[#3B3659]"
                     />
@@ -186,6 +186,7 @@ const Form = ({ arabic, title, formContent }) => {
         </div>
         <div className="mt-[10px] sm:mt-[1vw] ">
           <ReCAPTCHA
+            hl={arabic ? "ar" : "en"}
             ref={captchaRef}
             sitekey="6Le7MFgnAAAAAMjfxdVsrOkEhIB1-R7ugcl4ept6"
             // sitekey="6Les-1QnAAAAAGg82FEaIT2MjE4Di0_oi_McPYd9"

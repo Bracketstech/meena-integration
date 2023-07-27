@@ -5,6 +5,8 @@ import LatestNewsPage from "@/components/Pages/LatestNews/Index";
 import ScrollToTop from "@/components/ScrollToTop";
 import getNewsData from "@/lib/data-hooks/getNewsData";
 
+export const revalidate = 50000;
+
 export async function generateMetadata({ params, searchParams }, parent) {
   // fetch data
   const limit = 3;
