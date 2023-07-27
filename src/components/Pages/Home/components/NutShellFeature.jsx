@@ -18,7 +18,7 @@ const NutShellFeature = ({ feature, index }) => {
       <div className="sm:w-[90%] lg:w-[20.8333333333vw] w-[76.4102564103vw] mx-[auto] flex flex-col items-center lg:gap-y-[0.72916666666vw] gap-y-[3.07692307692vw]">
         <img
           src={feature.icon[0].path}
-          className="lg:w-[3.59375vw] w-[12.5641025641vw] sm:w-[6.34146341463vw]"
+          className="lg:w-[3.29375vw] w-[11.5641025641vw] sm:w-[5.84146341463vw]"
         />
         <div className="text-center">
           <h5 className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw]  lg:text-[1.354166666666667vw] lg:leading-[1.979166666666667vw] text-[4.871794871794872vw] leading-[9.743589743589744vw] PingAR-Medium text-[#3B3659]">

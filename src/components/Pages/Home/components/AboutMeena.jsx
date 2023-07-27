@@ -35,7 +35,7 @@ const AboutMeena = ({ arabic, companyValues, title, img, data }) => {
                 <img
                   src={item.icon?.path}
                   alt={item.title}
-                  className="lg:w-[1.19791666667vw] w-[4.87179487179vw] sm:w-[3.0487804878vw]"
+                  className="lg:w-[2vw] w-[6vw] sm:w-[4vw]"
                 />
                 <div className="lg:w-[32.2916666667vw] text-center lg:text-start">
                   <h5 className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw] lg:text-[1.354166666666667vw] lg:leading-[1.979166666666667vw] text-[4.871794871794872vw] leading-[9.743589743589744vw] PingAR-Medium text-[#3B3659]">

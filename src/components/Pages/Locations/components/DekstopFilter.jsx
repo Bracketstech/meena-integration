@@ -71,10 +71,11 @@ const DekstopFilter = ({
               <div
                 key={index}
                 className={`${
-                  addressContainer.length == index + 1 ||
-                  "   border-[#CECFD0] border-b-[1px]  "
+                  addressContainer.length == index + 1
+                    ? ""
+                    : "   border-[#CECFD0] border-b-[1px]  "
                 }   lg:py-[1.30208333333vw] px-[1.625vw]  relative ${
-                  address.isActive && "bg-white"
+                  address.isActive ? "bg-white" : ""
                 } `}
               >
                 <div

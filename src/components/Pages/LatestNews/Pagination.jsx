@@ -71,7 +71,7 @@ const Pagination = ({ numberOfPages, currentPage }) => {
             key={index}
             href={`?page=${index + 1}`}
             className={`number ${
-              index == currentPage - 1 && "active"
+              index == currentPage - 1 ? "active " : ""
             } relative lg:w-[2.5vw] w-[7.17948717949vw] flex justify-center items-center`}
           >
             <span className="text-[#313D49] PingAR-Regular lg:text-[1.2vw] text-[3.58974358974vw] lg:h-[1.14583333333vw] h-[4.87179487179vw] block">

@@ -11,7 +11,9 @@ const Cards = ({ cards }) => {
           data-aos="fade"
           data-aos-delay={200}
           className={`w-[42.3076923077vw] lg:w-[19.0625vw] ${
-            isOdd(index + 1) && "lg:mt-[4.16666666667vw] mt-[8.20512820513vw]"
+            isOdd(index + 1)
+              ? "lg:mt-[4.16666666667vw] mt-[8.20512820513vw]"
+              : ""
           }`}
         >
           <img
