@@ -8,8 +8,6 @@ import getGlobalMetaData from "@/lib/data-hooks/getGlobalMetaData";
 
 // const inter = Inter({ subsets: ["latin"] });
 
-export const revalidate = 5000;
-
 export async function generateMetadata({ params, searchParams }, parent) {
   // fetch data
   const data = await getGlobalMetaData();
