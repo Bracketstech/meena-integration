@@ -5,16 +5,20 @@ const getLocationData = async (isAr) => {
   const variables = {
     site: isAr ? "arabic" : "default",
   };
-  const { data } = await getClient().query({
-    query: locationQuery(),
-    variables,
-    context: {
-      fetchOptions: {
-        next: { revalidate: 0 },
+  try {
+    const { data } = await getClient().query({
+      query: locationQuery(),
+      variables,
+      context: {
+        fetchOptions: {
+          next: { revalidate: 0 },
+        },
       },
-    },
-  });
-  return data;
+    });
+    return data;
+  } catch (error) {
+    return null;
+  }
 };
 
 export default getLocationData;

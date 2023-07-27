@@ -6,16 +6,20 @@ const getPrivacyData = async (id, isAr) => {
     id: id,
     site: isAr ? "arabic" : "default",
   };
-  const { data } = await getClient().query({
-    query: privacyQuery(),
-    variables,
-    context: {
-      fetchOptions: {
-        next: { revalidate: 0 },
+  try {
+    const { data } = await getClient().query({
+      query: privacyQuery(),
+      variables,
+      context: {
+        fetchOptions: {
+          next: { revalidate: 0 },
+        },
       },
-    },
-  });
-  return data;
+    });
+    return data;
+  } catch (error) {
+    return null;
+  }
 };
 
 export default getPrivacyData;

@@ -8,16 +8,20 @@ const getHomeData = async (isAr) => {
       : "cda5ec94-a33e-4f57-9eae-dff69cef1cca",
     site: isAr ? "arabic" : "default",
   };
-  const { data } = await getClient().query({
-    query: homeQuery(),
-    variables,
-    context: {
-      fetchOptions: {
-        next: { revalidate: 0 },
+  try {
+    const { data } = await getClient().query({
+      query: homeQuery(),
+      variables,
+      context: {
+        fetchOptions: {
+          next: { revalidate: 0 },
+        },
       },
-    },
-  });
-  return data;
+    });
+    return data;
+  } catch (error) {
+    return null;
+  }
 };
 
 export default getHomeData;

@@ -2,15 +2,19 @@ import { getClient } from "../client";
 import { footerData } from "../queries/navQuery";
 
 const getFooterData = async () => {
-  const { data } = await getClient().query({
-    query: footerData,
-    context: {
-      fetchOptions: {
-        next: { revalidate: 0 },
+  try {
+    const { data } = await getClient().query({
+      query: footerData,
+      context: {
+        fetchOptions: {
+          next: { revalidate: 0 },
+        },
       },
-    },
-  });
-  return data;
+    });
+    return data;
+  } catch (error) {
+    return null;
+  }
 };
 
 export default getFooterData;

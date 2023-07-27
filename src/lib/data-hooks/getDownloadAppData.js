@@ -6,16 +6,20 @@ const getDownloadAppData = async (slug, isAr) => {
     slug: slug,
     site: isAr ? "arabic" : "default",
   };
-  const { data } = await getClient().query({
-    query: downloadAppQuery(),
-    variables,
-    context: {
-      fetchOptions: {
-        next: { revalidate: 0 },
+  try {
+    const { data } = await getClient().query({
+      query: downloadAppQuery(),
+      variables,
+      context: {
+        fetchOptions: {
+          next: { revalidate: 0 },
+        },
       },
-    },
-  });
-  return data;
+    });
+    return data;
+  } catch (error) {
+    return null;
+  }
 };
 
 export default getDownloadAppData;
