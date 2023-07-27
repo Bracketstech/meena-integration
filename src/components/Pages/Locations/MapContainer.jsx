@@ -281,7 +281,6 @@ const MapContainer = ({ arabic, filters, addressContainer }) => {
       }
     });
     setRenderingAddresses(newAddresses);
-    console.log("event");
     if (!searchedValue) {
       handleAddresses(appliedFilters);
     }
