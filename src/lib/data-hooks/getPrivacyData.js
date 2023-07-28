@@ -10,11 +10,11 @@ const getPrivacyData = async (id, isAr) => {
     const { data } = await getClient().query({
       query: privacyQuery(),
       variables,
-      context: {
-        fetchOptions: {
-          next: { revalidate: 0 },
-        },
-      },
+      // context: {
+      //   fetchOptions: {
+      //     next: { revalidate: 0 },
+      //   },
+      // },
     });
     return data;
   } catch (error) {
