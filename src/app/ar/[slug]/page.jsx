@@ -10,7 +10,7 @@ import getPageId from "@/hooks/getPageId";
 
 import getFABData from "@/lib/data-hooks/getFABData";
 
-// export const revalidate = 0;
+export const revalidate = 5;
 
 export async function generateMetadata({ params, searchParams }, parent) {
   // fetch data
