@@ -10,11 +10,11 @@ const getNewsDetails = async (slug, isAr) => {
     const { data } = await getClient().query({
       query: newsDetailQuery(),
       variables,
-      // context: {
-      //   fetchOptions: {
-      //     next: { revalidate: 0 },
-      //   },
-      // },
+      context: {
+        fetchOptions: {
+          next: { revalidate: 0 },
+        },
+      },
     });
     return data;
   } catch (error) {
