@@ -105,7 +105,6 @@ const Form = ({ arabic, title, formContent }) => {
       const headerHeight =
         vw > 1024 ? (vw / 100) * 6 : vw > 640 ? (vw / 100) * 8.0125 : 55;
       let offsetTop = getOffsetTop(firstErrorElement) - headerHeight;
-      console.log(offsetTop);
       // window.scrollTo(0, offsetTop);
       window.scrollTo(0, offsetTop);
     }
