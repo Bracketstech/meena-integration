@@ -5,7 +5,7 @@ import HomePage from "@/components/Pages/Home/Index";
 import ScrollToTop from "@/components/ScrollToTop";
 import getFABData from "@/lib/data-hooks/getFABData";
 import getHomeData from "@/lib/data-hooks/getHomeData";
-// export const revalidate = 5;
+export const revalidate = 5;
 
 export async function generateMetadata({ params, searchParams }, parent) {
   // fetch data

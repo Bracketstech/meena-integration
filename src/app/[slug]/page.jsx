@@ -16,9 +16,7 @@ import getTermsData from "@/lib/data-hooks/getTermsData";
 import getPrivacyData from "@/lib/data-hooks/getPrivacyData";
 import getFABData from "@/lib/data-hooks/getFABData";
 
-// export const revalidate = 5;
-
-export const dynamic = "force-dynamic";
+export const revalidate = 5;
 
 export async function generateMetadata({ params, searchParams }, parent) {
   // fetch data
