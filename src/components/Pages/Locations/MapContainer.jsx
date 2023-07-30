@@ -194,8 +194,10 @@ const MapContainer = ({ arabic, filters, addressContainer }) => {
   };
   const handleNearest = () => {
     navigator.geolocation.getCurrentPosition((position) => {
-      let userLat = parseInt(position.coords.latitude);
-      let userLong = parseInt(position.coords.longitude);
+      console.log(position);
+      let userLat = position.coords.latitude;
+      let userLong = position.coords.longitude;
+      console.log(userLat, userLong);
       let addresses = [
         {
           address: {

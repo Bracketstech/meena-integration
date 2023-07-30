@@ -14,9 +14,7 @@ const Index = ({ arabic, data }) => {
       <section>
         <SubPageHero
           arabic={arabic}
-          title={arabic ? "حول" : "About"}
-          boldtext={arabic ? "التطبيق" : "APP"}
-          markupTitle={data.top_header_content[0].top_header_content}
+          markupTitle={data.top_header_content[0].header_title}
           text={data.top_header_content[0].header_description}
         />
         <PrimaryCare
