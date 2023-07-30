@@ -13,6 +13,7 @@ const MobFilter = ({
   handleSearch,
   scrollTo,
   myMap,
+  isLoadingCurrentLocation,
 }) => {
   return (
     <div className="sm:mb-[14.6341463415vw] lg:hidden block rounded-[3.84615384615vw] overflow-hidden border-[#CECFD0] border-[1px] mt-[16.4102564103vw] sm:mt-[7.31707317073vw] mb-[20.5128205128vw]">
@@ -29,7 +30,11 @@ const MobFilter = ({
               }  hover:opacity-[0.9] sm:w-[24.3902439024vw] sm:h-[6.70731707317vw] sm:text-[1.9512195122vw] sm:leading-[3.41463414634vw]   text-[#FFFFFF] lg:text-[0.9375vw] text-[3.07692307692vw] PingAR-Regular lg:rounded-[1.35416666667vw] rounded-[6.66666666667vw] w-[27.4358974359vw] lg:w-[7.91666666667vw] lg:h-[2.70833333333vw] h-[10.2564102564vw] flex justify-center items-center`}
             >
               <span className="lg:h-[1.19791666667vw] h-[3.58974358974vw] sm:h-[2.92682926829vw]">
-                {arabic ? "مجاور" : "  Nearby"}
+                {isLoadingCurrentLocation
+                  ? "Loading"
+                  : arabic
+                  ? "مجاور"
+                  : "  Nearby"}
               </span>
             </div>
           </div>

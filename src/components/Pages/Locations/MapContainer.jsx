@@ -114,7 +114,8 @@ const MapContainer = ({ arabic, filters, addressContainer }) => {
   const myMap = useRef(null);
   const [renderingAddresses, setRenderingAddresses] = useState([]);
   const [activeMarker, setActiveMarker] = useState(null);
-
+  const [isLoadingCurrentLocation, setIsLoadingCurrentLocation] =
+    useState(false);
   const scrollTo = () => {
     const scrollOptions = {
       behavior: "smooth",
@@ -193,24 +194,29 @@ const MapContainer = ({ arabic, filters, addressContainer }) => {
     handleAddresses(filtersList);
   };
   const handleNearest = () => {
-    navigator.geolocation.getCurrentPosition((position) => {
-      console.log(position);
-      let userLat = position.coords.latitude;
-      let userLong = position.coords.longitude;
-      console.log(userLat, userLong);
-      let addresses = [
-        {
-          address: {
-            position: {
-              lat: userLat,
-              lng: userLong,
+    setIsLoadingCurrentLocation(true);
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        let userLat = position.coords.latitude;
+        let userLong = position.coords.longitude;
+        let addresses = [
+          {
+            address: {
+              position: {
+                lat: userLat,
+                lng: userLong,
+              },
             },
           },
-        },
-      ];
-      settingBounds(isNearestActive ? renderingAddresses : addresses);
-      setIsNearestActive(!isNearestActive);
-    });
+        ];
+        settingBounds(isNearestActive ? renderingAddresses : addresses);
+        setIsNearestActive(!isNearestActive);
+        setIsLoadingCurrentLocation(false);
+      },
+      (error) => {
+        setIsLoadingCurrentLocation(false);
+      }
+    );
   };
 
   const settingBounds = (addresses) => {
@@ -305,6 +311,7 @@ const MapContainer = ({ arabic, filters, addressContainer }) => {
               handleSearch={handleSearch}
               scrollTo={scrollTo}
               myMap={myMap}
+              isLoadingCurrentLocation={isLoadingCurrentLocation}
             >
               <MapComponent
                 arabic={arabic}
@@ -329,6 +336,7 @@ const MapContainer = ({ arabic, filters, addressContainer }) => {
                 isNearestActive={isNearestActive}
                 handleMarkerClick={handleMarkerClick}
                 appliedFilters={appliedFilters}
+                isLoadingCurrentLocation={isLoadingCurrentLocation}
               />
               <DesktopMap arabic={arabic} handleSearch={handleSearch}>
                 <MapComponent

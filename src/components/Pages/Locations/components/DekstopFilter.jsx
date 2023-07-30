@@ -9,6 +9,7 @@ const DekstopFilter = ({
   isNearestActive,
   handleMarkerClick,
   appliedFilters,
+  isLoadingCurrentLocation,
 }) => {
   return (
     <div className="hidden lg:block lg:w-[25vw] bg-[#F0F0F0] lg:overflow-hidden">
@@ -24,7 +25,11 @@ const DekstopFilter = ({
             } text-[#FFFFFF] lg:text-[0.9375vw] cursor-pointer hover:opacity-[0.9] text-[3.07692307692vw] PingAR-Regular lg:rounded-[1.35416666667vw] rounded-[6.66666666667vw] w-[27.4358974359vw] lg:w-[7.91666666667vw] lg:h-[2.70833333333vw] h-[10.2564102564vw] flex justify-center items-center`}
           >
             <span className="lg:h-[1.19791666667vw] h-[3.58974358974vw]">
-              {arabic ? "مجاور" : "  Nearby"}
+              {isLoadingCurrentLocation
+                ? "Loading"
+                : arabic
+                ? "مجاور"
+                : "  Nearby"}
             </span>
           </div>
         </div>
