@@ -185,7 +185,6 @@ const Faq = ({ arabic, questionsCategories, questionsData }) => {
       faq.addEventListener("click", () => {
         const selectedFaq = faq;
         const isActive = selectedFaq.classList.contains("active");
-        console.log(selectedFaq);
         faqEl.forEach((v) => {
           const otherFaq = v;
 

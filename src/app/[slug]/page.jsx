@@ -18,6 +18,8 @@ import getFABData from "@/lib/data-hooks/getFABData";
 
 // export const revalidate = 5;
 
+export const dynamic = "force-dynamic";
+
 export async function generateMetadata({ params, searchParams }, parent) {
   // fetch data
   const { slug } = params;

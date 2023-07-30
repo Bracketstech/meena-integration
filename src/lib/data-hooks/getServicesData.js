@@ -12,7 +12,7 @@ const getServicesData = async (id, isAr) => {
       variables,
       context: {
         fetchOptions: {
-          next: { revalidate: 0 },
+          next: { revalidate: 5 },
         },
       },
     });
