@@ -46,7 +46,8 @@ const MainNews = ({ arabic, data }) => {
               key={index}
               className="flex justify-between items-center flex-col lg:flex-row sm:gap-y-[3.65853658537vw] gap-y-[6.15384615385vw]"
             >
-              <div
+              <Link
+                href={card.slug}
                 data-aos="fade"
                 data-aos-anchor="#feb"
                 data-aos-delay={400}
@@ -77,7 +78,7 @@ const MainNews = ({ arabic, data }) => {
                     strokeWidth={6}
                   />
                 </svg>
-              </div>
+              </Link>
               <div className="text-[#3B3659] lg:w-[32.2916666667vw]">
                 <span
                   data-aos="fade"

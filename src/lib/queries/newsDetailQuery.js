@@ -9,6 +9,12 @@ export const newsDetailQuery = () => {
         slug
         blueprint
         ... on Entry_News_News {
+          seo_title
+          seo_image {
+            path: url
+          }
+          seo_description
+
           title
           thumbnail {
             path: url
