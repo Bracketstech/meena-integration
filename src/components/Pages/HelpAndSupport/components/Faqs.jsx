@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 
-const Faqs = ({ arabic, data, questions }) => {
+const Faqs = ({ arabic, questions, openIndex, setOpenIndex }) => {
+  const handleQuestionClick = (index) => {
+    setOpenIndex((prevIndex) => (prevIndex === index ? null : index));
+  };
+
   return (
     <div className="lg:w-[52.1875vw] w-[88.7179487179vw] mx-[auto] lg:mx-[unset] flex flex-col lg:gap-y-[1.25vw] gap-y-[4.10256410256vw] sm:gap-y-[3.65853658537vw]">
       {questions.length != 0 ? (
         questions.map((question, index) => (
-          <div key={index} className={`faq ${index == 0 ? "active" : ""}`}>
+          <div
+            onClick={() => handleQuestionClick(index)}
+            key={index}
+            className={`faq ${index == openIndex ? "active" : ""}`}
+          >
             <div className="faq__Question">
               <h5 className="PingAR-Medium">{question.title}</h5>
               <svg

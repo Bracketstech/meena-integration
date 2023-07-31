@@ -5,6 +5,7 @@ export const globalQuery = () => {
     query MyQuery($site: String!) {
       globalSEO: globalSet(handle: "seo_global", site: $site) {
         ... on GlobalSet_SeoGlobal {
+          website_general_prefix
           seo_title
           seo_description
           seo_image {

@@ -19,6 +19,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
   } else {
     newImages = [...previousImages];
   }
+
   return {
     title: data?.entry?.seo_title,
     description: data?.entry?.seo_description,

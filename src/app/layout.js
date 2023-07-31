@@ -13,7 +13,10 @@ export async function generateMetadata({ params, searchParams }, parent) {
   const data = await getGlobalMetaData();
   const previousImages = (await parent).openGraph?.images || [];
   return {
-    title: data?.globalSEO.seo_title,
+    title: {
+      default: data?.globalSEO?.seo_title,
+      template: `%s   ${data?.globalSEO?.website_general_prefix}`,
+    },
     description: data?.globalSEO.seo_description,
     openGraph: {
       images: [data?.globalSEO.seo_image?.path, ...previousImages],
