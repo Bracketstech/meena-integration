@@ -21,6 +21,9 @@ export const homeQuery = () => {
             path: url
             extension
           }
+          hero_image_mobile {
+            path: url
+          }
           hero_title
           hero_caption
           company_values {

@@ -21,41 +21,21 @@ export async function generateMetadata({ params, searchParams }, parent) {
   const previousTitle = (await parent).title;
   const previousDescription = (await parent).description;
 
-  if (id === "e9a0fcb1-57be-499d-ae50-ec17fb7bc69a") {
-    let newImages;
-    if (data?.branches?.data?.seo_image?.path) {
-      newImages = [data?.branches?.data?.seo_image?.path, ...previousImages];
-    } else {
-      newImages = [...previousImages];
-    }
-    return {
-      title: data?.branches?.data?.seo_title
-        ? data?.branches?.data?.seo_title
-        : previousTitle,
-      description: data?.branches?.data?.seo_description
-        ? data?.branches?.data?.seo_description
-        : previousDescription,
-      openGraph: {
-        images: [...newImages],
-      },
-    };
+  let newImages;
+  if (data?.entry?.seo_image?.path) {
+    newImages = [data?.entry?.seo_image?.path, ...previousImages];
   } else {
-    let newImages;
-    if (data?.entry?.seo_image?.path) {
-      newImages = [data?.entry?.seo_image?.path, ...previousImages];
-    } else {
-      newImages = [...previousImages];
-    }
-    return {
-      title: data?.entry?.seo_title ? data?.entry?.seo_title : previousTitle,
-      description: data?.entry?.seo_description
-        ? data?.entry?.seo_description
-        : previousDescription,
-      openGraph: {
-        images: [...newImages],
-      },
-    };
+    newImages = [...previousImages];
   }
+  return {
+    title: data?.entry?.seo_title ? data?.entry?.seo_title : previousTitle,
+    description: data?.entry?.seo_description
+      ? data?.entry?.seo_description
+      : previousDescription,
+    openGraph: {
+      images: [...newImages],
+    },
+  };
 }
 
 export default async function Page({ params }) {
@@ -74,7 +54,11 @@ export default async function Page({ params }) {
     case "e9a0fcb1-57be-499d-ae50-ec17fb7bc69a":
       return (
         <>
-          <Locations arabic data={data?.branches?.data} />
+          <Locations
+            aboveMapData={data?.entry}
+            arabic
+            data={data?.branches?.data}
+          />
         </>
       );
     case "e1880864-7e75-491a-a301-fad016620580":

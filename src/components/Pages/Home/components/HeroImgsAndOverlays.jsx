@@ -1,15 +1,16 @@
 import React from "react";
 
-const HeroImgsAndOverlays = ({ img }) => {
+const HeroImgsAndOverlays = ({ img, mobImg }) => {
   return (
     <div className="w-full h-[inherit] lg:h-full absolute top-0 leftRightFixer1">
       <img
+        priority
         src={img}
         alt="hero"
         className="w-full h-full flipped object-cover hidden lg:block"
       />
       <img
-        src={img}
+        src={mobImg}
         alt="hero"
         className="w-full h-full lg:hidden block object-cover object-[-84.6153846154vw]"
       />

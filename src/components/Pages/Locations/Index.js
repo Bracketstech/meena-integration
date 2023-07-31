@@ -6,7 +6,7 @@ import useHeader from "@/hooks/useHeader";
 import useUserTime from "@/hooks/useUserTime";
 import { useEffect, useState } from "react";
 
-const Index = ({ arabic, data }) => {
+const Index = ({ arabic, data, aboveMapData }) => {
   useAnimations();
   useHeader(arabic ? "الاماكن" : "Locations");
   const [addressContainer, setAddressContainer] = useState([]);
@@ -167,13 +167,10 @@ const Index = ({ arabic, data }) => {
 
         <SubPageHero
           arabic={arabic}
-          title={arabic ? "مواقع " : "Meena"}
-          boldtext={arabic ? "مينا" : "locations"}
-          text={
-            arabic
-              ? "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور نكايديديونتيوت لابوري ات"
-              : " Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna"
-          }
+          // title={arabic ? "مواقع " : "Meena"}
+          // boldtext={arabic ? "مينا" : "locations"}
+          markupTitle={aboveMapData?.top_header_content[0].header_title}
+          text={aboveMapData?.top_header_content[0].header_description}
         />
         {addressContainer.length != 0 && (
           <MapContainer

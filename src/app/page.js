@@ -5,6 +5,8 @@ import HomePage from "@/components/Pages/Home/Index";
 import ScrollToTop from "@/components/ScrollToTop";
 import getFABData from "@/lib/data-hooks/getFABData";
 import getHomeData from "@/lib/data-hooks/getHomeData";
+import { Suspense } from "react";
+import Loading from "./loading";
 export const revalidate = 5;
 
 export async function generateMetadata({ params, searchParams }, parent) {
@@ -32,14 +34,16 @@ export default async function Home() {
 
   return (
     <>
-      <div className="ltr">
-        {/* {JSON.stringify(data)} */}
-        <ScrollToTop />
-        <Cta />
-        <Nav home />
-        <HomePage data={data.entry} fabData={fabData} />
-        <Footer />
-      </div>
+      <Suspense fallback={<Loading />}>
+        <div className="ltr">
+          {/* {JSON.stringify(data)} */}
+          <ScrollToTop />
+          <Cta />
+          <Nav home />
+          <HomePage data={data.entry} fabData={fabData} />
+          <Footer />
+        </div>
+      </Suspense>
     </>
   );
 }

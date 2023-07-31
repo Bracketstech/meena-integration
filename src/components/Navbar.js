@@ -66,29 +66,39 @@ export default async function Nav({ arabic, home, id }) {
           </div>
           <div className="hidden lg:flex items-center lg:gap-x-[2.08333333333vw]">
             <ul className="links navList PingAR-Medium lg:text-[1.04166666667vw] lg:leading-[1.45833333333vw] flex items-center lg:gap-x-[2.08333333333vw]">
-              {bottomDataAccordingToSite.map((item) => (
-                <li key={item.page.url}>
-                  <Link href={item.page.url}>{item.page.title}</Link>
-                  <img
-                    src="/images/icons/links-style.svg"
-                    alt="style"
-                    className={
-                      (id == item.page.id && "active") ||
-                      (home && item.page.url == "/")
-                        ? "active"
-                        : home && item.page.url == "/ar" && "active"
-                    }
-                  />
-                </li>
-              ))}
+              {bottomDataAccordingToSite.map((item, index) => {
+                if (index != bottomDataAccordingToSite.length - 1) {
+                  return (
+                    <li key={item.page.url}>
+                      <Link href={item.page.url}>{item.page.title}</Link>
+                      <img
+                        src="/images/icons/links-style.svg"
+                        alt="style"
+                        className={
+                          (id == item.page.id && "active") ||
+                          (home && item.page.url == "/")
+                            ? "active"
+                            : home && item.page.url == "/ar" && "active"
+                        }
+                      />
+                    </li>
+                  );
+                }
+              })}
             </ul>
             <Link
-              href={arabic ? "/ar/about-app" : "/about-app"}
+              href={
+                bottomDataAccordingToSite[bottomDataAccordingToSite.length - 1]
+                  .page.url
+              }
               className="download__App bg-[#845FFF] text-[#FFFFFF] PingAR-Regular text18 lg:rounded-[1.35416666667vw] lg:w-[9.47916666667vw] lg:py-[0.625vw] flex justify-center items-center hover:bg-[#3B3659] transition-all duration-300"
             >
               <span className="relative top-[0.15vw]">
-                {" "}
-                {arabic ? "تحميل التطبيق" : "Download app"}{" "}
+                {
+                  bottomDataAccordingToSite[
+                    bottomDataAccordingToSite.length - 1
+                  ].page.title
+                }
               </span>
             </Link>
           </div>

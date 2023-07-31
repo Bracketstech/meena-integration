@@ -26,7 +26,9 @@ const DekstopFilter = ({
           >
             <span className="lg:h-[1.19791666667vw] h-[3.58974358974vw]">
               {isLoadingCurrentLocation
-                ? "Loading"
+                ? arabic
+                  ? "جاري التحميل"
+                  : "Loading"
                 : arabic
                 ? "مجاور"
                 : "  Nearby"}
