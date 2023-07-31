@@ -35,7 +35,8 @@ const ErrorComponent = ({ arabic }) => {
 
           <Link
             href={arabic ? "/ar" : "/"}
-            className="download__App bg-[#845FFF] px-[16px] lg:px-[1.8vw] mt-[7vw] sm:mt-[1.5vw] text-[#FFFFFF] PingAR-Regular text18 lg:rounded-[1.35416666667vw]  lg:py-[0.625vw]  justify-center items-center hover:bg-[#3B3659] transition-all duration-300"
+            style={{ display: "inline-block" }}
+            className="download__App bg-[#845FFF] px-[24px] sm:px-[30px] lg:px-[1.8vw] mt-[7vw] py-[8px]  sm:mt-[1.5vw] text-[#FFFFFF] PingAR-Regular text18 lg:rounded-[1.35416666667vw]  lg:py-[0.625vw]  justify-center items-center hover:bg-[#3B3659] transition-all duration-300"
           >
             <span className="relative top-[0.15vw]">Go Back to Homepage</span>
           </Link>

@@ -47,7 +47,7 @@ const MainNews = ({ arabic, data }) => {
               className="flex justify-between items-center flex-col lg:flex-row sm:gap-y-[3.65853658537vw] gap-y-[6.15384615385vw]"
             >
               <Link
-                href={card.slug}
+                href={arabic ? "/ar/news/" + card.slug : "/news/" + card.slug}
                 data-aos="fade"
                 data-aos-anchor="#feb"
                 data-aos-delay={400}

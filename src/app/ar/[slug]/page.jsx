@@ -9,6 +9,7 @@ import getData from "@/lib/data-hooks/getData";
 import getPageId from "@/hooks/getPageId";
 
 import getFABData from "@/lib/data-hooks/getFABData";
+import ErrorComponent from "@/components/ErrorComponent";
 
 export const revalidate = 5;
 
@@ -93,6 +94,6 @@ export default async function Page({ params }) {
       );
 
     default:
-      return <h1>Page Not Found {id}</h1>;
+      return <ErrorComponent arabic />;
   }
 }
