@@ -172,13 +172,15 @@ const Index = ({ arabic, data, aboveMapData }) => {
           markupTitle={aboveMapData?.top_header_content[0].header_title}
           text={aboveMapData?.top_header_content[0].header_description}
         />
-        {addressContainer.length != 0 && (
-          <MapContainer
-            addressContainer={addressContainer}
-            filters={filters}
-            arabic={arabic}
-          />
-        )}
+        <div className="min-h-[50vw]">
+          {addressContainer.length != 0 && (
+            <MapContainer
+              addressContainer={addressContainer}
+              filters={filters}
+              arabic={arabic}
+            />
+          )}
+        </div>
       </section>
     </main>
   );

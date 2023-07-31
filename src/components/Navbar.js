@@ -107,21 +107,25 @@ export default async function Nav({ arabic, home, id }) {
       <div className="block lg:hidden sidebar bg-[#3B3659] bg-opacity-[0.9] w-full h-[100vh] absolute top-0 leftRightFixer1 opacity-0">
         <div className="sm:pt-[37.8048780488vw] theekKar w-[90%] mx-[auto] h-full flex flex-col pt-[54.8717948718vw]">
           <ul className="sm:text-[3.41463414634vw] items-start PingAr-Regular links w-full text-white text-[4.87179487179vw] flex flex-col gap-y-[4.10256410256vw]">
-            {bottomDataAccordingToSite.map((item) => (
-              <li key={item.page.url}>
-                <Link href={item.page.url}>{item.page.title}</Link>
-                <img
-                  src="/images/icons/links-style.svg"
-                  alt="style"
-                  className={
-                    (id == item.page.id && "active") ||
-                    (home && item.page.url == "/")
-                      ? "active"
-                      : home && item.page.url == "/ar" && "active"
-                  }
-                />
-              </li>
-            ))}
+            {bottomDataAccordingToSite.map((item) => {
+              if (index != bottomDataAccordingToSite.length - 1) {
+                return (
+                  <li key={item.page.url}>
+                    <Link href={item.page.url}>{item.page.title}</Link>
+                    <img
+                      src="/images/icons/links-style.svg"
+                      alt="style"
+                      className={
+                        (id == item.page.id && "active") ||
+                        (home && item.page.url == "/")
+                          ? "active"
+                          : home && item.page.url == "/ar" && "active"
+                      }
+                    />
+                  </li>
+                );
+              }
+            })}
             {topDataAccordingToSite.map((item) => (
               <li key={item.page.url}>
                 <Link href={item.page.url}>{item.page.title}</Link>
@@ -139,10 +143,18 @@ export default async function Nav({ arabic, home, id }) {
             ))}
           </ul>
           <Link
-            href={arabic ? "/ar/about-app" : "/about-app"}
+            href={
+              bottomDataAccordingToSite[bottomDataAccordingToSite.length - 1]
+                .page.url
+            }
             className="sm:mt-[6.82926829268vw] sm:h-[7.31707317073vw] sm:text-[2.43902439024vw] mt-[12.3076923077vw] bg-[#845FFF] text-white text-[3.84615384615vw] rounded-[7.94871794872vw] w-full h-[10.5128205128vw] flex justify-center items-center"
           >
-            <span> {arabic ? "تحميل التطبيق" : "Download app"} </span>
+            <span>
+              {
+                bottomDataAccordingToSite[bottomDataAccordingToSite.length - 1]
+                  .page.title
+              }{" "}
+            </span>
           </Link>
         </div>
       </div>
