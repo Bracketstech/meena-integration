@@ -107,7 +107,7 @@ export default async function Nav({ arabic, home, id }) {
       <div className="block lg:hidden sidebar bg-[#3B3659] bg-opacity-[0.9] w-full h-[100vh] absolute top-0 leftRightFixer1 opacity-0">
         <div className="sm:pt-[37.8048780488vw] theekKar w-[90%] mx-[auto] h-full flex flex-col pt-[54.8717948718vw]">
           <ul className="sm:text-[3.41463414634vw] items-start PingAr-Regular links w-full text-white text-[4.87179487179vw] flex flex-col gap-y-[4.10256410256vw]">
-            {bottomDataAccordingToSite.map((item) => {
+            {bottomDataAccordingToSite.map((item, index) => {
               if (index != bottomDataAccordingToSite.length - 1) {
                 return (
                   <li key={item.page.url}>
