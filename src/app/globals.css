@@ -1288,3 +1288,24 @@ input[type="number"] {
     row-gap: 16px !important;
   }
 }
+
+.merchomuloader {
+  animation: chupade 1s;
+  position: fixed;
+  pointer-events: none;
+  z-index: 21351234;
+  background-color: #fff;
+  opacity: 0;
+}
+
+@keyframes chupade {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

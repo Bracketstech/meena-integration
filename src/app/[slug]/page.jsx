@@ -16,6 +16,7 @@ import getTermsData from "@/lib/data-hooks/getTermsData";
 import getPrivacyData from "@/lib/data-hooks/getPrivacyData";
 import getFABData from "@/lib/data-hooks/getFABData";
 import ErrorComponent from "@/components/ErrorComponent";
+import Loading from "../loading";
 
 export const revalidate = 5;
 
