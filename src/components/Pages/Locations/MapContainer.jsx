@@ -296,7 +296,7 @@ const MapContainer = ({ arabic, filters, addressContainer }) => {
 
   return (
     <div className="z-[2] lg:w-full w-[88.7179487179vw] mx-[auto] lg:mx-[unset] relative lg:pt-[4.16666666667vw] gap-y-[8.33333333333vw] lg:pb-[10.4166666667vw] flex justify-center items-stretch flex-col lg:flex-row">
-      <div className="flex min-h-[60vh] justify-center lg:h-[50.9895833333vw] items-stretch flex-col lg:flex-row lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw] overflow-hidden">
+      <div className="flex min-h-70vw lg:min-h-[50vw] justify-center lg:h-[50.9895833333vw] items-stretch flex-col lg:flex-row lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw] overflow-hidden">
         {isWindowLoaded ? (
           isMobile ? (
             <MobFilter
