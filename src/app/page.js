@@ -7,7 +7,7 @@ import getFABData from "@/lib/data-hooks/getFABData";
 import getHomeData from "@/lib/data-hooks/getHomeData";
 import { Suspense } from "react";
 import Loading from "./loading";
-export const revalidate = 5;
+export const revalidate = 300;
 
 export async function generateMetadata({ params, searchParams }, parent) {
   // fetch data

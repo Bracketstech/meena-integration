@@ -11,7 +11,7 @@ import getPageId from "@/hooks/getPageId";
 import getFABData from "@/lib/data-hooks/getFABData";
 import ErrorComponent from "@/components/ErrorComponent";
 
-export const revalidate = 5;
+export const revalidate = 300;
 
 export async function generateMetadata({ params, searchParams }, parent) {
   // fetch data
