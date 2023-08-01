@@ -10,7 +10,7 @@ const getDownloadAppData = async (slug, isAr) => {
     const { data } = await getClient().query({
       query: downloadAppQuery(),
       variables,
-      context: { tags: ["revalidationTag"] },
+      // context: { tags: ["revalidationTag"] },
     });
     return data;
   } catch (error) {

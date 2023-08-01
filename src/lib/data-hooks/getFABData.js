@@ -9,7 +9,7 @@ const getFABData = async (isAr) => {
     const { data } = await getClient().query({
       query: fabQuery(),
       variables,
-      context: { tags: ["revalidationTag"] },
+      // context: { tags: ["revalidationTag"] },
     });
     return data;
   } catch (error) {

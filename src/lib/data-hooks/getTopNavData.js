@@ -5,7 +5,7 @@ const getTopNavData = async () => {
   try {
     const { data } = await getClient().query({
       query: topNav,
-      context: { tags: ["revalidationTag"] },
+      // context: { tags: ["revalidationTag"] },
     });
     return data;
   } catch (error) {

@@ -8,7 +8,7 @@ const getGlobalMetaData = async (arabic) => {
     const { data } = await getClient().query({
       query: globalQuery(),
       variables,
-      context: { tags: ["revalidationTag"] },
+      // context: { tags: ["revalidationTag"] },
     });
     return data;
   } catch (error) {

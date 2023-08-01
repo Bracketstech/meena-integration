@@ -7,7 +7,7 @@ const getBottomNavData = async (isAr) => {
     const { data } = await getClient().query({
       query: bottomNav,
       variables,
-      context: { tags: ["revalidationTag"] },
+      // context: { tags: ["revalidationTag"] },
     });
     return data;
   } catch (error) {

@@ -10,7 +10,7 @@ const getServicesData = async (id, isAr) => {
     const { data } = await getClient().query({
       query: servicesQuery(),
       variables,
-      context: { tags: ["revalidationTag"] },
+      // context: { tags: ["revalidationTag"] },
     });
     return data;
   } catch (error) {

@@ -10,7 +10,7 @@ const getNewsDetails = async (slug, isAr) => {
     const { data } = await getClient().query({
       query: newsDetailQuery(),
       variables,
-      context: { tags: ["revalidationTag"] },
+      // context: { tags: ["revalidationTag"] },
     });
     return data;
   } catch (error) {

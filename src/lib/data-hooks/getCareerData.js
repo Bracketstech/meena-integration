@@ -10,7 +10,7 @@ const getCareerData = async (id, isAr) => {
     const { data } = await getClient().query({
       query: careerQuery(),
       variables,
-      context: { tags: ["revalidationTag"] },
+      // context: { tags: ["revalidationTag"] },
     });
     return data;
   } catch (error) {

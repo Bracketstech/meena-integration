@@ -8,7 +8,7 @@ const getNavData = async (arabic) => {
     const { data } = await getClient().query({
       query: nav,
       variables,
-      context: { tags: ["revalidationTag"] },
+      // context: { tags: ["revalidationTag"] },
     });
     return data;
   } catch (error) {
