@@ -125,13 +125,12 @@ const FutureHealthCareSwiper = ({ arabic, title, content }) => {
                     >
                       {item.title}
                     </h4>
-                    <p
+                    <div
                       data-aos="fade-down"
                       data-aos-delay={200}
+                      dangerouslySetInnerHTML={{ __html: item.description }}
                       className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] PingAR-Regular lg:text-[1.14583333333vw] lg:leading-[1.69270833333vw] text-[#505050] text-[3.58974358974vw] leading-[6.08058608059vw] lg:mt-[0.83333333333vw] mt-[2.05128205128vw] sm:text-start text-center"
-                    >
-                      {item.description}
-                    </p>
+                    ></div>
                   </div>
                 </div>
               </SwiperSlide>
