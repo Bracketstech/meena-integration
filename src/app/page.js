@@ -12,6 +12,8 @@ export const revalidate = 300;
 export async function generateMetadata({ params, searchParams }, parent) {
   // fetch data
   const data = await getHomeData();
+  const globalData = await getGlobalMetaData();
+
   const previousImages = (await parent).openGraph?.images || [];
   let newImages;
   if (data?.entry?.seo_image?.path) {
