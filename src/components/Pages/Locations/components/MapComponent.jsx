@@ -98,7 +98,8 @@ const MapComponent = ({
                         </span>
                       </a>
                       <a
-                        href=""
+                        href="https://www.google.com/maps"
+                        target="_blank"
                         className="flex items-start lg:gap-x-[0.625vw] gap-x-[2.22222222222vw]"
                       >
                         <img
