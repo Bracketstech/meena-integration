@@ -10,11 +10,7 @@ const getTermsData = async (id, isAr) => {
     const { data } = await getClient().query({
       query: termsQuery(),
       variables,
-      // context: {
-      //   fetchOptions: {
-      //     next: { revalidate: 0 },
-      //   },
-      // },
+      context: { tags: ["revalidationTag"] },
     });
     return data;
   } catch (error) {

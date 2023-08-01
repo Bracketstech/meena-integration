@@ -10,11 +10,7 @@ const getAboutData = async (id, isAr) => {
     const { data } = await getClient().query({
       query: aboutQuery(),
       variables,
-      // context: {
-      //   fetchOptions: {
-      //     next: { revalidate: 0 },
-      //   },
-      // },
+      context: { tags: ["revalidationTag"] },
     });
     return data;
   } catch (error) {

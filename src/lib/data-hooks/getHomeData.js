@@ -12,11 +12,7 @@ const getHomeData = async (isAr) => {
     const { data } = await getClient().query({
       query: homeQuery(),
       variables,
-      // context: {
-      //   fetchOptions: {
-      //     next: { revalidate: 0 },
-      //   },
-      // },
+      context: { tags: ["revalidationTag"] },
     });
     return data;
   } catch (error) {

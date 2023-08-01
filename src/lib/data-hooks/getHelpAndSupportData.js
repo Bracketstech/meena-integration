@@ -10,11 +10,7 @@ const getHelpAndSupportData = async (id, isAr) => {
     const { data } = await getClient().query({
       query: helpAndSupportQuery(),
       variables,
-      // context: {
-      //   fetchOptions: {
-      //     next: { revalidate: 0 },
-      //   },
-      // },
+      context: { tags: ["revalidationTag"] },
     });
     return data;
   } catch (error) {

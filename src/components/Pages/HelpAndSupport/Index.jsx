@@ -22,6 +22,7 @@ const Index = ({ arabic, data }) => {
       >
         <div
           data-aos="fade-up"
+          id="faqStart"
           className="Container1440 heading54 PingAR-Regular tracking-[unset] text-[#3B3659]"
           dangerouslySetInnerHTML={{ __html: data?.entry?.questions_title }}
         ></div>

@@ -5,11 +5,7 @@ const getFooterData = async () => {
   try {
     const { data } = await getClient().query({
       query: footerData,
-      // context: {
-      //   fetchOptions: {
-      //     next: { revalidate: 0 },
-      //   },
-      // },
+      context: { tags: ["revalidationTag"] },
     });
     return data;
   } catch (error) {

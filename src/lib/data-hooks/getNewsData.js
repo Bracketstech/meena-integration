@@ -12,11 +12,7 @@ const getNewsData = async (id, isAr, current_page, limit) => {
     const { data } = await getClient().query({
       query: newsQuery(),
       variables,
-      // context: {
-      //   fetchOptions: {
-      //     next: { revalidate: 0 },
-      //   },
-      // },
+      context: { tags: ["revalidationTag"] },
     });
     return data;
   } catch (error) {

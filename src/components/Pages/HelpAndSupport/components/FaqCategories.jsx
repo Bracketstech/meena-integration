@@ -1,14 +1,20 @@
+import Link from "next/link";
 import React from "react";
 
-const FaqCategories = ({ arabic, categories, handleClick }) => {
+const FaqCategories = ({ arabic, categories, handleClick, currentSlug }) => {
   return (
     <div className="ml-[5.64102564103vw] pt-[8px] lg:pt-0 pl lg:sticky lg:top-[4.97135416667vw] w-full lg:ml-[unset] lg:w-[15.46875vw] flex flex-row lg:flex-col lg:gap-y-[1.66666666667vw] gap-x-[3.07692307692vw] sm:gap-x-[1.9512195122vw] overflow-scroll lg:overflow-hidden hideScroll">
       {categories?.data.map((category, index) => (
         <div
           key={index}
-          onClick={() => handleClick(category.slug, index)}
+          onClick={() => {
+            window.history.pushState(null, null, `#${category.slug}`);
+            handleClick(category.slug, index);
+          }}
           id={categories.data.length - 1 == index ? "lineanimation2" : ""}
-          className={`question question${index} ${index == 0 ? "active" : ""}`}
+          className={`question question${index} ${
+            category.slug == currentSlug ? "active" : ""
+          }`}
         >
           <h5 className="lg:block hidden PingAR-Medium whitespace-nowrap lg:text-[1.14583333333vw] text-[#b1afbd] lg:leading-[1.5625vw] text-[4.10256410256vw]">
             {category.title}

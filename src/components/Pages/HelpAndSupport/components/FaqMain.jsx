@@ -26,11 +26,14 @@ const Faq = ({ arabic, questionsCategories, questionsData }) => {
     setQuestions(newQuestions);
   };
 
-  const handleCategoryActive = (index) => {
+  const handleCategoryActive = (slug) => {
     document.querySelectorAll(".question").forEach((q, i) => {
-      if (i == index) {
+      if (slug === q.href) {
+        console.log(slug, currentCategory);
         q.classList.add("active");
-      } else q.classList.remove("active");
+      } else {
+        q.classList.remove("active");
+      }
     });
   };
   const handleQuestionActive = (index) => {
@@ -46,15 +49,34 @@ const Faq = ({ arabic, questionsCategories, questionsData }) => {
   const updateData = (newCategory, index) => {
     setCurrentCategory(newCategory);
     updateQuestions(newCategory);
-    handleCategoryActive(index ? index : 0);
+    handleCategoryActive(newCategory);
     handleQuestionActive(index ? index : 0);
     setOpenIndex(0);
   };
 
   useEffect(() => {
+    const hash = window.location.hash;
     let newCategory = questionsCategories?.data[0].slug;
+    if (hash) {
+      newCategory = hash.replace("#", "");
+    } else {
+      newCategory = questionsCategories?.data[0].slug;
+    }
     updateData(newCategory);
   }, []);
+  // useEffect(() => {
+  //   const hash = window.location.hash;
+  //   const vw = window.innerWidth;
+  //   const headerHeight =
+  //     vw > 1024 ? (vw / 100) * 6 : vw > 640 ? (vw / 100) * 8.0125 : 55;
+  //   if (hash) {
+  //     document.getElementById("faqStart").scrollIntoView({
+  //       block: "start", // Align the top of the element to the top of the container
+  //       inline: "nearest",
+  //       offsetTop: -100, // 100px offset from the top
+  //     });
+  //   }
+  // }, [currentCategory]);
 
   return (
     <div className="relative lg:pt-[2.5vw] pt-[6.15384615385vw] lg:pb-[10.41666666666667vw] pb-[20.5128205128vw] sm:pt-[4.87804878049vw] sm:pb-[14.6341463415vw]">
@@ -65,11 +87,12 @@ const Faq = ({ arabic, questionsCategories, questionsData }) => {
           // categories={categories}
           categories={questionsCategories}
           arabic={arabic}
+          currentSlug={currentCategory}
         />
         <Faqs
           setOpenIndex={setOpenIndex}
           openIndex={openIndex}
-          // questions={questions}
+          questions={questions}
           arabic={arabic}
         />
       </div>

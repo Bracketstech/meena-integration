@@ -9,11 +9,7 @@ const getLocationData = async (isAr) => {
     const { data } = await getClient().query({
       query: locationQuery(),
       variables,
-      // context: {
-      //   fetchOptions: {
-      //     next: { revalidate: 0 },
-      //   },
-      // },
+      context: { tags: ["revalidationTag"] },
     });
     return data;
   } catch (error) {
