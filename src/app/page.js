@@ -21,7 +21,10 @@ export async function generateMetadata({ params, searchParams }, parent) {
   }
 
   return {
-    title: data?.entry?.seo_title,
+    title:
+      data?.entry?.seo_title +
+      " " +
+      globalData?.globalSEO?.website_general_prefix,
     description: data?.entry?.seo_description,
     openGraph: {
       images: [...newImages],
