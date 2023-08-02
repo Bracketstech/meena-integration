@@ -10,7 +10,7 @@ import Loading from "./loading";
 import getGlobalMetaData from "@/lib/data-hooks/getGlobalMetaData";
 import ErrorComponent from "@/components/ErrorComponent";
 import { revalidateTime } from "@/lib/client";
-export const revalidate = revalidateTime;
+export const revalidate = 30;
 
 export async function generateMetadata({ params, searchParams }, parent) {
   // fetch data
