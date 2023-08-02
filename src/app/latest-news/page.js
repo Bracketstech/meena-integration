@@ -4,7 +4,8 @@ import Nav from "@/components/Navbar";
 import LatestNewsPage from "@/components/Pages/LatestNews/Index";
 import ScrollToTop from "@/components/ScrollToTop";
 import getNewsData from "@/lib/data-hooks/getNewsData";
-export const revalidate = process.env.REVALIDATION_TIME;
+import { revalidateTime } from "@/lib/client";
+export const revalidate = revalidateTime;
 
 export async function generateMetadata({ params, searchParams }, parent) {
   // fetch data

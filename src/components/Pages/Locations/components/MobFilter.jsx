@@ -211,7 +211,8 @@ const MobFilter = ({
                       </span>
                     </a>
                     <a
-                      href=""
+                      href={`https://maps.google.com/?q=${address.address.position.lat},${address.address.position.lng}`}
+                      target="_blank"
                       className="sm:gap-x-[0.97560975609vw] relative flex items-start gap-x-[2.05128205128vw]"
                     >
                       <img

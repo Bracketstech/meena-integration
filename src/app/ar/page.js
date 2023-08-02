@@ -6,7 +6,8 @@ import ScrollToTop from "@/components/ScrollToTop";
 import getFABData from "@/lib/data-hooks/getFABData";
 import getGlobalMetaData from "@/lib/data-hooks/getGlobalMetaData";
 import getHomeData from "@/lib/data-hooks/getHomeData";
-export const revalidate = process.env.REVALIDATION_TIME;
+import { revalidateTime } from "@/lib/client";
+export const revalidate = revalidateTime;
 
 export async function generateMetadata({ params, searchParams }, parent) {
   // fetch data

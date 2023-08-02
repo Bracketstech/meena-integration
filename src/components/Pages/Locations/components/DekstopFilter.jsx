@@ -133,7 +133,8 @@ const DekstopFilter = ({
                     </span>
                   </a>
                   <a
-                    href=""
+                    href={`https://maps.google.com/?q=${address.address.position.lat},${address.address.position.lng}`}
+                    target="_blank"
                     className="flex relative items-start lg:gap-x-[0.625vw] gap-x-[2.22222222222vw]"
                   >
                     <img

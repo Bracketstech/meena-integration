@@ -9,7 +9,8 @@ import { Suspense } from "react";
 import Loading from "./loading";
 import getGlobalMetaData from "@/lib/data-hooks/getGlobalMetaData";
 import ErrorComponent from "@/components/ErrorComponent";
-export const revalidate = process.env.REVALIDATION_TIME;
+import { revalidateTime } from "@/lib/client";
+export const revalidate = revalidateTime;
 
 export async function generateMetadata({ params, searchParams }, parent) {
   // fetch data
