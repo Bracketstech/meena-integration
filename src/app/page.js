@@ -8,6 +8,7 @@ import getHomeData from "@/lib/data-hooks/getHomeData";
 import { Suspense } from "react";
 import Loading from "./loading";
 import getGlobalMetaData from "@/lib/data-hooks/getGlobalMetaData";
+import ErrorComponent from "@/components/ErrorComponent";
 export const revalidate = 300;
 
 export async function generateMetadata({ params, searchParams }, parent) {
@@ -38,6 +39,10 @@ export async function generateMetadata({ params, searchParams }, parent) {
 export default async function Home() {
   const data = await getHomeData();
   const fabData = await getFABData();
+
+  if (data == "error") {
+    return <ErrorComponent />;
+  }
 
   return (
     <>
