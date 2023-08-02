@@ -46,7 +46,7 @@ const getData = async (id, arabic) => {
       return await getPrivacyData(id, arabic);
 
     default:
-      return <h1>Page Not Found {id}</h1>;
+      return "error";
   }
 };
 

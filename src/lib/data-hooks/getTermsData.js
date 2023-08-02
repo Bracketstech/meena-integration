@@ -14,7 +14,7 @@ const getTermsData = async (id, isAr) => {
     });
     return data;
   } catch (error) {
-    return null;
+    return "error";
   }
 };
 

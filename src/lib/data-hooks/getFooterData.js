@@ -9,7 +9,7 @@ const getFooterData = async () => {
     });
     return data;
   } catch (error) {
-    return null;
+    return "error";
   }
 };
 

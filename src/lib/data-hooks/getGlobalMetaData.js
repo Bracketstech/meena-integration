@@ -12,7 +12,7 @@ const getGlobalMetaData = async (arabic) => {
     });
     return data;
   } catch (error) {
-    return null;
+    return "error";
   }
 };
 

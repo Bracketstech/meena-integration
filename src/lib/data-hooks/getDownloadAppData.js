@@ -14,7 +14,7 @@ const getDownloadAppData = async (slug, isAr) => {
     });
     return data;
   } catch (error) {
-    return null;
+    return "error";
   }
 };
 

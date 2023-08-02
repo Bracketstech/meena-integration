@@ -14,7 +14,7 @@ const getPaginationData = async (pageNo, limit) => {
     });
     return data;
   } catch (error) {
-    return null;
+    return "error";
   }
 };
 

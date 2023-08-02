@@ -9,7 +9,7 @@ const getTopNavData = async () => {
     });
     return data;
   } catch (error) {
-    return null;
+    return "error";
   }
 };
 

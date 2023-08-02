@@ -52,6 +52,10 @@ export default async function Page({ params }) {
   const data = await getData(id);
   const fabData = await getFABData();
 
+  if (data == "error") {
+    return <ErrorComponent />;
+  }
+
   switch (id) {
     case "300942ec-7d92-4f42-b8b2-15250cbf1c04":
       return (

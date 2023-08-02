@@ -16,7 +16,7 @@ const getNewsData = async (id, isAr, current_page, limit) => {
     });
     return data;
   } catch (error) {
-    return null;
+    return "error";
   }
 };
 

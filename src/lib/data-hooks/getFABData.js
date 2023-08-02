@@ -13,7 +13,7 @@ const getFABData = async (isAr) => {
     });
     return data;
   } catch (error) {
-    return null;
+    return "error";
   }
 };
 
