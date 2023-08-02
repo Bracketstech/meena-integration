@@ -29,12 +29,13 @@ export async function generateMetadata({ params, searchParams }, parent) {
   };
 }
 
-if (data == "error") {
-  return <ErrorComponent error />;
-}
 export default async function Article({ params }) {
   const { slug } = params;
   const data = await getNewsDetails(slug);
+
+  if (data == "error") {
+    return <ErrorComponent error />;
+  }
   return (
     <div className="ltr">
       <Cta />
