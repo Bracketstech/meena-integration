@@ -10,4 +10,4 @@ export const { getClient } = registerApolloClient(() => {
   });
 });
 
-export const revalidateTime = 300;
+export const revalidateTime = 120;
