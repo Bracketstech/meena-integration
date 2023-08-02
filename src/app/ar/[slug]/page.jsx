@@ -13,7 +13,7 @@ import getFABData from "@/lib/data-hooks/getFABData";
 import ErrorComponent from "@/components/ErrorComponent";
 
 import { revalidateTime } from "@/lib/client";
-export const revalidate = revalidateTime;
+export const revalidate = 45;
 
 export async function generateMetadata({ params, searchParams }, parent) {
   // fetch data
