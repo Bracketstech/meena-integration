@@ -18,7 +18,7 @@ import getFABData from "@/lib/data-hooks/getFABData";
 import ErrorComponent from "@/components/ErrorComponent";
 import Loading from "../loading";
 
-export const revalidate = 300;
+export const revalidate = process.env.REVALIDATION_TIME;
 
 export async function generateMetadata({ params, searchParams }, parent) {
   // fetch data

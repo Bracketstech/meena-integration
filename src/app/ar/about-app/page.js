@@ -4,7 +4,7 @@ import Nav from "@/components/Navbar";
 import AboutApp from "@/components/Pages/AboutApp/Index";
 import ScrollToTop from "@/components/ScrollToTop";
 import getDownloadAppData from "@/lib/data-hooks/getDownloadAppData";
-export const revalidate = 300;
+export const revalidate = process.env.REVALIDATION_TIME;
 
 export async function generateMetadata({ params, searchParams }, parent) {
   // fetch data

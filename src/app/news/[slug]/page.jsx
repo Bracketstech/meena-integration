@@ -5,7 +5,7 @@ import ArticlePage from "@/components/Pages/Article/Index";
 import ScrollToTop from "@/components/ScrollToTop";
 import getNewsDetails from "@/lib/data-hooks/getNewsDetails";
 
-export const revalidate = 300;
+export const revalidate = process.env.REVALIDATION_TIME;
 
 export async function generateMetadata({ params, searchParams }, parent) {
   // fetch data
