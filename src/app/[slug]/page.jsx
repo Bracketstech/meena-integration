@@ -19,7 +19,7 @@ import ErrorComponent from "@/components/ErrorComponent";
 import Loading from "../loading";
 
 import { revalidateTime } from "@/lib/client";
-export const revalidate = 30;
+export const revalidate = 300;
 
 export async function generateMetadata({ params, searchParams }, parent) {
   // fetch data

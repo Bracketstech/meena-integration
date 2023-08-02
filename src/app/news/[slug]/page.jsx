@@ -6,7 +6,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 import getNewsDetails from "@/lib/data-hooks/getNewsDetails";
 
 import { revalidateTime } from "@/lib/client";
-export const revalidate = 30;
+export const revalidate = 300;
 
 export async function generateMetadata({ params, searchParams }, parent) {
   // fetch data
