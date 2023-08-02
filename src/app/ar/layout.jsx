@@ -9,9 +9,9 @@ export async function generateMetadata({ params, searchParams }, parent) {
       default: data?.globalSEO?.seo_title,
       template: `%s   ${data?.globalSEO?.website_general_prefix}`,
     },
-    description: data?.globalSEO.seo_description,
+    description: data?.globalSEO?.seo_description,
     openGraph: {
-      images: [data?.globalSEO.seo_image?.path, ...previousImages],
+      images: [data?.globalSEO?.seo_image?.path, ...previousImages],
     },
   };
 }

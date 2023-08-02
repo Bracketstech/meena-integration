@@ -22,6 +22,10 @@ export async function generateMetadata({ params, searchParams }, parent) {
   const previousTitle = (await parent).title;
   const previousDescription = (await parent).description;
 
+  if (data == "error") {
+    return <ErrorComponent />;
+  }
+
   let newImages;
   if (data?.entry?.seo_image?.path) {
     newImages = [data?.entry?.seo_image?.path, ...previousImages];

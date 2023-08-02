@@ -24,6 +24,7 @@ const MapComponent = ({
   isNearestActive,
   handleMapClick,
   handleMarkerClick,
+  usersPosition,
 }) => {
   function MapMarkers() {
     const map = useGoogleMap();
@@ -98,7 +99,7 @@ const MapComponent = ({
                         </span>
                       </a>
                       <a
-                        href="https://www.google.com/maps"
+                        href={`https://maps.google.com/?q=${position.lat},${position.lng}`}
                         target="_blank"
                         className="flex items-start lg:gap-x-[0.625vw] gap-x-[2.22222222222vw]"
                       >
@@ -118,22 +119,21 @@ const MapComponent = ({
             </Marker>
           )
         )}
-        {isNearestActive &&
-          currentBounds.map((bound) => (
-            <Marker
-              key={bound.lng}
-              position={bound}
-              // icon={{
-              //   // path: google.maps.SymbolPath.CIRCLE,
-              //   url: "/images/icons/marker.svg",
-              // scale: 7,
-              // }}
-              label={{
-                text: arabic ? "You" : "You",
-                className: "markerLabel",
-              }}
-            />
-          ))}
+        {isNearestActive && (
+          <Marker
+            key={usersPosition.lng}
+            position={usersPosition}
+            // icon={{
+            //   // path: google.maps.SymbolPath.CIRCLE,
+            //   url: "/images/icons/marker.svg",
+            // scale: 7,
+            // }}
+            label={{
+              text: arabic ? "You" : "You",
+              className: "markerLabel",
+            }}
+          />
+        )}
       </>
     );
   }

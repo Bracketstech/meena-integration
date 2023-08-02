@@ -114,6 +114,7 @@ const MapContainer = ({ arabic, filters, addressContainer }) => {
   const myMap = useRef(null);
   const [renderingAddresses, setRenderingAddresses] = useState([]);
   const [activeMarker, setActiveMarker] = useState(null);
+  const [usersPosition, setUsersPosition] = useState({});
   const [isLoadingCurrentLocation, setIsLoadingCurrentLocation] =
     useState(false);
   const scrollTo = () => {
@@ -209,6 +210,8 @@ const MapContainer = ({ arabic, filters, addressContainer }) => {
             },
           },
         ];
+
+        setUsersPosition({ ...addresses[0].address.position });
         settingBounds(isNearestActive ? renderingAddresses : addresses);
         setIsNearestActive(!isNearestActive);
         setIsLoadingCurrentLocation(false);
@@ -242,7 +245,9 @@ const MapContainer = ({ arabic, filters, addressContainer }) => {
   }, []);
   useEffect(() => {
     if (renderingAddresses.length != 0) {
-      settingBounds(renderingAddresses);
+      if (!isNearestActive) {
+        settingBounds(renderingAddresses);
+      }
     }
   }, [renderingAddresses]);
 
@@ -323,6 +328,7 @@ const MapContainer = ({ arabic, filters, addressContainer }) => {
                 handleMapClick={handleMapClick}
                 handleMarkerClick={handleMarkerClick}
                 handleSearch={handleSearch}
+                usersPosition={usersPosition}
               />
             </MobFilter>
           ) : (
@@ -348,6 +354,7 @@ const MapContainer = ({ arabic, filters, addressContainer }) => {
                   setActiveMarker={setActiveMarker}
                   handleMapClick={handleMapClick}
                   handleMarkerClick={handleMarkerClick}
+                  usersPosition={usersPosition}
                 />
               </DesktopMap>
             </>
