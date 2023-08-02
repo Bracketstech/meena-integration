@@ -1,9 +1,9 @@
 import { getClient } from "../client";
 import { downloadAppQuery } from "../queries/downloadAppQuery";
 
-const getDownloadAppData = async (slug, isAr) => {
+const getDownloadAppData = async (id, isAr) => {
   const variables = {
-    slug: slug,
+    id: id,
     site: isAr ? "arabic" : "default",
   };
   try {
