@@ -6,7 +6,8 @@ import ScrollToTop from "@/components/ScrollToTop";
 import getNewsDetails from "@/lib/data-hooks/getNewsDetails";
 
 import { revalidateTime } from "@/lib/client";
-export const revalidate = 300;
+import ErrorComponent from "@/components/ErrorComponent";
+export const revalidate = revalidateTime;
 
 export async function generateMetadata({ params, searchParams }, parent) {
   // fetch data
@@ -28,6 +29,9 @@ export async function generateMetadata({ params, searchParams }, parent) {
   };
 }
 
+if (data == "error") {
+  return <ErrorComponent error />;
+}
 export default async function Article({ params }) {
   const { slug } = params;
   const data = await getNewsDetails(slug);

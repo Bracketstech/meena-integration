@@ -7,7 +7,8 @@ import getFABData from "@/lib/data-hooks/getFABData";
 import getNewsDetails from "@/lib/data-hooks/getNewsDetails";
 
 import { revalidateTime } from "@/lib/client";
-export const revalidate = 300;
+import ErrorComponent from "@/components/ErrorComponent";
+export const revalidate = revalidateTime;
 
 export async function generateMetadata({ params, searchParams }, parent) {
   // fetch data
@@ -37,6 +38,9 @@ export default async function Article({ params }) {
   const { slug } = params;
   const data = await getNewsDetails(slug, "arabic");
   const fabData = await getFABData("ar");
+  if (data == "error") {
+    return <ErrorComponent arabic error />;
+  }
 
   return (
     <div className="rtl">

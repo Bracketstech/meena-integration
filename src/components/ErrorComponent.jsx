@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const ErrorComponent = ({ arabic }) => {
+const ErrorComponent = ({ arabic, data, id, error }) => {
   return (
     <>
       <div className="Container1680 lg:pt-[13.9583333333vw] sm:pt-[24.3902439024vw] pt-[40.7692307692vw] pb-[11vw]">
@@ -20,7 +20,9 @@ const ErrorComponent = ({ arabic }) => {
             />
           </div>
           <h1 className="heading54 PingAR-Regular tracking-[unset] text-[#3B3659]">
-            <span className="PingAR-Bold block lg:h-[2vw] h-[25px]"> 404</span>
+            <span className="PingAR-Bold block lg:h-[2vw] h-[25px]">
+              {error ? 400 : 404}
+            </span>
           </h1>
         </div>
 

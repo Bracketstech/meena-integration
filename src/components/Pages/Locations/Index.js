@@ -50,29 +50,29 @@ const Index = ({ arabic, data, aboveMapData }) => {
     let newAddresses = [];
     data?.forEach((item) => {
       const isClinicOpen = checkingIsClinicOpen(
-        item.working_time[0].from_time,
-        item.working_time[0].to_time
+        item.working_time[0]?.from_time,
+        item.working_time[0]?.to_time
       );
 
-      const startingTime = ampmConvertor(item.working_time[0].from_time);
-      const endingTime = ampmConvertor(item.working_time[0].to_time);
+      const startingTime = ampmConvertor(item?.working_time[0]?.from_time);
+      const endingTime = ampmConvertor(item?.working_time[0]?.to_time);
       const timing =
-        item.working_days_span + ` (${startingTime} - ${endingTime})`;
+        item?.working_days_span + ` (${startingTime} - ${endingTime})`;
       const newAddress = {
         isAr: {
-          title: item.title,
+          title: item?.title,
           timing: timing,
         },
-        title: item.title,
+        title: item?.title,
         timing: timing,
-        phone: item.clinic_phone,
+        phone: item?.clinic_phone,
         isOpen: isClinicOpen,
-        filterId: item.clinic_type[0].title,
+        filterId: item?.clinic_type[0]?.title,
         isActive: false,
         address: {
           position: {
-            lat: +item.coordinates[0].lat,
-            lng: +item.coordinates[0].lng,
+            lat: +item.coordinates[0]?.lat,
+            lng: +item.coordinates[0]?.lng,
           },
         },
       };
@@ -169,8 +169,8 @@ const Index = ({ arabic, data, aboveMapData }) => {
           arabic={arabic}
           // title={arabic ? "مواقع " : "Meena"}
           // boldtext={arabic ? "مينا" : "locations"}
-          markupTitle={aboveMapData?.top_header_content[0].header_title}
-          text={aboveMapData?.top_header_content[0].header_description}
+          markupTitle={aboveMapData?.top_header_content[0]?.header_title}
+          text={aboveMapData?.top_header_content[0]?.header_description}
         />
         <div className="min-h-[50vw]">
           {addressContainer.length != 0 && (

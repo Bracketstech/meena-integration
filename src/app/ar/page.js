@@ -7,7 +7,8 @@ import getFABData from "@/lib/data-hooks/getFABData";
 import getGlobalMetaData from "@/lib/data-hooks/getGlobalMetaData";
 import getHomeData from "@/lib/data-hooks/getHomeData";
 import { revalidateTime } from "@/lib/client";
-export const revalidate = 300;
+import ErrorComponent from "@/components/ErrorComponent";
+export const revalidate = revalidateTime;
 
 export async function generateMetadata({ params, searchParams }, parent) {
   // fetch data
@@ -38,7 +39,9 @@ export async function generateMetadata({ params, searchParams }, parent) {
 export default async function Home() {
   const data = await getHomeData("Ar");
   const fabData = await getFABData("Ar");
-
+  if (data == "error") {
+    return <ErrorComponent arabic error />;
+  }
   return (
     <div className="rtl">
       <ScrollToTop />

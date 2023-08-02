@@ -10,7 +10,7 @@ import Loading from "./loading";
 import getGlobalMetaData from "@/lib/data-hooks/getGlobalMetaData";
 import ErrorComponent from "@/components/ErrorComponent";
 import { revalidateTime } from "@/lib/client";
-export const revalidate = 300;
+export const revalidate = revalidateTime;
 
 export async function generateMetadata({ params, searchParams }, parent) {
   // fetch data
@@ -42,7 +42,7 @@ export default async function Home() {
   const fabData = await getFABData();
 
   if (data == "error") {
-    return <ErrorComponent />;
+    return <ErrorComponent error />;
   }
 
   return (

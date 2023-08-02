@@ -5,7 +5,8 @@ import LatestNewsPage from "@/components/Pages/LatestNews/Index";
 import ScrollToTop from "@/components/ScrollToTop";
 import getNewsData from "@/lib/data-hooks/getNewsData";
 import { revalidateTime } from "@/lib/client";
-export const revalidate = 300;
+import ErrorComponent from "@/components/ErrorComponent";
+export const revalidate = revalidateTime;
 
 export async function generateMetadata({ params, searchParams }, parent) {
   // fetch data
@@ -42,6 +43,9 @@ export default async function LatestNews({ searchParams }) {
     searchParams.page ? +searchParams.page : 1,
     limit
   );
+  if (data == "error") {
+    return <ErrorComponent error />;
+  }
   const numberOfPages = Math.ceil(data.NewsEn.total / limit);
   return (
     <div className="ltr">

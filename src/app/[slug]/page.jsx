@@ -19,7 +19,7 @@ import ErrorComponent from "@/components/ErrorComponent";
 import Loading from "../loading";
 
 import { revalidateTime } from "@/lib/client";
-export const revalidate = 300;
+export const revalidate = revalidateTime;
 
 export async function generateMetadata({ params, searchParams }, parent) {
   // fetch data
@@ -54,7 +54,7 @@ export default async function Page({ params }) {
   const fabData = await getFABData();
 
   if (data == "error") {
-    return <ErrorComponent />;
+    return <ErrorComponent error />;
   }
 
   switch (id) {
