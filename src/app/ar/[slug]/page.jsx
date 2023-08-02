@@ -24,10 +24,6 @@ export async function generateMetadata({ params, searchParams }, parent) {
   const previousTitle = (await parent).title;
   const previousDescription = (await parent).description;
 
-  if (data == "error") {
-    return <ErrorComponent arabic error />;
-  }
-
   let newImages;
   if (data?.entry?.seo_image?.path) {
     newImages = [data?.entry?.seo_image?.path, ...previousImages];
@@ -51,6 +47,9 @@ export default async function Page({ params }) {
   const data = await getData(id, "arabic");
   const fabData = await getFABData("arabic");
 
+  if (data == "error") {
+    return <ErrorComponent arabic error />;
+  }
   switch (id) {
     case "a4ebcba3-3ba6-4d3b-bd01-29ea514119ed":
       return (
