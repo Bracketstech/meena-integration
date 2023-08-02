@@ -98,6 +98,12 @@ export default async function Page({ params }) {
         </>
       );
 
+    case "238442e3-ceb5-4d3b-96eb-ed616380c065":
+      return (
+        <>
+          <AboutApp data={data?.entry} />
+        </>
+      );
     default:
       return <ErrorComponent arabic />;
   }

@@ -1,22 +1,15 @@
+import ErrorComponent from "@/components/ErrorComponent";
 import AboutMeena from "@/components/Pages/AboutMeena/Index";
 import Careers from "@/components/Pages/Careers/Index";
 import HelpAndSupport from "@/components/Pages/HelpAndSupport/Index";
 import Locations from "@/components/Pages/Locations/Index";
-import Services from "@/components/Pages/Services/Index";
-import TermsAndConditions from "@/components/Pages/TermsAndConditions/Index";
 import PrivacyPolicy from "@/components/Pages/PrivacyPolicy/Index";
+import Services from "@/components/Pages/Services/Index";
+import AboutApp from "@/components/Pages/AboutApp/Index";
+import TermsAndConditions from "@/components/Pages/TermsAndConditions/Index";
 import getPageId from "@/hooks/getPageId";
 import getData from "@/lib/data-hooks/getData";
-import getServicesData from "@/lib/data-hooks/getServicesData";
-import getLocationData from "@/lib/data-hooks/getLocationData";
-import getHelpAndSupportData from "@/lib/data-hooks/getHelpAndSupportData";
-import getAboutData from "@/lib/data-hooks/getAboutData";
-import getCareerData from "@/lib/data-hooks/getCareerData";
-import getTermsData from "@/lib/data-hooks/getTermsData";
-import getPrivacyData from "@/lib/data-hooks/getPrivacyData";
 import getFABData from "@/lib/data-hooks/getFABData";
-import ErrorComponent from "@/components/ErrorComponent";
-import Loading from "../loading";
 
 import { revalidateTime } from "@/lib/client";
 export const revalidate = revalidateTime;
@@ -98,6 +91,12 @@ export default async function Page({ params }) {
       return (
         <>
           <PrivacyPolicy data={data?.entry} />
+        </>
+      );
+    case "fd59b077-71ee-4fbf-bc35-d627d367ed6b":
+      return (
+        <>
+          <AboutApp data={data?.entry} />
         </>
       );
 

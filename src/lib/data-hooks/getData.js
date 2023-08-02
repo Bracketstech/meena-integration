@@ -1,5 +1,6 @@
 import getAboutData from "./getAboutData";
 import getCareerData from "./getCareerData";
+import getDownloadAppData from "./getDownloadAppData";
 import getHelpAndSupportData from "./getHelpAndSupportData";
 import getHomeData from "./getHomeData";
 import getLocationData from "./getLocationData";
@@ -23,9 +24,10 @@ const getData = async (id, arabic) => {
       return await getCareerData(id, arabic);
     case "7e1edd52-c907-43c4-8076-36dada4fc25c":
       return await getTermsData(id, arabic);
-
     case "cd61ee96-9117-4b4e-9663-40764ac4ee6f":
       return await getPrivacyData(id, arabic);
+    case "fd59b077-71ee-4fbf-bc35-d627d367ed6b":
+      return await getDownloadAppData(id, arabic);
 
     case "a4ebcba3-3ba6-4d3b-bd01-29ea514119ed":
       return await getServicesData(id, arabic);
@@ -44,6 +46,8 @@ const getData = async (id, arabic) => {
 
     case "291a2fb2-b0ba-4ffd-a670-514e9f6405ff":
       return await getPrivacyData(id, arabic);
+    case "238442e3-ceb5-4d3b-96eb-ed616380c065":
+      return await getDownloadAppData(id, arabic);
 
     default:
       return "error";

@@ -2,8 +2,8 @@ const { gql } = require("@apollo/client");
 
 export const downloadAppQuery = () => {
   const query = gql`
-    query MyQuery($slug: String!, $site: String!) {
-      entry(slug: $slug, site: $site) {
+    query MyQuery($id: String!, $site: String!) {
+      entry(id: $id, site: $site) {
         id
         title
         slug
