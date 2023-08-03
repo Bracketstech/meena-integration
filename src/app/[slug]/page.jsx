@@ -12,7 +12,7 @@ import getData from "@/lib/data-hooks/getData";
 import getFABData from "@/lib/data-hooks/getFABData";
 
 import { revalidateTime } from "@/lib/client";
-export const revalidate = process.env.REVALIDATE_TIME || 300;
+export const revalidate = 300;
 
 export async function generateMetadata({ params, searchParams }, parent) {
   // fetch data
