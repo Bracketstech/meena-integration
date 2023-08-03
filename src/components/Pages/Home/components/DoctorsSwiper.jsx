@@ -46,7 +46,7 @@ const DoctorsSwiper = ({ arabic, title, doctors }) => {
                     <img
                       src={doctor.picture.path}
                       alt={doctor.title}
-                      className="w-full"
+                      className="w-full lg:h-[19.3229166667vw] object-cover sm:h-[45.703125vw] h-[300px]"
                     />
                     <div className="sm:my-[1.46341463415vw] sm:mx-[2.92682926829vw] text-[#3B3659] lg:mx-[1.25vw] lg:mt-[0.625vw] lg:mb-[1.25vw] my-[2.820512820512821vw] mx-[6.153846153846154vw]">
                       <h5 className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw] lg:text-[1.354166666666667vw] lg:leading-[1.979166666666667vw] text-[4.871794871794872vw] leading-[9.743589743589744vw] PingAR-Medium">

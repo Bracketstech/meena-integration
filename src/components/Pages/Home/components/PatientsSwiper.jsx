@@ -41,7 +41,7 @@ const PatientsSwiper = ({ arabic, title, testimonials }) => {
                 {testimonials.map((testimonial, index) => (
                   <SwiperSlide
                     key={testimonial.title + index}
-                    className="swiper-slide lg:rounded-[1.04166666667vw] rounded-[20px] bg-[#F5EBE8]"
+                    className="swiper-slide lg:rounded-[1.04166666667vw] rounded-[20px] bg-[#F5EBE8] flex items-center h-[220px] sm:h-[30.9713541667vw] lg:h-[14.4270833333vw]"
                   >
                     <div
                       className={`sm:w-[78%] sm:py-[3.65853658537vw] text-center ${
@@ -59,14 +59,14 @@ const PatientsSwiper = ({ arabic, title, testimonials }) => {
                             arabic ? "quote-down" : "quote-up"
                           }.svg`}
                           alt="quote"
-                          className="sm:w-[2.43902439024vw] w-[3.58974358974vw] absolute lg:top-[-0.78125vw] top-[-12%] patient__Quoteup lg:w-[0.9895833333333333vw]"
+                          className="sm:w-[2.43902439024vw] w-[3.58974358974vw] absolute lg:top-[-0.78125vw] top-[-6%] patient__Quoteup lg:w-[0.9895833333333333vw]"
                         />
                         <img
                           src={`/images/icons/${
                             arabic ? "quote-up" : "quote-down"
                           }.svg`}
                           alt="quote"
-                          className="sm:w-[2.43902439024vw] sm:bottom-[1.21951219512vw] w-[3.58974358974vw] absolute lg:bottom-[0.15625vw] bottom-[3%] patient__Quotedown lg:w-[0.9895833333333333vw]"
+                          className="sm:w-[2.43902439024vw] sm:bottom-[0.5vw] w-[3.58974358974vw] absolute lg:bottom-[0.15625vw] bottom-[1vw] patient__Quotedown lg:w-[0.9895833333333333vw]"
                         />
                       </div>
                       <span className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw] sm:mt-[1.46341463415vw] lg:text-[1.354166666666667vw] lg:leading-[1.979166666666667vw] text-[4.871794871794872vw] leading-[9.743589743589744vw] PingAR-Medium text-[#3B3659] lg:mt-[0.7291666666666667vw] block mt-[2.222222222222222vw]">

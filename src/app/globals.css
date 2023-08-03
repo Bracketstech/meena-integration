@@ -943,6 +943,9 @@ input[type="number"] {
   }
 }
 @media (max-width: 640px) {
+  .baap .baapkisun {
+    height: 200px;
+  }
   .termsContent li,
   .newsContent li {
     text-indent: 14px;

@@ -222,16 +222,16 @@ cursor-pointer;
     left: 0;
   }
   .ltr .patient__Quoteup {
-    @apply lg:left-[1.09375vw] sm:left-[-3.17073170732vw];
+    @apply lg:left-[1.09375vw] sm:left-[0vw];
   }
   .rtl .patient__Quoteup {
-    @apply lg:right-[1.09375vw] sm:right-[-3.17073170732vw];
+    @apply lg:right-[1.09375vw] sm:right-[0vw];
   }
   .ltr .patient__Quotedown {
-    @apply right-[30%] lg:right-[2.13541666667vw];
+    @apply right-[30%] lg:right-[0];
   }
   .rtl .patient__Quotedown {
-    @apply left-[30%] lg:left-[2.13541666667vw];
+    @apply left-[30%] lg:left-[0];
   }
   .ltr .location__Asterik {
     @apply lg:right-[32.6041666667vw] right-[12.0512820513vw] sm:right-[23.1707317073vw];

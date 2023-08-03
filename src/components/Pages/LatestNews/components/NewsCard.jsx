@@ -56,7 +56,7 @@ const NewsCard = ({
           <img
             src={image}
             alt="card-img"
-            className="w-full lg:h-[20.8333333333vw] h-[280px]  object-cover lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw]"
+            className="w-full baapkisun lg:h-[20.8333333333vw] h-[280px]  object-cover lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw]"
           />
         </Link>
       </div>
@@ -67,7 +67,7 @@ const NewsCard = ({
         <h4 className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw] line_clamp1g lg:text-[1.35416666667vw] lg:leading-[2.1875vw] text-[3.58974358974vw] leading-[5.89743589744vw] PingAR-Medium">
           {heading}
         </h4>
-        <p className="sm:text-[1.82926829268vw] sm:leading-[2.68292682927vw] sm:mt-[1.46341463415vw] line_clamp3g text-[#505050] lg:mt-[0.625vw] line_clamp3 mt-[2.05128205128vw] lg:text-[0.83333333333vw] lg:leading-[1.21527777778vw] text-[3.07692307692vw] leading-[5.38461538462vw] PingAR-Regular">
+        <p className="sm:text-[1.82926829268vw]  lg:min-h-[3.64583333333vw] sm:min-h-[8.04427083333vw] min-h-[60.56px] sm:leading-[2.68292682927vw] sm:mt-[1.46341463415vw] line_clamp3g text-[#505050] lg:mt-[0.625vw] line_clamp3 mt-[2.05128205128vw] lg:text-[0.83333333333vw] lg:leading-[1.21527777778vw] text-[3.07692307692vw] leading-[5.38461538462vw] PingAR-Regular">
           {paragraph}
         </p>
         <Link
