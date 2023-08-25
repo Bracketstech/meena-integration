@@ -28,6 +28,7 @@ const Index = ({ arabic, data }) => {
               title={data.experience_section_title}
               content={data.experience_slider_content}
               arabic={arabic}
+              img={data.experience_slider_main_image.path}
             />
             <OurFeatures
               content={data.other_features_content[0]}

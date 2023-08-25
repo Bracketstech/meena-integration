@@ -1,6 +1,6 @@
 import React from "react";
 
-const Information = ({ arabic, address, email, phone, socialData }) => {
+const Information = ({ arabic, address, email, phone, socialData, bcd }) => {
   return (
     <div className="lg:w-[21.40625vw]">
       <div className="flex flex-col sm:gap-y-[1.70731707317vw] lg:gap-y-[0.98958333333vw] gap-y-[4.10256410256vw] PingAR-Regular text-[#3B3659]">
@@ -51,19 +51,21 @@ const Information = ({ arabic, address, email, phone, socialData }) => {
         </a>
       </div>
       <div>
-        <ul className="footerLinks flex justify-center lg:justify-start items-end lg:gap-x-[1.09375vw] lg:mt-[3.22916666667vw] mt-[8.20512820513vw] gap-x-[3.84615384615vw]">
-          {socialData?.map((item, index) => (
-            <li key={index}>
-              <a href={item?.link}>
-                <img
-                  src={item?.icon_dark?.path}
-                  alt="Social Link"
-                  className="lg:w-[1.5625vw] w-[5.12820512821vw] sm:w-[3.65853658537vw]"
-                />
-              </a>
-            </li>
-          ))}
-        </ul>
+        {bcd || (
+          <ul className="footerLinks flex justify-center lg:justify-start items-end lg:gap-x-[1.09375vw] lg:mt-[3.22916666667vw] mt-[8.20512820513vw] gap-x-[3.84615384615vw]">
+            {socialData?.map((item, index) => (
+              <li key={index}>
+                <a href={item?.link}>
+                  <img
+                    src={item?.icon_dark?.path}
+                    alt="Social Link"
+                    className="lg:w-[1.5625vw] w-[5.12820512821vw] sm:w-[3.65853658537vw]"
+                  />
+                </a>
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
     </div>
   );

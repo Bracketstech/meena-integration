@@ -2,7 +2,7 @@ import React from "react";
 import Information from "./Information";
 import Form from "./Form";
 
-const GetInTouch = ({ arabic, data, socialData, formContent }) => {
+const GetInTouch = ({ arabic, data, socialData, formContent, bcd }) => {
   return (
     <div className="relative">
       <span className="healthCare__Overlay absolute w-full lg:h-[65.0625vw] h-[306.153846154vw] lg:top-[-4.79166666667vw] top-[-14.358974359vw] leftRightFixer1"></span>
@@ -21,6 +21,7 @@ const GetInTouch = ({ arabic, data, socialData, formContent }) => {
             email={data?.contact_us_content[0].email}
             phone={data?.contact_us_content[0].phone_number}
             socialData={socialData}
+            bcd={bcd}
           />
           <Form
             arabic={arabic}

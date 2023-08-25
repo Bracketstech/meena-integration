@@ -5,7 +5,7 @@ import GetInTouch from "./components/GetInTouch";
 import useAnimations from "@/hooks/useAnimations";
 import useHeader from "@/hooks/useHeader";
 
-const Index = ({ arabic, data }) => {
+const Index = ({ arabic, data, bcd }) => {
   useAnimations();
   useHeader(arabic ? "مساعدة الدعم" : "Help & Support");
 
@@ -36,6 +36,7 @@ const Index = ({ arabic, data }) => {
           data={data?.entry}
           socialData={data?.socialMediaData?.social_media_links}
           formContent={data?.contactUsForm}
+          bcd={bcd}
         />
       </div>
     </main>

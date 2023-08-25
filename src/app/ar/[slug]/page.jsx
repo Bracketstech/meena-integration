@@ -13,6 +13,7 @@ import getFABData from "@/lib/data-hooks/getFABData";
 import ErrorComponent from "@/components/ErrorComponent";
 
 import { revalidateTime } from "@/lib/client";
+import getFooterData from "@/lib/data-hooks/getFooterData";
 export const revalidate = 300;
 
 export async function generateMetadata({ params, searchParams }, parent) {
@@ -47,6 +48,10 @@ export default async function Page({ params }) {
   const data = await getData(id, "arabic");
   const fabData = await getFABData("arabic");
 
+  const footerData = await getFooterData();
+
+  const fData = footerData.footerDataAr;
+
   if (data == "error") {
     return <ErrorComponent arabic error />;
   }
@@ -70,7 +75,7 @@ export default async function Page({ params }) {
     case "e1880864-7e75-491a-a301-fad016620580":
       return (
         <>
-          <HelpAndSupport arabic data={data} />
+          <HelpAndSupport arabic data={data} bcd={fData.hide_sm_area} />
         </>
       );
     case "b6f20761-83c3-4cff-8090-aac0b7ab9b9d":

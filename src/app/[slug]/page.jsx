@@ -12,6 +12,7 @@ import getData from "@/lib/data-hooks/getData";
 import getFABData from "@/lib/data-hooks/getFABData";
 
 import { revalidateTime } from "@/lib/client";
+import getFooterData from "@/lib/data-hooks/getFooterData";
 export const revalidate = 300;
 
 export async function generateMetadata({ params, searchParams }, parent) {
@@ -46,6 +47,9 @@ export default async function Page({ params }) {
   const data = await getData(id);
   const fabData = await getFABData();
 
+  const footerData = await getFooterData();
+  const fData = footerData.footerDataEn;
+
   if (data == "error") {
     return <ErrorComponent error />;
   }
@@ -66,7 +70,7 @@ export default async function Page({ params }) {
     case "ab9bc9b1-cd72-42b7-b086-14ea9e1489ff":
       return (
         <>
-          <HelpAndSupport data={data} />
+          <HelpAndSupport data={data} bcd={fData.hide_sm_area} />
         </>
       );
     case "464bc255-fcaa-40f3-a9b3-6dff74e5436b":

@@ -74,7 +74,7 @@ const Footer = async ({ arabic }) => {
                 ))}
               </ul>
             </div>
-            {fData.hide_sm_area && (
+            {fData.hide_sm_area || (
               <div>
                 <h5 className="sm:leading-[3.65853658537vw] sm:text-[2.19512195122vw] PingAR-Medium lg:text-[1.14583333333vw] lg:leading-[1.66666666667vw] leading-[6.15384615385vw] text-[3.846153846153846vw] text-[#E6E7E7] text-center lg:text-start">
                   {fData.follow_us_title}

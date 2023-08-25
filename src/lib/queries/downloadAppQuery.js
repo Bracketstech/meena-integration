@@ -39,6 +39,10 @@ export const downloadAppQuery = () => {
             }
           }
           experience_section_title
+          experience_slider_main_image {
+            path: url
+          }
+
           experience_slider_content {
             main_image {
               path: url

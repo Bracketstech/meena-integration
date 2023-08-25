@@ -336,12 +336,12 @@ cursor-pointer;
   .rtl .about__Asterisk {
     @apply lg:right-[-3.02083333333vw] right-[-7.69230769231vw];
   }
-  .ltr .aboutAppSwiper {
+  /* .ltr .aboutAppSwiper {
     @apply pl-[5.64102564103vw] lg:pl-[unset];
   }
   .rtl .aboutAppSwiper {
     @apply pr-[5.64102564103vw] lg:pr-[unset];
-  }
+  } */
   .ltr .aboutApp__Asterisk {
     @apply lg:right-[3.125vw] sm:right-[4.87804878049vw] right-[7.17948717949vw];
   }
@@ -939,7 +939,7 @@ input[type="number"] {
     display: -webkit-box;
   }
   .aboutAppSwiper .swiper-slide {
-    width: 60vw !important;
+    width: 100% !important;
   }
 }
 @media (max-width: 640px) {
@@ -1149,7 +1149,7 @@ input[type="number"] {
     width: 8.95833333333vw !important;
   }
   .aboutAppSwiper .swiper-slide {
-    width: 75vw !important;
+    width: 100% !important;
   }
   .aboutMeenaSwiper .swiper-button-next,
   .aboutMeenaSwiper .swiper-button-prev {
