@@ -172,15 +172,25 @@ const Index = ({ arabic, data, aboveMapData }) => {
           markupTitle={aboveMapData?.top_header_content[0]?.header_title}
           text={aboveMapData?.top_header_content[0]?.header_description}
         />
-        <div className="min-h-[50vw]">
-          {addressContainer.length != 0 && (
-            <MapContainer
-              addressContainer={addressContainer}
-              filters={filters}
-              arabic={arabic}
+        {aboveMapData.hide_map_section ? (
+          <div className="flex items-center justify-center pb-[10vw] pt-[5vw]">
+            <img
+              src={aboveMapData.coming_soon_image.path}
+              alt="COming SOon"
+              className="w-full md:w-[30vw] "
             />
-          )}
-        </div>
+          </div>
+        ) : (
+          <div className="min-h-[50vw]">
+            {addressContainer.length != 0 && (
+              <MapContainer
+                addressContainer={addressContainer}
+                filters={filters}
+                arabic={arabic}
+              />
+            )}
+          </div>
+        )}
       </section>
     </main>
   );

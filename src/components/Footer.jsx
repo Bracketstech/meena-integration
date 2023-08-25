@@ -74,24 +74,26 @@ const Footer = async ({ arabic }) => {
                 ))}
               </ul>
             </div>
-            <div>
-              <h5 className="sm:leading-[3.65853658537vw] sm:text-[2.19512195122vw] PingAR-Medium lg:text-[1.14583333333vw] lg:leading-[1.66666666667vw] leading-[6.15384615385vw] text-[3.846153846153846vw] text-[#E6E7E7] text-center lg:text-start">
-                {fData.follow_us_title}
-              </h5>
-              <ul className="sm:mt-[1.46341463415vw] sm:gap-x-[2.43902439024vw] leading-[4.87179487179vw] footerLinks flex items-center lg:gap-x-[1.25vw] lg:mt-[0.41666666666vw] mt-[3.076923076923077vw] gap-x-[4.615384615384615vw]">
-                {fData?.social_media_links?.map((item) => (
-                  <li key={item.icon.path}>
-                    <a href={item.link} target="_blank">
-                      <img
-                        src={item.icon.path}
-                        alt="Social Link"
-                        className="sm:w-[3.65853658537vw] lg:w-[1.77083333333vw] w-[6.944444444444444vw]"
-                      />
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            {fData.hide_sm_area && (
+              <div>
+                <h5 className="sm:leading-[3.65853658537vw] sm:text-[2.19512195122vw] PingAR-Medium lg:text-[1.14583333333vw] lg:leading-[1.66666666667vw] leading-[6.15384615385vw] text-[3.846153846153846vw] text-[#E6E7E7] text-center lg:text-start">
+                  {fData.follow_us_title}
+                </h5>
+                <ul className="sm:mt-[1.46341463415vw] sm:gap-x-[2.43902439024vw] leading-[4.87179487179vw] footerLinks flex items-center lg:gap-x-[1.25vw] lg:mt-[0.41666666666vw] mt-[3.076923076923077vw] gap-x-[4.615384615384615vw]">
+                  {fData?.social_media_links?.map((item) => (
+                    <li key={item.icon.path}>
+                      <a href={item.link} target="_blank">
+                        <img
+                          src={item.icon.path}
+                          alt="Social Link"
+                          className="sm:w-[3.65853658537vw] lg:w-[1.77083333333vw] w-[6.944444444444444vw]"
+                        />
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
         </div>
       </div>

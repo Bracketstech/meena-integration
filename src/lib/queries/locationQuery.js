@@ -15,6 +15,11 @@ export const locationQuery = () => {
             path: url
           }
           title
+          hide_map_section
+          coming_soon_image {
+            path: url
+          }
+
           top_header_content {
             header_title
             header_description

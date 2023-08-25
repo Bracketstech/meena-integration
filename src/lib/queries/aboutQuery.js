@@ -16,6 +16,11 @@ export const aboutQuery = () => {
             header_title
             header_description
           }
+          hide_nutshell_section
+          hide_leaders_section
+          hide_cards_section
+          hide_partners_section
+          hide_qualification_seciton
           our_story_content {
             title
             image {

@@ -122,6 +122,8 @@ export const footerData = gql`
           path: url
         }
         description
+        hide_sm_area
+
         follow_us_title
         social_media_links {
           icon {
@@ -138,6 +140,8 @@ export const footerData = gql`
           path: url
         }
         description
+        hide_sm_area
+
         follow_us_title
         social_media_links {
           icon {
