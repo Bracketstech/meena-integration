@@ -9,30 +9,35 @@ const PrimaryCare = ({ arabic, content }) => {
           dangerouslySetInnerHTML={{ __html: content.text_content }}
         ></div>
         <div className="lg:h-[2.86458333333vw] sm:h-[unset] h-[10.7692307692vw] flex sm:gap-x-[1.9512195122vw] lg:gap-x-[1.25vw] gap-x-[4.61538461538vw] lg:mt-[2.5vw] mt-[6.15384615385vw] sm:mt-[2.92682926829vw]">
-          <a
-            data-aos="fade"
-            data-aos-anchor="#finger"
-            data-aos-delay={500}
-            href={content.android_download_link}
-          >
-            <img
-              src={content.android_download_icon.path}
-              alt="google-play"
-              className="lg:w-[9.375vw] w-[35.3846153846vw] h-full sm:w-[18.2926829268vw]"
-            />
-          </a>
-          <a
-            data-aos="fade-up"
-            data-aos-anchor="#finger"
-            data-aos-delay={600}
-            href={content.ios_download_link}
-          >
-            <img
-              src={content.ios_download_icon.path}
-              alt="app-store"
-              className="lg:w-[9.375vw] 4.61538461538w-[35.3846153846vw] h-full sm:w-[18.2926829268vw]"
-            />
-          </a>
+          {content?.android_download_link &&
+            content?.android_download_icon?.path && (
+              <a
+                data-aos="fade"
+                data-aos-anchor="#finger"
+                data-aos-delay={500}
+                href={content.android_download_link}
+              >
+                <img
+                  src={content.android_download_icon.path}
+                  alt="google-play"
+                  className="lg:w-[9.375vw] w-[35.3846153846vw] h-full sm:w-[18.2926829268vw]"
+                />
+              </a>
+            )}
+          {content?.ios_download_link && content?.ios_download_icon?.path && (
+            <a
+              data-aos="fade-up"
+              data-aos-anchor="#finger"
+              data-aos-delay={600}
+              href={content.ios_download_link}
+            >
+              <img
+                src={content.ios_download_icon.path}
+                alt="app-store"
+                className="lg:w-[9.375vw] 4.61538461538w-[35.3846153846vw] h-full sm:w-[18.2926829268vw]"
+              />
+            </a>
+          )}
         </div>
       </div>
       <div
