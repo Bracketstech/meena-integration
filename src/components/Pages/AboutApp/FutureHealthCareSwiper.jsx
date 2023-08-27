@@ -105,13 +105,13 @@ const FutureHealthCareSwiper = ({ arabic, title, content, img }) => {
               >
                 {content.map((item, index) => (
                   <SwiperSlide
-                    key={item.main_image.path}
+                    key={item?.title}
                     className="swiper-slide sm:w-full lg:w-[32.2916666667vw] w-[88.7179487179vw] flex flex-col justify-center items-center lg:items-start"
                   >
                     <img
                       data-aos="fade"
                       data-aos-delay={400}
-                      src={item.icon.path}
+                      src={item?.icon.path}
                       alt="check-board"
                       className="lg:w-[1.97916666667vw] w-[7.94871794872vw] sm:w-[4.26829268293vw]"
                     />
@@ -120,12 +120,12 @@ const FutureHealthCareSwiper = ({ arabic, title, content, img }) => {
                       data-aos-delay={200}
                       className="sm:text-[3.41463414634vw] sm:leading-[5.12195121951vw] sm:mt-[1.9512195122vw] lg:text-[1.875vw] lg:leading-[3.02083333333vw] lg:mt-[1.25vw] mt-[3.07692307692vw] text-[#3B3659] PingAR-Medium text-[4.87179487179vw] leading-[7.69230769231vw]"
                     >
-                      {item.title}
+                      {item?.title}
                     </h4>
                     <div
                       data-aos="fade-down"
                       data-aos-delay={200}
-                      dangerouslySetInnerHTML={{ __html: item.description }}
+                      dangerouslySetInnerHTML={{ __html: item?.description }}
                       className="text-center lg:text-start sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] PingAR-Regular lg:text-[1.14583333333vw] lg:leading-[1.69270833333vw] text-[#505050] text-[3.58974358974vw] leading-[6.08058608059vw] lg:mt-[0.83333333333vw] mt-[2.05128205128vw]  w-[90%] lg:w-[unset]"
                     ></div>
                   </SwiperSlide>

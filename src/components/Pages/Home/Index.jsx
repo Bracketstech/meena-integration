@@ -20,6 +20,7 @@ const HomePage = ({ data, arabic, fabData }) => {
         des={data.hero_caption}
         img={data.hero_image[0].path}
         mobImg={data.hero_image_mobile.path}
+        fabData={fabData}
       />
       <Info
         arabic={arabic}

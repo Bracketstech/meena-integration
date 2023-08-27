@@ -2,7 +2,7 @@ import Link from "next/link";
 import HeroLines from "./HeroLines";
 import HeroImgsAndOverlays from "./HeroImgsAndOverlays";
 
-const Hero = ({ arabic, title, des, img, mobImg }) => {
+const Hero = ({ arabic, title, des, img, mobImg, fabData }) => {
   let imgClasses = arabic
     ? "absolute right-[0vw] top-[19.9vw] w-[21vw]  sm:right-0 sm:w-[12vw] sm:top-[11.2vw]   lg:top-[6.5vw] lg:w-[8vw] object-contain"
     : "absolute right-[6vw] top-[8.9vw] w-[33vw]  sm:right-0 sm:w-[17vw] sm:top-[5vw]   lg:top-[2.9vw] lg:w-[12vw] object-contain";
@@ -33,23 +33,23 @@ const Hero = ({ arabic, title, des, img, mobImg }) => {
                 <Link
                   data-aos="fade"
                   data-aos-delay={200}
-                  href={arabic ? "/ar/about-app" : "/about-app"}
+                  href={fabData?.fab?.app_download}
                   className="anchor1"
                 >
                   <div>
-                    <span>{arabic ? "احصل على التطبيق" : " Get app "}</span>
+                    <span>{fabData?.fab?.app_download_btn_text}</span>
                     <img src="/images/icons/get-app.svg" alt="get-app" />
                   </div>
                 </Link>
                 <a
                   data-aos="fade"
                   data-aos-delay={400}
-                  href="tel:920011111"
+                  href={`tel:${fabData?.fab?.phone}`}
                   className="anchor2"
                 >
                   <div>
                     <span style={{ direction: "ltr" }} className="">
-                      9200 11111
+                      {fabData?.fab?.phone}
                     </span>
                     <img src="/images/icons/phone.svg" alt="phone" />
                   </div>

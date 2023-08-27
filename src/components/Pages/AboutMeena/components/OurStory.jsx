@@ -22,14 +22,14 @@ const OurStory = ({ arabic, data }) => {
             dangerouslySetInnerHTML={{ __html: data.content }}
             className="sm:text-[2.19512195122vw] PingAR-Regular sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] sm:gap-y-[1.46341463415vw] lg:mt-[0.625vw] mt-[3.07692307692vw] text-[#505050] lg:text-[1.14583333333vw] lg:leading-[1.70572916667vw] text-[3.58974358974vw] leading-[6.06837606838vw] flex flex-col lg:gap-y-[0.83333333333vw] gap-y-[3.07692307692vw]"
           ></div>
-          <h5 className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw] sm:mt-[1.46341463415vw] text-[#8450FF] lg:text-[1.35416666667vw] lg:leading-[2.1875vw] text-[4.87179487179vw] leading-[7.69230769231vw] PingAR-Regular lg:mt-[1.25vw] mt-[4.10256410256vw]">
+          {/* <h5 className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw] sm:mt-[1.46341463415vw] text-[#8450FF] lg:text-[1.35416666667vw] lg:leading-[2.1875vw] text-[4.87179487179vw] leading-[7.69230769231vw] PingAR-Regular lg:mt-[1.25vw] mt-[4.10256410256vw]">
             {arabic ? "قابل مينا" : " Meet meena"}
           </h5>
           <p className="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:mt-[0.625vw] mt-[3.07692307692vw] PingAR-Regular text-[#505050] lg:text-[1.14583333333vw] lg:leading-[1.70572916667vw] text-[3.58974358974vw] leading-[6.06837606838vw]">
             {arabic
               ? "نحن نرسم الطريق الواضح لإطلاق العنان لإمكانياتك الكاملة"
               : " We chart the clear path to unlock your full potential"}
-          </p>
+          </p> */}
         </div>
       </div>
       <div

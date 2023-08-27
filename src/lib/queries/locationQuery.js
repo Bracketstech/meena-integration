@@ -2,8 +2,8 @@ const { gql } = require("@apollo/client");
 
 export const locationQuery = () => {
   const query = gql`
-    query MyQuery($site: String!) {
-      entry(id: "b797d4f3-9da1-48c2-9b37-89250fd85a84", site: "default") {
+    query MyQuery($id: String!, $site: String!) {
+      entry(id: $id, site: $site) {
         id
         title
         slug
