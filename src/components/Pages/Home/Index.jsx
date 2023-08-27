@@ -30,6 +30,7 @@ const HomePage = ({ data, arabic, fabData }) => {
         aboutData={data.aboutMeenaSection}
         nutShellTitle={data.nutshellMidValueSectionTitle}
         nutShellFeatures={data.nutshellMidValueSectionFeatures}
+        cta={data?.nutshell_cta_text}
       />
       <section>
         <div>

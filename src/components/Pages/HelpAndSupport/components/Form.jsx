@@ -204,7 +204,7 @@ const Form = ({ arabic, title, formContent }) => {
 
         <button className="sm:mt-[3.05853658537vw] sm:h-[7.31707317073vw] lg:w-[8.22916666667vw] lg:h-[3.22916666667vw] bg-[#8450FF] lg:-[5.20833333333vw] rounded-[7.94871794872vw] h-[9.23076923077vw] w-full lg:mt-[1.26666666667vw] mt-[5.15384615385vw]">
           <span className="sm:text-[1.9512195122vw] lg:text-[0.9375vw] text-[3.07692307692vw] text-[#FFFFFF] PingAR-Regular">
-            {arabic ? "ارسل" : "Submit"}
+            {arabic ? "التقديم" : "Submit"}
           </span>
         </button>
       </form>

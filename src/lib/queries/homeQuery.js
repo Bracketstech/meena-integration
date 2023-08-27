@@ -48,6 +48,7 @@ export const homeQuery = () => {
               extension
             }
           }
+          nutshell_cta_text
           nutshellMidValueSectionTitle: mid_section_title
           nutshellMidValueSectionFeatures: mid_features {
             icon {

@@ -3,7 +3,7 @@ import React from "react";
 import NutShellFeature from "./NutShellFeature";
 import NutShellSvgs from "./NutShellSvgs";
 
-const NutShell = ({ arabic, title, features }) => {
+const NutShell = ({ arabic, title, features, cta }) => {
   return (
     <div className="relative">
       <NutShellSvgs />
@@ -31,7 +31,7 @@ const NutShell = ({ arabic, title, features }) => {
           data-aos="fade-up"
         >
           <span className="lg:h-[1.19791666667vw] sm:h-[2.92682926829vw] h-[3.58974358974vw]">
-            {arabic ? "عرض جميع الخدمات" : "View all services"}
+            {cta}
           </span>
         </Link>
       </div>

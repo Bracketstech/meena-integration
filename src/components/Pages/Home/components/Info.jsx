@@ -10,6 +10,7 @@ const Info = ({
   aboutData,
   nutShellTitle,
   nutShellFeatures,
+  cta,
 }) => {
   return (
     <section>
@@ -26,6 +27,7 @@ const Info = ({
           arabic={arabic}
           title={nutShellTitle}
           features={nutShellFeatures}
+          cta={cta}
         />
       </div>
     </section>
