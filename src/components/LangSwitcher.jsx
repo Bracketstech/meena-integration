@@ -19,11 +19,11 @@ const LangSwitcher = ({ arabic }) => {
   newPath = page ? newPath + "?page=" + page : newPath;
 
   const router = useRouter();
-  const handleLang = () => {
+  const handleLang = (time) => {
     document.getElementById("langToggler").classList.add("active");
     setTimeout(() => {
       router.push(newPath || "/");
-    }, 800);
+    }, time);
   };
   return (
     // <Link href={ newPath || "/" }>{arabic ? "En" : "Ar"}</Link>
@@ -32,25 +32,25 @@ const LangSwitcher = ({ arabic }) => {
       className="flex items-end lg:items-center gap-x-[5vw] sm:gap-x-[2vw]  lg:gap-x-[0.625vw]"
     >
       <span
-        onClick={handleLang}
+        onClick={() => handleLang(800)}
         className="hidden lg:block enToggler cursor-pointer"
       >
         {arabic ? "العربية" : "English"}
       </span>
       <span
-        onClick={handleLang}
+        onClick={() => handleLang(800)}
         className="hidden lg:block toggle cursor-pointer"
       >
         <span> </span>
       </span>
       <span
-        onClick={handleLang}
+        onClick={() => handleLang(800)}
         className="hidden lg:block arToggler cursor-pointer"
       >
         {!arabic ? "العربية" : "English"}
       </span>
       <span
-        onClick={handleLang}
+        onClick={() => handleLang(0)}
         className={`mob__Ar sm:text-[3.41463414634vw] text-[4.61538461538vw] lg:hidden block arToggler cursor-pointer relative ${
           arabic ? "top-[1.5vw]" : "top-[-2px]"
         }`}
