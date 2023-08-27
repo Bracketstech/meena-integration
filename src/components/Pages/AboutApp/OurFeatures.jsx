@@ -66,7 +66,7 @@ const OurFeatures = ({ arabic, content }) => {
           </g>
         </svg>
       </div>
-      <div className="lg:pt-[2.5vw] pt-[6.15384615385vw] sm:pt-[4.87804878049vw] flex items-center justify-between flex-wrap lg:gap-x-[9.58333333333vw] lg:gap-y-[2.8125vw] lg:pb-[10.4166666667vw] pb-[20.5128205128vw] sm:pb-[14.6341463415vw] sm:gap-y-[2.92682926829vw] gap-y-[6.15384615385vw]">
+      <div className="lg:pt-[2.5vw] pt-[6.15384615385vw] sm:pt-[4.87804878049vw] flex items-center justify-between lg:justify-center flex-wrap lg:gap-x-[12vw] lg:gap-y-[2.8125vw] lg:pb-[10.4166666667vw] pb-[20.5128205128vw] sm:pb-[14.6341463415vw] sm:gap-y-[2.92682926829vw] gap-y-[6.15384615385vw]">
         {content.items.map((item, index) => (
           <div
             data-aos="fade"

@@ -62,7 +62,7 @@ export const helpAndSupportQuery = () => {
       questionsCategories: terms(
         taxonomy: "faq_categories"
         filter: { site: $site }
-        sort: ["title asc"]
+        sort: ["id asc"]
       ) {
         current_page
         total
