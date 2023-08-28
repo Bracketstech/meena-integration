@@ -58,9 +58,6 @@ const Faqs = ({ arabic, questions, openIndex, setOpenIndex }) => {
                 dangerouslySetInnerHTML={{ __html: question.content }}
                 className="PingAR-Regular"
               ></div>
-              <a href="google.com" target="_blank">
-                Fuck YOu
-              </a>
             </div>
           </div>
         ))
