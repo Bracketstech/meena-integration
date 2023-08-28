@@ -1015,3 +1015,8 @@ body.active {
   overflow: hidden;
   display: -webkit-box;
 }
+
+.faq__Answer .PingAR-Regular p > a{
+  color: #3b3659;
+  z-index: 1000000;
+}
