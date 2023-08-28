@@ -52,6 +52,7 @@ const PrimaryCare = ({ arabic, content }) => {
           className="absolute lg:w-[16.875vw] w-[35.6102564103vw] top-0 leftRightFixer1"
         />
         <div className="relative z-[2] flex-col lg:gap-y-[0.83333333333vw] flex gap-y-[4.10256410256vw]">
+        {content.feature_on_phone_screen[0].display_text ? (
           <div
             className="sm:w-[38.0487804878vw] sm:h-[11.5853658537vw] Booking bg-[#EBF0F7] lg:rounded-[0.52083333333vw] rounded-[1.53846153846vw] lg:w-[19.7916666667vw] lg:h-[6.25vw] w-[61.5384615385vw] h-[18.4615384615vw] flex items-center sm:gap-x-[1.9512195122vw] lg:gap-x-[0.72916666666vw] gap-x-[3.07692307692vw] justify-start
           lg:px-[1.66666666667vw] px-[4.10256410256vw]"
@@ -65,6 +66,10 @@ const PrimaryCare = ({ arabic, content }) => {
               {content.feature_on_phone_screen[0].display_text}
             </span>
           </div>
+        
+        ) : null}
+        {content.feature_on_phone_screen[1].display_text ? (
+          
           <div
             className="sm:w-[38.0487804878vw] sm:h-[11.5853658537vw] Booking bg-[#D6D1ED] lg:rounded-[0.52083333333vw] rounded-[1.53846153846vw] lg:w-[19.7916666667vw] lg:h-[6.25vw] w-[61.5384615385vw] h-[18.4615384615vw] flex items-center sm:gap-x-[1.9512195122vw] lg:gap-x-[0.72916666666vw] gap-x-[3.07692307692vw] justify-start
           lg:px-[1.66666666667vw] px-[4.10256410256vw]"
@@ -78,6 +83,8 @@ const PrimaryCare = ({ arabic, content }) => {
               {content.feature_on_phone_screen[1].display_text}
             </span>
           </div>
+        
+        ) : null}
         </div>
       </div>
     </div>
