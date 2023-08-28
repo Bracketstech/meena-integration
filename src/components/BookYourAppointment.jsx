@@ -27,7 +27,7 @@ const BookYourAppointment = async ({ arabic, data, fabData }) => {
               <img src="/images/icons/get-app.svg" alt="get-app" />
             </div>
           </Link>
-          <a href={`tel:${fabData?.fab?.phone}`} className="anchor2">
+          <a href={`tel:${fabData?.fab?.phone}`} className="anchor2 hidden">
             <div>
               <span style={{ direction: "ltr" }} className="">
                 {fabData?.fab?.phone}
