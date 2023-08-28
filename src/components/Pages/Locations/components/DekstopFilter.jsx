@@ -118,7 +118,7 @@ const DekstopFilter = ({
                   </div>
                   <a
                     href={`tel:${address.phone}`}
-                    className="flex items-start relative lg:gap-x-[0.625vw] gap-x-[2.22222222222vw]"
+                    className="mobhidden hidden flex items-start relative lg:gap-x-[0.625vw] gap-x-[2.22222222222vw]"
                   >
                     <img
                       src="/images/icons/phone1.svg"

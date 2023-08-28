@@ -33,7 +33,7 @@ const Cta = async ({ arabic }) => {
           </Link>
           <a
             href={`tel:${data?.fab?.phone}`}
-            className="sm:w-[18.2926829268vw] sm:h-[4.63414634146vw] lg:w-[9.375vw] w-[31.2820512821vw] lg:rounded-[31.2820512821vw] rounded-[7.94871794872vw] bg-[#845FFF] lg:h-[2.39583333333vw] h-[8.20512820513vw] flex items-center justify-center"
+            className="mobhidden hidden sm:w-[18.2926829268vw] sm:h-[4.63414634146vw] lg:w-[9.375vw] w-[31.2820512821vw] lg:rounded-[31.2820512821vw] rounded-[7.94871794872vw] bg-[#845FFF] lg:h-[2.39583333333vw] h-[8.20512820513vw] flex items-center justify-center"
           >
             <div className="sm:h-[2.19512195122vw] flex lg:gap-x-[0.41666666666vw] gap-x-[2.05128205128vw] lg:h-[1.04166666667vw]">
               <span

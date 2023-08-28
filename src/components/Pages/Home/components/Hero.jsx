@@ -48,7 +48,7 @@ const Hero = ({ arabic, title, des, img, mobImg, fabData }) => {
                   data-aos="fade"
                   data-aos-delay={400}
                   href={`tel:${fabData?.fab?.phone}`}
-                  className="anchor2"
+                  className="mobhidden hidden anchor2"
                 >
                   <div>
                     <span style={{ direction: "ltr" }} className="">
