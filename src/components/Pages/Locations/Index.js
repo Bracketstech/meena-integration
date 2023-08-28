@@ -179,7 +179,7 @@ const Index = ({ arabic, data, aboveMapData }) => {
             <img
               src={aboveMapData.coming_soon_image.path}
               alt="COming SOon"
-              className="w-full md:w-[30vw] "
+              className="w-full md:w-[90VW] "
             />
           </div>
         ) : (
