@@ -7,13 +7,16 @@ const Hero = ({ arabic, title, des, img, mobImg, fabData }) => {
     ? "absolute right-[0vw] top-[19.9vw] w-[21vw]  sm:right-0 sm:w-[12vw] sm:top-[11.2vw]   lg:top-[6.5vw] lg:w-[8vw] object-contain"
     : "absolute right-[6vw] top-[8.9vw] w-[33vw]  sm:right-0 sm:w-[17vw] sm:top-[5vw]   lg:top-[2.9vw] lg:w-[12vw] object-contain";
 
+    let headingTitle = arabic
+    ? "heading54 leading-normal"
+    : "heading54";
   return (
     <section className="relative">
       <div className="h-[123.333333333vw] heightkhraba lg:h-[56.25vw] flex items-end lg:pb-[18.22916666666667vw] pb-[31.28205128205128vw]">
         <HeroImgsAndOverlays img={img} mobImg={mobImg} />
         <div className="Container1680 relative z-[2] text-white lg:text-[#3B3659]">
           <div className="lg:w-[32.03125vw] sm:w-[46vw]">
-            <h1 id="anchorFOrCards" data-aos="fade-up" className="heading54 leading-normal">
+            <h1 id="anchorFOrCards" data-aos="fade-up" className={headingTitle}>
               {title}
               <img
                 src="/images/icons/links-style3.svg"
