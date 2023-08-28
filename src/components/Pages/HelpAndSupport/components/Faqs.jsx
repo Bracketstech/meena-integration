@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useState } from "react";
 
 const Faqs = ({ arabic, questions, openIndex, setOpenIndex }) => {
@@ -10,11 +11,13 @@ const Faqs = ({ arabic, questions, openIndex, setOpenIndex }) => {
       {questions.length != 0 ? (
         questions.map((question, index) => (
           <div
-            onClick={() => handleQuestionClick(index)}
             key={index}
             className={`faq ${index == openIndex ? "active" : ""}`}
           >
-            <div className="faq__Question">
+            <div
+              className="faq__Question"
+              onClick={() => handleQuestionClick(index)}
+            >
               <h5 className="PingAR-Medium">{question.title}</h5>
               <svg
                 className="sm:w-[3.90243902439vw] sm:min-w-[3.90243902439vw] w-[8.20512820513vw] lg:h-[2.1875vw] lg:w-[2.1875vw] lg:min-w-[2.1875vw] min-w-[8.20512820513vw] transition-all duration-300"
@@ -55,6 +58,9 @@ const Faqs = ({ arabic, questions, openIndex, setOpenIndex }) => {
                 dangerouslySetInnerHTML={{ __html: question.content }}
                 className="PingAR-Regular"
               ></div>
+              <a href="google.com" target="_blank">
+                Fuck YOu
+              </a>
             </div>
           </div>
         ))
