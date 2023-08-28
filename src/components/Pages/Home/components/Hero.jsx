@@ -8,8 +8,8 @@ const Hero = ({ arabic, title, des, img, mobImg, fabData }) => {
     : "absolute right-[6vw] top-[8.9vw] w-[33vw]  sm:right-0 sm:w-[17vw] sm:top-[5vw]   lg:top-[2.9vw] lg:w-[12vw] object-contain";
 
     let headingTitle = arabic
-    ? "heading54 leading-normal"
-    : "heading54";
+    ? "heading54"
+    : "heading54 leading-normal";
   return (
     <section className="relative">
       <div className="h-[123.333333333vw] heightkhraba lg:h-[56.25vw] flex items-end lg:pb-[18.22916666666667vw] pb-[31.28205128205128vw]">
