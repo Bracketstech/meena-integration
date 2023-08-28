@@ -42,7 +42,7 @@ export const helpAndSupportQuery = () => {
           }
         }
       }
-      questions: entries(collection: "faq_question", filter: { site: $site }) {
+      questions: entries(collection: "faq_question", filter: { site: $site }, sort: ["order asc"]) {
         current_page
         total
         per_page
