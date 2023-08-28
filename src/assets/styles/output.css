@@ -7802,3 +7802,9 @@ body.active {
     }
   }
 }
+
+
+.faq__Answer  a{
+  color: #3b3659;
+  z-index: 1000000;
+}
