@@ -13,7 +13,7 @@ const Hero = ({ arabic, title, des, img, mobImg, fabData }) => {
         <HeroImgsAndOverlays img={img} mobImg={mobImg} />
         <div className="Container1680 relative z-[2] text-white lg:text-[#3B3659]">
           <div className="lg:w-[32.03125vw] sm:w-[46vw]">
-            <h1 id="anchorFOrCards" data-aos="fade-up" className="heading54">
+            <h1 id="anchorFOrCards" data-aos="fade-up" className="heading54 leading-normal">
               {title}
               <img
                 src="/images/icons/links-style3.svg"
