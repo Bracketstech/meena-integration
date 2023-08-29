@@ -255,7 +255,7 @@ cursor-pointer;
         lg:leading-[1.82291666667vw]  leading-[6.66666666667vw] text-[4.10256410256vw];
   }
   .faq__Answer {
-    @apply max-h-0 overflow-hidden lg:w-[41.25vw] w-[72.3076923077vw] transition-all duration-[800ms];
+    @apply max-h-0 overflow-hidden lg:w-[41.25vw] w-[72.3076923077vw] transition-all duration-[1200ms];
   }
   .faq__Answer p {
     @apply sm:pt-[0.97560975609vw] lg:pt-[0.83333333333vw] pt-[4.10256410256vw] lg:text-[1.04166666667vw] lg:leading-[1.5625vw] sm:text-[1.9512195122vw] sm:leading-[3.41463414634vw] leading-[6.05128205128vw] text-[3.58974358974vw];
@@ -839,7 +839,7 @@ input[type="number"] {
     background-color: #3b3659;
   }
   .faq.active .faq__Answer {
-    max-height: 102.2820512821vw;
+    max-height: 144.2820512821vw;
   }
   .aboutMeenaSwiper .swiper-button-next,
   .aboutMeenaSwiper .swiper-button-prev {
@@ -992,7 +992,7 @@ input[type="number"] {
     background-color: #3b3659;
   }
   .faq.active .faq__Answer {
-    max-height: 102.2820512821vw;
+    max-height: 144.2820512821vw;
   }
   .aboutMeenaSwiper .swiper-button-next,
   .aboutMeenaSwiper .swiper-button-prev {
@@ -1128,7 +1128,7 @@ input[type="number"] {
     background-color: #3b3659;
   }
   .faq.active .faq__Answer {
-    max-height: 12vw;
+    max-height: 24vw;
   }
   .ltr .aboutMeenaSwiper .swiper-button-next {
     right: 12.5vw !important;
@@ -1313,9 +1313,8 @@ input[type="number"] {
   }
 }
 
-
-.faq__Answer  a{
+.faq__Answer a {
   color: #845fff;
   z-index: 1000000;
-  position: relative
+  position: relative;
 }
