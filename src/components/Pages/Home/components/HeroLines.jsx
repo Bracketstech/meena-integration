@@ -3,10 +3,10 @@ import React from "react";
 const HeroLines = () => {
   return (
     <div>
-      
+
       <svg 
         id="heroLine1"
-        className="absolute hidden lg:block opacity-0 flipped heroLine w-[34.84375vw] leftRightFixer1 bottom-[7.33906249999vw]"
+        className="absolute hidden lg:block opacity-0 flipped heroLine w-[100vw] leftRightFixer1 bottom-[-6vw] left-0 right-0"
       xmlns="http://www.w3.org/2000/svg" width="1925.035" height="1066.303" viewBox="0 0 1925.035 1066.303">
         <path id="Path_104001" data-name="Path 104001" d="M913.05,934.915c-29.955,86.087,9.7,679.258-90,705.582-42.087,11.112-65.9-6.02-65.642-18.778s40-7.545,40-7.545-21.625-32.721-3.546-39.163c6.883-2.524,20.582-1.311,37.5,26.053,38.734,60.111-42.051,270.8-357.216,291.666-346.336,22.93-1283.018-212.1-1480.827,103.186" transform="translate(1009.439 -932.369)" fill="none" stroke="#8450ff" stroke-linecap="round" stroke-width="4"/>
       </svg>
