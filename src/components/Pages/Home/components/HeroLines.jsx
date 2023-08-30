@@ -3,7 +3,7 @@ import React from "react";
 const HeroLines = () => {
   return (
     <div>
-
+ 
       <svg 
         id="heroLine1"
         className="absolute hidden lg:block opacity-0 flipped heroLine w-[100vw] leftRightFixer1 bottom-[-6vw] left-0 right-0"
