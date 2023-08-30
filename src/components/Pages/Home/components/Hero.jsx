@@ -5,7 +5,8 @@ import HeroImgsAndOverlays from "./HeroImgsAndOverlays";
 const Hero = ({ arabic, title, des, img, mobImg, fabData }) => {
   let imgClasses = arabic
     ? "absolute right-[0vw] top-[19.9vw] w-[21vw]  sm:right-0 sm:w-[12vw] sm:top-[11.2vw]   lg:top-[6.5vw] lg:w-[8vw] object-contain"
-    : "absolute left-[0vw] top-[19.9vw] w-[60vw]  sm:right-0 sm:w-[17vw] sm:top-[5vw]   lg:top-[2.9vw] lg:w-[23vw] object-contain";
+    // : "absolute left-[0vw] top-[19.9vw] w-[60vw]  sm:right-0 sm:w-[17vw] sm:top-[5vw]   lg:top-[2.9vw] lg:w-[23vw] object-contain";
+    : "absolute right-[6vw] top-[8.9vw] w-[33vw]  sm:right-0 sm:w-[17vw] sm:top-[5vw]   lg:top-[2.9vw] lg:w-[12vw] object-contain";
 
   let headingTitle = arabic ? "heading54" : "heading54 leading-normal";
   return (
@@ -15,7 +16,7 @@ const Hero = ({ arabic, title, des, img, mobImg, fabData }) => {
         <div className="Container1680 relative z-[2] text-white lg:text-[#3B3659]">
           <div
             className={`${
-              arabic ? "lg:w-[32.03125vw] " : "lg:w-[43.03125vw] "
+              arabic ? "lg:w-[32.03125vw] " : "lg:w-[32.03125vw]"
             } sm:w-[46vw]`}
           >
             <h1 id="anchorFOrCards" data-aos="fade-up" className={headingTitle}>
