@@ -27,7 +27,7 @@ const FutureHealthCareSwiper = ({ arabic, title, content, img }) => {
       {/* Swiper */}
       <div className="lg:pb-[8.4375vw] pb-[15.12820512820513vw] sm:pb-[14.6341463415vw]">
         <div className=" mx-auto ustadakalkaro  lg:w-[75vw] lg:pt-[2.5vw] pt-[6.15384615385vw] lg:pb-[2.91666666667vw] pb-[unset] ">
-          <div className="flex items-stretch justify-center lg:gap-x-[4.21875vw] flex-col lg:flex-row gap-y-[4.10256410256vw]">
+          <div className="flex items-stretch justify-center lg:gap-x-[4.21875vw] flex-col lg:flex-row gap-y-[3.10256410256vw]">
             <div
               data-aos="fade"
               className=" lg:w-[38.4895833333vw] mx-[auto] lg:mx-[unset] w-[90%] lg:rounded-[1.04166666667vw] rounded-[3.84615384615vw] relative"
@@ -101,12 +101,12 @@ const FutureHealthCareSwiper = ({ arabic, title, content, img }) => {
                 modules={[Navigation]}
                 spaceBetween={swiperGap}
                 slidesPerView={slidesPerView}
-                className="swiper lg:pb-[unset] sm:pt-[4.87804878049vw] pb-[8.717948717948718vw]  mySwiper sm:w-full lg:w-[32.2916666667vw] w-[88.7179487179vw] aboutAppSwiper"
+                className="swiper lg:pb-[unset] sm:pt-[4.87804878049vw] pb-[8.717948717948718vw]  mySwiper sm:w-full lg:w-[33.2916666667vw] w-[88.7179487179vw] aboutAppSwiper"
               >
                 {content.map((item, index) => (
                   <SwiperSlide
                     key={item?.title}
-                    className="swiper-slide sm:w-full lg:w-[32.2916666667vw] w-[88.7179487179vw] flex flex-col justify-center items-center lg:items-start"
+                    className="swiper-slide lg:pl-[1vw] sm:w-full lg:w-[32.2916666667vw] w-[88.7179487179vw] flex flex-col justify-center items-center lg:items-start"
                   >
                     <img
                       data-aos="fade"
