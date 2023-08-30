@@ -6,7 +6,7 @@ const Hero = ({ arabic, title, des, img, mobImg, fabData }) => {
   let imgClasses = arabic
     ? "absolute right-[0vw] top-[19.9vw] w-[21vw]  sm:right-0 sm:w-[12vw] sm:top-[11.2vw]   lg:top-[6.5vw] lg:w-[8vw] object-contain"
     // : "absolute left-[0vw] top-[19.9vw] w-[60vw]  sm:right-0 sm:w-[17vw] sm:top-[5vw]   lg:top-[2.9vw] lg:w-[23vw] object-contain";
-    : "absolute right-[28.1vw] top-[19.7vw] w-[61vw]  sm:right-0 sm:w-[17vw] sm:top-[5vw]   lg:top-[7.1vw] lg:w-[23vw] object-contain";
+    : "absolute right-[28.1vw] top-[19.7vw] w-[61vw]  sm:right-[9vw] sm:w-[17vw] sm:top-[5vw]   lg:top-[7.1vw] lg:w-[23vw] object-contain";
 
   let headingTitle = arabic ? "heading54" : "heading54 leading-normal";
   return (
