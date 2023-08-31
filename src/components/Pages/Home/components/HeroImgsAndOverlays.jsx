@@ -7,7 +7,7 @@ const HeroImgsAndOverlays = ({ img, mobImg }) => {
         priority
         src={img}
         alt="hero"
-        className="w-[102%] absolute hero__Img  h-full flipped object-cover hidden lg:block"
+        className="w-full absolute hero__Img  h-full flipped object-cover hidden lg:block"
       />
       <img
         src={mobImg}

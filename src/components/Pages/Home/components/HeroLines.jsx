@@ -28,7 +28,7 @@ const HeroLines = () => {
         />
       </svg>
       <svg
-        className="absolute lg:hidden bottom-0 block  flipped  bottom-[9.51538461538vw] w-[100%] leftRightFixer2"
+        className="absolute lg:hidden bottom-0 block   flipped  bottom-[9.51538461538vw] w-[100%] leftRightFixer2"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 390.15 289.142"
       >

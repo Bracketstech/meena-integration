@@ -306,10 +306,10 @@ cursor-pointer;
     @apply left-0;
   }
   .ltr .hero__Img {
-    @apply left-[-2px];
+    @apply left-0;
   }
   .rtl .hero__Img {
-    @apply right-[-2px];
+    @apply right-0;
   }
   .doctorsSwiper .swiper-button-next,
   .doctorsSwiper .swiper-button-prev,
