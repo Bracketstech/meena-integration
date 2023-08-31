@@ -79,7 +79,7 @@ const Form = ({ arabic, title, formContent }) => {
       if (isVerified) {
         axios
           .post(
-            `https://meenacms.brackets-tech.com/!/forms/contact_us_form`,
+            `https://backend.meena-health.com/!/forms/contact_us_form`,
             {
               ...state,
             },

@@ -5,7 +5,7 @@ export const { getClient } = registerApolloClient(() => {
   return new ApolloClient({
     cache: new InMemoryCache(),
     link: new HttpLink({
-      uri: "https://meenacms.brackets-tech.com/graphql",
+      uri: "https://backend.meena-health.com/graphql",
     }),
   });
 });
