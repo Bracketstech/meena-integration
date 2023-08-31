@@ -4,16 +4,16 @@ import HeroImgsAndOverlays from "./HeroImgsAndOverlays";
 
 const Hero = ({ arabic, title, des, img, mobImg, fabData }) => {
   let imgClasses = arabic
-    ? "absolute right-[0vw] top-[19.9vw] w-[21vw]  sm:right-0 sm:w-[12vw] sm:top-[11.2vw]   lg:top-[6.5vw] lg:w-[8vw] object-contain"
-    // : "absolute left-[0vw] top-[19.9vw] w-[60vw]  sm:right-0 sm:w-[17vw] sm:top-[5vw]   lg:top-[2.9vw] lg:w-[23vw] object-contain";
-    : "absolute right-[28.1vw] top-[19.7vw] w-[61vw]  sm:right-[12vw] sm:w-[34vw] sm:top-[11vw] lg:right-[9vw]  lg:top-[7.1vw] lg:w-[23vw] object-contain";
+    ? "absolute left-[18vw] top-[9vw] w-[21vw]  sm:left-[62px] sm:w-[12vw] sm:top-[5.2vw]  lg:top-[2.5vw] lg:w-[8vw] object-contain"
+    : // : "absolute left-[0vw] top-[19.9vw] w-[60vw]  sm:right-0 sm:w-[17vw] sm:top-[5vw]   lg:top-[2.9vw] lg:w-[23vw] object-contain";
+      "absolute right-[28.1vw] top-[19.7vw] w-[61vw]  sm:right-[12vw] sm:w-[34vw] sm:top-[11vw] lg:right-[9vw]  lg:top-[7.1vw] lg:w-[23vw] object-contain";
 
   let headingTitle = arabic ? "heading54" : "heading54 leading-normal";
   return (
     <section className="relative">
-      <div className="h-[123.333333333vw] heightkhraba lg:h-[56.25vw] flex items-end lg:pb-[18.22916666666667vw] pb-[31.28205128205128vw]">
+      <div className="h-[122.820512821vw] heightkhraba lg:h-[56.25vw] flex items-end lg:pb-[18.22916666666667vw] pb-[18.4615384615vw]">
         <HeroImgsAndOverlays img={img} mobImg={mobImg} />
-        <div className="Container1680 relative z-[2] text-white lg:text-[#3B3659]">
+        <div className="Container1680 relative z-[2] text-[#3B3659]">
           <div
             className={`${
               arabic ? "lg:w-[32.03125vw] " : "lg:w-[32.03125vw]"
@@ -34,7 +34,7 @@ const Hero = ({ arabic, title, des, img, mobImg, fabData }) => {
 
             <div
               data-aos="fade-down"
-              className="sm:mt-[3.65853658537vw] lg:mt-[2.291666666666667vw] mt-[4.10256410256vw]"
+              className="sm:mt-[3.65853658537vw] lg:mt-[2.291666666666667vw] mt-[1.5vw]"
             >
               <p className="sm:text-[2.68292682927vw] sm:leading-[3.90243902439vw] lg:text-[1.354166666666667vw] text-[4.871794871794872vw] lg:leading-[2.1875vw] PingAR-Medium">
                 {des}
