@@ -18,7 +18,7 @@ const HomePage = ({ data, arabic, fabData }) => {
         arabic={arabic}
         title={data.hero_title}
         des={data.hero_caption}
-        img={data.hero_image[0].path}
+        img={data.hero_image.path}
         mobImg={data.hero_image_mobile.path}
         fabData={fabData}
       />
