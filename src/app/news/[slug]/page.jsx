@@ -5,6 +5,7 @@ import ArticlePage from "@/components/Pages/Article/Index";
 import ScrollToTop from "@/components/ScrollToTop";
 import getNewsDetails from "@/lib/data-hooks/getNewsDetails";
 
+
 import { revalidateTime } from "@/lib/client";
 import ErrorComponent from "@/components/ErrorComponent";
 export const revalidate = 300;
