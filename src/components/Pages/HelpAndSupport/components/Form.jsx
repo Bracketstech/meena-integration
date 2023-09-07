@@ -29,11 +29,6 @@ const Form = ({ arabic, title, formContent }) => {
     return emailPattern.test(value);
   };
   function isPositiveTenDigitNumber(number) {
-    // Check if the input is a number and not NaN
-    if (typeof number !== "number" || isNaN(number)) {
-      return false;
-    }
-
     // Check if the number is non-negative
     if (number < 0) {
       return false;
