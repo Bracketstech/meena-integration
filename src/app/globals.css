@@ -652,8 +652,16 @@ body.active {
   opacity: 1;
 }
 
-.error span {
+.error span,
+.emailError .emError,
+.phoneError .phError,
+.messageError .msgError {
   display: block !important;
+}
+.error.emailError .emError,
+.error.phoneError .phError,
+.error.messageError .msgError {
+  display: none !important;
 }
 .Pagination svg {
   transition: all 0.5s;

@@ -28,6 +28,25 @@ const Form = ({ arabic, title, formContent }) => {
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailPattern.test(value);
   };
+  function isPositiveTenDigitNumber(number) {
+    // Check if the input is a number and not NaN
+    if (typeof number !== "number" || isNaN(number)) {
+      return false;
+    }
+
+    // Check if the number is non-negative
+    if (number < 0) {
+      return false;
+    }
+
+    // Convert the number to a string and check its length
+    const numberString = number.toString();
+    if (numberString.length === 10) {
+      return true;
+    }
+
+    return false;
+  }
   function getOffsetTop(element) {
     let offsetTop = 0;
     while (element) {
@@ -65,11 +84,31 @@ const Form = ({ arabic, title, formContent }) => {
               item.parentElement.parentElement.classList.remove("error");
             }, 8000);
           }
-          if (item.type == "email" && !emailIsValid(item.value)) {
+          if (item.id == "email" && !emailIsValid(item.value)) {
             item.parentElement.parentElement.classList.add("emailError");
+
             isNoError = true;
             setTimeout(() => {
               item.parentElement.parentElement.classList.remove("emailError");
+            }, 8000);
+          }
+          if (
+            item.id == "phone_number" &&
+            !isPositiveTenDigitNumber(item.value)
+          ) {
+            item.parentElement.parentElement.classList.add("phoneError");
+
+            isNoError = true;
+            setTimeout(() => {
+              item.parentElement.parentElement.classList.remove("phoneError");
+            }, 8000);
+          }
+          if (item.id == "message" && item.value.length < 3) {
+            item.parentElement.parentElement.classList.add("messageError");
+
+            isNoError = true;
+            setTimeout(() => {
+              item.parentElement.parentElement.classList.remove("messageError");
             }, 8000);
           }
         }
@@ -142,6 +181,11 @@ const Form = ({ arabic, title, formContent }) => {
                   <span className="sm:text-[1.70731707317vw] sm:leading-[1] hidden lg:text-[0.83333333333vw] text-[3.07692307692vw] text-[red]">
                     {arabic ? "هذه الخانة مطلوبه" : "This field is Required"}
                   </span>
+                  <p className="sm:text-[1.70731707317vw] msgError sm:leading-[1] hidden lg:text-[0.83333333333vw] text-[3.07692307692vw] text-[red]">
+                    {arabic
+                      ? "يجب أن تكون الرسالة أكثر من 30 حرفا!"
+                      : "Message should be more than 30 chracters!"}
+                  </p>
                 </div>
               );
             } else if (state[field.handle] != null) {
@@ -171,12 +215,17 @@ const Form = ({ arabic, title, formContent }) => {
                     />
                   </div>
                   <span className="sm:text-[1.70731707317vw] sm:leading-[1] hidden lg:text-[0.83333333333vw] text-[3.07692307692vw] text-[red]">
-                    {arabic ? "هذه الخانة مطلوبه" : "This field is required"}
+                    {arabic ? "هذه الخانة مطلوبه" : "This field is required!"}
                   </span>
-                  <p className="sm:text-[1.70731707317vw] sm:leading-[1] hidden lg:text-[0.83333333333vw] text-[3.07692307692vw] text-[red]">
+                  <p className="sm:text-[1.70731707317vw] emError sm:leading-[1] hidden lg:text-[0.83333333333vw] text-[3.07692307692vw] text-[red]">
                     {arabic
                       ? "البريد الإلكتروني غير صالح!"
                       : "Email is not Valid!"}
+                  </p>
+                  <p className="sm:text-[1.70731707317vw] phError sm:leading-[1] hidden lg:text-[0.83333333333vw] text-[3.07692307692vw] text-[red]">
+                    {arabic
+                      ? "رقم الهاتف غير صالح!"
+                      : "Phone Number is not Valid!"}
                   </p>
                 </div>
               );
