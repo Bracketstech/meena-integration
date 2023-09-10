@@ -54,6 +54,65 @@ const useHeader = (title, home) => {
         <meta name="theme-color" content="#333333" />`;
     }
     // document.querySelector("head title").innerHTML = title;
+
+    // Define the URLs of the external and inline scripts
+
+    // Function to check if an inline script already exists
+    function inlineScriptExists() {
+      const scripts = document.head.getElementsByTagName("script");
+      for (const script of scripts) {
+        if (script.textContent.includes("window.dataLayer")) {
+          return true;
+        }
+      }
+      return false;
+    }
+
+    // Check if the inline script already exists
+    if (!inlineScriptExists()) {
+      // Create a new script element for the inline script
+      const inlineScriptElement = document.createElement("script");
+
+      // Add the inline script content
+      inlineScriptElement.textContent = `
+window.dataLayer = window.dataLayer || [];
+function gtag() {
+  dataLayer.push(arguments);
+}
+gtag("js", new Date());
+gtag("config", "G-2KMQN195TE");
+`;
+
+      // Insert the inline script element at the beginning of the head tag
+      const head = document.head || document.getElementsByTagName("head")[0];
+      head.insertBefore(inlineScriptElement, head.firstChild);
+    }
+
+    const gtmScriptUrl =
+      "https://www.googletagmanager.com/gtag/js?id=G-2KMQN195TE";
+
+    // Function to check if a script with a specific src attribute exists in the head
+    function scriptExists(src) {
+      const scripts = document.head.getElementsByTagName("script");
+      for (const script of scripts) {
+        if (script.src === src) {
+          return true;
+        }
+      }
+      return false;
+    }
+
+    // Check if the external script already exists
+    if (!scriptExists(gtmScriptUrl)) {
+      // Create a new script element for the external script
+      const externalScriptElement = document.createElement("script");
+      externalScriptElement.async = true;
+      externalScriptElement.src = gtmScriptUrl;
+
+      // Insert the external script element at the beginning of the head tag
+      const head = document.head || document.getElementsByTagName("head")[0];
+      head.insertBefore(externalScriptElement, head.firstChild);
+    }
   }, []);
 };
 

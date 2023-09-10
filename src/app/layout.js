@@ -35,8 +35,10 @@ export async function generateMetadata({ params, searchParams }, parent) {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
-      <Script src="https://www.googletagmanager.com/gtag/js?id=G-2KMQN195TE"></Script>
+      {/* <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-2KMQN195TE"
+      ></Script>
       <Script id="trackingscript">
         {`    window.dataLayer = window.dataLayer || [];
           function gtag() {
@@ -45,7 +47,8 @@ export default function RootLayout({ children }) {
           gtag("js", new Date());
           gtag("config", "G-2KMQN195TE");
 `}
-      </Script>
+      </Script> */}
+      <body>{children}</body>
     </html>
   );
 }
