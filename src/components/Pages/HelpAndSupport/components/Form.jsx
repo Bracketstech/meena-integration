@@ -231,7 +231,7 @@ const Form = ({ arabic, title, formContent }) => {
           <ReCAPTCHA
             hl={arabic ? "ar" : "en"}
             ref={captchaRef}
-            sitekey="6LfupdwnAAAAAM6hYGOAXF08ltS9LjxOWVCcsvoP"
+            sitekey="6Lcs_RMoAAAAAGV9EylAxWjOI9xVrsZoA-KsVLig"
             // sitekey="6Le7MFgnAAAAAMjfxdVsrOkEhIB1-R7ugcl4ept6"
             // sitekey="6Les-1QnAAAAAGg82FEaIT2MjE4Di0_oi_McPYd9"
             onChange={handleRecaptchaChange}
