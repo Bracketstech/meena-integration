@@ -70,21 +70,29 @@ const useHeader = (title, home) => {
 
     // Check if the inline script already exists
     if (!inlineScriptExists()) {
+
+      const metaElement = document.createElement("meta");
+      metaElement.name = "google-site-verification";
+      metaElement.content = "sHas6c0W7IzfBOzq4cIoylswRX44DDbLGmYEqXWw09g";
+
       // Create a new script element for the inline script
       const inlineScriptElement = document.createElement("script");
 
       // Add the inline script content
       inlineScriptElement.textContent = `
-window.dataLayer = window.dataLayer || [];
-function gtag() {
-  dataLayer.push(arguments);
-}
-gtag("js", new Date());
-gtag("config", "G-2KMQN195TE");
-`;
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+        gtag("config", "G-2KMQN195TE");
+        `;
 
       // Insert the inline script element at the beginning of the head tag
       const head = document.head || document.getElementsByTagName("head")[0];
+      // head.insertBefore(metaElement, head.firstChild);
+      head.appendChild(metaElement);
+
       head.insertBefore(inlineScriptElement, head.firstChild);
     }
 
