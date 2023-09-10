@@ -1,4 +1,4 @@
-import Nav from "@/components/Navbar";
+import Script from "next/script";
 import "swiper/css";
 import "swiper/css/navigation";
 
@@ -36,6 +36,16 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>{children}</body>
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-2KMQN195TE"></Script>
+      <Script id="trackingscript">
+        {`    window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+          gtag("config", "G-2KMQN195TE");
+`}
+      </Script>
     </html>
   );
 }
