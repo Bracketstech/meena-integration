@@ -4,7 +4,6 @@ const useHeader = (title, home) => {
   useEffect(() => {
     if (home) {
       document.querySelector("head").innerHTML += `
-        <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?
             id=G-2KMQN195TE"></script>
         <script>
@@ -22,8 +21,6 @@ const useHeader = (title, home) => {
           name="viewport"
           content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1"
         />
-        <meta name="googlebot" content="noindex" />
-        <meta name="robots" content="noindex, nofollow" />
         <!-- Styles  -->
         <!-- Primary Meta Tags -->
         <title>${title} || Coming Soon</title>
