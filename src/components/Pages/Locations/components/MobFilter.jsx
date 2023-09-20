@@ -196,7 +196,7 @@ const MobFilter = ({
                     </div>
                     <a
                       href={`tel:${address.phone}`}
-                      className="mobhidden hidden sm:gap-x-[0.97560975609vw] relative flex items-start gap-x-[2.05128205128vw]"
+                      className=" sm:gap-x-[0.97560975609vw] relative flex items-start gap-x-[2.05128205128vw]"
                     >
                       <img
                         src="/images/icons/phone1.svg"

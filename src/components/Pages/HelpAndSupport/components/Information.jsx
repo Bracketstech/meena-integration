@@ -35,7 +35,7 @@ const Information = ({ arabic, address, email, phone, socialData, bcd }) => {
         </a>
         <a
           href={`tel:${phone}`}
-          className="mobhidden hidden flex items-center lg:items-start lg:gap-x-[0.625vw] gap-y-[2.05128205128vw] flex-col lg:flex-row"
+          className=" flex items-center lg:items-start lg:gap-x-[0.625vw] gap-y-[2.05128205128vw] flex-col lg:flex-row"
         >
           <img
             src="/images/icons/mobile.svg"

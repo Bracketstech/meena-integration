@@ -10,6 +10,8 @@ const Info = ({
   aboutData,
   nutShellTitle,
   nutShellFeatures,
+  hideNutshellSection,
+  hideAboutMeenaSection,
   cta,
 }) => {
   return (
@@ -17,18 +19,23 @@ const Info = ({
       <div>
         <AboutMeena
           arabic={arabic}
+          hideAboutMeenaSection={hideAboutMeenaSection}
           companyValues={companyValues}
           title={aboutTitle}
           img={aboutImg}
           data={aboutData}
         />
 
-        <NutShell
-          arabic={arabic}
-          title={nutShellTitle}
-          features={nutShellFeatures}
-          cta={cta}
-        />
+
+        {hideNutshellSection || (
+             <NutShell
+             arabic={arabic}
+             title={nutShellTitle}
+             features={nutShellFeatures}
+             cta={cta}
+           />
+        )}
+       
       </div>
     </section>
   );

@@ -33,6 +33,8 @@ export const homeQuery = () => {
           doctors_section_hide
           section_testimonials_hide
           meena_clinics_section_hide
+          about_meena_section_hide
+          nutshell_section_hide
           hide_section_news
           aboutMeenaSectionTitle: section_title
           aboutMeenaSectionImage: image {

@@ -23,15 +23,19 @@ const HomePage = ({ data, arabic, fabData }) => {
         fabData={fabData}
       />
       <Info
-        arabic={arabic}
-        companyValues={data.company_values}
-        aboutTitle={data.aboutMeenaSectionTitle}
-        aboutImg={data.aboutMeenaSectionImage.path}
-        aboutData={data.aboutMeenaSection}
-        nutShellTitle={data.nutshellMidValueSectionTitle}
-        nutShellFeatures={data.nutshellMidValueSectionFeatures}
-        cta={data?.nutshell_cta_text}
-      />
+          arabic={arabic}
+          hideNutshellSection={data.nutshell_section_hide}
+          hideAboutMeenaSection={data.about_meena_section_hide}
+          companyValues={data.company_values}
+          aboutTitle={data.aboutMeenaSectionTitle}
+          aboutImg={data.aboutMeenaSectionImage.path}
+          aboutData={data.aboutMeenaSection}
+          nutShellTitle={data.nutshellMidValueSectionTitle}
+          nutShellFeatures={data.nutshellMidValueSectionFeatures}
+          cta={data?.nutshell_cta_text}
+        />
+       
+      
       <section>
         <div>
           {data.doctors_section_hide || (

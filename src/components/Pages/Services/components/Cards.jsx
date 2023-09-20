@@ -5,6 +5,7 @@ const Cards = ({ cards }) => {
   return (
     <div className="flex lg:gap-x-[2.5vw] lg:w-[40.625vw] flex-wrap justify-between lg:justify-normal">
       {cards.map((card, index) => (
+      !card.hide_this_service &&(
         <div
           key={card.title}
           data-aos-anchor="#one"
@@ -33,6 +34,8 @@ const Cards = ({ cards }) => {
             </p>
           </div>
         </div>
+  )
+     
       ))}
     </div>
   );

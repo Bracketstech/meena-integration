@@ -24,11 +24,11 @@ const Index = ({ arabic, data, fabData }) => {
         des={data.vertical_carousel_description}
         cards={data.vertical_carousel_content}
       />
-      <Ecosystem
+      { data.nutshell_section_hide || (<Ecosystem
         title={data.nuttshelValuesTitle}
         cards={data.nuttshelValuesFeatures}
         arabic={arabic}
-      />
+      />)}
       <WellBeingPrograms
         data={data.infograph_section_content[0]}
         arabic={arabic}

@@ -21,12 +21,14 @@ export const servicesQuery = () => {
           vertical_carousel_title
           vertical_carousel_description
           vertical_carousel_content {
+            hide_this_service
             image {
               path: url
             }
             title
             description
           }
+          nutshell_section_hide
           nuttshelValuesTitle: section_title
           nuttshelValuesFeatures: features {
             icon {
