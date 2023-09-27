@@ -15,19 +15,19 @@ const PricingAndTiming = ({ data, arabic }) => {
   
               {/* Card for General Practitioner */}
               <div className="card bg-white p-6 rounded-lg shadow-md border-2 border-#845eff w-full md:w-1/2.5 flex flex-col min-w-[10vw] justify-between mb-4 md:mb-0">
-                  <p className="heading30 font-bold text-#845eff text-20px mb-4 ">طبيب عام</p>
+                  <p className="heading30  font-bold text-#845eff text-[1.2vw] mb-4 ">طبيب عام</p>
                   <h2 className="heading54 heading-10 PingAR-Regular tracking-[unset] text-[#3B3659] whitespace-nowrap"><span className="text-lg font-bold">45</span> <span className="text-sm">ريال</span></h2>
               </div>
   
               {/* Card for Specialist */}
               <div className="card bg-white p-6 rounded-lg shadow-md border-2 border-#845eff w-full md:w-1/2.5 flex flex-col min-w-[10vw] justify-between mb-4 md:mb-0">
-                  <p className="heading30 font-bold text-#845eff text-20px mb-4 ">اخصائي</p>
+                  <p className="heading30  font-bold text-#845eff text-[1.2vw] mb-4 ">اخصائي</p>
                   <h2 className="heading54 heading-10 PingAR-Regular tracking-[unset] text-[#3B3659] whitespace-nowrap"><span className="text-lg font-bold">120</span> <span className="text-sm">ريال</span></h2>
               </div>
   
               {/* Card for Consultant */}
               <div className="card bg-white p-6 rounded-lg shadow-md border-2 border-#845eff w-full md:w-1/2.5 flex flex-col min-w-[10vw] justify-between">
-                  <p className="heading30 font-bold text-#845eff text-20px mb-4 ">استشاري</p>
+                  <p className="heading30  font-bold text-#845eff text-[1.2vw] mb-4 ">استشاري</p>
                   <h2 className="heading54 heading-10 PingAR-Regular tracking-[unset] text-[#3B3659] whitespace-nowrap"><span className="text-lg font-bold">150</span> <span className="text-sm">ريال</span></h2>
               </div>
               </div>
@@ -60,34 +60,34 @@ const PricingAndTiming = ({ data, arabic }) => {
       <div className="Container1440 relative z-[2] flex flex-col md:flex-row justify-between items-start gap-6 md:gap-x-[10vw] mx-auto">
           {/* Pricing Section */}
           
-          <div className="w-full md:w-auto">
+          <div className="w-full">
               <div data-aos="fade-up" className="heading54 PingAR-Regular tracking-[unset] text-[#3B3659] mb-6">
                   Pricing
               </div>
               <div className="gap-4 md:gap-x-2 flex flex-col md:flex-row justify-between">
   
               {/* Card for General Practitioner */}
-              <div className="card bg-white p-6 rounded-lg shadow-md border-2 border-#845eff w-full md:w-1/2.5 flex flex-col justify-between mb-4 md:mb-0">
-                  <p className="heading30 font-bold text-#845eff text-20px">General Practitioner</p>
-                  <h2 className="heading54 heading-10 PingAR-Regular tracking-[unset] text-[#3B3659] mb-4 whitespace-nowrap"><span className="text-lg font-bold">45</span> <span className="text-sm">SAR</span></h2>
+              <div className="card bg-white p-6 rounded-lg shadow-md border-2 border-#845eff w-full md:w-1/2.5 flex flex-col min-w-[10vw] justify-between mb-4 md:mb-0">
+                  <p className="heading30  font-bold text-#845eff text-[1.2vw] mb-4 ">General Practitioner</p>
+                  <h2 className="heading54 heading-10 PingAR-Regular tracking-[unset] text-[#3B3659] whitespace-nowrap"><span className="text-lg font-bold">45</span> <span className="text-sm">SAR</span></h2>
               </div>
   
               {/* Card for Specialist */}
-              <div className="card bg-white p-6 rounded-lg shadow-md border-2 border-#845eff w-full md:w-1/2.5 flex flex-col justify-between mb-4 md:mb-0">
-                  <p className="heading30 font-bold text-#845eff text-20px">Specialist</p>
-                  <h2 className="heading54 heading-10 PingAR-Regular tracking-[unset] text-[#3B3659] mb-4 whitespace-nowrap"><span className="text-lg font-bold">120</span> <span className="text-sm">SAR</span></h2>
+              <div className="card bg-white p-6 rounded-lg shadow-md border-2 border-#845eff w-full md:w-1/2.5 flex flex-col min-w-[10vw] justify-between mb-4 md:mb-0">
+                  <p className="heading30  font-bold text-#845eff text-[1.2vw] mb-4 ">Specialist</p>
+                  <h2 className="heading54 heading-10 PingAR-Regular tracking-[unset] text-[#3B3659]  whitespace-nowrap"><span className="text-lg font-bold">120</span> <span className="text-sm">SAR</span></h2>
               </div>
   
               {/* Card for Consultant */}
-              <div className="card bg-white p-6 rounded-lg shadow-md border-2 border-#845eff w-full md:w-1/2.5 flex flex-col justify-between">
-                  <p className="heading30 font-bold text-#845eff text-20px">Consultant</p>
-                  <h2 className="heading54 heading-10 PingAR-Regular tracking-[unset] text-[#3B3659] mb-4 whitespace-nowrap"><span className="text-lg font-bold">150</span> <span className="text-sm">SAR</span></h2>
+              <div className="card bg-white p-6 rounded-lg shadow-md border-2 border-#845eff w-full md:w-1/2.5 flex flex-col min-w-[10vw] justify-between">
+                  <p className="heading30  font-bold text-#845eff text-[1.2vw] mb-4 ">Consultant</p>
+                  <h2 className="heading54 heading-10 PingAR-Regular tracking-[unset] text-[#3B3659]  whitespace-nowrap"><span className="text-lg font-bold">150</span> <span className="text-sm">SAR</span></h2>
               </div>
               </div>
           </div>
   
           {/* Timing Section */}
-          <div className="lg:w-[35vw] w-full mt-6 md:mt-0">
+          <div className="lg:w-[28vw] w-full mt-6 md:mt-0">
               <div data-aos="fade-up" className="heading54 PingAR-Regular tracking-[unset] text-[#3B3659] mb-6">
                   Timing
               </div>
