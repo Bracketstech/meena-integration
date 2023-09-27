@@ -11,6 +11,7 @@ const PricingAndTiming = ({ data, arabic }) => {
               <div data-aos="fade-up" className="heading54 PingAR-Regular tracking-[unset] text-[#3B3659] mb-6">
                   الأسعار
               </div>
+              <p data-aos="fade-down" class="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[1.14583333333vw] lg:leading-[1.74479166667vw] text-[3.58974358974vw] leading-[5.9829059829vw] PingAR-Regular mb-6 text-[#707070] lg:text-[#505050] lg:mt-[1vw] mt-[1.02564102564vw]">استشارة طبية عن بعد</p>
               <div className="gap-4 md:gap-x-2 flex flex-col md:flex-row justify-between">
   
               {/* Card for General Practitioner */}
@@ -64,6 +65,7 @@ const PricingAndTiming = ({ data, arabic }) => {
               <div data-aos="fade-up" className="heading54 PingAR-Regular tracking-[unset] text-[#3B3659] mb-6">
                   Pricing
               </div>
+              <p data-aos="fade-down" class="sm:text-[2.19512195122vw] sm:leading-[3.65853658537vw] sm:mt-[1.46341463415vw] lg:text-[1.14583333333vw] lg:leading-[1.74479166667vw] text-[3.58974358974vw] leading-[5.9829059829vw] PingAR-Regular mb-6 text-[#707070] lg:text-[#505050] lg:mt-[1vw] mt-[1.02564102564vw]">Telemedicine Consultation</p>
               <div className="gap-4 md:gap-x-2 flex flex-col md:flex-row justify-between">
   
               {/* Card for General Practitioner */}
