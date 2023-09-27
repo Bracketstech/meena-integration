@@ -15,19 +15,19 @@ const PricingAndTiming = ({ data, arabic }) => {
   
               {/* Card for General Practitioner */}
               <div className="card bg-white p-6 rounded-lg shadow-md border-2 border-#845eff w-full md:w-1/2.5 flex flex-col min-w-[10vw] justify-between mb-4 md:mb-0">
-                  <p className="heading30  font-bold text-#845eff text-[1.2vw] mb-4 ">طبيب عام</p>
+                  <p className="heading30  font-bold text-#845eff text-[1.2rem] mb-4 ">طبيب عام</p>
                   <h2 className="heading54 heading-10 PingAR-Regular tracking-[unset] text-[#3B3659] whitespace-nowrap"><span className="text-lg font-bold">45</span> <span className="text-sm">ريال</span></h2>
               </div>
   
               {/* Card for Specialist */}
               <div className="card bg-white p-6 rounded-lg shadow-md border-2 border-#845eff w-full md:w-1/2.5 flex flex-col min-w-[10vw] justify-between mb-4 md:mb-0">
-                  <p className="heading30  font-bold text-#845eff text-[1.2vw] mb-4 ">اخصائي</p>
+                  <p className="heading30  font-bold text-#845eff text-[1.2rem] mb-4 ">اخصائي</p>
                   <h2 className="heading54 heading-10 PingAR-Regular tracking-[unset] text-[#3B3659] whitespace-nowrap"><span className="text-lg font-bold">120</span> <span className="text-sm">ريال</span></h2>
               </div>
   
               {/* Card for Consultant */}
               <div className="card bg-white p-6 rounded-lg shadow-md border-2 border-#845eff w-full md:w-1/2.5 flex flex-col min-w-[10vw] justify-between">
-                  <p className="heading30  font-bold text-#845eff text-[1.2vw] mb-4 ">استشاري</p>
+                  <p className="heading30  font-bold text-#845eff text-[1.2rem] mb-4 ">استشاري</p>
                   <h2 className="heading54 heading-10 PingAR-Regular tracking-[unset] text-[#3B3659] whitespace-nowrap"><span className="text-lg font-bold">150</span> <span className="text-sm">ريال</span></h2>
               </div>
               </div>
@@ -68,19 +68,19 @@ const PricingAndTiming = ({ data, arabic }) => {
   
               {/* Card for General Practitioner */}
               <div className="card bg-white p-6 rounded-lg shadow-md border-2 border-#845eff w-full md:w-1/2.5 flex flex-col min-w-[10vw] justify-between mb-4 md:mb-0">
-                  <p className="heading30  font-bold text-#845eff text-[1.2vw] mb-4 ">General Practitioner</p>
+                  <p className="heading30  font-bold text-#845eff text-[1.2rem] mb-4 ">General Practitioner</p>
                   <h2 className="heading54 heading-10 PingAR-Regular tracking-[unset] text-[#3B3659] whitespace-nowrap"><span className="text-lg font-bold">45</span> <span className="text-sm">SAR</span></h2>
               </div>
   
               {/* Card for Specialist */}
               <div className="card bg-white p-6 rounded-lg shadow-md border-2 border-#845eff w-full md:w-1/2.5 flex flex-col min-w-[10vw] justify-between mb-4 md:mb-0">
-                  <p className="heading30  font-bold text-#845eff text-[1.2vw] mb-4 ">Specialist</p>
+                  <p className="heading30  font-bold text-#845eff text-[1.2rem] mb-4 ">Specialist</p>
                   <h2 className="heading54 heading-10 PingAR-Regular tracking-[unset] text-[#3B3659]  whitespace-nowrap"><span className="text-lg font-bold">120</span> <span className="text-sm">SAR</span></h2>
               </div>
   
               {/* Card for Consultant */}
               <div className="card bg-white p-6 rounded-lg shadow-md border-2 border-#845eff w-full md:w-1/2.5 flex flex-col min-w-[10vw] justify-between">
-                  <p className="heading30  font-bold text-#845eff text-[1.2vw] mb-4 ">Consultant</p>
+                  <p className="heading30  font-bold text-#845eff text-[1.2rem] mb-4 ">Consultant</p>
                   <h2 className="heading54 heading-10 PingAR-Regular tracking-[unset] text-[#3B3659]  whitespace-nowrap"><span className="text-lg font-bold">150</span> <span className="text-sm">SAR</span></h2>
               </div>
               </div>
