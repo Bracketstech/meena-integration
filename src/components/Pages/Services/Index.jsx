@@ -4,6 +4,7 @@ import React from "react";
 import PrimaryCare from "./components/PrimaryCare";
 import Ecosystem from "./components/Ecosystem";
 import WellBeingPrograms from "./components/WellBeingPrograms";
+import PricingAndTiming from "./components/PricingAndTiming";
 import BookYourAppointment from "@/components/BookYourAppointment";
 import useAnimations from "@/hooks/useAnimations";
 import useHeader from "@/hooks/useHeader";
@@ -29,6 +30,10 @@ const Index = ({ arabic, data, fabData }) => {
         cards={data.nuttshelValuesFeatures}
         arabic={arabic}
       />)}
+      <PricingAndTiming
+        data={data.infograph_section_content[0]}
+        arabic={arabic}
+      />
       <WellBeingPrograms
         data={data.infograph_section_content[0]}
         arabic={arabic}
