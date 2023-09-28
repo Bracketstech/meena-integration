@@ -31,7 +31,7 @@ const Index = ({ arabic, data, fabData }) => {
         arabic={arabic}
       />)}
       <PricingAndTiming
-        data={data.infograph_section_content[0]}
+        data={data.service_fees_and_timing_section[0]}
         arabic={arabic}
       />
       <WellBeingPrograms

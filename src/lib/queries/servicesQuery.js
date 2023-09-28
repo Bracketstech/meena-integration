@@ -28,6 +28,25 @@ export const servicesQuery = () => {
             title
             description
           }
+          service_fees_and_timing_section{
+            fees_title
+            timing_titles
+            services{
+            ... on Set_Services_NewSet{
+              service_name
+              single_service{
+                type
+                fee
+                }
+              }
+            }
+            timing
+            due_time
+            from_and_to{
+              from
+              to
+            }
+          }
           nutshell_section_hide
           nuttshelValuesTitle: section_title
           nuttshelValuesFeatures: features {
